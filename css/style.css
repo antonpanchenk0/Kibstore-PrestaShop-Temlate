@@ -38,6 +38,9 @@ body {
 body {
   background-color: #e9edf0;
 }
+.border-bottom-1px {
+  border-bottom: 1px solid #e9edf0;
+}
 /*Nav Styles*/
 .navigation {
   width: 100%;
@@ -118,6 +121,16 @@ body {
   top: 0;
   left: -290px;
 }
+.navigation-collapse-close-btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: url("../img/icons/x.svg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  top: 25px;
+  right: -30px;
+}
 .navigation-collapse-wrap {
   position: fixed;
   left: 0;
@@ -183,11 +196,27 @@ body {
 .navigation-collapse-list {
   list-style-type: none;
   padding: 12px 0;
+  position: relative;
 }
 .navigation-collapse-list-item {
   display: flex;
   justify-content: flex-start;
-  padding: 12px 25px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  align-items: center;
+}
+.navigation-collapse-list-item:hover,
+.navigation-collapse-list-item.active {
+  background-color: rgba(81, 200, 120, 0.5);
+  cursor: pointer;
+}
+.navigation-collapse-list-item:hover .navigation-collapse-list-link,
+.navigation-collapse-list-item:hover .sub-navigation-collapse-list-link {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
 }
 .navigation-collapse-list-item:nth-child(4),
 .navigation-collapse-list-item:nth-child(7) {
@@ -197,7 +226,7 @@ body {
   height: 20px;
   width: 20px;
   stroke: #858585;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .navigation-collapse-list-icon[data-name=catalog] {
   stroke: #5489d7;
@@ -206,10 +235,17 @@ body {
   stroke: #51c878;
 }
 .navigation-collapse-list-link {
-  color: #000;
+  width: 100%;
+  height: 100%;
+  color: #000 !important;
   font-family: HelveticaNeueCyr;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
+  text-decoration: none!important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 25px;
 }
 .navigation-collapse-footer {
   padding: 15px;
@@ -222,6 +258,7 @@ body {
 }
 .navigation-collapse-footer .mobile-app-item {
   padding: 8px 5px;
+  text-decoration: none!important;
 }
 .navigation-collapse-footer .mobile-app-item img {
   height: 20px;
@@ -238,6 +275,95 @@ body {
 .navigation-collapse-footer-social img {
   filter: brightness(0.7);
   margin-right: 15px;
+}
+/*Sub-navigation*/
+.sub-navigation-collapse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 20;
+  background: #fff;
+  display: none;
+}
+.go-back-btn {
+  padding: 12px 25px;
+  border-bottom: 1px solid #e9edf0;
+  font-family: HelveticaNeueCyr;
+  font-weight: normal;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.go-back-btn::before {
+  content: url("../img/icons/arrow-left.svg");
+  display: block;
+  height: 24px;
+  margin-right: 10px;
+}
+.go-back-btn > span {
+  padding-left: 10px;
+  border-left: 1px solid #e9edf0;
+}
+.sub-navigation-collapse-list {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+}
+.sub-navigation-collapse-item {
+  display: flex;
+  justify-content: flex-start;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  align-items: center;
+}
+.sub-navigation-collapse-item:hover,
+.sub-navigation-collapse-item.active {
+  background-color: rgba(81, 200, 120, 0.5);
+  cursor: pointer;
+}
+.sub-navigation-collapse-item:hover .navigation-collapse-list-link,
+.sub-navigation-collapse-item:hover .sub-navigation-collapse-list-link {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+}
+.sub-navigation-collapse-item.sub-navigation-collapse-item-with-icon::after {
+  content: '';
+  height: 24px;
+  width: 24px;
+  background: url("../img/icons/chevron-right.svg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-left: auto;
+}
+.sub-navigation-collapse-list-icon {
+  height: 20px;
+  width: 20px;
+  stroke: #858585;
+  margin-right: 20px;
+}
+.sub-navigation-collapse-list-link {
+  width: 100%;
+  height: 100%;
+  color: #000 !important;
+  font-family: HelveticaNeueCyr;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: none!important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 25px;
+}
+.sub-navigation-more-icon {
+  stroke: #5489d7;
+  margin-left: auto;
 }
 /*Slider*/
 .carousel {
