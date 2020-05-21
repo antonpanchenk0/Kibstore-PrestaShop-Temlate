@@ -64,7 +64,7 @@
 .categories>.row, .discount-and-newItems>.row, .mobile-app>.row {
     margin: 0 3px;
 }
-.position-wrap, .discount-and-newItems-wrap, .mobile-app-wrap {
+.position-wrap, .discount-and-newItems-wrap {
     position: relative;
     padding: 0;
 }
@@ -74,10 +74,8 @@
 .discount-and-newItems-wrap>.dummy {
     margin-top: 66px;
 }
-.mobile-app-wrap>.dummy {
-    margin-top: 46px;
-}
-.position, .discount, .newItems, .mobile-app-item {
+
+.position, .discount, .newItems {
     background: #fff;
     margin: 3px;
     position: absolute;
@@ -97,10 +95,6 @@
 .discount, .newItems {
     flex-flow: row;
 }
-.mobile-app-item {
-    flex-flow: row;
-    padding: 8px 15px;
-}
 .position-icon {
     margin-bottom: 13px;
 }
@@ -114,28 +108,4 @@
 .discount-title, .newItems-title {
     text-transform: uppercase;
     margin-left: 10px;
-}
-.mobile-app-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mobile-app-item .mobile-app-icon {
-    height: 30px;
-    width: 30px;
-    margin-right: 12px;
-}
-.mobile-app-title {
-    text-align: left;
-    color: #000;
-    display: flex;
-    flex-flow: column-reverse;
-}
-.mobile-app-title>p {
-    font-size: 8px;
-    margin: 0;
-}
-.mobile-app-title>h3 {
-    font-size: 14px;
-    margin: 0;
 }

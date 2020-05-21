@@ -1,3 +1,6 @@
+:root {
+  --content-height: 100%;
+}
 *,
 head,
 body {
@@ -9,7 +12,14 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body {
+.wrap {
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
   background-color: #e9edf0;
 }
 @font-face {
@@ -211,8 +221,7 @@ body {
   background-color: rgba(81, 200, 120, 0.5);
   cursor: pointer;
 }
-.navigation-collapse-list-item:hover .navigation-collapse-list-link,
-.navigation-collapse-list-item:hover .sub-navigation-collapse-list-link {
+.navigation-collapse-list-item:hover .navigation-collapse-list-link {
   font-family: HelveticaNeueCyr;
   font-weight: bold;
 }
@@ -274,6 +283,58 @@ body {
   filter: brightness(0.7);
   margin-right: 15px;
 }
+.mobile-app-wrap {
+  position: relative;
+  padding: 0;
+}
+.mobile-app-wrap > .dummy {
+  margin-top: 46px;
+}
+.mobile-app-item {
+  background: #fff;
+  margin: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.mobile-app-item {
+  flex-flow: row;
+  padding: 8px 15px;
+}
+.mobile-app-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-app-item .mobile-app-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 12px;
+}
+.mobile-app-title {
+  text-align: left;
+  color: #000;
+  display: flex;
+  flex-flow: column-reverse;
+}
+.mobile-app-title > p {
+  font-size: 8px;
+  margin: 0;
+}
+.mobile-app-title > h3 {
+  font-size: 14px;
+  margin: 0;
+}
 /*Sub-navigation*/
 .sub-navigation-collapse {
   position: absolute;
@@ -326,10 +387,13 @@ body {
   background-color: rgba(81, 200, 120, 0.5);
   cursor: pointer;
 }
-.sub-navigation-collapse-item:hover .navigation-collapse-list-link,
-.sub-navigation-collapse-item:hover .sub-navigation-collapse-list-link {
+.sub-navigation-collapse-item:hover .navigation-collapse-list-link {
   font-family: HelveticaNeueCyr;
   font-weight: bold;
+}
+.sub-navigation-collapse-item:nth-child(4),
+.sub-navigation-collapse-item:nth-child(7) {
+  border-bottom: 1px solid #e9edf0;
 }
 .sub-navigation-collapse-item.sub-navigation-collapse-item-with-icon::after {
   content: '';
@@ -346,6 +410,12 @@ body {
   stroke: #858585;
   margin-right: 20px;
 }
+.sub-navigation-collapse-list-icon[data-name=catalog] {
+  stroke: #5489d7;
+}
+.sub-navigation-collapse-list-icon[data-name=cart] {
+  stroke: #51c878;
+}
 .sub-navigation-collapse-list-link {
   width: 100%;
   height: 100%;
@@ -358,6 +428,10 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 12px 25px;
+}
+.sub-navigation-collapse-list-link:hover {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
 }
 .sub-navigation-more-icon {
   stroke: #5489d7;
@@ -618,8 +692,7 @@ footer.main-footer {
   margin: 0 3px;
 }
 .position-wrap,
-.discount-and-newItems-wrap,
-.mobile-app-wrap {
+.discount-and-newItems-wrap {
   position: relative;
   padding: 0;
 }
@@ -629,13 +702,9 @@ footer.main-footer {
 .discount-and-newItems-wrap > .dummy {
   margin-top: 66px;
 }
-.mobile-app-wrap > .dummy {
-  margin-top: 46px;
-}
 .position,
 .discount,
-.newItems,
-.mobile-app-item {
+.newItems {
   background: #fff;
   margin: 3px;
   position: absolute;
@@ -656,10 +725,6 @@ footer.main-footer {
 .newItems {
   flex-flow: row;
 }
-.mobile-app-item {
-  flex-flow: row;
-  padding: 8px 15px;
-}
 .position-icon {
   margin-bottom: 13px;
 }
@@ -677,29 +742,5 @@ footer.main-footer {
 .newItems-title {
   text-transform: uppercase;
   margin-left: 10px;
-}
-.mobile-app-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mobile-app-item .mobile-app-icon {
-  height: 30px;
-  width: 30px;
-  margin-right: 12px;
-}
-.mobile-app-title {
-  text-align: left;
-  color: #000;
-  display: flex;
-  flex-flow: column-reverse;
-}
-.mobile-app-title > p {
-  font-size: 8px;
-  margin: 0;
-}
-.mobile-app-title > h3 {
-  font-size: 14px;
-  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
