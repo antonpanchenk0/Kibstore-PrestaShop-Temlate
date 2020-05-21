@@ -7,7 +7,11 @@ const config = {
         navLinksWithSubNav: document.querySelectorAll('.navigation-collapse-list-item-with-sub-navigation'),
         closeNavigationBtn: document.querySelector('a.navigation-collapse-close-btn'),
         navFooterSocial: document.querySelector('.mobile-app-row'),
+        navSearchBtn: document.getElementById('search'),
+        collapseSearchNode: document.getElementById('searchCollapse'),
+        closeSearchNodeBtn: document.querySelector('a.search-collapse-btn-back'),
         isCollapsed: false,
+        isSearchCollapsed: false,
         animationDuration: 1000,
     },
     subNavigation: {
@@ -22,6 +26,12 @@ const config = {
     }
 };
 
+const closeSearch = (collapseSearchNode, collapseWrap, animationDuration, isSearchCollapsed, callback) => {
+    $('a.nav-link#search').removeClass('active');
+    $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration, callback);
+};
+
+
 $(config.slider.sliderNode).carousel({interval: false});
 
 config.slider.progressInterval = setInterval(()=>{
@@ -33,36 +43,59 @@ config.slider.progressInterval = setInterval(()=>{
     config.slider.currentProgress ++;
 }, config.slider.duration/100);
 
+// Меню поиска
+config.navigation.navSearchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const { isSearchCollapsed, collapseWrap, animationDuration, collapseSearchNode } = config.navigation;
+    if(isSearchCollapsed) return false;
+    config.navigation.isSearchCollapsed = true;
+    $('a.nav-link#search').addClass('active');
+    collapseWrap.style.top = 40 + 'px';
+    $(collapseWrap).fadeIn(animationDuration/10);
+    $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration);
+});
+
+// Навигация
 config.navigation.toggleBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const { isCollapsed, collapseNode, collapseWrap, animationDuration } = config.navigation;
+    const { isCollapsed, isSearchCollapsed, collapseSearchNode, collapseNode, collapseWrap, animationDuration } = config.navigation;
     if(isCollapsed) return false;
-    config.navigation.isCollapsed = true;
+    if(isSearchCollapsed) {
+        closeSearch(collapseSearchNode, collapseWrap, animationDuration/2, isSearchCollapsed, function () {
+            config.navigation.isSearchCollapsed = false;
+            collapseWrap.style.top = 0 + 'px';
+            $(collapseWrap).fadeIn(animationDuration/10);
+            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
+        });
+        return true;
+    }
+    collapseWrap.style.top = 0 + 'px';
     $(collapseWrap).fadeIn(animationDuration/10);
     $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
+    config.navigation.isCollapsed = true;
+
 });
 
+// Навигация и поиска закрытие
 config.navigation.collapseWrap.addEventListener('click', (e) => {
-    if(e.target !== config.navigation.collapseWrap) return false;
+    if(e.target !== config.navigation.collapseWrap && e.target !== config.navigation.closeNavigationBtn && e.target !== config.navigation.closeSearchNodeBtn) return false;
     e.preventDefault();
-    const { isCollapsed, collapseNode, collapseWrap, animationDuration } = config.navigation;
-    if(!isCollapsed) return false;
-    config.navigation.isCollapsed = false;
-    $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, function () {
-        $(collapseWrap).fadeOut(animationDuration/10);
-    });
+    const { isCollapsed, isSearchCollapsed, collapseNode, collapseSearchNode, collapseWrap, animationDuration } = config.navigation;
+    if(isCollapsed) {
+        $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, function () {
+            $(collapseWrap).fadeOut(animationDuration / 10);
+            config.navigation.isCollapsed = false;
+        });
+    }
+    if(isSearchCollapsed) {
+        closeSearch(collapseSearchNode, collapseWrap, animationDuration, isSearchCollapsed, function () {
+            $(collapseWrap).fadeOut(animationDuration / 10);
+            config.navigation.isSearchCollapsed = false;
+        });
+    }
 });
 
-config.navigation.closeNavigationBtn.addEventListener('click',(e) => {
-    e.preventDefault();
-    const { isCollapsed, collapseNode, collapseWrap, animationDuration } = config.navigation;
-    if(!isCollapsed) return false;
-    config.navigation.isCollapsed = false;
-    $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, function () {
-        $(collapseWrap).fadeOut(animationDuration/10);
-    });
-});
-
+// Переключение уровней меню
 config.navigation.navLinksWithSubNav.forEach(link=>{
     link.addEventListener('click', (e)=> {
         e.preventDefault();
@@ -96,4 +129,4 @@ config.subNavigation.goBack.forEach(btn=>{
         }
         $(prevMenu).fadeOut(500);
     })
-})
+});
