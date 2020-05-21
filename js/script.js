@@ -12,7 +12,7 @@ const config = {
         closeSearchNodeBtn: document.querySelector('a.search-collapse-btn-back'),
         isCollapsed: false,
         isSearchCollapsed: false,
-        animationDuration: 1000,
+        animationDuration: 800,
     },
     subNavigation: {
         goBack: document.querySelectorAll('.go-back-btn'),
@@ -30,18 +30,19 @@ const closeSearch = (collapseSearchNode, collapseWrap, animationDuration, isSear
     $('a.nav-link#search').removeClass('active');
     $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration, callback);
 };
+// Настройка слайдера
+if(config.slider.sliderNode) {
+    $(config.slider.sliderNode).carousel({interval: false});
 
-
-$(config.slider.sliderNode).carousel({interval: false});
-
-config.slider.progressInterval = setInterval(()=>{
-    if(config.slider.currentProgress >= 100) {
-        $(config.slider.sliderNode).carousel('next');
-        config.slider.currentProgress = 0;
-    }
-    config.slider.progressNode.style.width = config.slider.currentProgress + '%';
-    config.slider.currentProgress ++;
-}, config.slider.duration/100);
+    config.slider.progressInterval = setInterval(()=>{
+        if(config.slider.currentProgress >= 100) {
+            $(config.slider.sliderNode).carousel('next');
+            config.slider.currentProgress = 0;
+        }
+        config.slider.progressNode.style.width = config.slider.currentProgress + '%';
+        config.slider.currentProgress ++;
+    }, config.slider.duration/100);
+}
 
 // Меню поиска
 config.navigation.navSearchBtn.addEventListener('click', (e) => {
