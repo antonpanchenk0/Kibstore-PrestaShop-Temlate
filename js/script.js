@@ -23,6 +23,10 @@ const config = {
         progressNode: document.getElementById('sliderProgress'),
         progressInterval: null,
         currentProgress: 0,
+    },
+    sortHeader: {
+        prItemViewType: 'plate',
+        switchPrItemViewBtn: document.getElementById('switch-view-btn'),
     }
 };
 
