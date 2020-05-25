@@ -1014,6 +1014,33 @@ footer.main-footer {
   stroke: #5489d7;
   margin-right: 10px;
 }
+.filterCollapseWrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.filterCollapse {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  min-height: 100%;
+  width: 260px;
+  background-color: #fff;
+}
+.filterCollapseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filterCollapseHeader > svg {
+  stroke: #858585;
+}
 .load-more {
   margin: 25px 0 20px 0;
   display: flex;
@@ -1043,4 +1070,3 @@ footer.main-footer {
   font-size: 18px;
   color: #000;
 }
-/*# sourceMappingURL=catalog-products-list.css.map */

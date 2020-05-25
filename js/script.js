@@ -27,7 +27,10 @@ const config = {
     sortHeader: {
         prItemViewType: 'plate',
         switchPrItemViewBtn: document.getElementById('switch-view-btn'),
+        filterBtn: document.getElementById('filterBtn'),
+        filterCollapseNode: document.getElementById('filterCollapse'),
     }
+
 };
 
 const closeSearch = (collapseSearchNode, collapseWrap, animationDuration, isSearchCollapsed, callback) => {
