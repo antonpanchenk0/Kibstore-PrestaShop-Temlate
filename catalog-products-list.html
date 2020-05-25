@@ -373,7 +373,7 @@
                 </li>
             </ul>
 
-            <div class="filterCollapseWrap">
+            <div class="filterCollapseWrap" id="filterCollapseWrap">
                 <div class="filterCollapse" id="filterCollapse">
                     <div class="filterCollapseHeader">
                         <a href="#">
@@ -383,19 +383,48 @@
                         <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
                     </div>
 
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Разворачиваемая панель #1
-                                    </button>
-                                </h5>
+                    <div class="filter-collapse-body">
+                        <div class="selected-filters">
+                            <h2>Вы выбрали</h2>
+                            <div class="selected">
+                                <div class="selected-item">
+                                    <h3>Бренд:<span>Tecsar</span></h3>
+                                    <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                                </div>
                             </div>
+                        </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div class="accordion" id="filtersAccardion">
+                            <div class="card">
+                                <div class="card-header" id="headingPrice">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link price-btn" type="button" data-toggle="collapse" data-target="#collapsePrice" aria-expanded="false" aria-controls="collapsePrice">
+                                            <span>Цена, ₴</span>
+                                            <svg fill="none" height="24" stroke="#5489d7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"/></svg>
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapsePrice" class="collapse" aria-labelledby="headingPrice" data-parent="#filtersAccardion">
+                                    <div class="card-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingBrand">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseBrand" aria-expanded="false" aria-controls="collapseBrand">
+                                            <span>Бренд</span>
+                                            <svg fill="none" height="24" stroke="#5489d7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"/></svg>
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseBrand" class="collapse" aria-labelledby="collapseBrand" data-parent="#filtersAccardion">
+                                    <div class="card-body">
+                                        /*Accardion here*/
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -22,6 +22,9 @@ body {
   width: 100%;
   background-color: #e9edf0;
 }
+.scroll-disabled {
+  overflow: hidden!important;
+}
 @font-face {
   font-family: HelveticaNeueCyr;
   src: url("../fonts/HelveticaNeueCyr-Bold.ttf");

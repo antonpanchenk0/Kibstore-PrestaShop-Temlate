@@ -28,7 +28,10 @@ const config = {
         prItemViewType: 'plate',
         switchPrItemViewBtn: document.getElementById('switch-view-btn'),
         filterBtn: document.getElementById('filterBtn'),
+        filterCollapseWrap: document.getElementById('filterCollapseWrap'),
         filterCollapseNode: document.getElementById('filterCollapse'),
+        isFilterCollapse: false,
+        animationDuration: 800,
     }
 
 };
@@ -37,6 +40,7 @@ const closeSearch = (collapseSearchNode, collapseWrap, animationDuration, isSear
     $('a.nav-link#search').removeClass('active');
     $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration, callback);
 };
+
 // Настройка слайдера
 if(config.slider.sliderNode) {
     $(config.slider.sliderNode).carousel({interval: false});
@@ -56,6 +60,7 @@ config.navigation.navSearchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const { isSearchCollapsed, collapseWrap, animationDuration, collapseSearchNode } = config.navigation;
     if(isSearchCollapsed) return false;
+    document.body.classList.add('scroll-disabled');
     config.navigation.isSearchCollapsed = true;
     $('a.nav-link#search').addClass('active');
     collapseWrap.style.top = 40 + 'px';
@@ -88,6 +93,7 @@ config.navigation.toggleBtn.addEventListener('click', (e) => {
 config.navigation.collapseWrap.addEventListener('click', (e) => {
     if(e.target !== config.navigation.collapseWrap && e.target !== config.navigation.closeNavigationBtn && e.target !== config.navigation.closeSearchNodeBtn) return false;
     e.preventDefault();
+    document.body.classList.remove('scroll-disabled');
     const { isCollapsed, isSearchCollapsed, collapseNode, collapseSearchNode, collapseWrap, animationDuration } = config.navigation;
     if(isCollapsed) {
         $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, function () {
@@ -137,4 +143,14 @@ config.subNavigation.goBack.forEach(btn=>{
         }
         $(prevMenu).fadeOut(500);
     })
+});
+
+config.sortHeader.filterBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const { isFilterCollapse, filterCollapseNode, filterCollapseWrap, animationDuration } = config.sortHeader;
+    if(isFilterCollapse) return false;
+    document.body.classList.add('scroll-disabled');
+    config.sortHeader.isFilterCollapse = true;
+    $(filterCollapseWrap).fadeIn(animationDuration/10);
+    $(filterCollapseNode).animate({'right': isFilterCollapse ? '-270px' : '0px'}, animationDuration);
 });
