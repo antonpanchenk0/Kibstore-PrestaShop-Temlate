@@ -1,0 +1,133 @@
+@import "./root-styles";
+@import './page-header-style';
+@import './add-to-cart-modal-style';
+@import "./more-position";
+@import "./product-item-nav";
+@import './product-buy-block';
+
+.wrap {
+    background-color:  #fff;
+    justify-content: flex-start;
+}
+
+.router {
+    padding: 0 15px;
+}
+.title-wrap {
+    padding: 0 15px;
+    & .title {
+        font-size: 14px;
+    }
+    & .product-code {
+        .SFProDisplayRegular;
+        font-size: 10px;
+        color: @grayColor;
+        margin: 10px 0 0 0;
+    }
+}
+.carousel {
+    padding: 0 15px;
+}
+.carousel-indicators {
+    justify-content: center;
+    bottom: -5px;
+    margin: 0 10px;
+    & > li:first-child{
+        margin-left: 0px;
+    }
+    & > li:last-child {
+        margin-right: 0px;
+    }
+    & > li {
+        height: 2px;
+        width: 40px;
+        background-color: @grayColor;
+    }
+    & > li.active {
+        background-color: @secondColor;
+    }
+}
+.carousel-item {
+    padding: 10px 50px;
+}
+.product-info-after-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+.product-info-after-slider .price, .product-info-after-slider .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+}
+.product-info-after-slider .info {
+    align-items: flex-end;
+}
+.product-info-after-slider .old-price {
+    .SFProDisplayRegular;
+    font-size: 12px;
+    color: @grayColor;
+    text-decoration: line-through;
+    margin-bottom: 7px;
+}
+.product-info-after-slider .current-price {
+    .SFProDisplayBold;
+    font-size: 20px;
+    color: #000;
+    display: block;
+    background-color: #d3ffd3;
+    margin-bottom: 10px;
+}
+.product-info-after-slider p {
+    .SFProDisplayRegular;
+    font-size: 10px;
+    color: @grayColor;
+}
+.product-info-after-slider .product-rate-star-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product-info-after-slider .feedback-count {
+    .SFProDisplayRegular;
+    font-size: 10px;
+    color: @grayColor;
+}
+.product-info-after-slider .is-available {
+    .SFProDisplayRegular;
+    color: @secondColor;
+    font-size: 10px;
+    display: flex;
+    &.available::before {
+        content: '';
+        display: block;
+        height: 7px;
+        width: 14px;
+        border-left: 2px solid @thirdColor;
+        border-bottom: 2px solid @thirdColor;
+        margin-right: 5px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+.product-description {
+    padding: 10px 15px;
+    & > h2 {
+        .SFProDisplayBold;
+        font-size: 14px;
+        color: #000;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    & > p {
+        .SFProDisplayRegular;
+        font-size: 14px;
+        color: #000;
+        text-align: left;
+    }
+}

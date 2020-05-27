@@ -1,11 +1,8 @@
 @import './root-styles';
-@import './fonts';
-@import './navigation';
-@import './colors';
-@import './footer';
 @import './page-header-style';
 @import './add-to-cart-modal-style';
 @import './add-to-cart-modal-style';
+@import "filter-collapse-style";
 
 .wrap {
     background: #ffffff;
@@ -67,10 +64,33 @@
     justify-content: center;
     align-items: center;
     background-color: @thirdColor;
+    border: 1px solid @thirdColor;
     border-radius: 5px;
+    &.active {
+        background-color: transparent;
+    }
 }
-.catalog-product-item-price .add-to-cart-btn svg {
+.catalog-product-item-price .add-to-cart-btn svg.sailing {
     height: 19px;
+    display: block;
+    stroke: #fff;
+}
+.catalog-product-item-price .add-to-cart-btn.active svg.sailing {
+    height: 19px;
+    display: none;
+}
+.catalog-product-item-price .add-to-cart-btn svg.sailed {
+    height: 24px;
+    display: none;
+}
+.catalog-product-item-price .add-to-cart-btn.active svg.sailed {
+    height: 20px;
+    width: 20px;
+    display: block;
+    stroke: @thirdColor;
+    fill: none;
+    -webkit-text-stroke-width: 2px;
+    stroke-width: 2px;
 }
 .catalog-product-item-rate {
     display: flex;
