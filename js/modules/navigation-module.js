@@ -12,34 +12,56 @@ export default class Navigation {
             collapseSearchNode: document.getElementById('searchCollapse'),
             closeSearchNodeBtn: document.querySelector('a.search-collapse-btn-back'),
             goBack: document.querySelectorAll('.go-back-btn'),
+            cartSearchBtn: document.getElementById('cart'),
+            collapseCartNode: document.getElementById('cartCollapse'),
+            closeCartNodeBtn: document.querySelector('a.cart-collapse-btn-back'),
+            closeXCartNodeBtn: document.querySelector('a.cart-collapse-close-btn'),
             isCollapsed: false,
             isSearchCollapsed: false,
+            isCartCollapsed: false,
             animationDuration,
         }
         this.createNavigationsEvents();
     }
 
-    closeSearch = (collapseSearchNode, collapseWrap, animationDuration, isSearchCollapsed, callback) => {
-        $('a.nav-link#search').removeClass('active');
-        $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration, callback);
-    };
-
     wrapFadeOut = () => {
-        $(this.config.collapseWrap).fadeOut(this.config.animationDuration / 10);
+        $(this.config.collapseWrap).fadeOut(this.config.animationDuration / 10, () => document.body.classList.remove('scroll-disabled'));
         this.config.isCollapsed = false;
     }
 
-    wrapSearchFadeOut = () => {
-        $(this.config.collapseWrap).fadeOut(this.config.animationDuration / 10);
-        this.config.isSearchCollapsed = false;
+    closeSingleRightModule = (module, isWrapFadeOut) => {
+        const { collapseWrap, animationDuration } = this.config;
+        switch (module) {
+            case 'cart': {
+                $('a.nav-link#cart').removeClass('active');
+                $(this.config.collapseCartNode).animate({'right': '-320px'}, animationDuration * 0.75, () => {
+                    isWrapFadeOut && $(collapseWrap).fadeOut(animationDuration / 10);
+                    document.body.classList.remove('scroll-disabled');
+                });
+                this.config.isCartCollapsed = false;
+                break;
+            }
+            case 'search': {
+                $('a.nav-link#search').removeClass('active');
+                $(this.config.collapseSearchNode).animate({'right': '-320px'}, animationDuration * 0.75, () => {
+                    isWrapFadeOut && $(collapseWrap).fadeOut(animationDuration / 10);
+                    document.body.classList.remove('scroll-disabled');
+                });
+                this.config.isSearchCollapsed = false;
+                break;
+            }
+        }
     }
 
-    wrapSearchOnNavOpen = () => {
-        this.config.isSearchCollapsed = false;
-        this.config.collapseWrap.style.top = 0 + 'px';
-        $(this.config.collapseWrap).fadeIn(this.config.animationDuration/10);
-        $(this.config.collapseNode).animate({'left': this.config.isCollapsed ? '-320px' : '0px'}, this.config.animationDuration);
-        this.config.isCollapsed = true;
+    closeAllRightModules = (isWrapFadeOut) => {
+        const { isSearchCollapsed, isCartCollapsed } = this.config;
+        if(isCartCollapsed) {
+            this.closeSingleRightModule('cart', isWrapFadeOut);
+        }
+        if(isSearchCollapsed) {
+            this.closeSingleRightModule('search', isWrapFadeOut);
+        }
+        return false;
     }
 
     createNavigationsEvents = () => {
@@ -48,6 +70,7 @@ export default class Navigation {
             e.preventDefault();
             const { isSearchCollapsed, collapseWrap, animationDuration, collapseSearchNode } = this.config;
             if(isSearchCollapsed) return false;
+            this.closeAllRightModules(false);
             document.body.classList.add('scroll-disabled');
             this.config.isSearchCollapsed = true;
             $('a.nav-link#search').addClass('active');
@@ -56,32 +79,56 @@ export default class Navigation {
             $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration);
         });
 
+        // Корзина
+        this.config.cartSearchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const { isCartCollapsed, collapseWrap, animationDuration, collapseCartNode } = this.config;
+            if(isCartCollapsed) return false;
+            this.closeAllRightModules(false);
+            document.body.classList.add('scroll-disabled');
+            this.config.isCartCollapsed = true;
+            $('a.nav-link#cart').addClass('active');
+            collapseWrap.style.top = 40 + 'px';
+            $(collapseWrap).fadeIn(animationDuration/10);
+            $(collapseCartNode).animate({'right': isCartCollapsed ? '-320px' : '0px'}, animationDuration);
+        })
+
         // Навигация
         this.config.toggleBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const { isCollapsed, isSearchCollapsed, collapseSearchNode, collapseNode, collapseWrap, animationDuration } = this.config;
+            const { isCollapsed, collapseNode, collapseWrap, animationDuration, isSearchCollapsed, isCartCollapsed } = this.config;
             if(isCollapsed) return false;
-            if(isSearchCollapsed) {
-                this.closeSearch(collapseSearchNode, collapseWrap, animationDuration/2, isSearchCollapsed, this.wrapSearchOnNavOpen);
-                return true;
-            }
-            collapseWrap.style.top = 0 + 'px';
-            $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
-            this.config.isCollapsed = true;
+            this.closeAllRightModules(false);
+            const waitTime = isSearchCollapsed || isCartCollapsed ? animationDuration * 0.75 : 0;
+            setTimeout(() => {
+                this.config.collapseWrap.style.top = 0 + 'px';
+                $(collapseWrap).fadeIn(animationDuration/10);
+                $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
+                this.config.isCollapsed = true;
+            }, waitTime)
         });
 
-        // Закрытие навигации и поиска
+        // Закрытие по нажатию на overlay и кнопки закрытия
         this.config.collapseWrap.addEventListener('click', (e) => {
-            if(e.target !== this.config.collapseWrap && e.target !== this.config.closeNavigationBtn && e.target !== this.config.closeSearchNodeBtn) return false;
+            if(e.target !== this.config.collapseWrap &&
+               e.target !== this.config.closeNavigationBtn &&
+               e.target !== this.config.closeSearchNodeBtn &&
+               e.target.parentNode.parentNode !== this.config.closeSearchNodeBtn &&
+               e.target !== this.config.closeCartNodeBtn &&
+               e.target.parentNode.parentNode !== this.config.closeCartNodeBtn &&
+               e.target.parentNode !== this.config.closeXCartNodeBtn &&
+               e.target.parentNode.parentNode !== this.config.closeXCartNodeBtn &&
+               e.target !== this.config.closeXCartNodeBtn ) return false;
             e.preventDefault();
-            document.body.classList.remove('scroll-disabled');
-            const { isCollapsed, isSearchCollapsed, collapseNode, collapseSearchNode, collapseWrap, animationDuration } = this.config;
+            const { isCollapsed, isSearchCollapsed, isCartCollapsed, collapseNode, animationDuration } = this.config;
             if(isCollapsed) {
                 $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, this.wrapFadeOut);
             }
             if(isSearchCollapsed) {
-                this.closeSearch(collapseSearchNode, collapseWrap, animationDuration, isSearchCollapsed, this.wrapSearchFadeOut);
+                this.closeSingleRightModule('search', true);
+            }
+            if(isCartCollapsed) {
+                this.closeSingleRightModule('cart', true);
             }
         });
 

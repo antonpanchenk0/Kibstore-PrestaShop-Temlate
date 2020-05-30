@@ -1,0 +1,280 @@
+@import "navigation";
+@import "root-styles";
+
+.wrap {
+    background: #fff;
+    justify-content: flex-start;
+}
+.nav-header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.delivery, .payment, .contacts {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 40px - 186px);
+    & > #map {
+        width: 100%;
+        height: 350px;
+    }
+}
+.delivery-header, .payment-header, .contacts-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 10px 15px;
+    background: @bodyBackgroundColor;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    & > .back-arrow-btn, & .close-x-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14px;
+        height: 14px;
+        margin-right: 15px;
+        & > svg {
+            width: 100%;
+            height: 100%;
+            stroke: @secondColor;
+        }
+    }
+    & .close-x-btn {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        & > svg {
+            stroke: @grayColor;
+        }
+    }
+    & > .header-title {
+        .HelveticaNeueCyrBold;
+        font-size: 16px;
+        color: #2c3138;
+        margin: 0;
+    }
+}
+.delivery-body, .payment-body, .contacts-body {
+    width: 100%;
+    padding: 15px;
+}
+.delivery-body-header, .payment-body-header, .contacts-body-header {
+    width: 100%;
+    margin-bottom: 10px;
+    & > img {
+        width: 25%;
+        height: auto;
+        float: left;
+        margin: 0 10px 0 0;
+        display: block;
+    }
+    & h2 {
+        .SFProDisplayBold;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 10px 20px 0 0;
+    }
+    & > p {
+        .SFProDisplayRegular;
+        font-size: 12px;
+        color: #000;
+        margin: 0;
+    }
+    & > p.margin {
+        .SFProDisplayRegular;
+        font-size: 12px;
+        color: #000;
+        margin-bottom: 15px;
+    }
+}
+.delivery-position-info, .payment-position-info, .contacts-position-info {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column;
+    & > .row {
+        margin: 0;
+    }
+    &.contacts-position-info {
+        margin: 0px;
+        padding: 10px 0;
+        border-bottom: 1px solid @bodyBackgroundColor;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &.contacts-position-info  > h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    & > h3 {
+        .SFProDisplayBold;
+        font-size: 14px;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    & > p {
+        .SFProDisplayRegular;
+        font-size: 12px;
+        color: #000;
+        margin: 0;
+    }
+    &.contacts-position-info  > p {
+        font-size: 16px;
+    }
+    & > a {
+        .SFProDisplayRegular;
+        color: @secondColor;
+        text-decoration: none!important;
+        font-size: 12px;
+        display: block;
+    }
+    & > p.margin {
+        margin-bottom: 15px;
+    }
+    & > .contact-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+        & > p {
+            .SFProDisplayRegular;
+            font-size: 16px;
+            color: #000;
+            margin: 0;
+        }
+        & > a {
+            .SFProDisplayRegular;
+            color: @secondColor;
+            text-decoration: none!important;
+            font-size: 14px;
+            display: block;
+        }
+        & > .contact {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            & > img {
+                width: 25px;
+                height: auto;
+                margin-right: 10px;
+            }
+            & > p {
+                .SFProDisplayRegular;
+                font-size: 16px;
+                margin: 0;
+            }
+            & > p.telegram {
+                color: #0088cc;
+            }
+            & > p.viber {
+                color: #8f5db7;
+            }
+        }
+    }
+    & > form {
+        width: 100%;
+        & > input, & > textarea {
+            border: 1px solid @grayColor;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            .SFProDisplayRegular;
+            font-size: 12px;
+            color: #000;
+            width: 100%;
+            resize: none;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+        & > textarea {
+            height: 90px;
+        }
+        & > button {
+            background: @thirdColor;
+            color: #fff;
+            .HelveticaNeueCyrBold;
+            font-size: 16px;
+            width: 120px;
+            height: 35px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            box-shadow: none!important;
+            border: none!important;
+        }
+    }
+}
+
+.mobile-app-wrap {
+    position: relative;
+    padding: 0;
+    & > .dummy {
+        margin-top: 46px;
+    }
+}
+.mobile-app-item {
+    background: #fff;
+    margin: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    flex-flow: row;
+    padding: 8px 10px;
+    & > .mobile-app-icon {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+}
+
+.mobile-app-title {
+    text-align: left;
+    color: #000;
+    display: flex;
+    flex-flow: column-reverse;
+    & > p {
+        font-size: 8px;
+        margin: 0;
+    }
+    & > h3 {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+.socials {
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.socials img {
+    filter: brightness(0.7);
+    margin-right: 15px;
+}

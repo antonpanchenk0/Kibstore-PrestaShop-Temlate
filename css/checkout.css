@@ -1,0 +1,552 @@
+@font-face {
+  font-family: HelveticaNeueCyr;
+  src: url("../fonts/HelveticaNeueCyr-Bold.ttf");
+  src: url("../fonts/HelveticaNeueCyr-Roman.ttf");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Bold.ttf");
+  src: url("../fonts/SFProDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Aspire";
+  src: url("../fonts/AspireFont.ttf");
+}
+.HelveticaNeueCyrBold {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+}
+.HelveticaNeueCyrRoman {
+  font-family: HelveticaNeueCyr;
+  font-weight: normal;
+}
+.SFProDisplayBold {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+}
+.SFProDisplayRegular {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+}
+.AspireFont {
+  font-family: "Aspire";
+  font-weight: normal;
+}
+header {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2f3c4f;
+}
+header > h1 {
+  font-family: "Aspire";
+  font-weight: normal;
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+}
+header > .phones > p {
+  text-align: right;
+  margin: 0;
+  color: #fff;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  line-height: 1;
+}
+header > .phones > p:first-child {
+  margin-bottom: 5px;
+}
+.main {
+  width: 100%;
+}
+.main .main-header {
+  z-index: -10;
+  width: 100%;
+  padding: 20px 15px;
+  background: #e9edf0;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.main .main-header > .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.main .main-header > .title > h2 {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+}
+.main .main-header > .title > a.close-btn {
+  text-decoration: none;
+  height: 14px;
+  width: 14px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.main .main-header > .title > a.close-btn > svg {
+  width: 14px;
+  height: 14px;
+  stroke: #858585;
+}
+.progressbar {
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.progressbar li {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 10px;
+  color: #858585;
+  width: 25%;
+  float: left;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+.progressbar li#personal::before {
+  content: "1";
+}
+.progressbar li#delivery::before {
+  content: "2";
+}
+.progressbar li#payment::before {
+  content: "3";
+}
+.progressbar li:before {
+  width: 16px;
+  height: 16px;
+  line-height: 10px;
+  display: block;
+  font-size: 10px;
+  color: #ffffff;
+  background: #858585;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0 auto 2px auto;
+  padding: 2px;
+  text-align: center;
+}
+.progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #858585;
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  z-index: -1;
+}
+.progressbar li:last-child:after {
+  width: 0;
+}
+.progressbar li.active:before {
+  background: #99e1a4;
+}
+.progressbar li.done:before,
+.progressbar li.done:after {
+  background: #51c878;
+}
+.progressbar li.done:before {
+  content: '✓' !important;
+}
+.order-form {
+  position: relative;
+  width: 100%;
+}
+.order-form fieldset {
+  width: 100%;
+  padding: 20px 15px;
+  border-bottom: 1px solid #e9edf0;
+}
+.order-form fieldset .form-card {
+  width: 100%;
+  position: relative;
+}
+.order-form fieldset .form-card .fs-title {
+  font-size: 16px;
+  color: #000;
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  text-align: left;
+}
+.order-form fieldset .form-card .fs-subtitle {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  margin-top: 15px;
+}
+.order-form fieldset {
+  width: 100%;
+  position: relative;
+}
+.order-form fieldset:not(:first-of-type) {
+  display: none;
+}
+.order-form .input-box {
+  margin-bottom: 15px;
+  position: relative;
+}
+.order-form .input-box.valid::after,
+.order-form .input-box.no-valid::after {
+  content: '✓';
+  height: 7px;
+  width: 14px;
+  color: #51c878;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-65%);
+  -moz-transform: translateY(-65%);
+  -ms-transform: translateY(-65%);
+  -o-transform: translateY(-65%);
+  transform: translateY(-65%);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-form .input-box.no-valid::after {
+  content: '✕';
+  color: red;
+}
+.order-form .input-box.valid input,
+.order-form .input-box.valid textarea {
+  border: 1px solid #51c878;
+}
+.order-form .input-box.no-valid input,
+.order-form .input-box.no-valid textarea {
+  border: 1px solid red;
+}
+.order-form input,
+.order-form textarea {
+  padding: 5px;
+  border: 1px solid #858585;
+  border-radius: 3px;
+  width: 90%;
+  box-sizing: border-box;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  color: #000;
+  font-size: 14px;
+  margin-left: 5px;
+  outline: none!important;
+}
+.order-form input:focus,
+.order-form textarea:focus {
+  box-shadow: none !important;
+}
+.order-form .action-button {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  background: #51c878;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.order-form .action-button:disabled {
+  background: #a8e3bb;
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+}
+.order-form .action-button:hover,
+.order-form .action-button:focus {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.order-form .action-button-previous {
+  /* Стиль для кнопки "Назад" */
+}
+.order-form .action-button-previous:hover,
+.order-form .action-button-previous:focus {
+  /* Стиль для кнопки "Назад" */
+}
+.radio-group {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.radio {
+  width: 100%;
+}
+.radio > input[type=radio] {
+  display: flex;
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radio > input[type=number] {
+  margin: 10px 0 0 20px;
+  width: 86%;
+  font-size: 12px;
+  display: none;
+}
+.radio.selected > input[type=number] {
+  display: block;
+}
+.radio-text {
+  position: relative;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #000;
+}
+.radio-text:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #51c878;
+  border-radius: 50%;
+  background: #FFF;
+}
+.radio-text:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #51c878;
+  opacity: 0;
+  transition: 0.5s;
+}
+.radio input:checked + .radio-text:after {
+  opacity: 1;
+}
+.form-check {
+  display: flex;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-check > label {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #858585;
+}
+.form-check > input {
+  display: block;
+  margin: 0;
+  width: auto;
+}
+.form-check > input:checked,
+.form-check > input:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.form-check > input:checked + label,
+.form-check > input:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.form-check > input:checked + label::before,
+.form-check > input:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #858585;
+  background-color: #ffffff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.form-check > input:checked + label::after,
+.form-check > input:not(:checked) + label::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  height: 4px;
+  width: 11px;
+  border-left: 2px solid #5489d7;
+  border-bottom: 2px solid #5489d7;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 4px;
+  top: 4px;
+}
+.form-check > input:not(:checked) + label::after {
+  opacity: 0;
+}
+.form-check > input:checked + label::after {
+  opacity: 1;
+}
+.order-info {
+  width: 100%;
+  padding: 20px 35px;
+  border-bottom: 1px solid #e9edf0;
+}
+.order-info > h2 {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.order-info > .product-price-info {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9edf0;
+}
+.order-info > .product-price-info > h2 {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #858585;
+  margin: 0;
+}
+.order-info > .product-price-info > h3 {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+}
+.order-info > .common-price {
+  padding: 10px 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-info > .common-price > div {
+  display: flex;
+  flex-flow: column;
+  align-items: self-start;
+  justify-content: flex-start;
+}
+.order-info > .common-price > div > h2 {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+}
+.order-info > .common-price > div > p {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 10px;
+  color: #858585;
+  margin: 0;
+}
+.order-info > .common-price > h3 {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  margin: 0;
+}
+.form-confirm-btn-block {
+  padding: 20px 20px;
+  border-bottom: 1px solid #e9edf0;
+}
+.form-confirm-btn-block .confirm-order {
+  height: 30px;
+  width: 100%;
+  background: #51c878;
+  color: #fff;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.form-confirm-btn-block .confirm-order:disabled {
+  background: #a8e3bb;
+}
+.form-confirm-btn-block > p {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #858585;
+  margin: 0;
+}
+.form-confirm-btn-block > p > span {
+  white-space: nowrap;
+}
+.form-confirm-btn-block > .comment-block {
+  width: 100%;
+  padding: 10px 0;
+}
+.form-confirm-btn-block > .comment-block > textarea {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0 0 0;
+  resize: none;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.form-footer {
+  width: 100%;
+}
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 15px 0 45px 0;
+  margin: 0;
+}
+.payment .payment-item {
+  max-height: 30px;
+  display: block;
+  margin: 0 5px;
+}
+.payment .payment-item > img {
+  max-height: 30px;
+}
+/*# sourceMappingURL=checkout.css.map */

@@ -1,0 +1,51 @@
+@import "navigation";
+@import "root-styles";
+
+header.nav-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+section.main {
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 0 15px;
+    position: relative;
+}
+.thx-text {
+    width: 100%;
+    & > h1 {
+        .HelveticaNeueCyrBold;
+        font-size: 35px;
+        color: @thirdColor;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    & > h2 {
+        text-align: center;
+        .SFProDisplayRegular;
+        font-size: 14px;
+        color: @grayColor;
+    }
+}
+.btns {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+    & > a {
+        font-size: 16px;
+        .SFProDisplayRegular;
+        color: @secondColor;
+        text-decoration: none!important;
+    }
+}
