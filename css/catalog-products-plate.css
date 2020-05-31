@@ -428,9 +428,11 @@
   stroke: #5489d7;
   margin-left: auto;
 }
-/*Search collapse*/
+/*Search, cart, contacts collapse*/
 .search-collapse,
-.cart-collapse {
+.cart-collapse,
+.contacts-collapse,
+.wish-list-collapse {
   right: -320px;
   position: absolute;
   top: 0;
@@ -445,14 +447,65 @@
   -webkit-box-shadow: 0px 10px 15px 7px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 0px 10px 15px 7px rgba(255, 255, 255, 0.2);
   box-shadow: 0px 10px 15px 7px rgba(255, 255, 255, 0.2);
+  height: calc(100% - 40px);
+}
+.search-collapse.wish-list-collapse,
+.cart-collapse.wish-list-collapse,
+.contacts-collapse.wish-list-collapse,
+.wish-list-collapse.wish-list-collapse {
+  width: 100%;
+  right: -110%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
 }
 .search-collapse-header,
-.cart-collapse-header {
+.cart-collapse-header,
+.contacts-collapse-header,
+.wish-list-collapse-header {
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9edf0;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.search-collapse-header > a,
+.cart-collapse-header > a,
+.contacts-collapse-header > a,
+.wish-list-collapse-header > a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: #e9edf0;
-  padding: 10px 14px;
+  text-decoration: none!important;
+}
+.search-collapse-header > a > h2,
+.cart-collapse-header > a > h2,
+.contacts-collapse-header > a > h2,
+.wish-list-collapse-header > a > h2 {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  margin: 0 0 0 10px;
+}
+.search-collapse-header > a > h2 > span,
+.cart-collapse-header > a > h2 > span,
+.contacts-collapse-header > a > h2 > span,
+.wish-list-collapse-header > a > h2 > span {
+  font-family: HelveticaNeueCyr;
+  font-weight: normal;
+}
+.search-collapse-header > a.cart-collapse-close-btn > svg,
+.cart-collapse-header > a.cart-collapse-close-btn > svg,
+.contacts-collapse-header > a.cart-collapse-close-btn > svg,
+.wish-list-collapse-header > a.cart-collapse-close-btn > svg {
+  height: 12px;
+  width: 12px;
 }
 .search-collapse-header form {
   display: flex;
@@ -544,37 +597,7 @@
   text-decoration: line-through;
   margin-left: 20px;
 }
-.cart-collapse-header {
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e9edf0;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-}
-.cart-collapse-header > a {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-decoration: none!important;
-}
-.cart-collapse-header > a > h2 {
-  font-family: HelveticaNeueCyr;
-  font-weight: bold;
-  font-size: 16px;
-  color: #000;
-  margin: 0 0 0 10px;
-}
-.cart-collapse-header > a > h2 > span {
-  font-family: HelveticaNeueCyr;
-  font-weight: normal;
-}
-.cart-collapse-header > a.cart-collapse-close-btn > svg {
-  height: 12px;
-  width: 12px;
-}
+/*Cart Styles*/
 .cart-body {
   width: 100%;
 }
@@ -761,6 +784,211 @@
   font-family: HelveticaNeueCyr;
   font-weight: normal;
   color: #5489d7;
+}
+/*Contacts Styles*/
+.contacts-body {
+  padding: 10px 15px;
+  height: auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 84px);
+}
+.contacts-position-info {
+  width: 100%;
+  text-align: left;
+  margin: 0px;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column;
+  border-bottom: 1px solid #e9edf0;
+}
+.contacts-position-info > .row {
+  margin: 0;
+}
+.contacts-position-info:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.contacts-position-info > h3 {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+}
+.contacts-position-info > a {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  color: #5489d7;
+  text-decoration: none!important;
+  font-size: 12px;
+  display: block;
+}
+.contacts-position-info > p.margin {
+  margin-bottom: 15px;
+}
+.contacts-position-info > .contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.contacts-position-info > .contact-row > p {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  margin: 0;
+}
+.contacts-position-info > .contact-row > a {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  color: #5489d7;
+  text-decoration: none!important;
+  font-size: 14px;
+  display: block;
+}
+.contacts-position-info > .contact-row > .contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contacts-position-info > .contact-row > .contact > img {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+.contacts-position-info > .contact-row > .contact > p {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+}
+.contacts-position-info > .contact-row > .contact > p.telegram {
+  color: #0088cc;
+}
+.contacts-position-info > .contact-row > .contact > p.viber {
+  color: #8f5db7;
+}
+.contacts-position-info .mobile-app-item {
+  padding: 8px 3px;
+}
+.contacts-position-info .mobile-app-item > .mobile-app-icon {
+  margin-right: 5px;
+}
+.contacts-position-info > form {
+  width: 100%;
+}
+.contacts-position-info > form > input,
+.contacts-position-info > form > textarea {
+  border: 1px solid #858585;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #000;
+  width: 100%;
+  resize: none;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.contacts-position-info > form > textarea {
+  height: 60px;
+}
+.contacts-position-info > form > button {
+  background: #51c878;
+  color: #fff;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 16px;
+  width: 120px;
+  height: 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: none!important;
+  border: none!important;
+}
+.contacts-position-info > .go-to-page {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #5489d7;
+  text-decoration: none!important;
+}
+.contacts-position-info > .socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+.contacts-position-info > .socials > a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+}
+.contacts-position-info > .socials > a:first-child {
+  margin-left: 0px;
+}
+.contacts-position-info > .socials > a:last-child {
+  margin-right: 0px;
+}
+.contacts-position-info > .socials > a > img {
+  filter: brightness(0.7);
+  width: 100%;
+  height: auto;
+}
+.contacts-position-info > .socials .mobile-app-title > h3 {
+  font-size: 12px;
+}
+.contacts-position-info.border-none {
+  border: none;
+}
+/*WishList Styles*/
+.wish-list-body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.wish-list-footer {
+  width: 100%;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+.wish-list-footer > .row {
+  margin: 0;
+  justify-content: space-between;
+}
+.wish-list-footer > .row > .wish-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 30px;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0;
+}
+.wish-list-footer > .row > .wish-control#toCart {
+  color: #51c878;
+  border: 1px solid #51c878;
+}
+.wish-list-footer > .row > .wish-control#toCompare {
+  color: #5489d7;
+  border: 1px solid #5489d7;
+}
+.wish-list-footer > .row > .wish-control#toDelete {
+  color: #858585;
+  border: 1px solid #858585;
 }
 /*Footer*/
 footer.main-footer {
