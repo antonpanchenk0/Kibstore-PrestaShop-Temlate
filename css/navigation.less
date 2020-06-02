@@ -354,7 +354,7 @@
     margin-left: auto;
 }
 /*Search, cart, contacts collapse*/
-.search-collapse, .cart-collapse, .contacts-collapse, .wish-list-collapse {
+.search-collapse, .cart-collapse, .contacts-collapse, .wish-list-collapse, .comparison-collapse {
     right: -320px;
     .navigation-collapse;
     left: unset!important;
@@ -362,7 +362,7 @@
     -moz-box-shadow: 0px 10px 15px 7px rgba(255, 255, 255, 0.2);
     box-shadow: 0px 10px 15px 7px rgba(255, 255, 255, 0.2);
     height: calc(100% - @navHeight);
-    &.wish-list-collapse {
+    &.wish-list-collapse, &.comparison-collapse {
         width: 100%;
         right: -110%;
         display: flex;
@@ -371,7 +371,7 @@
         flex-flow: column;
     }
 }
-.search-collapse-header, .cart-collapse-header, .contacts-collapse-header, .wish-list-collapse-header {
+.search-collapse-header, .cart-collapse-header, .contacts-collapse-header, .wish-list-collapse-header, .comparison-collapse-header {
     width: 100%;
     padding: 10px 15px;
     display: flex;
@@ -817,11 +817,181 @@
     }
 }
 
-/*WishList Styles*/
-.wish-list-body {
+/*WishList and comparison Styles*/
+.wish-list-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    position: relative;
+}
+.wish-list-body, .comparison-collapse-body {
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    padding: 0 15px 25px 15px;
+}
+.wish-list-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 0;
+    border-bottom: 1px solid @bodyBackgroundColor;
+    position: relative;
+    & > .wish-list-item-info {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        padding: 20px 0px;
+        & > .wish-img {
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
+            min-height: 50px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            & > img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        & > .wish-details {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            & > h2 {
+                font-size: 12px;
+                .SFProDisplayRegular;
+                color: #2c3138;
+                margin-bottom: 10px;
+            }
+            & > .price {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                & > h3 {
+                    .SFProDisplayBold;
+                    font-size: 14px;
+                    color: #000;
+                    margin: 0 15px 0 0;
+                }
+                & > h4 {
+                    .SFProDisplayRegular;
+                    font-size: 12px;
+                    color: @grayColor;
+                    margin: 0;
+                    text-decoration: line-through;
+                }
+            }
+        }
+        & > a.delete-wish-pos-btn {
+            display: block;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: url("../img/icons/trash.svg") no-repeat center center;
+            background-size: cover;
+            margin-bottom: 10px;
+        }
+        & > a.add-wish-pos-to-cart {
+            display: block;
+            height: 28px;
+            width: 28px;
+            position: absolute;
+            right: 0;
+            bottom: 15px;
+            background-color: @thirdColor;
+            padding: 5px;
+            border: 1px solid transparent;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url("../img/icons/cart.svg") no-repeat center center;
+                background-size: cover;
+            }
+            &.active {
+                border: 1px solid @thirdColor;
+                background: #FFFFFF;
+            }
+            &.active::before {
+                background: url("../img/icons/shopping-cart-sale-green.svg") no-repeat center center;
+            }
+        }
+    }
+}
+.wish-list-item .form-check {
+    padding: 0;
+}
+.wish-list-item .form-check input[type="checkbox"] {
+    opacity: 0;
+    & + label::after {
+        content: none;
+    }
+    &:checked + label::after {
+        content: '';
+    }
+    &:checked + label::before {
+        border: 1px solid @secondColor;
+    }
+    &:focus + label::before {
+        outline: none;
+        border: 1px solid @secondColor;
+    }
+}
+.wish-list-item .form-check label {
+    .SFProDisplayRegular;
+    display: block;
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    padding-left: 32px;
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+    }
+    &::before {
+        height: 20px;
+        width: 20px;
+        border: 1px solid @grayColor;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        left: 0px;
+    }
+    &::after {
+        height: 7px;
+        width: 14px;
+        border-left: 2px solid @secondColor;
+        border-bottom: 2px solid @secondColor;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        left: 3px;
+        top: 5px;
+    }
 }
 .wish-list-footer {
     width: 100%;
@@ -830,6 +1000,9 @@
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     background: #fff;
+    position: sticky;
+    bottom: 0;
+    left: 0;
     & > .row {
         margin: 0;
         justify-content: space-between;
@@ -845,6 +1018,7 @@
             -moz-border-radius: 3px;
             border-radius: 3px;
             padding: 0;
+            opacity: 0.6;
             &#toCart {
                 color: @thirdColor;
                 border: 1px solid @thirdColor;
@@ -856,6 +1030,164 @@
             &#toDelete {
                 color: @grayColor;
                 border: 1px solid @grayColor;
+            }
+        }
+    }
+    &.selected {
+        & > .row > .wish-control {
+            opacity: 1;
+        }
+    }
+}
+.comparison-collapse-body {
+    padding: 0;
+    overflow: auto;
+    & > table {
+        width: auto;
+        & > tbody > tr {
+            position: relative;
+            display: block;
+            & > td {
+                min-height: 100px;
+                height: 100px;
+                min-width: 80px;
+                max-width: 80px;
+                width: 80px;
+                padding: 0;
+                position: relative;
+                z-index: 10;
+                border-bottom: 1px solid @bodyBackgroundColor;
+                background: #fbfbfc;
+                position: sticky;
+                left: 0;
+                top: 0;
+                &::after {
+                    content: '';
+                    border-right: 1px solid @bodyBackgroundColor;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    -webkit-transform: translate(0, -50%);
+                    -moz-transform: translate(0, -50%);
+                    -ms-transform: translate(0, -50%);
+                    -o-transform: translate(0, -50%);
+                    transform: translate(0, -50%);
+                    height: 80%;
+                }
+                & > h2 {
+                    .SFProDisplayRegular;
+                    font-size: 10px;
+                    color: #2c3138;
+                    text-align: center;
+                }
+                &:first-child > h2 {
+                    padding: 20px 5px 0 5px;
+                    margin-top: 5px;
+                }
+                & > img {
+                    width: 40%;
+                    height: auto;
+                    max-height: 50px;
+                    margin-left: 20px;
+                }
+                & > a.comparison-del-pos-btn {
+                    height: 15px;
+                    width: 15px;
+                    display: block;
+                    background: url("../img/icons/trash.svg") no-repeat center center;
+                    background-size: cover;
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                }
+                & > h3 {
+                    .SFProDisplayBold;
+                    font-size: 12px;
+                    color: #000;
+                    text-align: right;
+                    padding: 0 5px 10px 0px;
+                    margin: -10px 0 0 0;
+                }
+                &:first-child {
+                    min-width: 120px;
+                    max-width: 120px;
+                    width: 120px;
+                    background: #fff;
+                    z-index: 20;
+                    border-bottom: none;
+                    &::after {
+                        border: none;
+                        height: 113%;
+                        width: 15px;
+                        -webkit-box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.15);
+                        -moz-box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.15);
+                        box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.15);
+                        z-index: 40;
+                    }
+                    &::before {
+                        content: '';
+                        display: block;
+                        border-bottom: 1px solid @bodyBackgroundColor;
+                        position: absolute;
+                        top: 0px;
+                        width: 90%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, 0);
+                        -moz-transform: translate(-50%, 0);
+                        -ms-transform: translate(-50%, 0);
+                        -o-transform: translate(-50%, 0);
+                        transform: translate(-50%, 0);
+                    }
+                    & > h2 {
+                        font-size: 12px;
+                    }
+                }
+            }
+            &:first-child > td {
+                min-height: 50px;
+                max-height: 50px;
+                height: 50px;
+                background: #fff;
+                & > h2 {
+                    padding: 0;
+                    margin-top: 0;
+                }
+            }
+            &:last-child > td:first-child {
+                border-bottom: 1px solid @bodyBackgroundColor;
+            }
+            & > td > a.comparison-add-to-cart-btn {
+                position: absolute;
+                right: 5px;
+                -webkit-transform: translate(0px, -60px);
+                -moz-transform: translate(0px, -60px);
+                -ms-transform: translate(0px, -60px);
+                -o-transform: translate(0px, -60px);
+                transform: translate(0px, -60px);
+                display: block;
+                height: 20px;
+                width: 20px;
+                background: #a6e1ba;
+                border: 1px solid transparent;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                padding: 2px;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background: url("../img/icons/cart.svg") no-repeat center center;
+                    background-size: cover;
+                }
+                &.active {
+                    border: 1px solid #a6e1ba;
+                }
+                &.active::after {
+                    background: url("../img/icons/shopping-cart-sale-green.svg") no-repeat center center;
+                }
             }
         }
     }

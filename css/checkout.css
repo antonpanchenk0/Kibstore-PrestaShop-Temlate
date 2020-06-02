@@ -12,6 +12,10 @@
   font-family: "Aspire";
   src: url("../fonts/AspireFont.ttf");
 }
+@font-face {
+  font-family: "Android Robot";
+  src: url("../fonts/ANDROIDROBOT.ttf");
+}
 .HelveticaNeueCyrBold {
   font-family: HelveticaNeueCyr;
   font-weight: bold;
@@ -30,6 +34,10 @@
 }
 .AspireFont {
   font-family: "Aspire";
+  font-weight: normal;
+}
+.Android {
+  font-family: "Android Robot";
   font-weight: normal;
 }
 header {

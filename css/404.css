@@ -1453,150 +1453,71 @@ body {
 .scroll-disabled {
   overflow: hidden!important;
 }
-.router {
-  width: 100%;
-  padding: 5px 0 10px 0;
-}
-.router-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-}
-.router-item {
-  display: flex;
-  align-items: center;
-}
-.router-item::after {
-  content: '→';
-  color: #858585;
-  margin: 0 3px;
-}
-.router-item:last-child::after {
-  content: none;
-}
-.router-item .router-link {
-  font-family: "SF Pro Display";
-  font-weight: bold;
-  font-size: 10px;
-  color: #5489d7;
-  white-space: nowrap;
-}
-.router-item.active .router-link {
-  color: #858585;
-}
-.title-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.title {
-  font-size: 16px;
-  color: #000000;
-  font-family: HelveticaNeueCyr;
-  font-weight: bold;
-  margin: 5px 0 0 0;
-}
-.product-counter {
-  font-family: "SF Pro Display";
-  font-weight: bold;
-  font-size: 12px;
-  color: #858585;
-  margin: 0 0 10px 0;
-}
-.go-back-title-btn {
-  height: 25px;
-  width: 25px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.07);
-}
-.go-back-title-btn svg {
-  vertical-align: unset;
-}
-.row-flex,
-.row-flex > div[class*='col-'] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex: 1 1 auto;
-}
-.row-flex-wrap {
-  -webkit-flex-flow: row wrap;
-  align-content: flex-start;
-  flex: 0;
-}
-.row-flex > div[class*='col-'] {
-  margin: -0.2px;
-}
 .wrap {
-  background-color: #fff;
+  background: #fff;
 }
-.catalog {
-  width: 100%;
-  height: 100%;
-  padding: 0 15px;
-}
-.catalog-positions {
-  width: 100%;
-  height: 100%;
-  padding: 15px 0;
-}
-.catalog-positions .row {
-  margin: 0 0 15px 0;
-}
-.catalog-position-wrap {
-  position: relative;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px!important;
-}
-.catalog-position-wrap .catalog-position-link {
+.error {
+  padding: 25px 0;
+  min-height: calc(100vh - 40px - 186px);
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  padding: 18px 5px;
-  margin: 0 4px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.catalog-position-wrap .catalog-position-icon {
-  height: 84px;
-  width: 84px;
-  margin-bottom: 10px;
+.error > h1 {
+  font-family: "Aspire";
+  font-weight: normal;
+  font-size: 16px;
+  color: #5489d7;
+  margin: 0;
+  padding: 0 15px;
 }
-.catalog-position-wrap .catalog-position-title {
+.error > .error-msg {
   width: 100%;
   text-align: center;
-  font-size: 10px;
-  color: #000;
+  padding: 10vh 0 25px 0;
+  position: relative;
+}
+.error > .error-msg > h2 {
+  font-family: "Aspire";
+  font-weight: normal;
+  font-size: 25px;
+  color: #51c878;
+  text-transform: uppercase;
+}
+.error > .error-msg > h3 {
+  font-family: "Android Robot";
+  font-weight: normal;
+  font-size: 100px;
+  color: #51c878;
+  position: relative;
+  line-height: 1;
+  letter-spacing: -0.05ch;
+  margin-bottom: 40px;
+  z-index: 20;
+}
+.error > .error-msg > h3 > img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.error > .error-msg.bg-add {
+  background: url("../img/404-2.png") no-repeat center center;
+  background-size: 100%;
+}
+.error > .error-msg > p {
   font-family: "SF Pro Display";
   font-weight: normal;
-  margin: 0;
-  padding: 0 5px;
-  -ms-word-break: break-all;
-  word-break: break-all;
-}
-.show-all {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.show-all-btn {
-  font-family: "SF Pro Display";
-  font-weight: normal;
-  color: #5489d7;
   font-size: 14px;
+  color: #858585;
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 20;
+  padding: 0 15px;
 }
-/*# sourceMappingURL=catalog-subcategories.css.map */
+/*# sourceMappingURL=404.css.map */

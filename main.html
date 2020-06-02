@@ -30,27 +30,10 @@
                     </li>
                     <li class="navigation-item">
                         <a href="#" class="nav-link" id="scales">
-                            <svg stroke="#fff" fill="#fff" id="scales" data-name="scales"
-                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8">
-                                <defs>
-                                    <style>.cls-1 {
-                                        fill: none;
-                                        stroke: #fff;
-                                        stroke-miterlimit: 10;
-                                        stroke-width: 1.5px;
-                                    }</style>
-                                </defs>
-                                <title>Весы</title>
-                                <path class="cls-1"
-                                      d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z"
-                                      transform="translate(-2.45 -1.95)"/>
-                                <path class="cls-1"
-                                      d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z"
-                                      transform="translate(-2.45 -1.95)"/>
-                                <rect x="4.72" y="0.75" width="9.66" height="1.5"/>
-                                <rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/>
-                                <rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/>
-                                <rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/>
+                            <svg stroke="#fff" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8">
+                                <path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z" transform="translate(-2.45 -1.95)"/>
+                                <path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z" transform="translate(-2.45 -1.95)"/>
+                                <rect x="4.72" y="0.75" width="9.66" height="1.5"/><rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/>
                                 <circle cx="9.55" cy="1.5" r="1.5"/>
                             </svg>
                         </a>
@@ -388,17 +371,194 @@
                         </a>
                     </header>
 
-                    <section class="wish-list-body">
+                    <form action="#" class="wish-list-form">
+                        <section class="wish-list-body" id="wishListBody">
+                            <div class="wish-list-item" data-id="0">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="wishID_0">
+                                    <label class="form-check-label" for="wishID_0"></label>
+                                </div>
+                                <div class="wish-list-item-info">
+                                    <div class="wish-img">
+                                        <img src="./img/camera.png" alt="Wish">
+                                    </div>
+                                    <div class="wish-details">
+                                        <h2>Видеокамера Tecsar HDD-20F3M-out</h2>
+                                        <div class="price">
+                                            <h3>963,00 ₴</h3>
+                                            <h4>999,00 ₴</h4>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="delete-wish-pos-btn"></a>
+                                    <a href="#" class="add-wish-pos-to-cart"></a>
+                                </div>
+                            </div>
+                            <div class="wish-list-item" data-id="1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="wishID_1">
+                                    <label class="form-check-label" for="wishID_1"></label>
+                                </div>
+                                <div class="wish-list-item-info">
+                                    <div class="wish-img">
+                                        <img src="./img/camera.png" alt="Wish">
+                                    </div>
+                                    <div class="wish-details">
+                                        <h2>Видеокамера Hikvision S-2CE16D8 T-ITE (2.8 мм) S-2CE16D8 S-2</h2>
+                                        <div class="price">
+                                            <h3>963,00 ₴</h3>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="delete-wish-pos-btn"></a>
+                                    <a href="#" class="add-wish-pos-to-cart"></a>
+                                </div>
+                            </div>
+                            <div class="wish-list-item" data-id="2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="wishID_2">
+                                    <label class="form-check-label" for="wishID_2"></label>
+                                </div>
+                                <div class="wish-list-item-info">
+                                    <div class="wish-img">
+                                        <img src="./img/camera.png" alt="Wish">
+                                    </div>
+                                    <div class="wish-details">
+                                        <h2>Видеокамера Tecsar HDD-20F3M-out</h2>
+                                        <div class="price">
+                                            <h3>963,00 ₴</h3>
+                                            <h4>999,00 ₴</h4>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="delete-wish-pos-btn"></a>
+                                    <a href="#" class="add-wish-pos-to-cart active"></a>
+                                </div>
+                            </div>
+                        </section>
+                        <footer class="wish-list-footer">
+                            <div class="row">
+                                <a href="#" class="wish-control" id="toCart">В корзину</a>
+                                <a href="#" class="wish-control" id="toCompare">К сравнению</a>
+                                <a href="#" class="wish-control" id="toDelete">Удалить</a>
+                            </div>
+                        </footer>
+                    </form>
+                </div>
 
+                <div class="comparison-collapse" id="comparisonCollapse">
+                    <header class="comparison-collapse-header">
+                        <a href="#" class="comparison-collapse-btn-back">
+                            <svg fill="none" height="24" stroke="#5489d7" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="20" x2="4" y1="12" y2="12"/>
+                                <polyline points="10 18 4 12 10 6"/>
+                            </svg>
+                            <h2>Сравнение товаров <span>(4)</span></h2>
+                        </a>
+                        <a href="#" class="comparison-collapse-close-btn">
+                            <svg fill="none" height="24" stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="18" x2="6" y1="6" y2="18"/>
+                                <line x1="6" x2="18" y1="6" y2="18"/>
+                            </svg>
+                        </a>
+                    </header>
+
+                    <section class="comparison-collapse-body" id="comparisonBody">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h2>Название товара <br>Цена</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Потребление</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Формфактор</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Модель</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Характеристика</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Характеристика</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Характеристика</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Характеристика</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="comparison-del-pos-btn"></a>
+                                        <h2>Видеокамера Tecsar AHDD-20F3M-out</h2>
+                                        <img src="./img/camera.png" alt="Camera">
+                                        <h3>963,00 ₴</h3>
+                                        <a class="comparison-add-to-cart-btn"></a>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Купольная</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Model X</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="comparison-del-pos-btn"></a>
+                                        <h2>Видеокамера Tecsar AHDD-20F3M-out</h2>
+                                        <img src="./img/camera.png" alt="Camera">
+                                        <h3>963,00 ₴</h3>
+                                        <a class="comparison-add-to-cart-btn"></a>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Купольная</h2>
+                                    </td>
+                                    <td>
+                                        <h2>Model X</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                    <td>
+                                        <h2>12В, 9.75Вт</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="clear-comparison-list-btn">Очистить список сравнений</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
-                    <footer class="wish-list-footer">
-                        <div class="row">
-                            <a href="#" class="wish-control" id="toCart">В корзину</a>
-                            <a href="#" class="wish-control" id="toCompare">К сравнению</a>
-                            <a href="#" class="wish-control" id="toDelete">Удалить</a>
-                        </div>
-                    </footer>
-
                 </div>
 
                 <div class="navigation-collapse" id="navCollapse">
@@ -677,18 +837,9 @@
                             <a href="#" class="navigation-collapse-list-link">
                                 <svg stroke="#fff" class="navigation-collapse-list-icon" fill="none" id="scales"
                                      data-name="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8">
-                                    <defs>
-                                        <style>.cls-1 {
-                                            fill: none;
-                                            stroke-miterlimit: 10;
-                                            stroke-width: 1.5px;
-                                        }</style>
-                                    </defs>
-                                    <path class="cls-1"
-                                          d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z"
+                                    <path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z"
                                           transform="translate(-2.45 -1.95)"/>
-                                    <path class="cls-1"
-                                          d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z"
+                                    <path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z"
                                           transform="translate(-2.45 -1.95)"/>
                                     <rect x="4.72" y="0.75" width="9.66" height="1.5"/>
                                     <rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/>

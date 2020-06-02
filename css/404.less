@@ -1,0 +1,66 @@
+@import "navigation";
+@import "root-styles";
+
+.wrap {
+    background: #fff;
+}
+.error {
+    padding: 25px 0;
+    min-height: calc(100vh - 40px - 186px);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    & > h1 {
+        .AspireFont;
+        font-size: 16px;
+        color: @secondColor;
+        margin: 0;
+        padding: 0 15px;
+    }
+    & > .error-msg {
+        width: 100%;
+        text-align: center;
+        padding: 10vh 0 25px 0;
+        position: relative;
+        & > h2 {
+            .AspireFont;
+            font-size: 25px;
+            color: @thirdColor;
+            text-transform: uppercase;
+        }
+        & > h3 {
+            .Android;
+            font-size: 100px;
+            color: @thirdColor;
+            position: relative;
+            line-height: 1;
+            letter-spacing: -0.05ch;
+            margin-bottom: 40px;
+            z-index: 20;
+            & > img {
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
+        &.bg-add {
+            background: url("../img/404-2.png") no-repeat center center;
+            background-size: 100%;
+        }
+        & > p {
+            .SFProDisplayRegular;
+            font-size: 14px;
+            color: @grayColor;
+            margin-bottom: 10px;
+            text-align: center;
+            z-index: 20;
+            padding: 0 15px;
+        }
+    }
+}
