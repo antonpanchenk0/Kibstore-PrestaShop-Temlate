@@ -490,11 +490,15 @@
 /*Cart Styles*/
 .cart-body {
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - @navHeight - 44px);
 }
 .cart-body .row {
     margin: 0;
 }
 .cart-item-wrap {
+    position: relative;
     width: 100%;
     padding:15px;
     border-bottom: 1px solid @bodyBackgroundColor;
@@ -507,7 +511,7 @@
 }
 .description-pos {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     margin: 0!important;
 }
@@ -571,10 +575,19 @@
     width: 25px;
     border: 1px solid @bodyBackgroundColor;
     border-radius: 0 2px 2px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     &[data-do="remove"] {
         font-weight: normal;
         color: @grayColor;
         border-radius: 2px 0 0 2px;
+    }
+    &.switchers-count-btn {
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 .switchers-count .count {
@@ -944,6 +957,9 @@
     & + label::after {
         content: none;
     }
+    & + label:hover {
+        cursor: pointer;
+    }
     &:checked + label::after {
         content: '';
     }
@@ -1044,6 +1060,7 @@
     overflow: auto;
     & > table {
         width: auto;
+        height: 100%;
         & > tbody > tr {
             position: relative;
             display: block;
@@ -1100,6 +1117,7 @@
                     position: absolute;
                     right: 5px;
                     top: 5px;
+                    z-index: 100;
                 }
                 & > h3 {
                     .SFProDisplayBold;
@@ -1118,7 +1136,7 @@
                     border-bottom: none;
                     &::after {
                         border: none;
-                        height: 113%;
+                        height: 110%;
                         width: 15px;
                         -webkit-box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.15);
                         -moz-box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.15);
@@ -1130,7 +1148,7 @@
                         display: block;
                         border-bottom: 1px solid @bodyBackgroundColor;
                         position: absolute;
-                        top: 0px;
+                        top: -1px;
                         width: 90%;
                         left: 50%;
                         -webkit-transform: translate(-50%, 0);
@@ -1154,8 +1172,27 @@
                     margin-top: 0;
                 }
             }
-            &:last-child > td:first-child {
-                border-bottom: 1px solid @bodyBackgroundColor;
+            &:last-child {
+                position: absolute;
+                height: 100%;
+                & > td:first-child {
+                    border-bottom: 1px solid @bodyBackgroundColor;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    &::after {
+                        height: 103%;
+                    }
+                    & > a.clear-comparison-list-btn {
+                        color: @secondColor;
+                        .SFProDisplayRegular;
+                        font-size: 10px;
+                        text-align: center;
+                        padding: 10px 5px;
+                        display: block;
+                        width: 100%;
+                    }
+                }
             }
             & > td > a.comparison-add-to-cart-btn {
                 position: absolute;
@@ -1168,12 +1205,16 @@
                 display: block;
                 height: 20px;
                 width: 20px;
-                background: #a6e1ba;
+                background: @thirdColor;
                 border: 1px solid transparent;
                 -webkit-border-radius: 5px;
                 -moz-border-radius: 5px;
                 border-radius: 5px;
                 padding: 2px;
+                z-index: 100;
+                &:hover {
+                    cursor: pointer;
+                }
                 &::after {
                     content: '';
                     width: 100%;
@@ -1183,7 +1224,8 @@
                     background-size: cover;
                 }
                 &.active {
-                    border: 1px solid #a6e1ba;
+                    border: 1px solid @thirdColor;
+                    background: transparent;
                 }
                 &.active::after {
                     background: url("../img/icons/shopping-cart-sale-green.svg") no-repeat center center;

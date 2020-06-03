@@ -115,6 +115,53 @@ export default class Navigation {
         return false;
     };
 
+    cartDeletePosEvent = (e) => {
+        const node = e.currentTarget.parentElement.parentElement.parentElement
+        $(node).animate({'left': '-110%'}, 300, () => {
+            const counterNode = document.querySelector('a.cart-collapse-btn-back h2 span');
+            const menuCounterNode = document.querySelector('span.cart-counter');
+            counterNode.innerHTML = `${+counterNode.innerHTML - 1}`;
+            menuCounterNode.innerHTML = `${+menuCounterNode.innerHTML - 1}`;
+            document.querySelector('#cartRender').removeChild(node);
+        })
+    }
+
+    cartSwitchCountEvent = (e) => {
+        e.preventDefault();
+        const _do = e.currentTarget.getAttribute('data-do');
+        switch (_do) {
+            case 'add': {
+                const value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
+                console.log(value)
+                e.currentTarget.parentElement.querySelector('p.count').innerHTML = `${Number(value) + 1}`;
+                break;
+            }
+            case 'remove': {
+                const value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
+                if((value - 1) >= 0) {
+                    e.currentTarget.parentElement.querySelector('p.count').innerHTML = `${Number(value) - 1}`;
+                }
+                break;
+            }
+            default: {
+                return;
+            }
+        }
+    }
+
+    cartUpdateEvents = () => {
+        const deleteBtns = document.querySelectorAll('a.delete-position-btn');
+        deleteBtns.forEach(btn => {
+            btn.removeEventListener('click', this.cartDeletePosEvent);
+            btn.addEventListener('click', this.cartDeletePosEvent);
+        });
+        const switchersBtns = document.querySelectorAll('.switchers-count-btn');
+        switchersBtns.forEach( _switch => {
+            _switch.removeEventListener('click', this.cartSwitchCountEvent);
+            _switch.addEventListener('click', this.cartSwitchCountEvent);
+        })
+    }
+
     wishListOnCheckedEvent = (e) => {
         const node = document.querySelector('.wish-list-item .form-check input:checked');
         node ? $('.wish-list-footer').addClass('selected') : $('.wish-list-footer').removeClass('selected');
@@ -124,9 +171,43 @@ export default class Navigation {
         e.preventDefault();
         const node = e.target.parentElement.parentElement;
         $(node).animate({'left': '-110%'}, 300, () => {
+            const counterNode = document.querySelector('a.wish-list-collapse-btn-back h2 span');
+            let counter = +counterNode.innerHTML;
+            counter = --counter;
+            counterNode.innerHTML = `${counter}`;
             document.getElementById('wishListBody').removeChild(node);
         })
     };
+
+    wishListDeleteCheckedPosEvent = (e) => {
+        e.preventDefault();
+        const nodes = document.querySelectorAll('.wish-list-item .form-check input:checked');
+        if(nodes.length != 0) {
+            for(let i = 0; i < nodes.length; i++) {
+                const node = nodes[i].parentElement.parentElement;
+                $(node).animate({'left': '-110%'}, 300, () => {
+                    document.getElementById('wishListBody').removeChild(node);
+                })
+            }
+            const value = document.querySelector('a.wish-list-collapse-btn-back h2 span').innerHTML;
+            document.querySelector('a.wish-list-collapse-btn-back h2 span').innerHTML = `${value - nodes.length}`
+        }
+    }
+
+    wishListAddToCartCheckedPosEvent = (e) => {
+        e.preventDefault();
+        const nodes = document.querySelectorAll('.wish-list-item .form-check input:checked');
+        if(nodes.length != 0) {
+            for(let i = 0; i < nodes.length; i++) {
+                nodes[i].parentElement.parentElement.querySelector('a.add-wish-pos-to-cart').classList.add('active');
+            }
+        }
+    }
+
+    wishListAddToCartPosEvent = (e) => {
+        e.preventDefault();
+        e.target.classList.contains('active') ?  e.target.classList.remove('active') : e.target.classList.add('active');
+    }
 
     wishListUpdateEvents = () => {
         const checkboxes = document.querySelectorAll('.wish-list-item .form-check input');
@@ -134,12 +215,92 @@ export default class Navigation {
             c.removeEventListener('input', this.wishListOnCheckedEvent);
             c.addEventListener('input', this.wishListOnCheckedEvent);
         });
+
         const trashBtns = document.querySelectorAll('a.delete-wish-pos-btn');
         trashBtns.forEach(b => {
             b.removeEventListener('click', this.wishListDeletePosEvent);
             b.addEventListener('click', this.wishListDeletePosEvent);
         })
+
+        const cartBtns = document.querySelectorAll('a.add-wish-pos-to-cart');
+        cartBtns.forEach(b => {
+            b.removeEventListener('click', this.wishListAddToCartPosEvent);
+            b.addEventListener('click', this.wishListAddToCartPosEvent);
+        })
+
+        const deleteChecked = document.querySelector('a.wish-control#toDelete');
+        deleteChecked.removeEventListener('click', this.wishListDeleteCheckedPosEvent);
+        deleteChecked.addEventListener('click', this.wishListDeleteCheckedPosEvent);
+
+        const addToCartChecked = document.querySelector('a.wish-control#toCart');
+        addToCartChecked.removeEventListener('click', this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.addEventListener('click', this.wishListAddToCartCheckedPosEvent);
     };
+
+    comparisonDeletePosEvent = (e) => {
+        e.preventDefault();
+        const node = e.target.parentElement.parentElement;
+        $(node).animate({'left': '-110%'}, 300, () => {
+            const counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
+            let counter = +counterNode.innerHTML;
+            counter = --counter;
+            counterNode.innerHTML = `${counter}`;
+            this.comparisonHeightCounter();
+            document.querySelector('tbody').removeChild(node);
+        })
+    }
+
+    comparisonAddToCartEvent = (e) => {
+        e.preventDefault();
+        e.target.classList.add('active');
+    }
+
+    comparisonHeightCounter = () => {
+        const lastTR = document.querySelector('tr.last-table-row');
+        const tableRows = document.querySelectorAll('tr');
+        let height = 0;
+        setTimeout(() => {
+            height = +document.querySelector('table tbody').clientHeight;
+            tableRows.forEach(row => {
+                if(row != lastTR) {
+                    height = height - row.clientHeight;
+                }
+            })
+            lastTR.style.height = height + 'px';
+            lastTR.querySelector('td').style.height = height + 'px';
+        }, 0)
+    }
+
+    comparisonClearList = (e) => {
+        e.preventDefault();
+        const tableRows = document.querySelectorAll('tr');
+        for (let i = 1; i < tableRows.length - 1; i ++) {
+            $(tableRows[i]).animate({'left': '-110%'}, 300, () => {
+                const counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
+                let counter = +counterNode.innerHTML;
+                counter = --counter;
+                counterNode.innerHTML = `${counter}`;
+                document.querySelector('tbody').removeChild(tableRows[i]);
+                this.comparisonHeightCounter();
+            })
+        }
+    }
+
+    comparisonUpdateEvents = () => {
+        const deleteBtns = document.querySelectorAll('a.comparison-del-pos-btn');
+        deleteBtns.forEach(b => {
+            b.removeEventListener('click', this.comparisonDeletePosEvent);
+            b.addEventListener('click', this.comparisonDeletePosEvent);
+        });
+        const addToCartBtns = document.querySelectorAll('a.comparison-add-to-cart-btn');
+        addToCartBtns.forEach(add => {
+            add.removeEventListener('click', this.comparisonAddToCartEvent);
+            add.addEventListener('click', this.comparisonAddToCartEvent);
+        })
+        this.comparisonHeightCounter();
+        document.querySelector('a.clear-comparison-list-btn').removeEventListener('click', this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').addEventListener('click', this.comparisonClearList);
+    }
 
     createNavigationsEvents = () => {
         // Меню поиска
@@ -161,6 +322,7 @@ export default class Navigation {
             e.preventDefault();
             const { isCartCollapsed, collapseWrap, animationDuration, collapseCartNode } = this.config;
             if(isCartCollapsed) return false;
+            this.cartUpdateEvents();
             this.closeAllRightModules(false);
             document.body.classList.add('scroll-disabled');
             this.config.isCartCollapsed = true;
@@ -204,6 +366,7 @@ export default class Navigation {
             e.preventDefault();
             const { isComparisonCollapsed, collapseWrap, animationDuration, collapseComparisonNode } = this.config;
             if(isComparisonCollapsed) return false;
+            this.comparisonUpdateEvents()
             this.closeAllRightModules(false);
             document.body.classList.add('scroll-disabled');
             this.config.isComparisonCollapsed = true;

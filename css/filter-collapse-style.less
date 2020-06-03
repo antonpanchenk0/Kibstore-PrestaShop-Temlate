@@ -65,10 +65,9 @@
 }
 .selected {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    padding: 5px 10px;
 }
 .selected-item {
     display: flex;
@@ -77,6 +76,7 @@
     border: 1px solid @secondColor;
     padding: 2px 4px;
     border-radius: 15px;
+    margin: 0 0 10px 5px;
 }
 .selected-item h3 {
     .SFProDisplayBold;
@@ -169,6 +169,9 @@
     opacity: 0;
     & + label::after {
         content: none;
+    }
+    & + label:hover {
+       cursor: pointer;
     }
     &:checked + label::after {
         content: '';

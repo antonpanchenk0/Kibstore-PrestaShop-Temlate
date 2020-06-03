@@ -620,11 +620,15 @@
 /*Cart Styles*/
 .cart-body {
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 40px - 44px);
 }
 .cart-body .row {
   margin: 0;
 }
 .cart-item-wrap {
+  position: relative;
   width: 100%;
   padding: 15px;
   border-bottom: 1px solid #e9edf0;
@@ -637,7 +641,7 @@
 }
 .description-pos {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   margin: 0!important;
 }
@@ -705,11 +709,18 @@
   width: 25px;
   border: 1px solid #e9edf0;
   border-radius: 0 2px 2px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .switchers-count .switchers-count-btn[data-do="remove"] {
   font-weight: normal;
   color: #858585;
   border-radius: 2px 0 0 2px;
+}
+.switchers-count .switchers-count-btn.switchers-count-btn:hover {
+  cursor: pointer;
 }
 .switchers-count .count {
   margin: 0;
@@ -1098,6 +1109,9 @@
 .wish-list-item .form-check input[type="checkbox"] + label::after {
   content: none;
 }
+.wish-list-item .form-check input[type="checkbox"] + label:hover {
+  cursor: pointer;
+}
 .wish-list-item .form-check input[type="checkbox"]:checked + label::after {
   content: '';
 }
@@ -1199,6 +1213,7 @@
 }
 .comparison-collapse-body > table {
   width: auto;
+  height: 100%;
 }
 .comparison-collapse-body > table > tbody > tr {
   position: relative;
@@ -1259,6 +1274,7 @@
   position: absolute;
   right: 5px;
   top: 5px;
+  z-index: 100;
 }
 .comparison-collapse-body > table > tbody > tr > td > h3 {
   font-family: "SF Pro Display";
@@ -1279,7 +1295,7 @@
 }
 .comparison-collapse-body > table > tbody > tr > td:first-child::after {
   border: none;
-  height: 113%;
+  height: 110%;
   width: 15px;
   -webkit-box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.15);
@@ -1291,7 +1307,7 @@
   display: block;
   border-bottom: 1px solid #e9edf0;
   position: absolute;
-  top: 0px;
+  top: -1px;
   width: 90%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -1313,8 +1329,28 @@
   padding: 0;
   margin-top: 0;
 }
+.comparison-collapse-body > table > tbody > tr:last-child {
+  position: absolute;
+  height: 100%;
+}
 .comparison-collapse-body > table > tbody > tr:last-child > td:first-child {
   border-bottom: 1px solid #e9edf0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.comparison-collapse-body > table > tbody > tr:last-child > td:first-child::after {
+  height: 103%;
+}
+.comparison-collapse-body > table > tbody > tr:last-child > td:first-child > a.clear-comparison-list-btn {
+  color: #5489d7;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px 5px;
+  display: block;
+  width: 100%;
 }
 .comparison-collapse-body > table > tbody > tr > td > a.comparison-add-to-cart-btn {
   position: absolute;
@@ -1327,12 +1363,16 @@
   display: block;
   height: 20px;
   width: 20px;
-  background: #a6e1ba;
+  background: #51c878;
   border: 1px solid transparent;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 2px;
+  z-index: 100;
+}
+.comparison-collapse-body > table > tbody > tr > td > a.comparison-add-to-cart-btn:hover {
+  cursor: pointer;
 }
 .comparison-collapse-body > table > tbody > tr > td > a.comparison-add-to-cart-btn::after {
   content: '';
@@ -1343,7 +1383,8 @@
   background-size: cover;
 }
 .comparison-collapse-body > table > tbody > tr > td > a.comparison-add-to-cart-btn.active {
-  border: 1px solid #a6e1ba;
+  border: 1px solid #51c878;
+  background: transparent;
 }
 .comparison-collapse-body > table > tbody > tr > td > a.comparison-add-to-cart-btn.active::after {
   background: url("../img/icons/shopping-cart-sale-green.svg") no-repeat center center;
@@ -1754,10 +1795,9 @@ body {
 }
 .selected {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  padding: 5px 10px;
 }
 .selected-item {
   display: flex;
@@ -1766,6 +1806,7 @@ body {
   border: 1px solid #5489d7;
   padding: 2px 4px;
   border-radius: 15px;
+  margin: 0 0 10px 5px;
 }
 .selected-item h3 {
   font-family: "SF Pro Display";
@@ -1863,6 +1904,9 @@ body {
 }
 .filter-collapse-body .accordion .card .card-body .form-check input[type="checkbox"] + label::after {
   content: none;
+}
+.filter-collapse-body .accordion .card .card-body .form-check input[type="checkbox"] + label:hover {
+  cursor: pointer;
 }
 .filter-collapse-body .accordion .card .card-body .form-check input[type="checkbox"]:checked + label::after {
   content: '';

@@ -21,6 +21,7 @@ export default class Filters {
             e.preventDefault();
             const { isFilterCollapse, filterCollapseNode, filterCollapseWrap, animationDuration } = this.config;
             if(isFilterCollapse) return false;
+            this.updateFilterEvents();
             document.body.classList.add('scroll-disabled');
             this.config.isFilterCollapse = true;
             $(filterCollapseWrap).fadeIn(animationDuration/10);
@@ -243,6 +244,54 @@ export default class Filters {
                 left: box.left + pageXOffset
             };
         }
+    }
+
+    updateFilterEvents = () => {
+        const checks = document.querySelectorAll('.form-check input');
+        checks.forEach(check => {
+            check.removeEventListener('input', this.renderActiveBrands);
+            check.addEventListener('input', this.renderActiveBrands);
+        })
+
+    }
+
+    renderActiveBrands = () => {
+        const checks = document.querySelectorAll('.form-check input:checked');
+        document.querySelector('#selectedFilters').innerHTML = '';
+        checks.forEach(e => {
+            const value = e.getAttribute('id');
+            const type = e.getAttribute('data-type');
+            this.renderSingleActiveBrand(type, value);
+        })
+
+    }
+
+    renderSingleActiveBrand = (type, value) => {
+        const wrap = document.querySelector('#selectedFilters');
+        const node = document.createElement('div');
+        node.classList.add('selected-item');
+        switch (type) {
+            case 'brand': {
+                node.innerHTML = `<h3>Бренд:<span>${value}</span></h3>`;
+                break;
+            }
+            case 'form': {
+                node.innerHTML = `<h3>Формфактор:<span>${value}</span></h3>`;
+            }
+        }
+        node.innerHTML += `<svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>`;
+        const svg = node.querySelector('svg');
+        svg.addEventListener('click', e => {
+            e.preventDefault();
+            const node = e.currentTarget;
+            const parent = node.parentElement;
+            const value = parent.querySelector('h3 span').innerHTML;
+            const input = document.getElementById(value);
+            input.checked = false;
+            wrap.removeChild(parent);
+        })
+        node.appendChild(svg);
+        wrap.appendChild(node)
     }
 
 }
