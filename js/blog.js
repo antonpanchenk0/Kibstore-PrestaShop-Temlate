@@ -3,7 +3,7 @@ const navElements = document.querySelectorAll('.menu-link');
 const overlay = document.getElementById('overlay');
 const loadMore = document.getElementById('loadMore');
 
-const navigation = new Navigation(800);
+const navigation = new Navigation(600);
 
 const changeSub = (e) => {
     e.preventDefault();

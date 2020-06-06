@@ -1,6 +1,6 @@
 import Navigation from './modules/navigation-module.js';
 
-const navigation = new Navigation(800);
+const navigation = new Navigation(600);
 
 const config = {
     slider: {

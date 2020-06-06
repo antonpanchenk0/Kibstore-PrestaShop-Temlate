@@ -2,6 +2,7 @@ export default class Filters {
     constructor(animationDuration) {
         this.config = {
             prItemViewType: 'plate',
+            sortHeaderNode: document.querySelector('.sort-header'),
             switchPrItemViewBtn: document.getElementById('switch-view-btn'),
             filterBtn: document.getElementById('filterBtn'),
             filterCollapseWrap: document.getElementById('filterCollapseWrap'),
@@ -11,6 +12,7 @@ export default class Filters {
             isFilterCollapse: false,
             animationDuration: animationDuration,
         };
+        this.heightToFilterBlock = this.config.sortHeaderNode.getBoundingClientRect().top - this.config.sortHeaderNode.parentElement.getBoundingClientRect().top;
         this.createFilterEvents();
         setTimeout(this.multiRange('range', 'rangeBetween', 'rangeButton1n', 'rangeButton2n', 'rangeInput1n', 'rangeInput2n'), 0);
     }
@@ -25,7 +27,7 @@ export default class Filters {
             document.body.classList.add('scroll-disabled');
             this.config.isFilterCollapse = true;
             $(filterCollapseWrap).fadeIn(animationDuration/10);
-            $(filterCollapseNode).animate({'right': isFilterCollapse ? '-270px' : '0px'}, animationDuration);
+            $(filterCollapseNode).animate({'right': isFilterCollapse ? '-310px' : '0px'}, animationDuration);
         });
 
         //Close event
@@ -35,12 +37,23 @@ export default class Filters {
             e.preventDefault();
             if(!isFilterCollapse) return false;
             this.config.isFilterCollapse = false;
-            $(filterCollapseNode).animate({'right': isFilterCollapse ? '-270px' : '0px'}, animationDuration, function () {
+            $(filterCollapseNode).animate({'right': isFilterCollapse ? '-310px' : '0px'}, animationDuration, function () {
                 $(filterCollapseWrap).fadeOut(animationDuration/10, function () {
                     document.body.classList.remove('scroll-disabled');
                 });
             });
         });
+
+        // Sticky filter event
+        window.addEventListener('scroll', e => {
+            if(window.pageYOffset >= this.heightToFilterBlock) {
+                this.config.sortHeaderNode.classList.add('sticky');
+                document.querySelector('div.catalog-positions').style.paddingTop = this.config.sortHeaderNode.getBoundingClientRect().height + 'px';
+            } else {
+                this.config.sortHeaderNode.classList.remove('sticky');
+                document.querySelector('div.catalog-positions').style.paddingTop = 0;
+            }
+        })
     };
 
     multiRange = (idX, btwX, btn1X, btn2X, input1, input2) => {
