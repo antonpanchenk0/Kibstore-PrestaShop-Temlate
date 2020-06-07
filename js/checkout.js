@@ -35,7 +35,7 @@ const checkValidationOnPage = (pnumber) => {
         case 1: {
                 if( inputs.user_name.node.value.match(inputs.user_name.regExp) &&
                     inputs.user_phone.node.value.match(inputs.user_phone.regExp) &&
-                    inputs.user_email.node.value.match(inputs.user_email.regExp)
+                    (inputs.user_email.node.value.match(inputs.user_email.regExp) || inputs.user_email.node.value == '')
                 ) {
                     $(nextBtns[pnumber - 1]).prop('disabled', false);
                 } else {

@@ -130,8 +130,14 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    &[aria-expanded=true] > svg {
+    &[aria-expanded=true] {
+        color: @secondColor;
+    }
+    & > svg {
         stroke: @grayColor;
+    }
+    &[aria-expanded=true] > svg {
+        stroke: @secondColor;
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -149,10 +155,6 @@
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-    }
-    &.price-btn, &.price-btn svg {
-        color: @secondColor;
-        stroke: @secondColor;
     }
 }
 .filter-collapse-body .accordion .card .card-body {

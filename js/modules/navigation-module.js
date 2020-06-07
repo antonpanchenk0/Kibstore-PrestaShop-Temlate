@@ -396,23 +396,13 @@ export default class Navigation {
             if( e.target !== this.config.collapseWrap &&
                 e.target !== this.config.closeNavigationBtn &&
                 e.target !== this.config.closeSearchNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeSearchNodeBtn &&
                 e.target !== this.config.closeCartNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeCartNodeBtn &&
-                e.target.parentNode !== this.config.closeXCartNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeXCartNodeBtn &&
                 e.target !== this.config.closeXCartNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeContactsNodeBtn &&
-                e.target.parentNode !== this.config.closeXContactsNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeXContactsNodeBtn &&
+                e.target !== this.config.closeContactsNodeBtn &&
                 e.target !== this.config.closeXContactsNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeWishListNodeBtn &&
-                e.target.parentNode !== this.config.closeXWishListNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeXWishListNodeBtn &&
+                e.target !== this.config.closeWishListNodeBtn &&
                 e.target !== this.config.closeXWishListNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeComparisonNodeBtn &&
-                e.target.parentNode !== this.config.closeXComparisonNodeBtn &&
-                e.target.parentNode.parentNode !== this.config.closeXComparisonNodeBtn &&
+                e.target !== this.config.closeComparisonNodeBtn &&
                 e.target !== this.config.closeXComparisonNodeBtn ) return false;
             e.preventDefault();
             const { isCollapsed, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isComparisonCollapsed, isWishListCollapsed, collapseNode, animationDuration } = this.config;

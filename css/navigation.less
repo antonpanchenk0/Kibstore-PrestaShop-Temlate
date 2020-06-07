@@ -387,19 +387,30 @@ header {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        text-decoration: none!important;
+        text-decoration: none;
+        background: url("../img/icons/x.svg") no-repeat center center;
+        background-size: cover;
+        height: 12px;
+        width: 12px;
+    }
+    & > div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        & > a {
+            height: 24px;
+            width: 24px;
+            background: url('../img/icons/arrow-left.svg') no-repeat center center;
+            background-size: cover;
+        }
         & > h2 {
             .HelveticaNeueCyrBold;
             font-size: 16px;
             color: #000;
             margin: 0 0 0 10px;
-            & > span {
-                .HelveticaNeueCyrRoman;
-            }
         }
-        &.cart-collapse-close-btn > svg {
-            height: 12px;
-            width: 12px;
+        & > span {
+            .HelveticaNeueCyrRoman;
         }
     }
 }

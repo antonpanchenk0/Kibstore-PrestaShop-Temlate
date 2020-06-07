@@ -67,6 +67,8 @@
 .delivery-body, .payment-body, .contacts-body {
     width: 100%;
     padding: 15px;
+    overflow-y: unset;
+    max-height: unset;
 }
 .delivery-body-header, .payment-body-header, .contacts-body-header {
     width: 100%;
@@ -153,7 +155,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 5px;
-        & > p {
+        & > a   > p {
             .SFProDisplayRegular;
             font-size: 16px;
             color: #000;
@@ -166,7 +168,7 @@
             font-size: 14px;
             display: block;
         }
-        & > .contact {
+        & > a > .contact {
             display: flex;
             justify-content: flex-start;
             align-items: center;

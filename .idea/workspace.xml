@@ -3,6 +3,43 @@
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts-full.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/404.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog-page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/filter-collapse-style.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/filter-collapse-style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/full-pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/full-pages.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/full-pages.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/navigation.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-characteristics.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-characteristics.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/x.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/x.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/navigation-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/navigation-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +163,7 @@
       <workItem from="1591184608897" duration="9060000" />
       <workItem from="1591203841623" duration="3354000" />
       <workItem from="1591266699603" duration="3272000" />
+      <workItem from="1591523247676" duration="8702000" />
     </task>
     <servers />
   </component>
@@ -137,9 +175,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="654" y="246" key="#File_Watchers/0.0.1536.824@0.0.1536.824" timestamp="1590417996904" />
-    <state x="395" y="91" key="EditFileWatcherDialog" timestamp="1590417525643">
+    <state x="395" y="91" key="EditFileWatcherDialog" timestamp="1591524533790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="91" key="EditFileWatcherDialog/0.0.1536.824@0.0.1536.824" timestamp="1590417525643" />
+    <state x="395" y="91" key="EditFileWatcherDialog/0.0.1536.824@0.0.1536.824" timestamp="1591524533790" />
   </component>
 </project>
