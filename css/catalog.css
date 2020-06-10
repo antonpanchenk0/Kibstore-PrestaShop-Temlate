@@ -48,7 +48,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: 100;
 }
 .navigation {
   width: 100%;
@@ -1271,8 +1271,11 @@ header {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 10px;
-  color: #2c3138;
   text-align: center;
+}
+.comparison-collapse-body > table > tbody > tr > td > h2 > a {
+  text-decoration: none!important;
+  color: #2c3138 !important;
 }
 .comparison-collapse-body > table > tbody > tr > td:first-child > h2 {
   padding: 20px 5px 0 5px;

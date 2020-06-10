@@ -1,7 +1,12 @@
+@buyBlockHeight: 60px;
+
+footer.main-footer {
+    margin-bottom: @buyBlockHeight;
+}
 .product-buy {
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    z-index: 10000;
+    z-index: 100;
     width: 100%;
     background-color: @bodyBackgroundColor;
     display: flex;
@@ -11,7 +16,6 @@
     -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    margin-bottom: 10px;
     &.in-cart {
         background-color: #fff;
     }

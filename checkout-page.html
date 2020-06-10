@@ -40,7 +40,7 @@
             <div class="form-card">
                 <h2 class="fs-title">Ваши данные</h2>
                 <div class="input-box"><input id="uname" type="text" name="name" placeholder="Иван Иванов" /></div>
-                <div class="input-box"><input id="uphone" type="text" name="phone" placeholder="3809999999" /></div>
+                <div class="input-box"><input id="uphone" type="text" name="phone" placeholder="+38(099)999-9999" /></div>
                 <div class="input-box"><input id="uemail" type="email" name="email" placeholder="Электронная почта" /></div>
             </div>
             <input data-id="0" type="button" name="next" class="next action-button" value="Далее" disabled />
@@ -57,8 +57,9 @@
                         <input type="number" id="mail_num" name="mail_num" placeholder="Укажите номер отделения Новой почты" />
                     </label>
                     <label class="radio">
-                        <input type="radio" name="delivery_type" value="Доставка курьером Новая почта"/>
+                        <input data-id="newAddress" type="radio" name="delivery_type" value="Доставка курьером Новая почта"/>
                         <div class="radio-text">Доставка курьером "Новая почта"</div>
+                        <input type="text" id="del_address" name="del_address" placeholder="Укажите адресс доставки" />
                     </label>
                     <label class="radio">
                         <input type="radio" name="delivery_type" value="Самовывоз из магазина"/>
@@ -66,7 +67,7 @@
                     </label>
                 </div>
             </div>
-<!--            <input type="button" name="previous" class="previous action-button-previous" value="Назад" /> -->
+            <input type="button" name="previous" class="previous action-button-previous" value="Назад" />
             <input type="button" name="next" class="next action-button" value="Далее" disabled />
         </fieldset>
         <fieldset data-id="3">
@@ -88,7 +89,7 @@
                     </label>
                 </div>
             </div>
-<!--            <input type="button" name="previous" class="previous action-button-previous" value="Назад" />-->
+            <input type="button" name="previous" class="previous action-button-previous" value="Назад" />
         </fieldset>
 
         <div class="order-info">

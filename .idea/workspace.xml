@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/404-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/404-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-products-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-products-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-products-plate.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-products-plate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-subcategories.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-subcategories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/checkout-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contacts-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts-full.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
@@ -13,6 +21,9 @@
       <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-products-plate.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-plate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-products-plate.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-plate.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-products-plate.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-plate.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css" afterDir="false" />
@@ -20,27 +31,39 @@
       <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/checkout.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/checkout.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/filter-collapse-style.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/filter-collapse-style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/full-pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/full-pages.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/full-pages.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/navigation.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-buy-block.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-buy-block.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-about.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-characteristics.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-characteristics.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-feedback.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-feedback.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-feedback.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-feedback.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icons/x.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/x.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-full.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/catalog-products.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/catalog-products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/navigation-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/navigation-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/product-cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/product-card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment-full.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-about.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-characteristics.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-characteristics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-photo-and-video.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-photo-and-video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thx-for-order-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/thx-for-order-page.html" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +83,9 @@
     <expand />
     <select />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -69,8 +95,48 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>z-in</find>
+      <find>actio</find>
+      <find>radio</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/css/product-cart-feedback.less" />
+        <option value="$PROJECT_DIR$/js/product-card.js" />
+        <option value="$PROJECT_DIR$/css/product-buy-block.less" />
+        <option value="$PROJECT_DIR$/css/checkout.less" />
+        <option value="$PROJECT_DIR$/checkout-page.html" />
+        <option value="$PROJECT_DIR$/js/checkout.js" />
+        <option value="$PROJECT_DIR$/css/catalog-products-plate.less" />
+        <option value="$PROJECT_DIR$/css/navigation.less" />
+        <option value="$PROJECT_DIR$/js/catalog-products.js" />
+        <option value="$PROJECT_DIR$/main.html" />
+        <option value="$PROJECT_DIR$/js/modules/navigation-module.js" />
+        <option value="$PROJECT_DIR$/404-1.html" />
+        <option value="$PROJECT_DIR$/404-2.html" />
+        <option value="$PROJECT_DIR$/blog.html" />
+        <option value="$PROJECT_DIR$/blog-page.html" />
+        <option value="$PROJECT_DIR$/catalog.html" />
+        <option value="$PROJECT_DIR$/catalog-products-list.html" />
+        <option value="$PROJECT_DIR$/catalog-products-plate.html" />
+        <option value="$PROJECT_DIR$/catalog-subcategories.html" />
+        <option value="$PROJECT_DIR$/contacts-full.html" />
+        <option value="$PROJECT_DIR$/delivery-full.html" />
+        <option value="$PROJECT_DIR$/payment-full.html" />
+        <option value="$PROJECT_DIR$/product-cart-about.html" />
+        <option value="$PROJECT_DIR$/product-cart-characteristics.html" />
+        <option value="$PROJECT_DIR$/product-cart-feedback.html" />
+        <option value="$PROJECT_DIR$/product-cart-photo-and-video.html" />
+        <option value="$PROJECT_DIR$/thx-for-order-page.html" />
+      </list>
+    </option>
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -83,8 +149,43 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-239" />
+    <option name="y" value="-12" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
   <component name="ProjectId" id="1cP0hjfRkgAOIKQ9z44jEATh0uw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -111,6 +212,18 @@
       <recent name="G:\CyberStor-Template\js\modules" />
       <recent name="G:\CyberStor-Template\css" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CyberStor-Template/main.html" useBuiltInWebServerPort="true">
@@ -164,11 +277,41 @@
       <workItem from="1591203841623" duration="3354000" />
       <workItem from="1591266699603" duration="3272000" />
       <workItem from="1591523247676" duration="8702000" />
+      <workItem from="1591712794248" duration="3452000" />
+      <workItem from="1591724717589" duration="3315000" />
+      <workItem from="1591781016879" duration="5567000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12334000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="246" key="#File_Watchers" timestamp="1590417996904">
@@ -179,5 +322,288 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="91" key="EditFileWatcherDialog/0.0.1536.824@0.0.1536.824" timestamp="1591524533790" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/root-styles.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/product-card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product-item-nav.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product-cart-feedback.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product-buy-block.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product-cart-characteristics.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/jquery.maskedinput.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/checkout.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="283" column="47" selection-start-line="283" selection-start-column="47" selection-end-line="283" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/catalog-products-plate.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/catalog-products-list.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/navigation.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="153" column="37" selection-start-line="153" selection-start-column="37" selection-end-line="153" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/catalog-products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/navigation-module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="416" column="69" selection-start-line="416" selection-start-column="69" selection-end-line="416" selection-end-column="69" />
+          <folding>
+            <element signature="e#14420#14436#0" />
+            <element signature="e#15124#15140#0" />
+            <element signature="e#15854#15870#0" />
+            <element signature="e#16627#16643#0" />
+            <element signature="e#14525#15152#0" />
+            <element signature="e#16004#16028#0" />
+            <element signature="e#15984#16622#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="860" column="14" selection-start-line="860" selection-start-column="14" selection-end-line="860" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="860" column="14" selection-start-line="860" selection-start-column="14" selection-end-line="860" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="861" column="14" selection-start-line="861" selection-start-column="14" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="860" column="14" selection-start-line="860" selection-start-column="14" selection-end-line="860" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="861" column="10" selection-start-line="861" selection-start-column="10" selection-end-line="861" selection-end-column="10" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog-products-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="861" column="14" selection-start-line="861" selection-start-column="14" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog-products-plate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="860" column="14" selection-start-line="860" selection-start-column="14" selection-end-line="860" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog-subcategories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="861" column="14" selection-start-line="861" selection-start-column="14" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contacts-full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="860" column="14" selection-start-line="860" selection-start-column="14" selection-end-line="860" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delivery-full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="859" column="10" selection-start-line="859" selection-start-column="10" selection-end-line="859" selection-end-column="10" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/payment-full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="860" column="14" selection-start-line="860" selection-start-column="14" selection-end-line="860" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-cart-about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="861" column="14" selection-start-line="861" selection-start-column="14" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-cart-characteristics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="861" column="14" selection-start-line="861" selection-start-column="14" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thx-for-order-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="860" column="14" selection-start-line="860" selection-start-column="14" selection-end-line="860" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-cart-photo-and-video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="861" column="14" selection-start-line="861" selection-start-column="14" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-cart-feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="861" column="14" selection-start-line="861" selection-start-column="14" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="861" selection-end-column="14" />
+          <folding>
+            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

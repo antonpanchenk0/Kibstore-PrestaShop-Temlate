@@ -258,11 +258,13 @@ header > .phones > a:first-child {
 .order-form textarea:focus {
   box-shadow: none !important;
 }
-.order-form .action-button {
+.order-form .action-button,
+.order-form .action-button-previous {
   width: 70px;
   height: 30px;
   text-align: center;
   background: #51c878;
+  border: 1px solid #51c878;
   color: #ffffff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -279,8 +281,19 @@ header > .phones > a:first-child {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.order-form .action-button:disabled {
+.order-form .action-button.action-button-previous,
+.order-form .action-button-previous.action-button-previous {
+  background: transparent;
+  border: 1px solid #858585;
+  color: #858585;
+  margin-left: 0px;
+  font-family: HelveticaNeueCyr;
+  font-weight: normal;
+}
+.order-form .action-button.action-button:disabled,
+.order-form .action-button-previous.action-button:disabled {
   background: #a8e3bb;
+  border: 1px solid #a8e3bb;
   -webkit-box-shadow: none!important;
   -moz-box-shadow: none!important;
   box-shadow: none!important;
@@ -313,13 +326,15 @@ header > .phones > a:first-child {
   z-index: -1;
   opacity: 0;
 }
-.radio > input[type=number] {
+.radio > input[type=number],
+.radio > input[type=text] {
   margin: 10px 0 0 20px;
   width: 86%;
   font-size: 12px;
   display: none;
 }
-.radio.selected > input[type=number] {
+.radio.selected > input[type=number],
+.radio.selected > input[type=text] {
   display: block;
 }
 .radio-text {
@@ -559,4 +574,3 @@ header > .phones > a:first-child {
 .payment .payment-item > img {
   max-height: 30px;
 }
-/*# sourceMappingURL=checkout.css.map */

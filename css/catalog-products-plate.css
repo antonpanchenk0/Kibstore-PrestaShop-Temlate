@@ -48,7 +48,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: 100;
 }
 .navigation {
   width: 100%;
@@ -500,34 +500,49 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-decoration: none!important;
+  text-decoration: none;
+  background: url("../img/icons/x.svg") no-repeat center center;
+  background-size: cover;
+  height: 12px;
+  width: 12px;
 }
-.search-collapse-header > a > h2,
-.cart-collapse-header > a > h2,
-.contacts-collapse-header > a > h2,
-.wish-list-collapse-header > a > h2,
-.comparison-collapse-header > a > h2 {
+.search-collapse-header > div,
+.cart-collapse-header > div,
+.contacts-collapse-header > div,
+.wish-list-collapse-header > div,
+.comparison-collapse-header > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search-collapse-header > div > a,
+.cart-collapse-header > div > a,
+.contacts-collapse-header > div > a,
+.wish-list-collapse-header > div > a,
+.comparison-collapse-header > div > a {
+  height: 24px;
+  width: 24px;
+  background: url('../img/icons/arrow-left.svg') no-repeat center center;
+  background-size: cover;
+}
+.search-collapse-header > div > h2,
+.cart-collapse-header > div > h2,
+.contacts-collapse-header > div > h2,
+.wish-list-collapse-header > div > h2,
+.comparison-collapse-header > div > h2 {
   font-family: HelveticaNeueCyr;
   font-weight: bold;
   font-size: 16px;
   color: #000;
   margin: 0 0 0 10px;
 }
-.search-collapse-header > a > h2 > span,
-.cart-collapse-header > a > h2 > span,
-.contacts-collapse-header > a > h2 > span,
-.wish-list-collapse-header > a > h2 > span,
-.comparison-collapse-header > a > h2 > span {
+.search-collapse-header > div > span,
+.cart-collapse-header > div > span,
+.contacts-collapse-header > div > span,
+.wish-list-collapse-header > div > span,
+.comparison-collapse-header > div > span {
   font-family: HelveticaNeueCyr;
   font-weight: normal;
-}
-.search-collapse-header > a.cart-collapse-close-btn > svg,
-.cart-collapse-header > a.cart-collapse-close-btn > svg,
-.contacts-collapse-header > a.cart-collapse-close-btn > svg,
-.wish-list-collapse-header > a.cart-collapse-close-btn > svg,
-.comparison-collapse-header > a.cart-collapse-close-btn > svg {
-  height: 12px;
-  width: 12px;
 }
 .search-collapse-header form {
   display: flex;
@@ -1256,8 +1271,11 @@ header {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 10px;
-  color: #2c3138;
   text-align: center;
+}
+.comparison-collapse-body > table > tbody > tr > td > h2 > a {
+  text-decoration: none!important;
+  color: #2c3138 !important;
 }
 .comparison-collapse-body > table > tbody > tr > td:first-child > h2 {
   padding: 20px 5px 0 5px;
@@ -1869,8 +1887,14 @@ body {
   align-items: center;
   text-decoration: none;
 }
-.filter-collapse-body .accordion .card .card-header button[aria-expanded=true] > svg {
+.filter-collapse-body .accordion .card .card-header button[aria-expanded=true] {
+  color: #5489d7;
+}
+.filter-collapse-body .accordion .card .card-header button > svg {
   stroke: #858585;
+}
+.filter-collapse-body .accordion .card .card-header button[aria-expanded=true] > svg {
+  stroke: #5489d7;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -1888,11 +1912,6 @@ body {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-.filter-collapse-body .accordion .card .card-header button.price-btn,
-.filter-collapse-body .accordion .card .card-header button.price-btn svg {
-  color: #5489d7;
-  stroke: #5489d7;
 }
 .filter-collapse-body .accordion .card .card-body {
   padding: 0 10px;
@@ -2099,6 +2118,47 @@ body {
 }
 .footer-btn > span {
   margin-left: 5px;
+}
+.sort-header {
+  background: #fff;
+  z-index: 100;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.sort-header > ul {
+  margin: 0;
+}
+.sort-header.sticky {
+  position: fixed;
+  top: 40px;
+  left: 0;
+}
+.sort-list {
+  padding: 0 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
+.sort-item {
+  margin-right: 35px;
+}
+.sort-item:last-child {
+  margin-right: 0;
+}
+.sort-link {
+  padding: 8px 0;
+  display: block;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #5489d7;
+}
+.sort-link svg {
+  stroke: #5489d7;
+  margin-right: 10px;
 }
 .wrap {
   background: #ffffff;

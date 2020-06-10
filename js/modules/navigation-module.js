@@ -36,6 +36,9 @@ export default class Navigation {
             isComparisonCollapsed: false,
             animationDuration,
         }
+        this.navCartBtn = document.getElementById('navCart');
+        this.navWishListBtn = document.getElementById('navWishList');
+        this.navComparisonBtn = document.getElementById('navComparison');
         this.createNavigationsEvents();
     }
 
@@ -302,6 +305,70 @@ export default class Navigation {
         document.querySelector('a.clear-comparison-list-btn').addEventListener('click', this.comparisonClearList);
     }
 
+    openCart = (e) => {
+        e ? e.preventDefault() : e;
+        const { isCartCollapsed, collapseWrap, animationDuration, collapseCartNode } = this.config;
+        if(isCartCollapsed) return false;
+        this.cartUpdateEvents();
+        this.closeAllRightModules(false);
+        document.body.classList.add('scroll-disabled');
+        this.config.isCartCollapsed = true;
+        $('a.nav-link#cart').addClass('active');
+        collapseWrap.style.top = 40 + 'px';
+        $(collapseWrap).fadeIn(animationDuration/10);
+        $(collapseCartNode).animate({'right': isCartCollapsed ? '-320px' : '0px'}, animationDuration);
+    }
+
+    openWishList = (e) => {
+        e.preventDefault();
+        const { isWishListCollapsed, collapseWrap, animationDuration, collapseWishListNode } = this.config;
+        if(isWishListCollapsed) return false;
+        this.wishListUpdateEvents();
+        this.closeAllRightModules(false);
+        document.body.classList.add('scroll-disabled');
+        this.config.isWishListCollapsed = true;
+        $('a.nav-link#heart').addClass('active');
+        collapseWrap.style.top = 40 + 'px';
+        $(collapseWrap).fadeIn(animationDuration/10);
+        $(collapseWishListNode).animate({'right': isWishListCollapsed ? '-105%' : '0px'}, animationDuration);
+    }
+
+    openComparison = (e) => {
+        e.preventDefault();
+        const { isComparisonCollapsed, collapseWrap, animationDuration, collapseComparisonNode } = this.config;
+        if(isComparisonCollapsed) return false;
+        this.comparisonUpdateEvents()
+        this.closeAllRightModules(false);
+        document.body.classList.add('scroll-disabled');
+        this.config.isComparisonCollapsed = true;
+        $('a.nav-link#scales').addClass('active');
+        collapseWrap.style.top = 40 + 'px';
+        $(collapseWrap).fadeIn(animationDuration/10);
+        $(collapseComparisonNode).animate({'right': isComparisonCollapsed ? '-105%' : '0px'}, animationDuration);
+    }
+
+    openRightNavigationFromMainNavigation = (e, type) => {
+        e.preventDefault();
+        const { collapseNode, animationDuration, isCollapsed } = this.config;
+        $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration * 0.75 , () => {
+            this.config.isCollapsed = false;
+            switch (type) {
+                case 'cart': {
+                    this.openCart(e);
+                    break;
+                }
+                case 'wishList': {
+                    this.openWishList(e);
+                    break
+                }
+                case 'comparison': {
+                    this.openComparison(e);
+                    break;
+                }
+            }
+        });
+    }
+
     createNavigationsEvents = () => {
         // Меню поиска
         this.config.navSearchBtn.addEventListener('click', (e) => {
@@ -318,19 +385,11 @@ export default class Navigation {
         });
 
         // Корзина
-        this.config.cartSearchBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const { isCartCollapsed, collapseWrap, animationDuration, collapseCartNode } = this.config;
-            if(isCartCollapsed) return false;
-            this.cartUpdateEvents();
-            this.closeAllRightModules(false);
-            document.body.classList.add('scroll-disabled');
-            this.config.isCartCollapsed = true;
-            $('a.nav-link#cart').addClass('active');
-            collapseWrap.style.top = 40 + 'px';
-            $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseCartNode).animate({'right': isCartCollapsed ? '-320px' : '0px'}, animationDuration);
+        this.config.cartSearchBtn.addEventListener('click', this.openCart);
+        this.navCartBtn.addEventListener('click', (e) => {
+            this.openRightNavigationFromMainNavigation(e, 'cart');
         });
+
 
         // Контакты
         this.config.navContactsBtn.addEventListener('click', (e) => {
@@ -347,33 +406,15 @@ export default class Navigation {
         });
 
         // Список желаний
-        this.config.navWishListBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const { isWishListCollapsed, collapseWrap, animationDuration, collapseWishListNode } = this.config;
-            if(isWishListCollapsed) return false;
-            this.wishListUpdateEvents();
-            this.closeAllRightModules(false);
-            document.body.classList.add('scroll-disabled');
-            this.config.isWishListCollapsed = true;
-            $('a.nav-link#heart').addClass('active');
-            collapseWrap.style.top = 40 + 'px';
-            $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseWishListNode).animate({'right': isWishListCollapsed ? '-105%' : '0px'}, animationDuration);
+        this.config.navWishListBtn.addEventListener('click', this.openWishList);
+        this.navWishListBtn.addEventListener('click', (e) => {
+            this.openRightNavigationFromMainNavigation(e, 'wishList');
         });
 
         // Сравнения
-        this.config.navComparisonBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const { isComparisonCollapsed, collapseWrap, animationDuration, collapseComparisonNode } = this.config;
-            if(isComparisonCollapsed) return false;
-            this.comparisonUpdateEvents()
-            this.closeAllRightModules(false);
-            document.body.classList.add('scroll-disabled');
-            this.config.isComparisonCollapsed = true;
-            $('a.nav-link#scales').addClass('active');
-            collapseWrap.style.top = 40 + 'px';
-            $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseComparisonNode).animate({'right': isComparisonCollapsed ? '-105%' : '0px'}, animationDuration);
+        this.config.navComparisonBtn.addEventListener('click', this.openComparison);
+        this.navComparisonBtn.addEventListener('click', (e) => {
+            this.openRightNavigationFromMainNavigation(e, 'comparison');
         });
 
         // Навигация
