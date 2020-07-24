@@ -2,6 +2,10 @@
 @import './colors';
 
 @navHeight: 120px;
+@navWidthLeftSection: 20%;
+@navWidthCenterSection: 50%;
+@navWidthRightSection: 30%;
+
 
 .border-bottom-1px {
     border-bottom: 1px solid @bodyBackgroundColor;
@@ -22,7 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-flow: column;
-    padding: 12px 15px;
+    padding: 12px 40px;
 }
 .nav-toggle-btn {
     width: 1.5rem;
@@ -39,11 +43,14 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     & > .logotype-box {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
+        flex: 0 0 @navWidthLeftSection;
+        max-width: @navWidthLeftSection;
+        padding: 0;
         & > img.logotype {
             max-width: 50px;
             margin-right: 25px;
@@ -68,6 +75,9 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex: 0 0 @navWidthCenterSection;
+        max-width: @navWidthCenterSection;
+        padding: 0;
         & > .lang-switch-box, & > .navigation-header-list-box {
             & > .lang-switch-list, & > .navigation-header-list {
                 display: flex;
@@ -123,8 +133,32 @@ header {
             }
         }
     }
+    & > .social-box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 0 0 @navWidthRightSection;
+        max-width: @navWidthRightSection;
+        padding: 0;
+        & > .social-link {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .HelveticaNeueCyrRoman;
+            font-size: 16px;
+            color: #fff;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+            & > img.social-icon {
+                height: 30px;
+                margin-right: 5px;
+            }
+        }
+    }
 }
-.navigation-links {
+.navigation-desktop-and-mobile {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -133,7 +167,9 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 0 45px;
+        flex: 0 0 @navWidthLeftSection;
+        max-width: @navWidthLeftSection;
+        padding: 0 50px 0 0;
         & > .desktop-menu-btn {
             display: flex;
             justify-content: center;
@@ -151,6 +187,12 @@ header {
     }
     & > .navigation-search {
         width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 0 0 @navWidthCenterSection;
+        max-width: @navWidthCenterSection;
+        padding: 0;
         & > form {
             width: 100%;
             position: relative;
@@ -223,10 +265,13 @@ header {
         }
     }
     & > .navigation-list {
+        padding: 0;
         display: flex;
         list-style: none;
         margin-bottom: 0;
-
+        flex: 0 0 @navWidthRightSection;
+        max-width: @navWidthRightSection;
+        padding: 0 0 0 50px;
     }
 }
 .navigation-item {
@@ -1540,6 +1585,203 @@ header {
                 }
                 &.active::after {
                     background: url("../img/icons/shopping-cart-sale-green.svg") no-repeat center center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1560px){
+    .desktop-navigation-header {
+        & > .logotype-box {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        & > .navigation-list-box {
+            justify-content: flex-start;
+            flex: 0 0 60%;
+            max-width: 60%;
+            & > .lang-switch-box {
+                margin-right: 20px;
+            }
+        }
+        & > .social-box {
+            flex: 0 0 15%;
+            max-width: 15%;
+        }
+    }
+    .navigation-desktop-and-mobile {
+        & > .desktop-menu-btn-box {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+        & > .navigation-search {
+            justify-content: center;
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+        & > .navigation-list {
+            justify-content: flex-end;
+            padding: 0 0 0 25px;
+            flex: 0 0 35%;
+            max-width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .navigation {
+        padding: 12px 20px;
+    }
+    .desktop-navigation-header {
+        & > .logotype-box {
+            flex: 0 0 25%;
+            max-width: 25%;
+            & > img.logotype {
+                margin-right: 15px;
+            }
+            & > .logotype-text {
+                & > h1.web-title {
+                    font-size: 18px;
+                }
+                & > h2.web-sub-title {
+                    font-size: 9px;
+                }
+            }
+        }
+        & > .navigation-list-box {
+            justify-content: flex-start;
+            flex: 0 0 75%;
+            max-width: 75%;
+            & > .lang-switch-box {
+                margin-right: 20px;
+            }
+        }
+        & > .social-box {
+            flex: 0 0 15%;
+            max-width: 15%;
+            display: none;
+        }
+    }
+    .navigation-desktop-and-mobile {
+        & > .desktop-menu-btn-box {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+        & > .navigation-search {
+            justify-content: center;
+            flex: 0 0 42%;
+            max-width: 42%;
+        }
+        & > .navigation-list {
+            justify-content: flex-end;
+            padding: 0 0 0 25px;
+            flex: 0 0 38%;
+            max-width: 38%;
+            & > .navigation-item {
+                & > .nav-link {
+                    width: 20px;
+                    height: 20px;
+                    & > svg {
+                        height: 20px;
+                    }
+                }
+                &.nav-dropdown > .nav-link {
+                    width: 100%;
+                    font-size: 14px;
+                }
+                &.nav-dropdown > .dropdown {
+                    & > .dropdown-link {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .navigation {
+        padding: 12px 20px;
+    }
+    .desktop-navigation-header {
+        & > .logotype-box {
+            flex: 0 0 25%;
+            max-width: 25%;
+            & > img.logotype {
+                margin-right: 15px;
+            }
+            & > .logotype-text {
+                & > h1.web-title {
+                    font-size: 18px;
+                }
+                & > h2.web-sub-title {
+                    font-size: 9px;
+                }
+            }
+        }
+        & > .navigation-list-box {
+            justify-content: flex-start;
+            flex: 0 0 75%;
+            max-width: 75%;
+            & > .lang-switch-box {
+                & > .lang-switch-list {
+                    & > .lang-switch-item {
+                        font-size: 12px;
+                    }
+                }
+            }
+            & > .navigation-header-list-box {
+                & > .navigation-header-list {
+                    & > .navigation-header-item {
+                        & > .nav-link {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        & > .social-box {
+            flex: 0 0 15%;
+            max-width: 15%;
+            display: none;
+        }
+    }
+    .navigation-desktop-and-mobile {
+        & > .desktop-menu-btn-box {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        & > .navigation-search {
+            justify-content: center;
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+        & > .navigation-list {
+            justify-content: flex-end;
+            padding: 0 0 0 25px;
+            flex: 0 0 45%;
+            max-width: 45%;
+            & > .navigation-item {
+                margin: 0 15px;
+                &:last-child {
+                    margin: 0 0 0 15px
+                }
+                & > .nav-link {
+                    width: 20px;
+                    height: 20px;
+                    & > svg {
+                        height: 20px;
+                    }
+                }
+                &.nav-dropdown > .nav-link {
+                    width: 100%;
+                    font-size: 14px;
+                }
+                &.nav-dropdown > .dropdown {
+                    & > .dropdown-link {
+                        font-size: 14px;
+                    }
                 }
             }
         }
