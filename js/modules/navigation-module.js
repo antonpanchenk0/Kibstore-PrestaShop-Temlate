@@ -1,6 +1,8 @@
 export default class Navigation {
     constructor(animationDuration){
         this.config = {
+            navigationBlock: document.querySelector('header'),
+            desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
             toggleBtn: document.getElementById('navToggleBtn'),
             collapseNode: document.getElementById('navCollapse'),
             collapseWrap: document.getElementById('navCollapseWrap'),
@@ -28,17 +30,31 @@ export default class Navigation {
             collapseComparisonNode: document.getElementById('comparisonCollapse'),
             closeComparisonNodeBtn: document.querySelector('a.comparison-collapse-btn-back'),
             closeXComparisonNodeBtn: document.querySelector('a.comparison-collapse-close-btn'),
+            desktopNavigationBtn: document.getElementById('dmenu'),
+            desktopNavigationCollapseMenu: document.querySelector('div.desktop-navigation-collapse'),
+            desktopCollapseDesktopOverlay: document.querySelector('div.desktop-navigation-collapse-overlay'),
+            desktopSearchInput: document.getElementById('navSearchInp'),
+            desktopSearchBlock: document.getElementById('navSearch'),
+            desktopSearchResult: document.getElementById('navSearchResult'),
+            desktopSearchForm :document.getElementById('navSearchForm'),
             isCollapsed: false,
             isSearchCollapsed: false,
             isCartCollapsed: false,
             isContactsCollapsed: false,
             isWishListCollapsed: false,
             isComparisonCollapsed: false,
+            isDesktopMenuCollapsed: false,
+            isDesktopAnimated: false,
+            isOverlayShow: false,
+            isSearchResultVisible: false,
+            isSearchResultAnimated: false,
             animationDuration,
         }
+        this.wrapBlock = document.querySelector('div.wrap');
         this.navCartBtn = document.getElementById('navCart');
         this.navWishListBtn = document.getElementById('navWishList');
         this.navComparisonBtn = document.getElementById('navComparison');
+        this.mobileResolution = 860;
         this.createNavigationsEvents();
     }
 
@@ -306,7 +322,10 @@ export default class Navigation {
     }
 
     openCart = (e) => {
-        e ? e.preventDefault() : e;
+        if(window.innerWidth > this.mobileResolution) {
+            return false;
+        }
+        e.preventDefault();
         const { isCartCollapsed, collapseWrap, animationDuration, collapseCartNode } = this.config;
         if(isCartCollapsed) return false;
         this.cartUpdateEvents();
@@ -320,6 +339,9 @@ export default class Navigation {
     }
 
     openWishList = (e) => {
+        if(window.innerWidth > this.mobileResolution) {
+            return false;
+        }
         e.preventDefault();
         const { isWishListCollapsed, collapseWrap, animationDuration, collapseWishListNode } = this.config;
         if(isWishListCollapsed) return false;
@@ -334,6 +356,9 @@ export default class Navigation {
     }
 
     openComparison = (e) => {
+        if(window.innerWidth > this.mobileResolution) {
+            return false;
+        }
         e.preventDefault();
         const { isComparisonCollapsed, collapseWrap, animationDuration, collapseComparisonNode } = this.config;
         if(isComparisonCollapsed) return false;
@@ -367,6 +392,23 @@ export default class Navigation {
                 }
             }
         });
+    }
+
+    squeezeNavigationOnScroll = (windowTop) => {
+        if(windowTop > 0 && window.innerWidth > 860) {
+            this.config.navigationBlock.style.top = '-60px';
+            this.wrapBlock.style.marginTop = '65px';
+            $('#sqlogo').addClass('show')
+            return 0;
+        }
+        if(windowTop == 0 && window.innerWidth > 860) {
+            this.config.navigationBlock.style.top = '0';
+            this.wrapBlock.style.marginTop = '120px';
+            $('#sqlogo').removeClass('show');
+            return 0;
+        }
+        this.wrapBlock.style.marginTop = '40px';
+        return 1;
     }
 
     createNavigationsEvents = () => {
@@ -424,6 +466,7 @@ export default class Navigation {
             if(isCollapsed) return false;
             this.closeAllRightModules(false);
             const waitTime = isSearchCollapsed || isCartCollapsed || isContactsCollapsed || isWishListCollapsed ? animationDuration * 0.75 : 0;
+            document.body.classList.add('scroll-disabled');
             setTimeout(() => {
                 this.config.collapseWrap.style.top = 0 + 'px';
                 $(collapseWrap).fadeIn(animationDuration/10);
@@ -465,6 +508,7 @@ export default class Navigation {
             if(isComparisonCollapsed) {
                 this.closeSingleRightModule('comparison', true);
             }
+            document.body.classList.remove('scroll-disabled');
         });
 
         //Переключение уровней меню
@@ -502,5 +546,81 @@ export default class Navigation {
                 $(prevMenu).fadeOut(500);
             })
         });
+
+
+        // События по загрузке страницы
+        document.addEventListener('DOMContentLoaded', (e) => {
+            const pageTop = window.pageYOffset;
+            this.squeezeNavigationOnScroll(pageTop);
+            document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
+            // Десктоп переключение меню при скроле
+            document.addEventListener('scroll', (e) => {
+                const pageTop = window.pageYOffset;
+                this.squeezeNavigationOnScroll(pageTop);
+            })
+            window.addEventListener('resize', (e) => {
+                const pageTop = window.pageYOffset;
+                this.squeezeNavigationOnScroll(pageTop);
+                document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
+            })
+        })
+
+        // Открытие и закрытие меню Desktop
+        this.config.desktopNavigationBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if(!this.config.isDesktopAnimated) {
+                const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
+                this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
+                $(desktopNavigationCollapseMenu).animate( {'top': isDesktopMenuCollapsed ? '-100rem' : '55px'} , animationDuration * .75, ()=> {
+                    this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
+                    this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
+                });
+            }
+        })
+
+        // Overlay при hover
+        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseenter', (e) => {
+            if(!this.config.isOverlayShow) {
+                $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
+                    this.config.isOverlayShow = !this.config.isOverlayShow
+                });
+            }
+        })
+        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseleave', (e) => {
+            $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
+            this.config.isOverlayShow = !this.config.isOverlayShow;
+        })
+
+        // Поиск в навигации
+        this.config.desktopSearchInput.addEventListener('input', (e) => {
+            const value = e.target.value;
+            const { isSearchResultAnimated, desktopSearchResult, desktopSearchBlock } = this.config;
+            if(value.length > 0) {
+                desktopSearchBlock.classList.add('is-searching');
+                if(!isSearchResultAnimated) {
+                    this.config.isSearchResultAnimated = !isSearchResultAnimated;
+                    $(desktopSearchResult).fadeIn(100, () => {
+                        this.config.isSearchResultAnimated = !this.config.isSearchResultAnimated;
+                        this.config.isSearchResultVisible = !this.config.isSearchResultVisible;
+                    });
+                }
+            } else {
+                desktopSearchBlock.classList.remove('is-searching');
+                this.config.isSearchResultAnimated = !isSearchResultAnimated;
+                $(desktopSearchResult).fadeOut(100, () => {
+                    this.config.isSearchResultAnimated = !this.config.isSearchResultAnimated;
+                    this.config.isSearchResultVisible = !this.config.isSearchResultVisible;
+                });
+            }
+        })
+        this.config.desktopSearchForm.addEventListener('reset', () => {
+            const { isSearchResultAnimated, desktopSearchResult, desktopSearchBlock } = this.config;
+            desktopSearchBlock.classList.remove('is-searching');
+            this.config.isSearchResultAnimated = !isSearchResultAnimated;
+            $(desktopSearchResult).fadeOut(100, () => {
+                this.config.isSearchResultAnimated = !this.config.isSearchResultAnimated;
+                this.config.isSearchResultVisible = !this.config.isSearchResultVisible;
+            });
+        })
     }
 }
