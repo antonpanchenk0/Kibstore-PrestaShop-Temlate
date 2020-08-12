@@ -20,8 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/no-modules/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/404-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/404-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-products-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-products-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-products-plate.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-products-plate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-subcategories.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-subcategories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts-full.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-full.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/no-modules/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/catalog-products.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/no-modules/catalog-products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/no-modules/catalog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/no-modules/checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/no-modules/no-module-main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/page-with-nav-only.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/no-modules/page-with-nav-only.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/product-card.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/no-modules/product-card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment-full.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-about.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-characteristics.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-characteristics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-cart-photo-and-video.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-cart-photo-and-video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thx-for-order-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/thx-for-order-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +201,7 @@
       <workItem from="1596304159293" duration="6088000" />
       <workItem from="1596354847725" duration="2553000" />
       <workItem from="1597141946140" duration="16021000" />
-      <workItem from="1597231506217" duration="8238000" />
+      <workItem from="1597231506217" duration="8472000" />
     </task>
     <servers />
   </component>
@@ -198,6 +224,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="654" y="246" key="#File_Watchers/0.0.1536.824@0.0.1536.824" timestamp="1590417996904" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597265954469">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597265954468" />
     <state x="395" y="91" key="EditFileWatcherDialog" timestamp="1591524533790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

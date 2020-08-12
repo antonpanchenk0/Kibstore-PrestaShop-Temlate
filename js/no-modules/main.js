@@ -1,3 +1,7 @@
+import Navigation from '../modules/navigation-module.js';
+
+const navigation = new Navigation(600);
+
 const config = {
     slider: {
         duration: 5000,

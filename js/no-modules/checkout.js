@@ -1,4 +1,4 @@
-import './plugins/jquery.maskedinput.min.js';
+import '../plugins/jquery.maskedinput.min.js';
 
 const inputs = {
     user_name: {
