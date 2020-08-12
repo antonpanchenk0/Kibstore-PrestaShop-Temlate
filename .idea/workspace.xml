@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/modules/navigation-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/navigation-module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/no-modules/no-module-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -71,14 +91,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Documents\GitHub\CyberStor-Template\js\no-modules" />
+      <recent name="G:\CyberStor-Template\js\modules" />
+      <recent name="G:\CyberStor-Template\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\CyberStor-Template\img\icons" />
       <recent name="G:\CyberStor-Template" />
       <recent name="G:\CyberStor-Template\icons" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\CyberStor-Template\js\modules" />
-      <recent name="G:\CyberStor-Template\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -155,12 +176,23 @@
       <workItem from="1596304159293" duration="6088000" />
       <workItem from="1596354847725" duration="2553000" />
       <workItem from="1597141946140" duration="16021000" />
-      <workItem from="1597231506217" duration="6533000" />
+      <workItem from="1597231506217" duration="7752000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="246" key="#File_Watchers" timestamp="1590417996904">
