@@ -1,4 +1,4 @@
-import Navigation from '../modules/navigation-module.js';
+import Navigation from './modules/navigation-module.js';
 const navElements = document.querySelectorAll('.menu-link');
 const overlay = document.getElementById('overlay');
 const loadMore = document.getElementById('loadMore');

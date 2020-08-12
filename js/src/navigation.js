@@ -1,4 +1,4 @@
-export default class Navigation {
+class Navigation {
     constructor(animationDuration){
         this.config = {
             navigationBlock: document.querySelector('header'),
@@ -675,3 +675,5 @@ export default class Navigation {
         })
     }
 }
+
+const navigation = new Navigation(600);
