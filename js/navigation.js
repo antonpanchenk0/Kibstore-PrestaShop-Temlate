@@ -1,679 +1,875 @@
-class Navigation {
-    constructor(animationDuration){
-        this.config = {
-            navigationBlock: document.querySelector('header'),
-            desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
-            toggleBtn: document.getElementById('navToggleBtn'),
-            collapseNode: document.getElementById('navCollapse'),
-            collapseWrap: document.getElementById('navCollapseWrap'),
-            collapseNavList: document.querySelector('.navigation-collapse-list'),
-            navLinksWithSubNav: document.querySelectorAll('.navigation-collapse-list-item-with-sub-navigation'),
-            closeNavigationBtn: document.querySelector('a.navigation-collapse-close-btn'),
-            navFooterSocial: document.querySelector('.mobile-app-row'),
-            navSearchBtn: document.getElementById('search'),
-            collapseSearchNode: document.getElementById('searchCollapse'),
-            closeSearchNodeBtn: document.querySelector('a.search-collapse-btn-back'),
-            goBack: document.querySelectorAll('.go-back-btn'),
-            cartSearchBtn: document.getElementById('cart'),
-            collapseCartNode: document.getElementById('cartCollapse'),
-            closeCartNodeBtn: document.querySelector('a.cart-collapse-btn-back'),
-            closeXCartNodeBtn: document.querySelector('a.cart-collapse-close-btn'),
-            navContactsBtn: document.getElementById('phone'),
-            collapseContactsNode: document.getElementById('contactsCollapse'),
-            closeContactsNodeBtn: document.querySelector('a.contacts-collapse-btn-back'),
-            closeXContactsNodeBtn: document.querySelector('a.contacts-collapse-close-btn'),
-            navWishListBtn: document.getElementById('heart'),
-            collapseWishListNode: document.getElementById('wishListCollapse'),
-            closeWishListNodeBtn: document.querySelector('a.wish-list-collapse-btn-back'),
-            closeXWishListNodeBtn: document.querySelector('a.wish-list-collapse-close-btn'),
-            navComparisonBtn: document.getElementById('scales'),
-            collapseComparisonNode: document.getElementById('comparisonCollapse'),
-            closeComparisonNodeBtn: document.querySelector('a.comparison-collapse-btn-back'),
-            closeXComparisonNodeBtn: document.querySelector('a.comparison-collapse-close-btn'),
-            desktopNavigationBtn: document.getElementById('dmenu'),
-            desktopNavigationCollapseMenu: document.querySelector('div.desktop-navigation-collapse'),
-            desktopCollapseDesktopOverlay: document.querySelector('div.desktop-navigation-collapse-overlay'),
-            desktopSearchInput: document.getElementById('navSearchInp'),
-            desktopSearchBlock: document.getElementById('navSearch'),
-            desktopSearchResult: document.getElementById('navSearchResult'),
-            desktopSearchForm :document.getElementById('navSearchForm'),
-            isCollapsed: false,
-            isSearchCollapsed: false,
-            isCartCollapsed: false,
-            isContactsCollapsed: false,
-            isWishListCollapsed: false,
-            isComparisonCollapsed: false,
-            isDesktopMenuCollapsed: false,
-            isDesktopAnimated: false,
-            isOverlayShow: false,
-            isSearchResultVisible: false,
-            isSearchResultAnimated: false,
-            animationDuration,
-        }
-        this.wrapBlock = document.querySelector('div.wrap');
-        this.navCartBtn = document.getElementById('navCart');
-        this.navWishListBtn = document.getElementById('navWishList');
-        this.navComparisonBtn = document.getElementById('navComparison');
-        this.mobileResolution = 860;
-        this.createNavigationsEvents();
-    }
+"use strict";
 
-    wrapFadeOut = () => {
-        $(this.config.collapseWrap).fadeOut(this.config.animationDuration / 10, () => document.body.classList.remove('scroll-disabled'));
-        this.config.isCollapsed = false;
-    }
+function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
 
-    closeSingleRightModule = (module, isWrapFadeOut) => {
-        const { collapseWrap, animationDuration } = this.config;
+function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Navigation = function Navigation(_animationDuration) {
+    var _this = this;
+
+    _classCallCheck(this, Navigation);
+
+    _defineProperty(this, "wrapFadeOut", function () {
+        $(_this.config.collapseWrap).fadeOut(_this.config.animationDuration / 10, function () {
+            return document.body.classList.remove('scroll-disabled');
+        });
+        _this.config.isCollapsed = false;
+    });
+
+    _defineProperty(this, "closeSingleRightModule", function (module, isWrapFadeOut) {
+        var _this$config = _this.config,
+            collapseWrap = _this$config.collapseWrap,
+            animationDuration = _this$config.animationDuration;
+
         switch (module) {
-            case 'cart': {
+            case 'cart':
+            {
                 $('a.nav-link#cart').removeClass('active');
-                $(this.config.collapseCartNode).animate({'right': '-320px'}, animationDuration * 0.75, () => {
+                $(_this.config.collapseCartNode).animate({
+                    'right': '-320px'
+                }, animationDuration * 0.75, function () {
                     isWrapFadeOut && $(collapseWrap).fadeOut(animationDuration / 10);
                     isWrapFadeOut && document.body.classList.remove('scroll-disabled');
                 });
-                this.config.isCartCollapsed = false;
+                _this.config.isCartCollapsed = false;
                 break;
             }
-            case 'search': {
+
+            case 'search':
+            {
                 $('a.nav-link#search').removeClass('active');
-                $(this.config.collapseSearchNode).animate({'right': '-320px'}, animationDuration * 0.75, () => {
+                $(_this.config.collapseSearchNode).animate({
+                    'right': '-320px'
+                }, animationDuration * 0.75, function () {
                     isWrapFadeOut && $(collapseWrap).fadeOut(animationDuration / 10);
                     isWrapFadeOut && document.body.classList.remove('scroll-disabled');
                 });
-                this.config.isSearchCollapsed = false;
+                _this.config.isSearchCollapsed = false;
                 break;
             }
-            case 'contacts': {
+
+            case 'contacts':
+            {
                 $('a.nav-link#phone').removeClass('active');
-                $(this.config.collapseContactsNode).animate({'right': '-320px'}, animationDuration * 0.75, () => {
+                $(_this.config.collapseContactsNode).animate({
+                    'right': '-320px'
+                }, animationDuration * 0.75, function () {
                     isWrapFadeOut && $(collapseWrap).fadeOut(animationDuration / 10);
                     isWrapFadeOut && document.body.classList.remove('scroll-disabled');
                 });
-                this.config.isContactsCollapsed = false;
+                _this.config.isContactsCollapsed = false;
                 break;
             }
-            case 'wishList': {
+
+            case 'wishList':
+            {
                 $('a.nav-link#heart').removeClass('active');
-                $(this.config.collapseWishListNode).animate({'right': '-110%'}, animationDuration * 0.75, () => {
+                $(_this.config.collapseWishListNode).animate({
+                    'right': '-110%'
+                }, animationDuration * 0.75, function () {
                     isWrapFadeOut && $(collapseWrap).fadeOut(animationDuration / 10);
                     isWrapFadeOut && document.body.classList.remove('scroll-disabled');
                 });
-                this.config.isWishListCollapsed = false;
+                _this.config.isWishListCollapsed = false;
                 break;
             }
-            case 'comparison': {
+
+            case 'comparison':
+            {
                 $('a.nav-link#scales').removeClass('active');
-                $(this.config.collapseComparisonNode).animate({'right': '-110%'}, animationDuration * 0.75, () => {
+                $(_this.config.collapseComparisonNode).animate({
+                    'right': '-110%'
+                }, animationDuration * 0.75, function () {
                     isWrapFadeOut && $(collapseWrap).fadeOut(animationDuration / 10);
                     isWrapFadeOut && document.body.classList.remove('scroll-disabled');
                 });
-                this.config.isComparisonCollapsed = false;
+                _this.config.isComparisonCollapsed = false;
                 break;
             }
         }
-    }
+    });
 
-    closeAllRightModules = (isWrapFadeOut) => {
-        const { isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isWishListCollapsed, isComparisonCollapsed } = this.config;
-        if(isCartCollapsed) {
-            this.closeSingleRightModule('cart', isWrapFadeOut);
+    _defineProperty(this, "closeAllRightModules", function (isWrapFadeOut) {
+        var _this$config2 = _this.config,
+            isSearchCollapsed = _this$config2.isSearchCollapsed,
+            isCartCollapsed = _this$config2.isCartCollapsed,
+            isContactsCollapsed = _this$config2.isContactsCollapsed,
+            isWishListCollapsed = _this$config2.isWishListCollapsed,
+            isComparisonCollapsed = _this$config2.isComparisonCollapsed;
+
+        if (isCartCollapsed) {
+            _this.closeSingleRightModule('cart', isWrapFadeOut);
         }
-        if(isSearchCollapsed) {
-            this.closeSingleRightModule('search', isWrapFadeOut);
+
+        if (isSearchCollapsed) {
+            _this.closeSingleRightModule('search', isWrapFadeOut);
         }
-        if(isContactsCollapsed) {
-            this.closeSingleRightModule('contacts', isWrapFadeOut);
+
+        if (isContactsCollapsed) {
+            _this.closeSingleRightModule('contacts', isWrapFadeOut);
         }
-        if(isWishListCollapsed) {
-            this.closeSingleRightModule('wishList', isWrapFadeOut);
+
+        if (isWishListCollapsed) {
+            _this.closeSingleRightModule('wishList', isWrapFadeOut);
         }
-        if(isComparisonCollapsed) {
-            this.closeSingleRightModule('comparison', isWrapFadeOut);
+
+        if (isComparisonCollapsed) {
+            _this.closeSingleRightModule('comparison', isWrapFadeOut);
         }
+
         return false;
-    };
+    });
 
-    cartDeletePosEvent = (e) => {
-        const node = e.currentTarget.parentElement.parentElement.parentElement
-        $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.cart-collapse-btn-back h2 span');
-            const menuCounterNode = document.querySelector('span.cart-counter');
-            counterNode.innerHTML = `${+counterNode.innerHTML - 1}`;
-            menuCounterNode.innerHTML = `${+menuCounterNode.innerHTML - 1}`;
+    _defineProperty(this, "cartDeletePosEvent", function (e) {
+        var node = e.currentTarget.parentElement.parentElement.parentElement;
+        $(node).animate({
+            'left': '-110%'
+        }, 300, function () {
+            var counterNode = document.querySelector('a.cart-collapse-btn-back h2 span');
+            var menuCounterNode = document.querySelector('span.cart-counter');
+            counterNode.innerHTML = "".concat(+counterNode.innerHTML - 1);
+            menuCounterNode.innerHTML = "".concat(+menuCounterNode.innerHTML - 1);
             document.querySelector('#cartRender').removeChild(node);
-        })
-    }
+        });
+    });
 
-    cartSwitchCountEvent = (e) => {
+    _defineProperty(this, "cartSwitchCountEvent", function (e) {
         e.preventDefault();
-        const _do = e.currentTarget.getAttribute('data-do');
+
+        var _do = e.currentTarget.getAttribute('data-do');
+
         switch (_do) {
-            case 'add': {
-                const value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
-                console.log(value)
-                e.currentTarget.parentElement.querySelector('p.count').innerHTML = `${Number(value) + 1}`;
+            case 'add':
+            {
+                var value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
+                console.log(value);
+                e.currentTarget.parentElement.querySelector('p.count').innerHTML = "".concat(Number(value) + 1);
                 break;
             }
-            case 'remove': {
-                const value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
-                if((value - 1) >= 0) {
-                    e.currentTarget.parentElement.querySelector('p.count').innerHTML = `${Number(value) - 1}`;
+
+            case 'remove':
+            {
+                var _value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
+
+                if (_value - 1 >= 0) {
+                    e.currentTarget.parentElement.querySelector('p.count').innerHTML = "".concat(Number(_value) - 1);
                 }
+
                 break;
             }
-            default: {
+
+            default:
+            {
                 return;
             }
         }
-    }
+    });
 
-    cartUpdateEvents = () => {
-        const deleteBtns = document.querySelectorAll('a.delete-position-btn');
-        deleteBtns.forEach(btn => {
-            btn.removeEventListener('click', this.cartDeletePosEvent);
-            btn.removeEventListener('touchstart', this.cartDeletePosEvent);
-            btn.addEventListener('click', this.cartDeletePosEvent);
-            btn.addEventListener('touchstart', this.cartDeletePosEvent);
+    _defineProperty(this, "cartUpdateEvents", function () {
+        var deleteBtns = document.querySelectorAll('a.delete-position-btn');
+        deleteBtns.forEach(function (btn) {
+            btn.removeEventListener('click', _this.cartDeletePosEvent);
+            btn.removeEventListener('touchstart', _this.cartDeletePosEvent);
+            btn.addEventListener('click', _this.cartDeletePosEvent);
+            btn.addEventListener('touchstart', _this.cartDeletePosEvent);
         });
-        const switchersBtns = document.querySelectorAll('.switchers-count-btn');
-        switchersBtns.forEach( _switch => {
-            _switch.removeEventListener('click', this.cartSwitchCountEvent);
-            _switch.removeEventListener('touchstart', this.cartSwitchCountEvent);
-            _switch.addEventListener('click', this.cartSwitchCountEvent);
-            _switch.addEventListener('touchstart', this.cartSwitchCountEvent);
-        })
-    }
+        var switchersBtns = document.querySelectorAll('.switchers-count-btn');
+        switchersBtns.forEach(function (_switch) {
+            _switch.removeEventListener('click', _this.cartSwitchCountEvent);
 
-    wishListOnCheckedEvent = (e) => {
-        const node = document.querySelector('.wish-list-item .form-check input:checked');
+            _switch.removeEventListener('touchstart', _this.cartSwitchCountEvent);
+
+            _switch.addEventListener('click', _this.cartSwitchCountEvent);
+
+            _switch.addEventListener('touchstart', _this.cartSwitchCountEvent);
+        });
+    });
+
+    _defineProperty(this, "wishListOnCheckedEvent", function (e) {
+        var node = document.querySelector('.wish-list-item .form-check input:checked');
         node ? $('.wish-list-footer').addClass('selected') : $('.wish-list-footer').removeClass('selected');
-    };
+    });
 
-    wishListDeletePosEvent = (e) => {
+    _defineProperty(this, "wishListDeletePosEvent", function (e) {
         e.preventDefault();
-        const node = e.target.parentElement.parentElement;
-        $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.wish-list-collapse-btn-back h2 span');
-            let counter = +counterNode.innerHTML;
+        var node = e.target.parentElement.parentElement;
+        $(node).animate({
+            'left': '-110%'
+        }, 300, function () {
+            var counterNode = document.querySelector('a.wish-list-collapse-btn-back h2 span');
+            var counter = +counterNode.innerHTML;
             counter = --counter;
-            counterNode.innerHTML = `${counter}`;
+            counterNode.innerHTML = "".concat(counter);
             document.getElementById('wishListBody').removeChild(node);
-        })
-    };
+        });
+    });
 
-    wishListDeleteCheckedPosEvent = (e) => {
+    _defineProperty(this, "wishListDeleteCheckedPosEvent", function (e) {
         e.preventDefault();
-        const nodes = document.querySelectorAll('.wish-list-item .form-check input:checked');
-        if(nodes.length != 0) {
-            for(let i = 0; i < nodes.length; i++) {
-                const node = nodes[i].parentElement.parentElement;
-                $(node).animate({'left': '-110%'}, 300, () => {
+        var nodes = document.querySelectorAll('.wish-list-item .form-check input:checked');
+
+        if (nodes.length != 0) {
+            var _loop = function _loop(i) {
+                var node = nodes[i].parentElement.parentElement;
+                $(node).animate({
+                    'left': '-110%'
+                }, 300, function () {
                     document.getElementById('wishListBody').removeChild(node);
-                })
-            }
-            const value = document.querySelector('a.wish-list-collapse-btn-back h2 span').innerHTML;
-            document.querySelector('a.wish-list-collapse-btn-back h2 span').innerHTML = `${value - nodes.length}`
-        }
-    }
+                });
+            };
 
-    wishListAddToCartCheckedPosEvent = (e) => {
+            for (var i = 0; i < nodes.length; i++) {
+                _loop(i);
+            }
+
+            var value = document.querySelector('a.wish-list-collapse-btn-back h2 span').innerHTML;
+            document.querySelector('a.wish-list-collapse-btn-back h2 span').innerHTML = "".concat(value - nodes.length);
+        }
+    });
+
+    _defineProperty(this, "wishListAddToCartCheckedPosEvent", function (e) {
         e.preventDefault();
-        const nodes = document.querySelectorAll('.wish-list-item .form-check input:checked');
-        if(nodes.length != 0) {
-            for(let i = 0; i < nodes.length; i++) {
+        var nodes = document.querySelectorAll('.wish-list-item .form-check input:checked');
+
+        if (nodes.length != 0) {
+            for (var i = 0; i < nodes.length; i++) {
                 nodes[i].parentElement.parentElement.querySelector('a.add-wish-pos-to-cart').classList.add('active');
             }
         }
-    }
+    });
 
-    wishListAddToCartPosEvent = (e) => {
+    _defineProperty(this, "wishListAddToCartPosEvent", function (e) {
         e.preventDefault();
-        e.target.classList.contains('active') ?  e.target.classList.remove('active') : e.target.classList.add('active');
-    }
+        e.target.classList.contains('active') ? e.target.classList.remove('active') : e.target.classList.add('active');
+    });
 
-    wishListUpdateEvents = () => {
-        const checkboxes = document.querySelectorAll('.wish-list-item .form-check input');
-        checkboxes.forEach(c => {
-            c.removeEventListener('input', this.wishListOnCheckedEvent);
-            c.addEventListener('input', this.wishListOnCheckedEvent);
+    _defineProperty(this, "wishListUpdateEvents", function () {
+        var checkboxes = document.querySelectorAll('.wish-list-item .form-check input');
+        checkboxes.forEach(function (c) {
+            c.removeEventListener('input', _this.wishListOnCheckedEvent);
+            c.addEventListener('input', _this.wishListOnCheckedEvent);
         });
+        var trashBtns = document.querySelectorAll('a.delete-wish-pos-btn');
+        trashBtns.forEach(function (b) {
+            b.removeEventListener('click', _this.wishListDeletePosEvent);
+            b.removeEventListener('touchstart', _this.wishListDeletePosEvent);
+            b.addEventListener('click', _this.wishListDeletePosEvent);
+            b.addEventListener('touchstart', _this.wishListDeletePosEvent);
+        });
+        var cartBtns = document.querySelectorAll('a.add-wish-pos-to-cart');
+        cartBtns.forEach(function (b) {
+            b.removeEventListener('click', _this.wishListAddToCartPosEvent);
+            b.removeEventListener('touchstart', _this.wishListAddToCartPosEvent);
+            b.addEventListener('click', _this.wishListAddToCartPosEvent);
+            b.addEventListener('touchstart', _this.wishListAddToCartPosEvent);
+        });
+        var deleteChecked = document.querySelector('a.wish-control#toDelete');
+        deleteChecked.removeEventListener('click', _this.wishListDeleteCheckedPosEvent);
+        deleteChecked.removeEventListener('touchstart', _this.wishListDeleteCheckedPosEvent);
+        deleteChecked.addEventListener('click', _this.wishListDeleteCheckedPosEvent);
+        deleteChecked.addEventListener('touchstart', _this.wishListDeleteCheckedPosEvent);
+        var addToCartChecked = document.querySelector('a.wish-control#toCart');
+        addToCartChecked.removeEventListener('click', _this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.removeEventListener('touchstart', _this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.addEventListener('click', _this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.addEventListener('touchstart', _this.wishListAddToCartCheckedPosEvent);
+    });
 
-        const trashBtns = document.querySelectorAll('a.delete-wish-pos-btn');
-        trashBtns.forEach(b => {
-            b.removeEventListener('click', this.wishListDeletePosEvent);
-            b.removeEventListener('touchstart', this.wishListDeletePosEvent);
-            b.addEventListener('click', this.wishListDeletePosEvent);
-            b.addEventListener('touchstart', this.wishListDeletePosEvent);
-        })
-
-        const cartBtns = document.querySelectorAll('a.add-wish-pos-to-cart');
-        cartBtns.forEach(b => {
-            b.removeEventListener('click', this.wishListAddToCartPosEvent);
-            b.removeEventListener('touchstart', this.wishListAddToCartPosEvent);
-            b.addEventListener('click', this.wishListAddToCartPosEvent);
-            b.addEventListener('touchstart', this.wishListAddToCartPosEvent);
-        })
-
-        const deleteChecked = document.querySelector('a.wish-control#toDelete');
-        deleteChecked.removeEventListener('click', this.wishListDeleteCheckedPosEvent);
-        deleteChecked.removeEventListener('touchstart', this.wishListDeleteCheckedPosEvent);
-        deleteChecked.addEventListener('click', this.wishListDeleteCheckedPosEvent);
-        deleteChecked.addEventListener('touchstart', this.wishListDeleteCheckedPosEvent);
-
-        const addToCartChecked = document.querySelector('a.wish-control#toCart');
-        addToCartChecked.removeEventListener('click', this.wishListAddToCartCheckedPosEvent);
-        addToCartChecked.removeEventListener('touchstart', this.wishListAddToCartCheckedPosEvent);
-        addToCartChecked.addEventListener('click', this.wishListAddToCartCheckedPosEvent);
-        addToCartChecked.addEventListener('touchstart', this.wishListAddToCartCheckedPosEvent);
-    };
-
-    comparisonDeletePosEvent = (e) => {
+    _defineProperty(this, "comparisonDeletePosEvent", function (e) {
         e.preventDefault();
-        const node = e.target.parentElement.parentElement;
-        $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
-            let counter = +counterNode.innerHTML;
+        var node = e.target.parentElement.parentElement;
+        $(node).animate({
+            'left': '-110%'
+        }, 300, function () {
+            var counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
+            var counter = +counterNode.innerHTML;
             counter = --counter;
-            counterNode.innerHTML = `${counter}`;
-            this.comparisonHeightCounter();
-            document.querySelector('tbody').removeChild(node);
-        })
-    }
+            counterNode.innerHTML = "".concat(counter);
 
-    comparisonAddToCartEvent = (e) => {
+            _this.comparisonHeightCounter();
+
+            document.querySelector('tbody').removeChild(node);
+        });
+    });
+
+    _defineProperty(this, "comparisonAddToCartEvent", function (e) {
         e.preventDefault();
         e.target.classList.add('active');
-    }
+    });
 
-    comparisonHeightCounter = () => {
-        const lastTR = document.querySelector('tr.last-table-row');
-        const tableRows = document.querySelectorAll('tr');
-        let height = 0;
-        setTimeout(() => {
+    _defineProperty(this, "comparisonHeightCounter", function () {
+        var lastTR = document.querySelector('tr.last-table-row');
+        var tableRows = document.querySelectorAll('tr');
+        var height = 0;
+        setTimeout(function () {
             height = +document.querySelector('table tbody').clientHeight;
-            tableRows.forEach(row => {
-                if(row != lastTR) {
+            tableRows.forEach(function (row) {
+                if (row != lastTR) {
                     height = height - row.clientHeight;
                 }
-            })
+            });
             lastTR.style.height = height + 'px';
             lastTR.querySelector('td').style.height = height + 'px';
-        }, 0)
-    }
+        }, 0);
+    });
 
-    comparisonClearList = (e) => {
+    _defineProperty(this, "comparisonClearList", function (e) {
         e.preventDefault();
-        const tableRows = document.querySelectorAll('tr');
-        for (let i = 1; i < tableRows.length - 1; i ++) {
-            $(tableRows[i]).animate({'left': '-110%'}, 300, () => {
-                const counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
-                let counter = +counterNode.innerHTML;
+        var tableRows = document.querySelectorAll('tr');
+
+        var _loop2 = function _loop2(i) {
+            $(tableRows[i]).animate({
+                'left': '-110%'
+            }, 300, function () {
+                var counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
+                var counter = +counterNode.innerHTML;
                 counter = --counter;
-                counterNode.innerHTML = `${counter}`;
+                counterNode.innerHTML = "".concat(counter);
                 document.querySelector('tbody').removeChild(tableRows[i]);
-                this.comparisonHeightCounter();
-            })
+
+                _this.comparisonHeightCounter();
+            });
+        };
+
+        for (var i = 1; i < tableRows.length - 1; i++) {
+            _loop2(i);
         }
-    }
+    });
 
-    comparisonUpdateEvents = () => {
-        const deleteBtns = document.querySelectorAll('a.comparison-del-pos-btn');
-        deleteBtns.forEach(b => {
-            b.removeEventListener('click', this.comparisonDeletePosEvent);
-            b.removeEventListener('touchstart', this.comparisonDeletePosEvent);
-            b.addEventListener('click', this.comparisonDeletePosEvent);
-            b.addEventListener('touchstart', this.comparisonDeletePosEvent);
+    _defineProperty(this, "comparisonUpdateEvents", function () {
+        var deleteBtns = document.querySelectorAll('a.comparison-del-pos-btn');
+        deleteBtns.forEach(function (b) {
+            b.removeEventListener('click', _this.comparisonDeletePosEvent);
+            b.removeEventListener('touchstart', _this.comparisonDeletePosEvent);
+            b.addEventListener('click', _this.comparisonDeletePosEvent);
+            b.addEventListener('touchstart', _this.comparisonDeletePosEvent);
         });
-        const addToCartBtns = document.querySelectorAll('a.comparison-add-to-cart-btn');
-        addToCartBtns.forEach(add => {
-            add.removeEventListener('click', this.comparisonAddToCartEvent);
-            add.removeEventListener('touchstart', this.comparisonAddToCartEvent);
-            add.addEventListener('click', this.comparisonAddToCartEvent);
-            add.addEventListener('touchstart', this.comparisonAddToCartEvent);
-        })
-        this.comparisonHeightCounter();
-        document.querySelector('a.clear-comparison-list-btn').removeEventListener('click', this.comparisonClearList);
-        document.querySelector('a.clear-comparison-list-btn').removeEventListener('touchstart', this.comparisonClearList);
-        document.querySelector('a.clear-comparison-list-btn').addEventListener('click', this.comparisonClearList);
-        document.querySelector('a.clear-comparison-list-btn').addEventListener('touchstart', this.comparisonClearList);
-    }
+        var addToCartBtns = document.querySelectorAll('a.comparison-add-to-cart-btn');
+        addToCartBtns.forEach(function (add) {
+            add.removeEventListener('click', _this.comparisonAddToCartEvent);
+            add.removeEventListener('touchstart', _this.comparisonAddToCartEvent);
+            add.addEventListener('click', _this.comparisonAddToCartEvent);
+            add.addEventListener('touchstart', _this.comparisonAddToCartEvent);
+        });
 
-    openCart = (e) => {
-        if(window.innerWidth > this.mobileResolution) {
+        _this.comparisonHeightCounter();
+
+        document.querySelector('a.clear-comparison-list-btn').removeEventListener('click', _this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').removeEventListener('touchstart', _this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').addEventListener('click', _this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').addEventListener('touchstart', _this.comparisonClearList);
+    });
+
+    _defineProperty(this, "openCart", function (e) {
+        if (window.innerWidth > _this.mobileResolution) {
             return false;
         }
+
         e.preventDefault();
-        const { isCartCollapsed, collapseWrap, animationDuration, collapseCartNode } = this.config;
-        if(isCartCollapsed) return false;
-        this.cartUpdateEvents();
-        this.closeAllRightModules(false);
+        var _this$config3 = _this.config,
+            isCartCollapsed = _this$config3.isCartCollapsed,
+            collapseWrap = _this$config3.collapseWrap,
+            animationDuration = _this$config3.animationDuration,
+            collapseCartNode = _this$config3.collapseCartNode;
+        if (isCartCollapsed) return false;
+
+        _this.cartUpdateEvents();
+
+        _this.closeAllRightModules(false);
+
         document.body.classList.add('scroll-disabled');
-        this.config.isCartCollapsed = true;
+        _this.config.isCartCollapsed = true;
         $('a.nav-link#cart').addClass('active');
         collapseWrap.style.top = 40 + 'px';
-        $(collapseWrap).fadeIn(animationDuration/10);
-        $(collapseCartNode).animate({'right': isCartCollapsed ? '-320px' : '0px'}, animationDuration);
-    }
+        $(collapseWrap).fadeIn(animationDuration / 10);
+        $(collapseCartNode).animate({
+            'right': isCartCollapsed ? '-320px' : '0px'
+        }, animationDuration);
+    });
 
-    openWishList = (e) => {
-        if(window.innerWidth > this.mobileResolution) {
+    _defineProperty(this, "openWishList", function (e) {
+        if (window.innerWidth > _this.mobileResolution) {
             return false;
         }
+
         e.preventDefault();
-        const { isWishListCollapsed, collapseWrap, animationDuration, collapseWishListNode } = this.config;
-        if(isWishListCollapsed) return false;
-        this.wishListUpdateEvents();
-        this.closeAllRightModules(false);
+        var _this$config4 = _this.config,
+            isWishListCollapsed = _this$config4.isWishListCollapsed,
+            collapseWrap = _this$config4.collapseWrap,
+            animationDuration = _this$config4.animationDuration,
+            collapseWishListNode = _this$config4.collapseWishListNode;
+        if (isWishListCollapsed) return false;
+
+        _this.wishListUpdateEvents();
+
+        _this.closeAllRightModules(false);
+
         document.body.classList.add('scroll-disabled');
-        this.config.isWishListCollapsed = true;
+        _this.config.isWishListCollapsed = true;
         $('a.nav-link#heart').addClass('active');
         collapseWrap.style.top = 40 + 'px';
-        $(collapseWrap).fadeIn(animationDuration/10);
-        $(collapseWishListNode).animate({'right': isWishListCollapsed ? '-105%' : '0px'}, animationDuration);
-    }
+        $(collapseWrap).fadeIn(animationDuration / 10);
+        $(collapseWishListNode).animate({
+            'right': isWishListCollapsed ? '-105%' : '0px'
+        }, animationDuration);
+    });
 
-    openComparison = (e) => {
-        if(window.innerWidth > this.mobileResolution) {
+    _defineProperty(this, "openComparison", function (e) {
+        if (window.innerWidth > _this.mobileResolution) {
             return false;
         }
+
         e.preventDefault();
-        const { isComparisonCollapsed, collapseWrap, animationDuration, collapseComparisonNode } = this.config;
-        if(isComparisonCollapsed) return false;
-        this.comparisonUpdateEvents()
-        this.closeAllRightModules(false);
+        var _this$config5 = _this.config,
+            isComparisonCollapsed = _this$config5.isComparisonCollapsed,
+            collapseWrap = _this$config5.collapseWrap,
+            animationDuration = _this$config5.animationDuration,
+            collapseComparisonNode = _this$config5.collapseComparisonNode;
+        if (isComparisonCollapsed) return false;
+
+        _this.comparisonUpdateEvents();
+
+        _this.closeAllRightModules(false);
+
         document.body.classList.add('scroll-disabled');
-        this.config.isComparisonCollapsed = true;
+        _this.config.isComparisonCollapsed = true;
         $('a.nav-link#scales').addClass('active');
         collapseWrap.style.top = 40 + 'px';
-        $(collapseWrap).fadeIn(animationDuration/10);
-        $(collapseComparisonNode).animate({'right': isComparisonCollapsed ? '-105%' : '0px'}, animationDuration);
-    }
+        $(collapseWrap).fadeIn(animationDuration / 10);
+        $(collapseComparisonNode).animate({
+            'right': isComparisonCollapsed ? '-105%' : '0px'
+        }, animationDuration);
+    });
 
-    openRightNavigationFromMainNavigation = (e, type) => {
+    _defineProperty(this, "openRightNavigationFromMainNavigation", function (e, type) {
         e.preventDefault();
-        const { collapseNode, animationDuration, isCollapsed } = this.config;
-        $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration * 0.75 , () => {
-            this.config.isCollapsed = false;
+        var _this$config6 = _this.config,
+            collapseNode = _this$config6.collapseNode,
+            animationDuration = _this$config6.animationDuration,
+            isCollapsed = _this$config6.isCollapsed;
+        $(collapseNode).animate({
+            'left': isCollapsed ? '-320px' : '0px'
+        }, animationDuration * 0.75, function () {
+            _this.config.isCollapsed = false;
+
             switch (type) {
-                case 'cart': {
-                    this.openCart(e);
+                case 'cart':
+                {
+                    _this.openCart(e);
+
                     break;
                 }
-                case 'wishList': {
-                    this.openWishList(e);
-                    break
+
+                case 'wishList':
+                {
+                    _this.openWishList(e);
+
+                    break;
                 }
-                case 'comparison': {
-                    this.openComparison(e);
+
+                case 'comparison':
+                {
+                    _this.openComparison(e);
+
                     break;
                 }
             }
         });
-    }
+    });
 
-    squeezeNavigationOnScroll = (windowTop) => {
-        if(windowTop > 0 && window.innerWidth > 860) {
-            this.config.navigationBlock.style.top = '-60px';
-            this.wrapBlock.style.marginTop = '65px';
-            $('#sqlogo').addClass('show')
+    _defineProperty(this, "squeezeNavigationOnScroll", function (windowTop) {
+        if (windowTop > 0 && window.innerWidth > 860) {
+            _this.config.navigationBlock.style.top = '-60px';
+            _this.wrapBlock.style.marginTop = '65px';
+            $('#sqlogo').addClass('show');
             return 0;
         }
-        if(windowTop == 0 && window.innerWidth > 860) {
-            this.config.navigationBlock.style.top = '0';
-            this.wrapBlock.style.marginTop = '120px';
+
+        if (windowTop == 0 && window.innerWidth > 860) {
+            _this.config.navigationBlock.style.top = '0';
+            _this.wrapBlock.style.marginTop = '120px';
             $('#sqlogo').removeClass('show');
             return 0;
         }
-        this.wrapBlock.style.marginTop = '40px';
-        return 1;
-    }
 
-    searchEvent = (e) => {
+        _this.wrapBlock.style.marginTop = '40px';
+        return 1;
+    });
+
+    _defineProperty(this, "searchEvent", function (e) {
         e.preventDefault();
-        const { isSearchCollapsed, collapseWrap, animationDuration, collapseSearchNode } = this.config;
-        if(isSearchCollapsed) return false;
-        this.closeAllRightModules(false);
+        var _this$config7 = _this.config,
+            isSearchCollapsed = _this$config7.isSearchCollapsed,
+            collapseWrap = _this$config7.collapseWrap,
+            animationDuration = _this$config7.animationDuration,
+            collapseSearchNode = _this$config7.collapseSearchNode;
+        if (isSearchCollapsed) return false;
+
+        _this.closeAllRightModules(false);
+
         document.body.classList.add('scroll-disabled');
-        this.config.isSearchCollapsed = true;
+        _this.config.isSearchCollapsed = true;
         $('a.nav-link#search').addClass('active');
         collapseWrap.style.top = 40 + 'px';
-        $(collapseWrap).fadeIn(animationDuration/10);
-        $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration);
-    }
+        $(collapseWrap).fadeIn(animationDuration / 10);
+        $(collapseSearchNode).animate({
+            'right': isSearchCollapsed ? '-320px' : '0px'
+        }, animationDuration);
+    });
 
-    contactsEvent = (e) => {
+    _defineProperty(this, "contactsEvent", function (e) {
         e.preventDefault();
-        const { isContactsCollapsed, collapseWrap, animationDuration, collapseContactsNode } = this.config;
-        if(isContactsCollapsed) return false;
-        this.closeAllRightModules(false);
+        var _this$config8 = _this.config,
+            isContactsCollapsed = _this$config8.isContactsCollapsed,
+            collapseWrap = _this$config8.collapseWrap,
+            animationDuration = _this$config8.animationDuration,
+            collapseContactsNode = _this$config8.collapseContactsNode;
+        if (isContactsCollapsed) return false;
+
+        _this.closeAllRightModules(false);
+
         document.body.classList.add('scroll-disabled');
-        this.config.isContactsCollapsed = true;
+        _this.config.isContactsCollapsed = true;
         $('a.nav-link#phone').addClass('active');
         collapseWrap.style.top = 40 + 'px';
-        $(collapseWrap).fadeIn(animationDuration/10);
-        $(collapseContactsNode).animate({'right': isContactsCollapsed ? '-320px' : '0px'}, animationDuration);
-    }
+        $(collapseWrap).fadeIn(animationDuration / 10);
+        $(collapseContactsNode).animate({
+            'right': isContactsCollapsed ? '-320px' : '0px'
+        }, animationDuration);
+    });
 
-    navigationEvent = (e) => {
+    _defineProperty(this, "navigationEvent", function (e) {
         e.preventDefault();
-        const { isCollapsed, collapseNode, collapseWrap, animationDuration, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isWishListCollapsed } = this.config;
-        if(isCollapsed) return false;
-        this.closeAllRightModules(false);
-        const waitTime = isSearchCollapsed || isCartCollapsed || isContactsCollapsed || isWishListCollapsed ? animationDuration * 0.75 : 0;
+        var _this$config9 = _this.config,
+            isCollapsed = _this$config9.isCollapsed,
+            collapseNode = _this$config9.collapseNode,
+            collapseWrap = _this$config9.collapseWrap,
+            animationDuration = _this$config9.animationDuration,
+            isSearchCollapsed = _this$config9.isSearchCollapsed,
+            isCartCollapsed = _this$config9.isCartCollapsed,
+            isContactsCollapsed = _this$config9.isContactsCollapsed,
+            isWishListCollapsed = _this$config9.isWishListCollapsed;
+        if (isCollapsed) return false;
+
+        _this.closeAllRightModules(false);
+
+        var waitTime = isSearchCollapsed || isCartCollapsed || isContactsCollapsed || isWishListCollapsed ? animationDuration * 0.75 : 0;
         document.body.classList.add('scroll-disabled');
-        setTimeout(() => {
-            this.config.collapseWrap.style.top = 0 + 'px';
-            $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
-            this.config.isCollapsed = true;
-        }, waitTime)
-    }
+        setTimeout(function () {
+            _this.config.collapseWrap.style.top = 0 + 'px';
+            $(collapseWrap).fadeIn(animationDuration / 10);
+            $(collapseNode).animate({
+                'left': isCollapsed ? '-320px' : '0px'
+            }, animationDuration);
+            _this.config.isCollapsed = true;
+        }, waitTime);
+    });
 
-    navigationCloseEvent = (e) => {
-        if( e.target !== this.config.collapseWrap &&
-            e.target !== this.config.closeNavigationBtn &&
-            e.target !== this.config.closeSearchNodeBtn &&
-            e.target !== this.config.closeCartNodeBtn &&
-            e.target !== this.config.closeXCartNodeBtn &&
-            e.target !== this.config.closeContactsNodeBtn &&
-            e.target !== this.config.closeXContactsNodeBtn &&
-            e.target !== this.config.closeWishListNodeBtn &&
-            e.target !== this.config.closeXWishListNodeBtn &&
-            e.target !== this.config.closeComparisonNodeBtn &&
-            e.target !== this.config.closeXComparisonNodeBtn ) return false;
+    _defineProperty(this, "navigationCloseEvent", function (e) {
+        if (e.target !== _this.config.collapseWrap && e.target !== _this.config.closeNavigationBtn && e.target !== _this.config.closeSearchNodeBtn && e.target !== _this.config.closeCartNodeBtn && e.target !== _this.config.closeXCartNodeBtn && e.target !== _this.config.closeContactsNodeBtn && e.target !== _this.config.closeXContactsNodeBtn && e.target !== _this.config.closeWishListNodeBtn && e.target !== _this.config.closeXWishListNodeBtn && e.target !== _this.config.closeComparisonNodeBtn && e.target !== _this.config.closeXComparisonNodeBtn) return false;
         e.preventDefault();
-        const { isCollapsed, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isComparisonCollapsed, isWishListCollapsed, collapseNode, animationDuration } = this.config;
-        if(isCollapsed) {
-            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, this.wrapFadeOut);
-        }
-        if(isSearchCollapsed) {
-            this.closeSingleRightModule('search', true);
-        }
-        if(isCartCollapsed) {
-            this.closeSingleRightModule('cart', true);
-        }
-        if(isContactsCollapsed) {
-            this.closeSingleRightModule('contacts', true);
-        }
-        if(isWishListCollapsed) {
-            this.closeSingleRightModule('wishList', true);
-        }
-        if(isComparisonCollapsed) {
-            this.closeSingleRightModule('comparison', true);
-        }
-        document.body.classList.remove('scroll-disabled');
-    }
+        var _this$config10 = _this.config,
+            isCollapsed = _this$config10.isCollapsed,
+            isSearchCollapsed = _this$config10.isSearchCollapsed,
+            isCartCollapsed = _this$config10.isCartCollapsed,
+            isContactsCollapsed = _this$config10.isContactsCollapsed,
+            isComparisonCollapsed = _this$config10.isComparisonCollapsed,
+            isWishListCollapsed = _this$config10.isWishListCollapsed,
+            collapseNode = _this$config10.collapseNode,
+            animationDuration = _this$config10.animationDuration;
 
-    switchMenuLevelEvent = (e) => {
+        if (isCollapsed) {
+            $(collapseNode).animate({
+                'left': isCollapsed ? '-320px' : '0px'
+            }, animationDuration, _this.wrapFadeOut);
+        }
+
+        if (isSearchCollapsed) {
+            _this.closeSingleRightModule('search', true);
+        }
+
+        if (isCartCollapsed) {
+            _this.closeSingleRightModule('cart', true);
+        }
+
+        if (isContactsCollapsed) {
+            _this.closeSingleRightModule('contacts', true);
+        }
+
+        if (isWishListCollapsed) {
+            _this.closeSingleRightModule('wishList', true);
+        }
+
+        if (isComparisonCollapsed) {
+            _this.closeSingleRightModule('comparison', true);
+        }
+
+        document.body.classList.remove('scroll-disabled');
+    });
+
+    _defineProperty(this, "switchMenuLevelEvent", function (e) {
         e.preventDefault();
         e.cancelBubble = true;
-        let li = e.target;
-        if(!e.target.matches('.navigation-collapse-list-item-with-sub-navigation')) {
-            if(e.target.matches('.navigation-collapse-list-link')) {
+        var li = e.target;
+
+        if (!e.target.matches('.navigation-collapse-list-item-with-sub-navigation')) {
+            if (e.target.matches('.navigation-collapse-list-link')) {
                 li = e.target.parentNode;
-            }
-            else {
+            } else {
                 li = e.target.parentNode.parentNode;
             }
         }
-        const nextNav = li.querySelector('.sub-navigation-collapse');
-        this.config.navFooterSocial.style.display = 'none';
-        $(nextNav).fadeIn(500);
-    }
 
-    backSwitchMenuLevelEvent = (e) => {
+        var nextNav = li.querySelector('.sub-navigation-collapse');
+        _this.config.navFooterSocial.style.display = 'none';
+        $(nextNav).fadeIn(500);
+    });
+
+    _defineProperty(this, "backSwitchMenuLevelEvent", function (e) {
         e.preventDefault();
         e.cancelBubble = true;
-        let backBtn = e.target;
-        if(!e.target.matches('.go-back-btn')) {
+        var backBtn = e.target;
+
+        if (!e.target.matches('.go-back-btn')) {
             backBtn = e.target.parentNode;
         }
-        const prevMenu = backBtn.parentNode;
-        if(prevMenu.getAttribute('data-level') == '2') {
-            this.config.navFooterSocial.style.display = 'flex';
-        }
-        $(prevMenu).fadeOut(500);
-    }
 
-    desktopNavigationEvent = (e) => {
+        var prevMenu = backBtn.parentNode;
+
+        if (prevMenu.getAttribute('data-level') == '2') {
+            _this.config.navFooterSocial.style.display = 'flex';
+        }
+
+        $(prevMenu).fadeOut(500);
+    });
+
+    _defineProperty(this, "desktopNavigationEvent", function (e) {
         e.preventDefault();
-        if(!this.config.isDesktopAnimated) {
-            const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
-            this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
-            $(desktopNavigationCollapseMenu).animate( {'top': isDesktopMenuCollapsed ? '-100rem' : '55px'} , animationDuration * .75, ()=> {
-                this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
-                this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
+
+        if (!_this.config.isDesktopAnimated) {
+            var _this$config11 = _this.config,
+                isDesktopMenuCollapsed = _this$config11.isDesktopMenuCollapsed,
+                desktopNavigationCollapseMenu = _this$config11.desktopNavigationCollapseMenu,
+                animationDuration = _this$config11.animationDuration;
+            _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
+            $(desktopNavigationCollapseMenu).animate({
+                'top': isDesktopMenuCollapsed ? '-100rem' : '55px'
+            }, animationDuration * .75, function () {
+                _this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
+                _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
             });
         }
-    }
+    });
 
-    createNavigationsEvents = () => {
+    _defineProperty(this, "createNavigationsEvents", function () {
         // Меню поиска
-        this.config.navSearchBtn.addEventListener('click', this.searchEvent);
-        this.config.navSearchBtn.addEventListener('touchstart', this.searchEvent);
+        _this.config.navSearchBtn.addEventListener('click', _this.searchEvent);
 
-        // Корзина
-        this.config.cartSearchBtn.addEventListener('click', this.openCart);
-        this.config.cartSearchBtn.addEventListener('touchstart', this.openCart);
-        this.navCartBtn.addEventListener('click', (e) => {
-            this.openRightNavigationFromMainNavigation(e, 'cart');
-        });
-        this.navCartBtn.addEventListener('touchstart', (e) => {
-            this.openRightNavigationFromMainNavigation(e, 'cart');
-        });
+        _this.config.navSearchBtn.addEventListener('touchstart', _this.searchEvent); // Корзина
 
 
-        // Контакты
-        this.config.navContactsBtn.addEventListener('click', this.contactsEvent);
-        this.config.navContactsBtn.addEventListener('touchstart', this.contactsEvent);
+        _this.config.cartSearchBtn.addEventListener('click', _this.openCart);
 
-        // Список желаний
-        this.config.navWishListBtn.addEventListener('click', this.openWishList);
-        this.config.navWishListBtn.addEventListener('touchstart', this.openWishList);
-        this.navWishListBtn.addEventListener('click', (e) => {
-            this.openRightNavigationFromMainNavigation(e, 'wishList');
-        });
-        this.navWishListBtn.addEventListener('touchstart', (e) => {
-            this.openRightNavigationFromMainNavigation(e, 'wishList');
+        _this.config.cartSearchBtn.addEventListener('touchstart', _this.openCart);
+
+        _this.navCartBtn.addEventListener('click', function (e) {
+            _this.openRightNavigationFromMainNavigation(e, 'cart');
         });
 
-        // Сравнения
-        this.config.navComparisonBtn.addEventListener('click', this.openComparison);
-        this.config.navComparisonBtn.addEventListener('touchstart', this.openComparison);
-        this.navComparisonBtn.addEventListener('click', (e) => {
-            this.openRightNavigationFromMainNavigation(e, 'comparison');
-        });
-        this.navComparisonBtn.addEventListener('touchstart', (e) => {
-            this.openRightNavigationFromMainNavigation(e, 'comparison');
-        });
+        _this.navCartBtn.addEventListener('touchstart', function (e) {
+            _this.openRightNavigationFromMainNavigation(e, 'cart');
+        }); // Контакты
 
-        // Навигация
-        this.config.toggleBtn.addEventListener('click', this.navigationEvent);
-        this.config.toggleBtn.addEventListener('touchstart', this.navigationEvent);
 
-        // Закрытие по нажатию на overlay и кнопки закрытия
-        this.config.collapseWrap.addEventListener('click', this.navigationCloseEvent);
-        this.config.collapseWrap.addEventListener('touchstart', this.navigationCloseEvent);
+        _this.config.navContactsBtn.addEventListener('click', _this.contactsEvent);
 
-        //Переключение уровней меню
-        this.config.navLinksWithSubNav.forEach(link => {
-            link.addEventListener('click', this.switchMenuLevelEvent)
-            link.addEventListener('touchstart', this.switchMenuLevelEvent)
+        _this.config.navContactsBtn.addEventListener('touchstart', _this.contactsEvent); // Список желаний
+
+
+        _this.config.navWishListBtn.addEventListener('click', _this.openWishList);
+
+        _this.config.navWishListBtn.addEventListener('touchstart', _this.openWishList);
+
+        _this.navWishListBtn.addEventListener('click', function (e) {
+            _this.openRightNavigationFromMainNavigation(e, 'wishList');
         });
 
-        this.config.goBack.forEach(btn => {
-            btn.addEventListener('click', this.backSwitchMenuLevelEvent)
-            btn.addEventListener('touchstart', this.backSwitchMenuLevelEvent)
+        _this.navWishListBtn.addEventListener('touchstart', function (e) {
+            _this.openRightNavigationFromMainNavigation(e, 'wishList');
+        }); // Сравнения
+
+
+        _this.config.navComparisonBtn.addEventListener('click', _this.openComparison);
+
+        _this.config.navComparisonBtn.addEventListener('touchstart', _this.openComparison);
+
+        _this.navComparisonBtn.addEventListener('click', function (e) {
+            _this.openRightNavigationFromMainNavigation(e, 'comparison');
         });
 
+        _this.navComparisonBtn.addEventListener('touchstart', function (e) {
+            _this.openRightNavigationFromMainNavigation(e, 'comparison');
+        }); // Навигация
 
-        // События по загрузке страницы
-        document.addEventListener('DOMContentLoaded', (e) => {
-            const pageTop = window.pageYOffset;
-            this.squeezeNavigationOnScroll(pageTop);
-            document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
-            // Десктоп переключение меню при скроле
-            document.addEventListener('scroll', (e) => {
-                const pageTop = window.pageYOffset;
-                this.squeezeNavigationOnScroll(pageTop);
-            })
-            window.addEventListener('resize', (e) => {
-                const pageTop = window.pageYOffset;
-                this.squeezeNavigationOnScroll(pageTop);
+
+        _this.config.toggleBtn.addEventListener('click', _this.navigationEvent);
+
+        _this.config.toggleBtn.addEventListener('touchstart', _this.navigationEvent); // Закрытие по нажатию на overlay и кнопки закрытия
+
+
+        _this.config.collapseWrap.addEventListener('click', _this.navigationCloseEvent);
+
+        _this.config.collapseWrap.addEventListener('touchstart', _this.navigationCloseEvent); //Переключение уровней меню
+
+
+        _this.config.navLinksWithSubNav.forEach(function (link) {
+            link.addEventListener('click', _this.switchMenuLevelEvent);
+            link.addEventListener('touchstart', _this.switchMenuLevelEvent);
+        });
+
+        _this.config.goBack.forEach(function (btn) {
+            btn.addEventListener('click', _this.backSwitchMenuLevelEvent);
+            btn.addEventListener('touchstart', _this.backSwitchMenuLevelEvent);
+        }); // События по загрузке страницы
+
+
+        document.addEventListener('DOMContentLoaded', function (e) {
+            var pageTop = window.pageYOffset;
+
+            _this.squeezeNavigationOnScroll(pageTop);
+
+            document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50'; // Десктоп переключение меню при скроле
+
+            document.addEventListener('scroll', function (e) {
+                var pageTop = window.pageYOffset;
+
+                _this.squeezeNavigationOnScroll(pageTop);
+            });
+            window.addEventListener('resize', function (e) {
+                var pageTop = window.pageYOffset;
+
+                _this.squeezeNavigationOnScroll(pageTop);
+
                 document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
-            })
-        })
+            });
+        }); // Открытие и закрытие меню Desktop
 
-        // Открытие и закрытие меню Desktop
-        this.config.desktopNavigationBtn.addEventListener('click', this.desktopNavigationEvent);
-        this.config.desktopNavigationBtn.addEventListener('touchstart', this.desktopNavigationEvent);
+        _this.config.desktopNavigationBtn.addEventListener('click', _this.desktopNavigationEvent);
 
-        // Overlay при hover
-        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseenter', (e) => {
-            if(!this.config.isOverlayShow) {
-                $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
-                    this.config.isOverlayShow = !this.config.isOverlayShow
+        _this.config.desktopNavigationBtn.addEventListener('touchstart', _this.desktopNavigationEvent); // Overlay при hover
+
+
+        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseenter', function (e) {
+            if (!_this.config.isOverlayShow) {
+                $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
+                    _this.config.isOverlayShow = !_this.config.isOverlayShow;
                 });
             }
-        })
-        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseleave', (e) => {
-            $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
-            this.config.isOverlayShow = !this.config.isOverlayShow;
-        })
+        });
+        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseleave', function (e) {
+            $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
+            _this.config.isOverlayShow = !_this.config.isOverlayShow;
+        }); // Поиск в навигации
 
-        // Поиск в навигации
-        this.config.desktopSearchInput.addEventListener('input', (e) => {
-            const value = e.target.value;
-            const { isSearchResultAnimated, desktopSearchResult, desktopSearchBlock } = this.config;
-            if(value.length > 0) {
+        _this.config.desktopSearchInput.addEventListener('input', function (e) {
+            var value = e.target.value;
+            var _this$config12 = _this.config,
+                isSearchResultAnimated = _this$config12.isSearchResultAnimated,
+                desktopSearchResult = _this$config12.desktopSearchResult,
+                desktopSearchBlock = _this$config12.desktopSearchBlock;
+
+            if (value.length > 0) {
                 desktopSearchBlock.classList.add('is-searching');
-                if(!isSearchResultAnimated) {
-                    this.config.isSearchResultAnimated = !isSearchResultAnimated;
-                    $(desktopSearchResult).fadeIn(100, () => {
-                        this.config.isSearchResultAnimated = !this.config.isSearchResultAnimated;
-                        this.config.isSearchResultVisible = !this.config.isSearchResultVisible;
+
+                if (!isSearchResultAnimated) {
+                    _this.config.isSearchResultAnimated = !isSearchResultAnimated;
+                    $(desktopSearchResult).fadeIn(100, function () {
+                        _this.config.isSearchResultAnimated = !_this.config.isSearchResultAnimated;
+                        _this.config.isSearchResultVisible = !_this.config.isSearchResultVisible;
                     });
                 }
             } else {
                 desktopSearchBlock.classList.remove('is-searching');
-                this.config.isSearchResultAnimated = !isSearchResultAnimated;
-                $(desktopSearchResult).fadeOut(100, () => {
-                    this.config.isSearchResultAnimated = !this.config.isSearchResultAnimated;
-                    this.config.isSearchResultVisible = !this.config.isSearchResultVisible;
+                _this.config.isSearchResultAnimated = !isSearchResultAnimated;
+                $(desktopSearchResult).fadeOut(100, function () {
+                    _this.config.isSearchResultAnimated = !_this.config.isSearchResultAnimated;
+                    _this.config.isSearchResultVisible = !_this.config.isSearchResultVisible;
                 });
             }
-        })
-        this.config.desktopSearchForm.addEventListener('reset', () => {
-            const { isSearchResultAnimated, desktopSearchResult, desktopSearchBlock } = this.config;
-            desktopSearchBlock.classList.remove('is-searching');
-            this.config.isSearchResultAnimated = !isSearchResultAnimated;
-            $(desktopSearchResult).fadeOut(100, () => {
-                this.config.isSearchResultAnimated = !this.config.isSearchResultAnimated;
-                this.config.isSearchResultVisible = !this.config.isSearchResultVisible;
-            });
-        })
-    }
-}
+        });
 
-const navigation = new Navigation(600);
+        _this.config.desktopSearchForm.addEventListener('reset', function () {
+            var _this$config13 = _this.config,
+                isSearchResultAnimated = _this$config13.isSearchResultAnimated,
+                desktopSearchResult = _this$config13.desktopSearchResult,
+                desktopSearchBlock = _this$config13.desktopSearchBlock;
+            desktopSearchBlock.classList.remove('is-searching');
+            _this.config.isSearchResultAnimated = !isSearchResultAnimated;
+            $(desktopSearchResult).fadeOut(100, function () {
+                _this.config.isSearchResultAnimated = !_this.config.isSearchResultAnimated;
+                _this.config.isSearchResultVisible = !_this.config.isSearchResultVisible;
+            });
+        });
+    });
+
+    this.config = {
+        navigationBlock: document.querySelector('header'),
+        desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
+        toggleBtn: document.getElementById('navToggleBtn'),
+        collapseNode: document.getElementById('navCollapse'),
+        collapseWrap: document.getElementById('navCollapseWrap'),
+        collapseNavList: document.querySelector('.navigation-collapse-list'),
+        navLinksWithSubNav: document.querySelectorAll('.navigation-collapse-list-item-with-sub-navigation'),
+        closeNavigationBtn: document.querySelector('a.navigation-collapse-close-btn'),
+        navFooterSocial: document.querySelector('.mobile-app-row'),
+        navSearchBtn: document.getElementById('search'),
+        collapseSearchNode: document.getElementById('searchCollapse'),
+        closeSearchNodeBtn: document.querySelector('a.search-collapse-btn-back'),
+        goBack: document.querySelectorAll('.go-back-btn'),
+        cartSearchBtn: document.getElementById('cart'),
+        collapseCartNode: document.getElementById('cartCollapse'),
+        closeCartNodeBtn: document.querySelector('a.cart-collapse-btn-back'),
+        closeXCartNodeBtn: document.querySelector('a.cart-collapse-close-btn'),
+        navContactsBtn: document.getElementById('phone'),
+        collapseContactsNode: document.getElementById('contactsCollapse'),
+        closeContactsNodeBtn: document.querySelector('a.contacts-collapse-btn-back'),
+        closeXContactsNodeBtn: document.querySelector('a.contacts-collapse-close-btn'),
+        navWishListBtn: document.getElementById('heart'),
+        collapseWishListNode: document.getElementById('wishListCollapse'),
+        closeWishListNodeBtn: document.querySelector('a.wish-list-collapse-btn-back'),
+        closeXWishListNodeBtn: document.querySelector('a.wish-list-collapse-close-btn'),
+        navComparisonBtn: document.getElementById('scales'),
+        collapseComparisonNode: document.getElementById('comparisonCollapse'),
+        closeComparisonNodeBtn: document.querySelector('a.comparison-collapse-btn-back'),
+        closeXComparisonNodeBtn: document.querySelector('a.comparison-collapse-close-btn'),
+        desktopNavigationBtn: document.getElementById('dmenu'),
+        desktopNavigationCollapseMenu: document.querySelector('div.desktop-navigation-collapse'),
+        desktopCollapseDesktopOverlay: document.querySelector('div.desktop-navigation-collapse-overlay'),
+        desktopSearchInput: document.getElementById('navSearchInp'),
+        desktopSearchBlock: document.getElementById('navSearch'),
+        desktopSearchResult: document.getElementById('navSearchResult'),
+        desktopSearchForm: document.getElementById('navSearchForm'),
+        isCollapsed: false,
+        isSearchCollapsed: false,
+        isCartCollapsed: false,
+        isContactsCollapsed: false,
+        isWishListCollapsed: false,
+        isComparisonCollapsed: false,
+        isDesktopMenuCollapsed: false,
+        isDesktopAnimated: false,
+        isOverlayShow: false,
+        isSearchResultVisible: false,
+        isSearchResultAnimated: false,
+        animationDuration: _animationDuration
+    };
+    this.wrapBlock = document.querySelector('div.wrap');
+    this.navCartBtn = document.getElementById('navCart');
+    this.navWishListBtn = document.getElementById('navWishList');
+    this.navComparisonBtn = document.getElementById('navComparison');
+    this.mobileResolution = 860;
+    this.createNavigationsEvents();
+};
+
+var navigation = new Navigation(600);
