@@ -551,7 +551,7 @@ class Navigation {
     createNavigationsEvents = () => {
 
         // Закрытие по свайпу
-        $(this.config.collapseWrap).on('swiperight', this.closeAllRightModules);
+        $(this.config.collapseSearchNode).on('swiperight', this.closeAllRightModules);
         $(this.config.collapseWrap).on('swipeleft', this.navigationEvent);
 
         // Меню поиска
