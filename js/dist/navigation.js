@@ -8,6 +8,7 @@ var Navigation = function Navigation(animationDuration) {
     _initialiseProps.call(this);
 
     this.config = {
+        logotype: document.getElementById('mainLogo'),
         navigationBlock: document.querySelector('header'),
         desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
         toggleBtn: document.getElementById('navToggleBtn'),
@@ -476,13 +477,13 @@ var _initialiseProps = function _initialiseProps() {
         if (windowTop > 0 && window.innerWidth > 860) {
             _this.config.navigationBlock.style.top = '-60px';
             _this.wrapBlock.style.marginTop = '65px';
-            $('#sqlogo').addClass('show');
+            _this.config.logotype.style.top = window.innerWidth >= 1600 ? '55px' : '0px';
             return 0;
         }
         if (windowTop == 0 && window.innerWidth > 860) {
             _this.config.navigationBlock.style.top = '0';
             _this.wrapBlock.style.marginTop = '120px';
-            $('#sqlogo').removeClass('show');
+            _this.config.logotype.style.top = '0px';
             return 0;
         }
         _this.wrapBlock.style.marginTop = '40px';
@@ -622,7 +623,7 @@ var _initialiseProps = function _initialiseProps() {
                 animationDuration = _config11.animationDuration;
 
             _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
-            $(desktopNavigationCollapseMenu).animate({ 'top': isDesktopMenuCollapsed ? '-100rem' : '55px' }, animationDuration * .75, function () {
+            $(desktopNavigationCollapseMenu).animate({ 'top': isDesktopMenuCollapsed ? '-100rem' : '50px' }, animationDuration * .75, function () {
                 _this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
             });
@@ -630,10 +631,6 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.createNavigationsEvents = function () {
-
-        // Закрытие по свайпу
-        $(_this.config.collapseSearchNode).on('swiperight', _this.closeAllRightModules);
-        $(_this.config.collapseWrap).on('swipeleft', _this.navigationEvent);
 
         // Меню поиска
         _this.config.navSearchBtn.addEventListener('click', _this.searchEvent);

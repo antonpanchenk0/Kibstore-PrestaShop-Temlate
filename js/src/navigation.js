@@ -1,6 +1,7 @@
 class Navigation {
     constructor(animationDuration){
         this.config = {
+            logotype: document.getElementById('mainLogo'),
             navigationBlock: document.querySelector('header'),
             desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
             toggleBtn: document.getElementById('navToggleBtn'),
@@ -416,13 +417,13 @@ class Navigation {
         if(windowTop > 0 && window.innerWidth > 860) {
             this.config.navigationBlock.style.top = '-60px';
             this.wrapBlock.style.marginTop = '65px';
-            $('#sqlogo').addClass('show')
+            this.config.logotype.style.top = window.innerWidth >= 1600 ? '55px' : '0px';
             return 0;
         }
         if(windowTop == 0 && window.innerWidth > 860) {
             this.config.navigationBlock.style.top = '0';
             this.wrapBlock.style.marginTop = '120px';
-            $('#sqlogo').removeClass('show');
+            this.config.logotype.style.top = '0px';
             return 0;
         }
         this.wrapBlock.style.marginTop = '40px';
@@ -541,7 +542,7 @@ class Navigation {
         if(!this.config.isDesktopAnimated) {
             const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
             this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
-            $(desktopNavigationCollapseMenu).animate( {'top': isDesktopMenuCollapsed ? '-100rem' : '55px'} , animationDuration * .75, ()=> {
+            $(desktopNavigationCollapseMenu).animate( {'top': isDesktopMenuCollapsed ? '-100rem' : '50px'} , animationDuration * .75, ()=> {
                 this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
             });
@@ -549,10 +550,6 @@ class Navigation {
     }
 
     createNavigationsEvents = () => {
-
-        // Закрытие по свайпу
-        $(this.config.collapseSearchNode).on('swiperight', this.closeAllRightModules);
-        $(this.config.collapseWrap).on('swipeleft', this.navigationEvent);
 
         // Меню поиска
         this.config.navSearchBtn.addEventListener('click', this.searchEvent);
