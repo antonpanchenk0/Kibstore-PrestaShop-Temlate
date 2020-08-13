@@ -164,11 +164,11 @@ var _initialiseProps = function _initialiseProps() {
     this.cartDeletePosEvent = function (e) {
         var node = e.currentTarget.parentElement.parentElement.parentElement;
         $(node).animate({ 'left': '-110%' }, 300, function () {
-            var counterNode = document.querySelector('a.cart-collapse-btn-back h2 span');
+            var counterNode = document.querySelector('a.cart-collapse-btn-back~h2>span');
             var menuCounterNode = document.querySelector('span.cart-counter');
             counterNode.innerHTML = '' + (+counterNode.innerHTML - 1);
             menuCounterNode.innerHTML = '' + (+menuCounterNode.innerHTML - 1);
-            document.querySelector('#cartRender').removeChild(node);
+            document.getElementById('cartRender').removeChild(node);
         });
     };
 
@@ -179,7 +179,6 @@ var _initialiseProps = function _initialiseProps() {
             case 'add':
                 {
                     var value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
-                    console.log(value);
                     e.currentTarget.parentElement.querySelector('p.count').innerHTML = '' + (Number(value) + 1);
                     break;
                 }
@@ -223,8 +222,9 @@ var _initialiseProps = function _initialiseProps() {
     this.wishListDeletePosEvent = function (e) {
         e.preventDefault();
         var node = e.target.parentElement.parentElement;
+        console.log(node);
         $(node).animate({ 'left': '-110%' }, 300, function () {
-            var counterNode = document.querySelector('a.wish-list-collapse-btn-back h2 span');
+            var counterNode = document.querySelector('a.wish-list-collapse-btn-back~h2>span');
             var counter = +counterNode.innerHTML;
             counter = --counter;
             counterNode.innerHTML = '' + counter;
@@ -306,7 +306,7 @@ var _initialiseProps = function _initialiseProps() {
         e.preventDefault();
         var node = e.target.parentElement.parentElement;
         $(node).animate({ 'left': '-110%' }, 300, function () {
-            var counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
+            var counterNode = document.querySelector('a.comparison-collapse-btn-back~h2>span');
             var counter = +counterNode.innerHTML;
             counter = --counter;
             counterNode.innerHTML = '' + counter;

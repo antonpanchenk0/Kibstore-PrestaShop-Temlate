@@ -136,13 +136,13 @@ class Navigation {
     };
 
     cartDeletePosEvent = (e) => {
-        const node = e.currentTarget.parentElement.parentElement.parentElement
+        const node = e.currentTarget.parentElement.parentElement.parentElement;
         $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.cart-collapse-btn-back h2 span');
+            const counterNode = document.querySelector('a.cart-collapse-btn-back~h2>span');
             const menuCounterNode = document.querySelector('span.cart-counter');
             counterNode.innerHTML = `${+counterNode.innerHTML - 1}`;
             menuCounterNode.innerHTML = `${+menuCounterNode.innerHTML - 1}`;
-            document.querySelector('#cartRender').removeChild(node);
+            document.getElementById('cartRender').removeChild(node);
         })
     }
 
@@ -152,7 +152,6 @@ class Navigation {
         switch (_do) {
             case 'add': {
                 const value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
-                console.log(value)
                 e.currentTarget.parentElement.querySelector('p.count').innerHTML = `${Number(value) + 1}`;
                 break;
             }
@@ -194,8 +193,9 @@ class Navigation {
     wishListDeletePosEvent = (e) => {
         e.preventDefault();
         const node = e.target.parentElement.parentElement;
+        console.log(node)
         $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.wish-list-collapse-btn-back h2 span');
+            const counterNode = document.querySelector('a.wish-list-collapse-btn-back~h2>span');
             let counter = +counterNode.innerHTML;
             counter = --counter;
             counterNode.innerHTML = `${counter}`;
@@ -273,7 +273,7 @@ class Navigation {
         e.preventDefault();
         const node = e.target.parentElement.parentElement;
         $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
+            const counterNode = document.querySelector('a.comparison-collapse-btn-back~h2>span');
             let counter = +counterNode.innerHTML;
             counter = --counter;
             counterNode.innerHTML = `${counter}`;
