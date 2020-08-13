@@ -201,16 +201,16 @@ var _initialiseProps = function _initialiseProps() {
         var deleteBtns = document.querySelectorAll('a.delete-position-btn');
         deleteBtns.forEach(function (btn) {
             btn.removeEventListener('click', _this.cartDeletePosEvent);
-            btn.removeEventListener('touchstart', _this.cartDeletePosEvent);
+            btn.removeEventListener('touchend', _this.cartDeletePosEvent);
             btn.addEventListener('click', _this.cartDeletePosEvent);
-            btn.addEventListener('touchstart', _this.cartDeletePosEvent);
+            btn.addEventListener('touchend', _this.cartDeletePosEvent);
         });
         var switchersBtns = document.querySelectorAll('.switchers-count-btn');
         switchersBtns.forEach(function (_switch) {
             _switch.removeEventListener('click', _this.cartSwitchCountEvent);
-            _switch.removeEventListener('touchstart', _this.cartSwitchCountEvent);
+            _switch.removeEventListener('touchend', _this.cartSwitchCountEvent);
             _switch.addEventListener('click', _this.cartSwitchCountEvent);
-            _switch.addEventListener('touchstart', _this.cartSwitchCountEvent);
+            _switch.addEventListener('touchend', _this.cartSwitchCountEvent);
         });
     };
 
@@ -275,30 +275,30 @@ var _initialiseProps = function _initialiseProps() {
         var trashBtns = document.querySelectorAll('a.delete-wish-pos-btn');
         trashBtns.forEach(function (b) {
             b.removeEventListener('click', _this.wishListDeletePosEvent);
-            b.removeEventListener('touchstart', _this.wishListDeletePosEvent);
+            b.removeEventListener('touchend', _this.wishListDeletePosEvent);
             b.addEventListener('click', _this.wishListDeletePosEvent);
-            b.addEventListener('touchstart', _this.wishListDeletePosEvent);
+            b.addEventListener('touchend', _this.wishListDeletePosEvent);
         });
 
         var cartBtns = document.querySelectorAll('a.add-wish-pos-to-cart');
         cartBtns.forEach(function (b) {
             b.removeEventListener('click', _this.wishListAddToCartPosEvent);
-            b.removeEventListener('touchstart', _this.wishListAddToCartPosEvent);
+            b.removeEventListener('touchend', _this.wishListAddToCartPosEvent);
             b.addEventListener('click', _this.wishListAddToCartPosEvent);
-            b.addEventListener('touchstart', _this.wishListAddToCartPosEvent);
+            b.addEventListener('touchend', _this.wishListAddToCartPosEvent);
         });
 
         var deleteChecked = document.querySelector('a.wish-control#toDelete');
         deleteChecked.removeEventListener('click', _this.wishListDeleteCheckedPosEvent);
-        deleteChecked.removeEventListener('touchstart', _this.wishListDeleteCheckedPosEvent);
+        deleteChecked.removeEventListener('touchend', _this.wishListDeleteCheckedPosEvent);
         deleteChecked.addEventListener('click', _this.wishListDeleteCheckedPosEvent);
-        deleteChecked.addEventListener('touchstart', _this.wishListDeleteCheckedPosEvent);
+        deleteChecked.addEventListener('touchend', _this.wishListDeleteCheckedPosEvent);
 
         var addToCartChecked = document.querySelector('a.wish-control#toCart');
         addToCartChecked.removeEventListener('click', _this.wishListAddToCartCheckedPosEvent);
-        addToCartChecked.removeEventListener('touchstart', _this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.removeEventListener('touchend', _this.wishListAddToCartCheckedPosEvent);
         addToCartChecked.addEventListener('click', _this.wishListAddToCartCheckedPosEvent);
-        addToCartChecked.addEventListener('touchstart', _this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.addEventListener('touchend', _this.wishListAddToCartCheckedPosEvent);
     };
 
     this.comparisonDeletePosEvent = function (e) {
@@ -359,22 +359,22 @@ var _initialiseProps = function _initialiseProps() {
         var deleteBtns = document.querySelectorAll('a.comparison-del-pos-btn');
         deleteBtns.forEach(function (b) {
             b.removeEventListener('click', _this.comparisonDeletePosEvent);
-            b.removeEventListener('touchstart', _this.comparisonDeletePosEvent);
+            b.removeEventListener('touchend', _this.comparisonDeletePosEvent);
             b.addEventListener('click', _this.comparisonDeletePosEvent);
-            b.addEventListener('touchstart', _this.comparisonDeletePosEvent);
+            b.addEventListener('touchend', _this.comparisonDeletePosEvent);
         });
         var addToCartBtns = document.querySelectorAll('a.comparison-add-to-cart-btn');
         addToCartBtns.forEach(function (add) {
             add.removeEventListener('click', _this.comparisonAddToCartEvent);
-            add.removeEventListener('touchstart', _this.comparisonAddToCartEvent);
+            add.removeEventListener('touchend', _this.comparisonAddToCartEvent);
             add.addEventListener('click', _this.comparisonAddToCartEvent);
-            add.addEventListener('touchstart', _this.comparisonAddToCartEvent);
+            add.addEventListener('touchend', _this.comparisonAddToCartEvent);
         });
         _this.comparisonHeightCounter();
         document.querySelector('a.clear-comparison-list-btn').removeEventListener('click', _this.comparisonClearList);
-        document.querySelector('a.clear-comparison-list-btn').removeEventListener('touchstart', _this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').removeEventListener('touchend', _this.comparisonClearList);
         document.querySelector('a.clear-comparison-list-btn').addEventListener('click', _this.comparisonClearList);
-        document.querySelector('a.clear-comparison-list-btn').addEventListener('touchstart', _this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').addEventListener('touchend', _this.comparisonClearList);
     };
 
     this.openCart = function (e) {
@@ -637,59 +637,59 @@ var _initialiseProps = function _initialiseProps() {
 
         // Меню поиска
         _this.config.navSearchBtn.addEventListener('click', _this.searchEvent);
-        _this.config.navSearchBtn.addEventListener('touchstart', _this.searchEvent);
+        _this.config.navSearchBtn.addEventListener('touchend', _this.searchEvent);
 
         // Корзина
         _this.config.cartSearchBtn.addEventListener('click', _this.openCart);
-        _this.config.cartSearchBtn.addEventListener('touchstart', _this.openCart);
+        _this.config.cartSearchBtn.addEventListener('touchend', _this.openCart);
         _this.navCartBtn.addEventListener('click', function (e) {
             _this.openRightNavigationFromMainNavigation(e, 'cart');
         });
-        _this.navCartBtn.addEventListener('touchstart', function (e) {
+        _this.navCartBtn.addEventListener('touchend', function (e) {
             _this.openRightNavigationFromMainNavigation(e, 'cart');
         });
 
         // Контакты
         _this.config.navContactsBtn.addEventListener('click', _this.contactsEvent);
-        _this.config.navContactsBtn.addEventListener('touchstart', _this.contactsEvent);
+        _this.config.navContactsBtn.addEventListener('touchend', _this.contactsEvent);
 
         // Список желаний
         _this.config.navWishListBtn.addEventListener('click', _this.openWishList);
-        _this.config.navWishListBtn.addEventListener('touchstart', _this.openWishList);
+        _this.config.navWishListBtn.addEventListener('touchend', _this.openWishList);
         _this.navWishListBtn.addEventListener('click', function (e) {
             _this.openRightNavigationFromMainNavigation(e, 'wishList');
         });
-        _this.navWishListBtn.addEventListener('touchstart', function (e) {
+        _this.navWishListBtn.addEventListener('touchend', function (e) {
             _this.openRightNavigationFromMainNavigation(e, 'wishList');
         });
 
         // Сравнения
         _this.config.navComparisonBtn.addEventListener('click', _this.openComparison);
-        _this.config.navComparisonBtn.addEventListener('touchstart', _this.openComparison);
+        _this.config.navComparisonBtn.addEventListener('touchend', _this.openComparison);
         _this.navComparisonBtn.addEventListener('click', function (e) {
             _this.openRightNavigationFromMainNavigation(e, 'comparison');
         });
-        _this.navComparisonBtn.addEventListener('touchstart', function (e) {
+        _this.navComparisonBtn.addEventListener('touchend', function (e) {
             _this.openRightNavigationFromMainNavigation(e, 'comparison');
         });
 
         // Навигация
         _this.config.toggleBtn.addEventListener('click', _this.navigationEvent);
-        _this.config.toggleBtn.addEventListener('touchstart', _this.navigationEvent);
+        _this.config.toggleBtn.addEventListener('touchend', _this.navigationEvent);
 
         // Закрытие по нажатию на overlay и кнопки закрытия
         _this.config.collapseWrap.addEventListener('click', _this.navigationCloseEvent);
-        _this.config.collapseWrap.addEventListener('touchstart', _this.navigationCloseEvent);
+        _this.config.collapseWrap.addEventListener('touchend', _this.navigationCloseEvent);
 
         //Переключение уровней меню
         _this.config.navLinksWithSubNav.forEach(function (link) {
             link.addEventListener('click', _this.switchMenuLevelEvent);
-            link.addEventListener('touchstart', _this.switchMenuLevelEvent);
+            link.addEventListener('touchend', _this.switchMenuLevelEvent);
         });
 
         _this.config.goBack.forEach(function (btn) {
             btn.addEventListener('click', _this.backSwitchMenuLevelEvent);
-            btn.addEventListener('touchstart', _this.backSwitchMenuLevelEvent);
+            btn.addEventListener('touchend', _this.backSwitchMenuLevelEvent);
         });
 
         // События по загрузке страницы
@@ -711,7 +711,7 @@ var _initialiseProps = function _initialiseProps() {
 
         // Открытие и закрытие меню Desktop
         _this.config.desktopNavigationBtn.addEventListener('click', _this.desktopNavigationEvent);
-        _this.config.desktopNavigationBtn.addEventListener('touchstart', _this.desktopNavigationEvent);
+        _this.config.desktopNavigationBtn.addEventListener('touchend', _this.desktopNavigationEvent);
 
         // Overlay при hover
         document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseenter', function (e) {
