@@ -630,6 +630,11 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.createNavigationsEvents = function () {
+
+        // Закрытие по свайпу
+        $(_this.config.collapseWrap).on('swiperight', _this.closeAllRightModules);
+        $(_this.config.collapseWrap).on('swipeleft', _this.navigationEvent);
+
         // Меню поиска
         _this.config.navSearchBtn.addEventListener('click', _this.searchEvent);
         _this.config.navSearchBtn.addEventListener('touchstart', _this.searchEvent);
