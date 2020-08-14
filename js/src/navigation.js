@@ -1,6 +1,7 @@
-export default class Navigation {
+class Navigation {
     constructor(animationDuration){
         this.config = {
+            logotype: document.getElementById('mainLogo'),
             navigationBlock: document.querySelector('header'),
             desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
             toggleBtn: document.getElementById('navToggleBtn'),
@@ -135,13 +136,13 @@ export default class Navigation {
     };
 
     cartDeletePosEvent = (e) => {
-        const node = e.currentTarget.parentElement.parentElement.parentElement
+        const node = e.currentTarget.parentElement.parentElement.parentElement;
         $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.cart-collapse-btn-back h2 span');
+            const counterNode = document.querySelector('a.cart-collapse-btn-back~h2>span');
             const menuCounterNode = document.querySelector('span.cart-counter');
             counterNode.innerHTML = `${+counterNode.innerHTML - 1}`;
             menuCounterNode.innerHTML = `${+menuCounterNode.innerHTML - 1}`;
-            document.querySelector('#cartRender').removeChild(node);
+            document.getElementById('cartRender').removeChild(node);
         })
     }
 
@@ -151,7 +152,6 @@ export default class Navigation {
         switch (_do) {
             case 'add': {
                 const value = e.currentTarget.parentElement.querySelector('p.count').innerHTML;
-                console.log(value)
                 e.currentTarget.parentElement.querySelector('p.count').innerHTML = `${Number(value) + 1}`;
                 break;
             }
@@ -172,12 +172,16 @@ export default class Navigation {
         const deleteBtns = document.querySelectorAll('a.delete-position-btn');
         deleteBtns.forEach(btn => {
             btn.removeEventListener('click', this.cartDeletePosEvent);
+            btn.removeEventListener('touchend', this.cartDeletePosEvent);
             btn.addEventListener('click', this.cartDeletePosEvent);
+            btn.addEventListener('touchend', this.cartDeletePosEvent);
         });
         const switchersBtns = document.querySelectorAll('.switchers-count-btn');
         switchersBtns.forEach( _switch => {
             _switch.removeEventListener('click', this.cartSwitchCountEvent);
+            _switch.removeEventListener('touchend', this.cartSwitchCountEvent);
             _switch.addEventListener('click', this.cartSwitchCountEvent);
+            _switch.addEventListener('touchend', this.cartSwitchCountEvent);
         })
     }
 
@@ -189,8 +193,9 @@ export default class Navigation {
     wishListDeletePosEvent = (e) => {
         e.preventDefault();
         const node = e.target.parentElement.parentElement;
+        console.log(node)
         $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.wish-list-collapse-btn-back h2 span');
+            const counterNode = document.querySelector('a.wish-list-collapse-btn-back~h2>span');
             let counter = +counterNode.innerHTML;
             counter = --counter;
             counterNode.innerHTML = `${counter}`;
@@ -238,29 +243,37 @@ export default class Navigation {
         const trashBtns = document.querySelectorAll('a.delete-wish-pos-btn');
         trashBtns.forEach(b => {
             b.removeEventListener('click', this.wishListDeletePosEvent);
+            b.removeEventListener('touchend', this.wishListDeletePosEvent);
             b.addEventListener('click', this.wishListDeletePosEvent);
+            b.addEventListener('touchend', this.wishListDeletePosEvent);
         })
 
         const cartBtns = document.querySelectorAll('a.add-wish-pos-to-cart');
         cartBtns.forEach(b => {
             b.removeEventListener('click', this.wishListAddToCartPosEvent);
+            b.removeEventListener('touchend', this.wishListAddToCartPosEvent);
             b.addEventListener('click', this.wishListAddToCartPosEvent);
+            b.addEventListener('touchend', this.wishListAddToCartPosEvent);
         })
 
         const deleteChecked = document.querySelector('a.wish-control#toDelete');
         deleteChecked.removeEventListener('click', this.wishListDeleteCheckedPosEvent);
+        deleteChecked.removeEventListener('touchend', this.wishListDeleteCheckedPosEvent);
         deleteChecked.addEventListener('click', this.wishListDeleteCheckedPosEvent);
+        deleteChecked.addEventListener('touchend', this.wishListDeleteCheckedPosEvent);
 
         const addToCartChecked = document.querySelector('a.wish-control#toCart');
         addToCartChecked.removeEventListener('click', this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.removeEventListener('touchend', this.wishListAddToCartCheckedPosEvent);
         addToCartChecked.addEventListener('click', this.wishListAddToCartCheckedPosEvent);
+        addToCartChecked.addEventListener('touchend', this.wishListAddToCartCheckedPosEvent);
     };
 
     comparisonDeletePosEvent = (e) => {
         e.preventDefault();
         const node = e.target.parentElement.parentElement;
         $(node).animate({'left': '-110%'}, 300, () => {
-            const counterNode = document.querySelector('a.comparison-collapse-btn-back h2 span');
+            const counterNode = document.querySelector('a.comparison-collapse-btn-back~h2>span');
             let counter = +counterNode.innerHTML;
             counter = --counter;
             counterNode.innerHTML = `${counter}`;
@@ -309,16 +322,22 @@ export default class Navigation {
         const deleteBtns = document.querySelectorAll('a.comparison-del-pos-btn');
         deleteBtns.forEach(b => {
             b.removeEventListener('click', this.comparisonDeletePosEvent);
+            b.removeEventListener('touchend', this.comparisonDeletePosEvent);
             b.addEventListener('click', this.comparisonDeletePosEvent);
+            b.addEventListener('touchend', this.comparisonDeletePosEvent);
         });
         const addToCartBtns = document.querySelectorAll('a.comparison-add-to-cart-btn');
         addToCartBtns.forEach(add => {
             add.removeEventListener('click', this.comparisonAddToCartEvent);
+            add.removeEventListener('touchend', this.comparisonAddToCartEvent);
             add.addEventListener('click', this.comparisonAddToCartEvent);
+            add.addEventListener('touchend', this.comparisonAddToCartEvent);
         })
         this.comparisonHeightCounter();
         document.querySelector('a.clear-comparison-list-btn').removeEventListener('click', this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').removeEventListener('touchend', this.comparisonClearList);
         document.querySelector('a.clear-comparison-list-btn').addEventListener('click', this.comparisonClearList);
+        document.querySelector('a.clear-comparison-list-btn').addEventListener('touchend', this.comparisonClearList);
     }
 
     openCart = (e) => {
@@ -398,153 +417,196 @@ export default class Navigation {
         if(windowTop > 0 && window.innerWidth > 860) {
             this.config.navigationBlock.style.top = '-60px';
             this.wrapBlock.style.marginTop = '65px';
-            $('#sqlogo').addClass('show')
+            this.config.logotype.style.top = window.innerWidth >= 1600 ? '55px' : '0px';
             return 0;
         }
         if(windowTop == 0 && window.innerWidth > 860) {
             this.config.navigationBlock.style.top = '0';
             this.wrapBlock.style.marginTop = '120px';
-            $('#sqlogo').removeClass('show');
+            this.config.logotype.style.top = '0px';
             return 0;
         }
         this.wrapBlock.style.marginTop = '40px';
         return 1;
     }
 
-    createNavigationsEvents = () => {
-        // Меню поиска
-        this.config.navSearchBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const { isSearchCollapsed, collapseWrap, animationDuration, collapseSearchNode } = this.config;
-            if(isSearchCollapsed) return false;
-            this.closeAllRightModules(false);
-            document.body.classList.add('scroll-disabled');
-            this.config.isSearchCollapsed = true;
-            $('a.nav-link#search').addClass('active');
-            collapseWrap.style.top = 40 + 'px';
+    searchEvent = (e) => {
+        e.preventDefault();
+        const { isSearchCollapsed, collapseWrap, animationDuration, collapseSearchNode } = this.config;
+        if(isSearchCollapsed) return false;
+        this.closeAllRightModules(false);
+        document.body.classList.add('scroll-disabled');
+        this.config.isSearchCollapsed = true;
+        $('a.nav-link#search').addClass('active');
+        collapseWrap.style.top = 40 + 'px';
+        $(collapseWrap).fadeIn(animationDuration/10);
+        $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration);
+    }
+
+    contactsEvent = (e) => {
+        e.preventDefault();
+        const { isContactsCollapsed, collapseWrap, animationDuration, collapseContactsNode } = this.config;
+        if(isContactsCollapsed) return false;
+        this.closeAllRightModules(false);
+        document.body.classList.add('scroll-disabled');
+        this.config.isContactsCollapsed = true;
+        $('a.nav-link#phone').addClass('active');
+        collapseWrap.style.top = 40 + 'px';
+        $(collapseWrap).fadeIn(animationDuration/10);
+        $(collapseContactsNode).animate({'right': isContactsCollapsed ? '-320px' : '0px'}, animationDuration);
+    }
+
+    navigationEvent = (e) => {
+        e.preventDefault();
+        const { isCollapsed, collapseNode, collapseWrap, animationDuration, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isWishListCollapsed } = this.config;
+        if(isCollapsed) return false;
+        this.closeAllRightModules(false);
+        const waitTime = isSearchCollapsed || isCartCollapsed || isContactsCollapsed || isWishListCollapsed ? animationDuration * 0.75 : 0;
+        document.body.classList.add('scroll-disabled');
+        setTimeout(() => {
+            this.config.collapseWrap.style.top = 0 + 'px';
             $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseSearchNode).animate({'right': isSearchCollapsed ? '-320px' : '0px'}, animationDuration);
-        });
+            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
+            this.config.isCollapsed = true;
+        }, waitTime)
+    }
+
+    navigationCloseEvent = (e) => {
+        if( e.target !== this.config.collapseWrap &&
+            e.target !== this.config.closeNavigationBtn &&
+            e.target !== this.config.closeSearchNodeBtn &&
+            e.target !== this.config.closeCartNodeBtn &&
+            e.target !== this.config.closeXCartNodeBtn &&
+            e.target !== this.config.closeContactsNodeBtn &&
+            e.target !== this.config.closeXContactsNodeBtn &&
+            e.target !== this.config.closeWishListNodeBtn &&
+            e.target !== this.config.closeXWishListNodeBtn &&
+            e.target !== this.config.closeComparisonNodeBtn &&
+            e.target !== this.config.closeXComparisonNodeBtn ) return false;
+        e.preventDefault();
+        const { isCollapsed, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isComparisonCollapsed, isWishListCollapsed, collapseNode, animationDuration } = this.config;
+        if(isCollapsed) {
+            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, this.wrapFadeOut);
+        }
+        if(isSearchCollapsed) {
+            this.closeSingleRightModule('search', true);
+        }
+        if(isCartCollapsed) {
+            this.closeSingleRightModule('cart', true);
+        }
+        if(isContactsCollapsed) {
+            this.closeSingleRightModule('contacts', true);
+        }
+        if(isWishListCollapsed) {
+            this.closeSingleRightModule('wishList', true);
+        }
+        if(isComparisonCollapsed) {
+            this.closeSingleRightModule('comparison', true);
+        }
+        document.body.classList.remove('scroll-disabled');
+    }
+
+    switchMenuLevelEvent = (e) => {
+        e.preventDefault();
+        e.cancelBubble = true;
+        let li = e.target;
+        if(!e.target.matches('.navigation-collapse-list-item-with-sub-navigation')) {
+            if(e.target.matches('.navigation-collapse-list-link')) {
+                li = e.target.parentNode;
+            }
+            else {
+                li = e.target.parentNode.parentNode;
+            }
+        }
+        const nextNav = li.querySelector('.sub-navigation-collapse');
+        this.config.navFooterSocial.style.display = 'none';
+        $(nextNav).fadeIn(500);
+    }
+
+    backSwitchMenuLevelEvent = (e) => {
+        e.preventDefault();
+        e.cancelBubble = true;
+        let backBtn = e.target;
+        if(!e.target.matches('.go-back-btn')) {
+            backBtn = e.target.parentNode;
+        }
+        const prevMenu = backBtn.parentNode;
+        if(prevMenu.getAttribute('data-level') == '2') {
+            this.config.navFooterSocial.style.display = 'flex';
+        }
+        $(prevMenu).fadeOut(500);
+    }
+
+    desktopNavigationEvent = (e) => {
+        e.preventDefault();
+        if(!this.config.isDesktopAnimated) {
+            const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
+            this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
+            $(desktopNavigationCollapseMenu).animate( {'top': isDesktopMenuCollapsed ? '-100rem' : '50px'} , animationDuration * .75, ()=> {
+                this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
+                this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
+            });
+        }
+    }
+
+    createNavigationsEvents = () => {
+
+        // Меню поиска
+        this.config.navSearchBtn.addEventListener('click', this.searchEvent);
+        this.config.navSearchBtn.addEventListener('touchend', this.searchEvent);
 
         // Корзина
         this.config.cartSearchBtn.addEventListener('click', this.openCart);
+        this.config.cartSearchBtn.addEventListener('touchend', this.openCart);
         this.navCartBtn.addEventListener('click', (e) => {
+            this.openRightNavigationFromMainNavigation(e, 'cart');
+        });
+        this.navCartBtn.addEventListener('touchend', (e) => {
             this.openRightNavigationFromMainNavigation(e, 'cart');
         });
 
 
         // Контакты
-        this.config.navContactsBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const { isContactsCollapsed, collapseWrap, animationDuration, collapseContactsNode } = this.config;
-            if(isContactsCollapsed) return false;
-            this.closeAllRightModules(false);
-            document.body.classList.add('scroll-disabled');
-            this.config.isContactsCollapsed = true;
-            $('a.nav-link#phone').addClass('active');
-            collapseWrap.style.top = 40 + 'px';
-            $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseContactsNode).animate({'right': isContactsCollapsed ? '-320px' : '0px'}, animationDuration);
-        });
+        this.config.navContactsBtn.addEventListener('click', this.contactsEvent);
+        this.config.navContactsBtn.addEventListener('touchend', this.contactsEvent);
 
         // Список желаний
         this.config.navWishListBtn.addEventListener('click', this.openWishList);
+        this.config.navWishListBtn.addEventListener('touchend', this.openWishList);
         this.navWishListBtn.addEventListener('click', (e) => {
+            this.openRightNavigationFromMainNavigation(e, 'wishList');
+        });
+        this.navWishListBtn.addEventListener('touchend', (e) => {
             this.openRightNavigationFromMainNavigation(e, 'wishList');
         });
 
         // Сравнения
         this.config.navComparisonBtn.addEventListener('click', this.openComparison);
+        this.config.navComparisonBtn.addEventListener('touchend', this.openComparison);
         this.navComparisonBtn.addEventListener('click', (e) => {
+            this.openRightNavigationFromMainNavigation(e, 'comparison');
+        });
+        this.navComparisonBtn.addEventListener('touchend', (e) => {
             this.openRightNavigationFromMainNavigation(e, 'comparison');
         });
 
         // Навигация
-        this.config.toggleBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const { isCollapsed, collapseNode, collapseWrap, animationDuration, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isWishListCollapsed } = this.config;
-            if(isCollapsed) return false;
-            this.closeAllRightModules(false);
-            const waitTime = isSearchCollapsed || isCartCollapsed || isContactsCollapsed || isWishListCollapsed ? animationDuration * 0.75 : 0;
-            document.body.classList.add('scroll-disabled');
-            setTimeout(() => {
-                this.config.collapseWrap.style.top = 0 + 'px';
-                $(collapseWrap).fadeIn(animationDuration/10);
-                $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
-                this.config.isCollapsed = true;
-            }, waitTime)
-        });
+        this.config.toggleBtn.addEventListener('click', this.navigationEvent);
+        this.config.toggleBtn.addEventListener('touchend', this.navigationEvent);
 
         // Закрытие по нажатию на overlay и кнопки закрытия
-        this.config.collapseWrap.addEventListener('click', (e) => {
-            if( e.target !== this.config.collapseWrap &&
-                e.target !== this.config.closeNavigationBtn &&
-                e.target !== this.config.closeSearchNodeBtn &&
-                e.target !== this.config.closeCartNodeBtn &&
-                e.target !== this.config.closeXCartNodeBtn &&
-                e.target !== this.config.closeContactsNodeBtn &&
-                e.target !== this.config.closeXContactsNodeBtn &&
-                e.target !== this.config.closeWishListNodeBtn &&
-                e.target !== this.config.closeXWishListNodeBtn &&
-                e.target !== this.config.closeComparisonNodeBtn &&
-                e.target !== this.config.closeXComparisonNodeBtn ) return false;
-            e.preventDefault();
-            const { isCollapsed, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isComparisonCollapsed, isWishListCollapsed, collapseNode, animationDuration } = this.config;
-            if(isCollapsed) {
-                $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, this.wrapFadeOut);
-            }
-            if(isSearchCollapsed) {
-                this.closeSingleRightModule('search', true);
-            }
-            if(isCartCollapsed) {
-                this.closeSingleRightModule('cart', true);
-            }
-            if(isContactsCollapsed) {
-                this.closeSingleRightModule('contacts', true);
-            }
-            if(isWishListCollapsed) {
-                this.closeSingleRightModule('wishList', true);
-            }
-            if(isComparisonCollapsed) {
-                this.closeSingleRightModule('comparison', true);
-            }
-            document.body.classList.remove('scroll-disabled');
-        });
+        this.config.collapseWrap.addEventListener('click', this.navigationCloseEvent);
+        this.config.collapseWrap.addEventListener('touchend', this.navigationCloseEvent);
 
         //Переключение уровней меню
-        this.config.navLinksWithSubNav.forEach(link=>{
-            link.addEventListener('click', (e)=> {
-                e.preventDefault();
-                e.cancelBubble = true;
-                let li = e.target;
-                if(!e.target.matches('.navigation-collapse-list-item-with-sub-navigation')) {
-                    if(e.target.matches('.navigation-collapse-list-link')) {
-                        li = e.target.parentNode;
-                    }
-                    else {
-                        li = e.target.parentNode.parentNode;
-                    }
-                }
-                const nextNav = li.querySelector('.sub-navigation-collapse');
-                this.config.navFooterSocial.style.display = 'none';
-                $(nextNav).fadeIn(500);
-            })
+        this.config.navLinksWithSubNav.forEach(link => {
+            link.addEventListener('click', this.switchMenuLevelEvent)
+            link.addEventListener('touchend', this.switchMenuLevelEvent)
         });
 
-        this.config.goBack.forEach(btn=>{
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.cancelBubble = true;
-                let backBtn = e.target;
-                if(!e.target.matches('.go-back-btn')) {
-                    backBtn = e.target.parentNode;
-                }
-                const prevMenu = backBtn.parentNode;
-                if(prevMenu.getAttribute('data-level') == '2') {
-                    this.config.navFooterSocial.style.display = 'flex';
-                }
-                $(prevMenu).fadeOut(500);
-            })
+        this.config.goBack.forEach(btn => {
+            btn.addEventListener('click', this.backSwitchMenuLevelEvent)
+            btn.addEventListener('touchend', this.backSwitchMenuLevelEvent)
         });
 
 
@@ -566,17 +628,8 @@ export default class Navigation {
         })
 
         // Открытие и закрытие меню Desktop
-        this.config.desktopNavigationBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            if(!this.config.isDesktopAnimated) {
-                const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
-                this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
-                $(desktopNavigationCollapseMenu).animate( {'top': isDesktopMenuCollapsed ? '-100rem' : '55px'} , animationDuration * .75, ()=> {
-                    this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
-                    this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
-                });
-            }
-        })
+        this.config.desktopNavigationBtn.addEventListener('click', this.desktopNavigationEvent);
+        this.config.desktopNavigationBtn.addEventListener('touchend', this.desktopNavigationEvent);
 
         // Overlay при hover
         document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseenter', (e) => {
@@ -624,3 +677,5 @@ export default class Navigation {
         })
     }
 }
+
+const navigation = new Navigation(600);
