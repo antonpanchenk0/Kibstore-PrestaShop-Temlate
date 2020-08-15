@@ -545,7 +545,7 @@ var _initialiseProps = function _initialiseProps() {
         setTimeout(function () {
             _this.config.collapseWrap.style.top = 0 + 'px';
             $(collapseWrap).fadeIn(animationDuration / 10);
-            $(collapseNode).animate({ 'left': isCollapsed ? '-320px' : '0px' }, animationDuration);
+            $(collapseNode).animate({ 'left': isCollapsed ? '-320px' : '0px' }, animationDuration * 0.75);
             _this.config.isCollapsed = true;
         }, waitTime);
     };
@@ -564,7 +564,7 @@ var _initialiseProps = function _initialiseProps() {
             animationDuration = _config10.animationDuration;
 
         if (isCollapsed) {
-            $(collapseNode).animate({ 'left': isCollapsed ? '-320px' : '0px' }, animationDuration, _this.wrapFadeOut);
+            $(collapseNode).animate({ 'left': isCollapsed ? '-320px' : '0px' }, animationDuration * 0.75, _this.wrapFadeOut);
         }
         if (isSearchCollapsed) {
             _this.closeSingleRightModule('search', true);
@@ -765,4 +765,4 @@ var _initialiseProps = function _initialiseProps() {
     };
 };
 
-var navigation = new Navigation(600);
+var navigation = new Navigation(400);

@@ -466,7 +466,7 @@ class Navigation {
         setTimeout(() => {
             this.config.collapseWrap.style.top = 0 + 'px';
             $(collapseWrap).fadeIn(animationDuration/10);
-            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration);
+            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration * 0.75);
             this.config.isCollapsed = true;
         }, waitTime)
     }
@@ -486,7 +486,7 @@ class Navigation {
         e.preventDefault();
         const { isCollapsed, isSearchCollapsed, isCartCollapsed, isContactsCollapsed, isComparisonCollapsed, isWishListCollapsed, collapseNode, animationDuration } = this.config;
         if(isCollapsed) {
-            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration, this.wrapFadeOut);
+            $(collapseNode).animate({'left': isCollapsed ? '-320px' : '0px'}, animationDuration * 0.75, this.wrapFadeOut);
         }
         if(isSearchCollapsed) {
             this.closeSingleRightModule('search', true);
@@ -678,4 +678,4 @@ class Navigation {
     }
 }
 
-const navigation = new Navigation(600);
+const navigation = new Navigation(400);
