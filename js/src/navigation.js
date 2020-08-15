@@ -632,14 +632,14 @@ class Navigation {
         this.config.desktopNavigationBtn.addEventListener('touchend', this.desktopNavigationEvent);
 
         // Overlay при hover
-        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseenter', (e) => {
+        this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', (e) => {
             if(!this.config.isOverlayShow) {
                 $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
                     this.config.isOverlayShow = !this.config.isOverlayShow
                 });
             }
         })
-        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseleave', (e) => {
+        this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', (e) => {
             $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
             this.config.isOverlayShow = !this.config.isOverlayShow;
         })

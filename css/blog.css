@@ -505,9 +505,7 @@ header.main-navigation-header {
   border: 1px solid #5489d7;
 }
 .navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-list > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item.has-dropdown-nav > .desktop-sub-catalog-navigation > .desktop-sub-catalog-col > .sub-catalog-list > .sub-catalog-item:first-child > .sub-catalog-link,
-.navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-links > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item.has-dropdown-nav > .desktop-sub-catalog-navigation > .desktop-sub-catalog-col > .sub-catalog-list > .sub-catalog-item:first-child > .sub-catalog-link,
-.navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-list > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item.has-dropdown-nav > .desktop-sub-catalog-navigation > .desktop-sub-catalog-col > .sub-catalog-list > .sub-catalog-item:first-child:hover > .sub-catalog-link,
-.navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-links > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item.has-dropdown-nav > .desktop-sub-catalog-navigation > .desktop-sub-catalog-col > .sub-catalog-list > .sub-catalog-item:first-child:hover > .sub-catalog-link {
+.navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-links > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item.has-dropdown-nav > .desktop-sub-catalog-navigation > .desktop-sub-catalog-col > .sub-catalog-list > .sub-catalog-item:first-child > .sub-catalog-link {
   padding: 1px 0px 1px 15px;
   font-family: "SF Pro Display";
   font-weight: bold;
@@ -516,7 +514,6 @@ header.main-navigation-header {
   color: #5489d7;
   text-decoration: underline;
   text-transform: uppercase;
-  border: none;
 }
 .navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-list > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item.has-dropdown-nav > .desktop-sub-catalog-navigation > .desktop-sub-catalog-col > .sub-catalog-list:last-child,
 .navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-links > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item.has-dropdown-nav > .desktop-sub-catalog-navigation > .desktop-sub-catalog-col > .sub-catalog-list:last-child {

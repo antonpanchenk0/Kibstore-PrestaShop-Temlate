@@ -711,14 +711,14 @@ var _initialiseProps = function _initialiseProps() {
         _this.config.desktopNavigationBtn.addEventListener('touchend', _this.desktopNavigationEvent);
 
         // Overlay при hover
-        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseenter', function (e) {
+        _this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', function (e) {
             if (!_this.config.isOverlayShow) {
                 $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
                     _this.config.isOverlayShow = !_this.config.isOverlayShow;
                 });
             }
         });
-        document.querySelector('ul.desktop-catalog-navigation-list').addEventListener('mouseleave', function (e) {
+        _this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', function (e) {
             $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
             _this.config.isOverlayShow = !_this.config.isOverlayShow;
         });

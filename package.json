@@ -2,8 +2,12 @@
   "name": "cyberstor-template",
   "version": "1.0.0",
   "babel": {
-    "presets": ["es2015"],
-    "plugins": ["babel-plugin-transform-class-properties"]
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "babel-plugin-transform-class-properties"
+    ]
   },
   "description": "",
   "main": "index.js",
