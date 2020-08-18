@@ -31,10 +31,12 @@
       <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/full-pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/full-pages.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/navigation.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-about.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css.map" afterDir="false" />
@@ -42,10 +44,10 @@
       <change beforePath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/root-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/root-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/root-styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/root-styles.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +68,88 @@
     <expand />
     <select />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8">
+              <caret line="2179" column="70" selection-start-line="2179" selection-start-column="59" selection-end-line="2179" selection-end-column="70" />
+              <folding>
+                <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="819" column="44" selection-start-line="819" selection-start-column="44" selection-end-line="819" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/navigation.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35377">
+              <caret line="2081" column="29" selection-start-line="2081" selection-start-column="29" selection-end-line="2081" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/footer.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="293" column="40" lean-forward="true" selection-start-line="293" selection-start-column="40" selection-end-line="293" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/icons/heart.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/icons/star-fill.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="420" column="21" selection-start-line="420" selection-start-column="21" selection-end-line="420" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/root-styles.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -80,10 +164,23 @@
       <find>toolt</find>
       <find>Виде</find>
       <find>desktopCollapseDesktopOverlay</find>
+      <find>1600</find>
+      <find>footer-content</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js/src/navigation.js" />
+        <option value="$PROJECT_DIR$/css/navigation.less" />
+        <option value="$PROJECT_DIR$/css/main.less" />
+        <option value="$PROJECT_DIR$/main.html" />
+        <option value="$PROJECT_DIR$/css/footer.less" />
+      </list>
+    </option>
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -104,6 +201,46 @@
   </component>
   <component name="ProjectId" id="1cP0hjfRkgAOIKQ9z44jEATh0uw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CyberStor-Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CyberStor-Template" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -133,6 +270,18 @@
       <recent name="G:\CyberStor-Template\js\modules" />
       <recent name="G:\CyberStor-Template\css" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CyberStor-Template/main.html" useBuiltInWebServerPort="true">
@@ -215,6 +364,55 @@
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9156000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.16901408" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.16901408" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.1191766" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
@@ -223,7 +421,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -242,7 +447,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="246" key="#File_Watchers" timestamp="1590417996904">
@@ -261,5 +465,56 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1595421442094" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="420" column="21" selection-start-line="420" selection-start-column="21" selection-end-line="420" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/navigation.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35377">
+          <caret line="2081" column="29" selection-start-line="2081" selection-start-column="29" selection-end-line="2081" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="819" column="44" selection-start-line="819" selection-start-column="44" selection-end-line="819" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="2179" column="70" selection-start-line="2179" selection-start-column="59" selection-end-line="2179" selection-end-column="70" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/footer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="293" column="40" lean-forward="true" selection-start-line="293" selection-start-column="40" selection-end-line="293" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

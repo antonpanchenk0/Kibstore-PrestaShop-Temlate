@@ -417,7 +417,7 @@ class Navigation {
         if(windowTop > 0 && window.innerWidth > 860) {
             this.config.navigationBlock.style.top = '-60px';
             this.wrapBlock.style.marginTop = '65px';
-            this.config.logotype.style.top = window.innerWidth >= 1600 ? '55px' : '0px';
+            this.config.logotype.style.top = window.innerWidth >= 1650 ? '55px' : '0px';
             return 0;
         }
         if(windowTop == 0 && window.innerWidth > 860) {

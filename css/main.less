@@ -58,8 +58,8 @@
 
 .content {
     width: 100%;
-    flex: 0 0 calc(75% - 21px);
-    max-width: calc(75% - 21px);
+    flex: 0 0 calc(77% - 22px);
+    max-width: calc(77% - 22px);
     display: flex;
     flex-flow: column;
     align-items: flex-end;
@@ -160,7 +160,8 @@ section.sales-leaders, section.new-items, section.previously-viewed {
         display: flex;
         justify-content: flex-start;
         align-items: stretch;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow: hidden;
     }
 }
 .product-item {
@@ -266,7 +267,8 @@ section.sales-leaders, section.new-items, section.previously-viewed {
             & > img {
                 max-width: 100%;
                 min-width: 100%;
-                height: auto;
+                height: 175px;
+                object-fit: contain;
                 margin-bottom: 15px;
             }
             & > h2.title {
@@ -275,7 +277,7 @@ section.sales-leaders, section.new-items, section.previously-viewed {
                 color: #000;
                 text-align: left;
                 margin: 0 0 10px 0;
-                word-break: break-word;
+                word-break: break-all;
                 overflow: hidden;
                 -ms-text-overflow: ellipsis;
                 text-overflow: ellipsis;
@@ -750,7 +752,137 @@ section.sales-leaders, section.new-items, section.previously-viewed {
 @media screen and (max-width: 1560px) {
     .content {
         padding: 0 7px;
-        flex: 0 0 80%;
-        max-width: 80%;
+        flex: 0 0 77%;
+        max-width: 77%;
+    }
+    .fluid-content {
+        padding: 0 7px 0 0;
+    }
+    .product-item {
+        flex: 0 0 25%;
+        max-width: 25%;
+        & > .product-item-wrap {
+            & >.product-item-header {
+                & > .tooltips-box {
+                    & > .product-item-tooltip {
+                        width: 100px;
+                        height: 20px;
+                        min-height: 20px;
+                        &::before {
+                            left: -12px;
+                        }
+                        & > h2 {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            & > .product-item-footer {
+                & > .product-item-footer-price {
+                    & > .current-price {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .blog-news, .about-us, .subscribe-to-updates, .advantages {
+        & > .blog-news-wrap, & > .about-us-wrap, & > .subscribe-to-updates-wrap, & > .advantages-wrap {
+            flex: 0 0 calc(77% - 7px);
+            max-width: calc(77% - 7px);
+            &.subscribe-to-updates-wrap {
+                flex: 0 0 calc(77% - 57px);
+                max-width: calc(77% - 57px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .content {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .product-item {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+    .blog-news, .about-us, .subscribe-to-updates, .advantages {
+        & > .blog-news-wrap, & > .about-us-wrap, & > .subscribe-to-updates-wrap, & > .advantages-wrap {
+            flex: 0 0 calc(70% - 7px);
+            max-width: calc(70% - 7px);
+            & > .advantages-list {
+                padding: 30px;
+                & > .advantages-item {
+                    & > .advantages-link {
+                        & > .advantages-icon {
+                            width: 125px;
+                            max-width: 125px
+                        }
+                    }
+                }
+            }
+            & > .blog-news-body {
+                & > .blog-news-item {
+                    & > .blog-news-wrap {
+                        flex-flow: column;
+                        & > .blog-news-image {
+                            height: 130px;
+                            max-height: 140px;
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                        & > .blog-news-details {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                            position: unset;
+                            padding: 0;
+                            margin-top: 20px;
+                            & > .blog-news-details-header, & > .blog-news-details-body {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.subscribe-to-updates-wrap {
+                flex: 0 0 calc(70% - 17px);
+                max-width: calc(70% - 17px);
+                & > .girl-box {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .content {
+        display: none;
+    }
+    .fluid-content {
+        display: none;
+    }
+    .fixed-social-links {
+        display: none;
+    }
+    .categories, .discount-and-newItems, .mobile-app {
+        display: block;
+    }
+    .content.content-slider {
+        display: flex;
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .content.content-slider {
+        & > .carousel {
+            & > .carousel-inner {
+                height: 180px;
+                max-height: 180px;
+            }
+        }
     }
 }
