@@ -2323,6 +2323,9 @@ header.main-navigation-header {
   background: url("../img/icons/shopping-cart-sale-green.svg") no-repeat center center;
 }
 @media screen and (max-width: 1560px) {
+  nav.navigation {
+    padding: 10px;
+  }
   .desktop-navigation-header > .logotype-box {
     flex: 0 0 25%;
     max-width: 25%;
@@ -2340,12 +2343,17 @@ header.main-navigation-header {
     max-width: 15%;
   }
   .navigation-desktop-and-mobile > .desktop-menu-btn-box {
-    flex: 0 0 25%;
-    max-width: 25%;
-    justify-content: flex-end;
+    flex: 0 0 20%;
+    max-width: 20%;
+    justify-content: flex-start;
+    padding: 0;
   }
   .navigation-desktop-and-mobile > .desktop-menu-btn-box > .logotype {
     display: none!important;
+  }
+  .navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse {
+    right: unset;
+    left: 0;
   }
   .navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse > .desktop-navigation-list > .desktop-navigation-item > .desktop-catalog-navigation-list > .desktop-catalog-navigation-item > .desktop-sub-catalog-navigation {
     width: 375%!important;
@@ -2359,8 +2367,8 @@ header.main-navigation-header {
   }
   .navigation-desktop-and-mobile > .navigation-search {
     justify-content: center;
-    flex: 0 0 40%;
-    max-width: 40%;
+    flex: 0 0 45%;
+    max-width: 45%;
   }
   .navigation-desktop-and-mobile > .navigation-search > .navigation-search-result > .navigation-search-result-item > .navigation-search-result-item-info > .navigation-search-result-item-price-tooltip {
     flex-flow: column-reverse;
@@ -2624,6 +2632,7 @@ footer.main-footer {
 .footer-nav {
   width: 100%;
   padding: 15px;
+  display: none;
 }
 .footer-nav > .footer-nav-list {
   width: 100%;

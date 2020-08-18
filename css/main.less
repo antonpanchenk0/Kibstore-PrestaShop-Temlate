@@ -5,51 +5,54 @@
     width: 100%;
     margin: 10px 0 5px 0;
     position: relative;
-}
-.carousel-indicators {
-    margin: 0 15px 0 0;
-    justify-content: flex-end;
-    & > li {
-        border-radius: 50%;
-        width: 5px;
-        height: 5px;
-        background-color: #85cdc9;
+    & > .carousel-indicators {
+        margin: 0 15px 0 0;
+        justify-content: flex-end;
+        & > li {
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            background-color: #85cdc9;
+        }
+    }
+    & > .carousel-inner {
+        width: 100%;
+        height: 350px;
+        & > .carousel-item, & > .carousel-item.active {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &[data-id="0"] {
+                background: url("../img/slides/slide.jpg") no-repeat center center;
+                background-size: cover;
+            }
+            &[data-id="1"] {
+                background: url("../img/slides/slide2.jpg") no-repeat center center;
+                background-size: cover;
+            }
+        }
+    }
+    & > .slider-loading {
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        background-color: #fff;
+        opacity: 0.6;
+        z-index: 10;
+        overflow: hidden;
+        & > .slider-progress {
+            width: 50%;
+            height: 100%;
+            background-color: @secondColor;
+        }
     }
 }
-.carousel-inner {
-    width: 100%;
-    height: 350px;
-}
-.carousel-item, .carousel-item.active {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &[data-id="0"] {
-        background: url("../img/slides/slide.jpg") no-repeat center center;
-        background-size: cover;
-    }
-    &[data-id="1"] {
-        background: url("../img/slides/slide2.jpg") no-repeat center center;
-        background-size: cover;
-    }
-}
-.slider-loading {
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    bottom: 0;
-    background-color: #fff;
-    opacity: 0.6;
-    z-index: 10;
-    overflow: hidden;
-}
-.slider-loading>.slider-progress {
-    width: 50%;
-    height: 100%;
-    background-color: @secondColor;
-}
+
+
+
 
 /*Categories Section | Discount and new items section | Mobile app section*/
 
@@ -61,7 +64,7 @@
     flex-flow: column;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 0 185px 0 0;
+    padding: 0 155px 0 0;
 }
 .fluid-content {
     width: 100%;
@@ -71,6 +74,62 @@
     justify-content: flex-start;
     padding: 0 185px 0 0;
     margin-top: 45px;
+}
+
+.fixed-social-links {
+    position: fixed;
+    top: 240px;
+    right: 0px;
+    z-index: 10;
+    & > .fixed-social-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 130px;
+        height: 30px;
+        padding: 5px;
+        margin-bottom: 15px;
+        -webkit-border-radius: 5px 0 0 5px;
+        -moz-border-radius: 5px 0 0 5px;
+        border-radius: 5px 0 0 5px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 4px 1px #0000002e;
+        -moz-box-shadow: 0px 0px 4px 1px #0000002e;
+        box-shadow: 0px 0px 4px 1px #0000002e;
+        text-decoration: none;
+        .HelveticaNeueCyrRoman;
+        font-size: 18px;
+        -webkit-transform: translateX(95px);
+        -moz-transform: translateX(95px);
+        -ms-transform: translateX(95px);
+        -o-transform: translateX(95px);
+        transform: translateX(95px);
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        &:first-child {
+            color: #8f5db7;
+        }
+        &:last-child {
+            margin-bottom: 0px;
+            color: #0088cc;
+        }
+        &:hover {
+            -webkit-transform: translateX(0px);
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -o-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+        & > img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+    }
 }
 section.sales-leaders, section.new-items, section.previously-viewed {
     width: 100%;
@@ -128,7 +187,7 @@ section.sales-leaders, section.new-items, section.previously-viewed {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 0 10px 0 20px;
+            padding: 0 10px;
             & > h2 {
                 flex: 0 0 30%;
                 max-width: 30%;
@@ -202,7 +261,7 @@ section.sales-leaders, section.new-items, section.previously-viewed {
         }
         & > .product-item-body {
             width: 100%;
-            padding: 0 25px;
+            padding: 0 10px;
             margin-top: 15px;
             & > img {
                 max-width: 100%;
@@ -282,7 +341,7 @@ section.sales-leaders, section.new-items, section.previously-viewed {
         }
         & > .product-item-footer {
             width: 100%;
-            padding: 0 25px;
+            padding: 0 10px;
             margin-top: 20px;
             & > .product-item-footer-price {
                 width: 100%;
@@ -338,14 +397,14 @@ section.sales-leaders, section.new-items, section.previously-viewed {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 40px;
-                    width: 50px;
+                    height: 30px;
+                    width: 40px;
                     background-color: @thirdColor;
-                    -webkit-border-radius: 8px;
-                    -moz-border-radius: 8px;
-                    border-radius: 8px;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    border-radius: 3px;
                     & > svg {
-                        width: 25px;
+                        width: 20px;
                     }
                 }
                 & > .second-controls {
@@ -355,7 +414,7 @@ section.sales-leaders, section.new-items, section.previously-viewed {
                     & > a {
                         margin: 0 5px;
                         & > svg {
-                            width: 25px;
+                            width: 20px;
                         }
                     }
                 }
@@ -686,4 +745,12 @@ section.sales-leaders, section.new-items, section.previously-viewed {
 .discount-title, .newItems-title {
     text-transform: uppercase;
     margin-left: 10px;
+}
+
+@media screen and (max-width: 1560px) {
+    .content {
+        padding: 0 7px;
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
 }

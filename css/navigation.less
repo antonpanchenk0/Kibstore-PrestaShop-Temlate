@@ -2050,6 +2050,9 @@ header.main-navigation-header {
 }
 
 @media screen and (max-width: 1560px){
+    nav.navigation {
+        padding: 10px;
+    }
     .desktop-navigation-header {
         & > .logotype-box {
             flex: 0 0 25%;
@@ -2070,13 +2073,16 @@ header.main-navigation-header {
     }
     .navigation-desktop-and-mobile {
         & > .desktop-menu-btn-box {
-            flex: 0 0 25%;
-            max-width: 25%;
-            justify-content: flex-end;
+            flex: 0 0 20%;
+            max-width: 20%;
+            justify-content: flex-start;
+            padding: 0;
             & > .logotype {
                 display: none!important;
             }
             & > .desktop-navigation-collapse {
+                right: unset;
+                left: 0;
                 & > .desktop-navigation-list {
                     & > .desktop-navigation-item {
                         & > .desktop-catalog-navigation-list {
@@ -2099,8 +2105,8 @@ header.main-navigation-header {
         }
         & > .navigation-search {
             justify-content: center;
-            flex: 0 0 40%;
-            max-width: 40%;
+            flex: 0 0 45%;
+            max-width: 45%;
             & > .navigation-search-result {
                 & > .navigation-search-result-item {
                     & > .navigation-search-result-item-info {
