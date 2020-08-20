@@ -56,6 +56,7 @@ class Navigation {
         this.navWishListBtn = document.getElementById('navWishList');
         this.navComparisonBtn = document.getElementById('navComparison');
         this.mobileResolution = 860;
+        this.isMainPage = document.getElementById('content-slider') ? true : false;
         this.createNavigationsEvents();
     }
 
@@ -538,7 +539,7 @@ class Navigation {
     }
 
     desktopNavigationEvent = (e) => {
-        e.preventDefault();
+        e && e.preventDefault();
         if(!this.config.isDesktopAnimated) {
             const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
             this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
@@ -614,6 +615,10 @@ class Navigation {
         document.addEventListener('DOMContentLoaded', (e) => {
             const pageTop = window.pageYOffset;
             this.squeezeNavigationOnScroll(pageTop);
+            // Разворачивание навигации если это main страница
+            if(this.isMainPage && window.innerWidth > 860) {
+                this.desktopNavigationEvent(null)
+            }
             document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
             document.addEventListener('scroll', (e) => {

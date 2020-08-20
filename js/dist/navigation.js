@@ -63,6 +63,7 @@ var Navigation = function Navigation(animationDuration) {
     this.navWishListBtn = document.getElementById('navWishList');
     this.navComparisonBtn = document.getElementById('navComparison');
     this.mobileResolution = 860;
+    this.isMainPage = document.getElementById('content-slider') ? true : false;
     this.createNavigationsEvents();
 };
 
@@ -477,7 +478,7 @@ var _initialiseProps = function _initialiseProps() {
         if (windowTop > 0 && window.innerWidth > 860) {
             _this.config.navigationBlock.style.top = '-60px';
             _this.wrapBlock.style.marginTop = '65px';
-            _this.config.logotype.style.top = window.innerWidth >= 1600 ? '55px' : '0px';
+            _this.config.logotype.style.top = window.innerWidth >= 1650 ? '55px' : '0px';
             return 0;
         }
         if (windowTop == 0 && window.innerWidth > 860) {
@@ -615,7 +616,7 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.desktopNavigationEvent = function (e) {
-        e.preventDefault();
+        e && e.preventDefault();
         if (!_this.config.isDesktopAnimated) {
             var _config11 = _this.config,
                 isDesktopMenuCollapsed = _config11.isDesktopMenuCollapsed,
@@ -693,6 +694,10 @@ var _initialiseProps = function _initialiseProps() {
         document.addEventListener('DOMContentLoaded', function (e) {
             var pageTop = window.pageYOffset;
             _this.squeezeNavigationOnScroll(pageTop);
+            // Разворачивание навигации если это main страница
+            if (_this.isMainPage && window.innerWidth > 860) {
+                _this.desktopNavigationEvent(null);
+            }
             document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
             document.addEventListener('scroll', function (e) {
