@@ -276,188 +276,191 @@ header.main-navigation-header {
             z-index: -1;
             right: 50px;
             top: -100rem;
-            & > .desktop-navigation-list, & > .desktop-navigation-links {
-                list-style: none;
+            & > .desktop-navigation-collapse-wrap {
                 width: 100%;
-                margin: 0;
-                & > .desktop-navigation-item {
+                & > .desktop-navigation-list, & > .desktop-navigation-links {
+                    list-style: none;
                     width: 100%;
-                    & > .desktop-navigation-link {
-                        padding: 10px 20px;
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
-                        .HelveticaNeueCyrRoman;
-                        font-size: 16px;
-                        color: #000;
-                        & > svg {
-                            margin-right: 15px;
-                        }
-                    }
-                    &.active {
-                        & > .desktop-navigation-link {
-                            .HelveticaNeueCyrBold;
-                        }
-                    }
-                    &.underline {
-                        border-bottom: 1px solid @grayColor;
-                    }
-                    & > .desktop-catalog-navigation-list {
+                    margin: 0;
+                    & > .desktop-navigation-item {
                         width: 100%;
-                        list-style: none;
-                        margin: 0;
-                        -webkit-box-shadow: inset 0px 0px 5px 0px #00000042;
-                        -moz-box-shadow: inset 0px 0px 5px 0px #00000042;
-                        box-shadow: inset 0px 0px 5px 0px #00000042;
-                        background: #dcf4e4;
-                        & > .desktop-catalog-navigation-item {
-                            position: relative;
-                            & > .desktop-catalog-navigation-link {
-                                text-decoration: none!important;
-                                position: relative;
-                                padding: 10px 30px;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                .SFProDisplayRegular;
-                                font-size: 14px;
-                                color: #000;
-                                & > svg {
-                                    margin-right: 15px;
-                                }
+                        & > .desktop-navigation-link {
+                            padding: 10px 20px;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            .HelveticaNeueCyrRoman;
+                            font-size: 16px;
+                            color: #000;
+                            & > svg {
+                                margin-right: 15px;
                             }
-                            &:hover {
+                        }
+                        &.active {
+                            & > .desktop-navigation-link {
+                                .HelveticaNeueCyrBold;
+                            }
+                        }
+                        &.underline {
+                            border-bottom: 1px solid @grayColor;
+                        }
+                        & > .desktop-catalog-navigation-list {
+                            width: 100%;
+                            list-style: none;
+                            margin: 0;
+                            -webkit-box-shadow: inset 0px 0px 5px 0px #00000042;
+                            -moz-box-shadow: inset 0px 0px 5px 0px #00000042;
+                            box-shadow: inset 0px 0px 5px 0px #00000042;
+                            background: #dcf4e4;
+                            & > .desktop-catalog-navigation-item {
+                                position: relative;
                                 & > .desktop-catalog-navigation-link {
-                                    color: @secondColor;
-                                    &::after {
-                                        content: '';
-                                        position: absolute;
-                                        right: 10px;
-                                        top: 50%;
-                                        -webkit-transform: translateY(-50%);
-                                        -moz-transform: translateY(-50%);
-                                        -ms-transform: translateY(-50%);
-                                        -o-transform: translateY(-50%);
-                                        transform: translateY(-50%);
-                                        width: 25px;
-                                        height: 25px;
-                                        display: block;
-                                        background: url("../img/icons/chevron-right.svg") no-repeat center center;
-                                        background-size: cover;
+                                    text-decoration: none!important;
+                                    position: relative;
+                                    padding: 10px 30px;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    .SFProDisplayRegular;
+                                    font-size: 14px;
+                                    color: #000;
+                                    & > svg {
+                                        margin-right: 15px;
                                     }
                                 }
-                            }
-                            &.has-dropdown-nav > .desktop-sub-catalog-navigation {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: flex-start;
-                                opacity: 0;
-                                padding: 0 0 0 10px;
-                                width: 475%;
-                                min-height: 530px;
-                                background: #fff;
-                                position: absolute;
-                                top: -100rem;
-                                left: 100%;
-                                max-height: 530px;
-                                flex-wrap: wrap;
-                                -webkit-transition: 0.3s all;
-                                -moz-transition: 0.3s all;
-                                -ms-transition: 0.3s all;
-                                -o-transition: 0.3s all;
-                                transition: 0.3s all;
-                                & > .desktop-sub-catalog-col {
-                                    padding: 20px 10px 10px 0px;
-                                    flex: 0 0 81%;
-                                    max-width: 81%;
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    justify-content: flex-start;
-                                    align-items: start;
-                                    overflow: hidden;
-                                    &.adv-col {
-                                        flex: 0 0 19%;
-                                        max-width: 19%;
-                                        min-height: 530px;
-                                        height: 100%;
-                                        padding: 0;
-                                        position: relative;
-                                        & > a {
-                                            display: block;
-                                            width: 100%;
-                                            height: 100%;
+                                &:hover {
+                                    & > .desktop-catalog-navigation-link {
+                                        color: @secondColor;
+                                        &::after {
+                                            content: '';
                                             position: absolute;
-                                        }
-                                        & > a[data-name=adv1] {
-                                            background: url("../img/adv.png") no-repeat left center;
+                                            right: 10px;
+                                            top: 50%;
+                                            -webkit-transform: translateY(-50%);
+                                            -moz-transform: translateY(-50%);
+                                            -ms-transform: translateY(-50%);
+                                            -o-transform: translateY(-50%);
+                                            transform: translateY(-50%);
+                                            width: 25px;
+                                            height: 25px;
+                                            display: block;
+                                            background: url("../img/icons/chevron-right.svg") no-repeat center center;
                                             background-size: cover;
                                         }
                                     }
-                                    & > .sub-catalog-list {
-                                        list-style: none;
-                                        margin-bottom: 20px;
-                                        flex: 0 0 33.33%;
-                                        max-width: 33.33%;
-                                        & > .sub-catalog-item {
-                                            width: 100%;
-                                            & > .sub-catalog-link {
+                                }
+                                &.has-dropdown-nav > .desktop-sub-catalog-navigation {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: flex-start;
+                                    opacity: 0;
+                                    padding: 0 0 0 10px;
+                                    width: 475%;
+                                    min-height: 530px;
+                                    background: #fff;
+                                    position: absolute;
+                                    top: -100rem;
+                                    left: 100%;
+                                    max-height: 530px;
+                                    flex-wrap: wrap;
+                                    -webkit-transition: 0.3s all;
+                                    -moz-transition: 0.3s all;
+                                    -ms-transition: 0.3s all;
+                                    -o-transition: 0.3s all;
+                                    transition: 0.3s all;
+                                    & > .desktop-sub-catalog-col {
+                                        padding: 20px 10px 10px 0px;
+                                        flex: 0 0 81%;
+                                        max-width: 81%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: flex-start;
+                                        align-items: start;
+                                        overflow: hidden;
+                                        &.adv-col {
+                                            flex: 0 0 19%;
+                                            max-width: 19%;
+                                            min-height: 530px;
+                                            height: 100%;
+                                            padding: 0;
+                                            position: relative;
+                                            & > a {
                                                 display: block;
                                                 width: 100%;
-                                                .SFProDisplayRegular;
-                                                text-decoration: none;
-                                                font-size: 13px;
-                                                padding: 1px 15px;
-                                                color: #000;
-                                                border: 1px solid transparent;
-                                                border-radius: 10px;
+                                                height: 100%;
+                                                position: absolute;
                                             }
-                                            &:hover > .sub-catalog-link {
-                                                font-weight: bold;
-                                                color: @secondColor;
-                                                border: 1px solid @secondColor;
-                                            }
-                                            &:first-child > .sub-catalog-link {
-                                                padding: 1px 10px;
-                                                .SFProDisplayBold;
-                                                font-size: 15px;
-                                                text-align: center;
-                                                color: @secondColor;
-                                                text-decoration: underline;
-                                                text-transform: uppercase;
+                                            & > a[data-name=adv1] {
+                                                background: url("../img/adv.png") no-repeat left center;
+                                                background-size: cover;
                                             }
                                         }
-                                        &:last-child {
-                                            margin-bottom: 0px;
+                                        & > .sub-catalog-list {
+                                            list-style: none;
+                                            margin-bottom: 20px;
+                                            flex: 0 0 33.33%;
+                                            max-width: 33.33%;
+                                            & > .sub-catalog-item {
+                                                width: 100%;
+                                                & > .sub-catalog-link {
+                                                    display: block;
+                                                    width: 100%;
+                                                    .SFProDisplayRegular;
+                                                    text-decoration: none;
+                                                    font-size: 13px;
+                                                    padding: 1px 15px;
+                                                    color: #000;
+                                                    border: 1px solid transparent;
+                                                    border-radius: 10px;
+                                                }
+                                                &:hover > .sub-catalog-link {
+                                                    font-weight: bold;
+                                                    color: @secondColor;
+                                                    border: 1px solid @secondColor;
+                                                }
+                                                &:first-child > .sub-catalog-link {
+                                                    padding: 1px 10px;
+                                                    .SFProDisplayBold;
+                                                    font-size: 15px;
+                                                    text-align: center;
+                                                    color: @secondColor;
+                                                    text-decoration: underline;
+                                                    text-transform: uppercase;
+                                                }
+                                            }
+                                            &:last-child {
+                                                margin-bottom: 0px;
+                                            }
                                         }
                                     }
                                 }
-                            }
-                            &.has-dropdown-nav:hover > .desktop-sub-catalog-navigation {
-                                opacity: 1;
-                                top: -44px;
+                                &.has-dropdown-nav:hover > .desktop-sub-catalog-navigation {
+                                    opacity: 1;
+                                    top: -44px;
+                                }
                             }
                         }
                     }
-                }
-                & > .desktop-navigation-link {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    padding: 5px 20px;
-                    &:first-child {
-                        margin-top: 10px;
-                    }
-                    & > a {
-                        .HelveticaNeueCyrBold;
-                        font-size: 16px;
-                        color: #000;
-                    }
-                    &.telegram > a {
-                        margin-top: 5px;
-                        color: #0088cc;
-                    }
-                    &.viber > a {
-                        color: #8f5db7;
+                    & > .desktop-navigation-link {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding: 5px 20px;
+                        &:first-child {
+                            margin-top: 10px;
+                        }
+                        & > a {
+                            .HelveticaNeueCyrBold;
+                            font-size: 16px;
+                            color: #000;
+                        }
+                        &.telegram > a {
+                            margin-top: 5px;
+                            color: #0088cc;
+                        }
+                        &.viber > a {
+                            color: #8f5db7;
+                        }
                     }
                 }
             }
@@ -2089,38 +2092,40 @@ header.main-navigation-header {
             & > .desktop-navigation-collapse {
                 right: unset;
                 left: 0;
-                & > .desktop-navigation-list {
-                    & > .desktop-navigation-item {
-                        & > .desktop-catalog-navigation-list {
-                            & > .desktop-catalog-navigation-item {
-                                & > .desktop-sub-catalog-navigation {
-                                    padding: 0 0 15px 0 !important;
-                                    width: 375%!important;
-                                    flex-wrap: wrap-reverse !important;
-                                    align-items: baseline!important;
-                                    & > .desktop-sub-catalog-col {
-                                        padding: 0 7px !important;
-                                        flex: 0 0 100% !important;
-                                        max-width: 100% !important;
-                                        max-height: 380px;
-                                        overflow-y: auto!important;
-                                        &:first-child {
-                                            padding: 15px 7px 15px 15px !important;
-                                        }
+                & > .desktop-navigation-collapse-wrap {
+                    & > .desktop-navigation-list {
+                        & > .desktop-navigation-item {
+                            & > .desktop-catalog-navigation-list {
+                                & > .desktop-catalog-navigation-item {
+                                    & > .desktop-sub-catalog-navigation {
+                                        padding: 0 0 15px 0 !important;
+                                        width: 375%!important;
+                                        flex-wrap: wrap-reverse !important;
+                                        align-items: baseline!important;
+                                        & > .desktop-sub-catalog-col {
+                                            padding: 0 7px !important;
+                                            flex: 0 0 100% !important;
+                                            max-width: 100% !important;
+                                            max-height: 380px;
+                                            overflow-y: auto!important;
+                                            &:first-child {
+                                                padding: 15px 7px 15px 15px !important;
+                                            }
 
-                                        &:nth-child(3) {
-                                            padding: 15px 15px 15px 7px !important;
+                                            &:nth-child(3) {
+                                                padding: 15px 15px 15px 7px !important;
+                                            }
                                         }
-                                    }
-                                    & > .adv-col {
-                                        flex: 0 0 100% !important;
-                                        max-width: 100% !important;
-                                        max-height: 150px !important;
-                                        min-height: 150px !important;
-                                        padding: 0 !important;
-                                        & > a[data-name=adv1] {
-                                            background: url("../img/adv.png") no-repeat center center !important;
-                                            background-size: cover !important;
+                                        & > .adv-col {
+                                            flex: 0 0 100% !important;
+                                            max-width: 100% !important;
+                                            max-height: 150px !important;
+                                            min-height: 150px !important;
+                                            padding: 0 !important;
+                                            & > a[data-name=adv1] {
+                                                background: url("../img/adv.png") no-repeat center center !important;
+                                                background-size: cover !important;
+                                            }
                                         }
                                     }
                                 }
@@ -2215,21 +2220,23 @@ header.main-navigation-header {
             max-width: 30%;
             font-size: 14px;
             & > .desktop-navigation-collapse {
-                & > .desktop-navigation-list {
-                    & > .desktop-navigation-item {
-                        & > .desktop-catalog-navigation-list {
-                            & > .desktop-catalog-navigation-item {
-                                & > .desktop-sub-catalog-navigation {
-                                    width: 250%!important;
-                                    & > .desktop-sub-catalog-col {
-                                        & > .sub-catalog-list {
-                                            flex: 0 0 50%!important;
-                                            max-width: 50%!important;
-                                            & > .sub-catalog-item {
-                                                & > .sub-catalog-link {
-                                                    font-size: 12px;
-                                                    &:first-child {
-                                                        font-size: 14px;
+                & > .desktop-navigation-collapse-wrap {
+                    & > .desktop-navigation-list {
+                        & > .desktop-navigation-item {
+                            & > .desktop-catalog-navigation-list {
+                                & > .desktop-catalog-navigation-item {
+                                    & > .desktop-sub-catalog-navigation {
+                                        width: 250%!important;
+                                        & > .desktop-sub-catalog-col {
+                                            & > .sub-catalog-list {
+                                                flex: 0 0 50%!important;
+                                                max-width: 50%!important;
+                                                & > .sub-catalog-item {
+                                                    & > .sub-catalog-link {
+                                                        font-size: 12px;
+                                                        &:first-child {
+                                                            font-size: 14px;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -2361,12 +2368,14 @@ header.main-navigation-header {
             padding: 0 15px 0 0;
             & > .desktop-navigation-collapse {
                 right: 15px;
-                & > .desktop-navigation-list {
-                    & > .desktop-navigation-item {
-                        & > .desktop-catalog-navigation-list {
-                            & > .desktop-catalog-navigation-item {
-                                & > .desktop-sub-catalog-navigation {
-                                    width: 225%!important;
+                & > .desktop-navigation-collapse-wrap {
+                    & > .desktop-navigation-list {
+                        & > .desktop-navigation-item {
+                            & > .desktop-catalog-navigation-list {
+                                & > .desktop-catalog-navigation-item {
+                                    & > .desktop-sub-catalog-navigation {
+                                        width: 225%!important;
+                                    }
                                 }
                             }
                         }
