@@ -602,11 +602,11 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.backSwitchMenuLevelEvent = function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         e.cancelBubble = true;
         var backBtn = e.target;
         if (!e.target.matches('.go-back-btn')) {
-            backBtn = e.target.parentNode;
+            return true;
         }
         var prevMenu = backBtn.parentNode;
         if (prevMenu.getAttribute('data-level') == '2') {

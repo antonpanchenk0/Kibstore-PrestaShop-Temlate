@@ -525,11 +525,11 @@ class Navigation {
     }
 
     backSwitchMenuLevelEvent = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         e.cancelBubble = true;
         let backBtn = e.target;
         if(!e.target.matches('.go-back-btn')) {
-            backBtn = e.target.parentNode;
+            return true;
         }
         const prevMenu = backBtn.parentNode;
         if(prevMenu.getAttribute('data-level') == '2') {
