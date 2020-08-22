@@ -53,9 +53,23 @@
   transition: 0.3s;
 }
 /*Nav Styles*/
+.desktop-navigation-collapse-overlay {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: #000000a6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
 header.main-navigation-header {
   width: 100%;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f3c4f;
   top: 0;
   left: 0;
   z-index: 100;
@@ -67,8 +81,8 @@ header.main-navigation-header {
 }
 .navigation {
   width: 100%;
+  max-width: 1920px;
   height: 120px;
-  background-color: #2f3c4f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -286,16 +300,6 @@ header.main-navigation-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.navigation-desktop-and-mobile > .desktop-navigation-collapse-overlay {
-  width: 100%;
-  height: 100vh;
-  z-index: -2;
-  background: #000000a6;
-  position: absolute;
-  top: 90px;
-  left: 0;
-  display: none;
 }
 .navigation-desktop-and-mobile > .desktop-menu-btn-box {
   display: flex;
@@ -3003,7 +3007,7 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   min-height: 100vh;
   width: 100%;
   background-color: #e9edf0;
@@ -3068,22 +3072,38 @@ body {
 /*Categories Section | Discount and new items section | Mobile app section*/
 .content {
   width: 100%;
-  flex: 0 0 calc(77% - 22px);
-  max-width: calc(77% - 22px);
+  max-width: 1920px;
   display: flex;
   flex-flow: column;
   align-items: flex-end;
   justify-content: flex-start;
   padding: 0 155px 0 0;
 }
+.content > div,
+.content > section {
+  flex: 0 0 calc(77% - 60px);
+  max-width: calc(77% - 60px);
+}
 .fluid-content {
   width: 100%;
   display: flex;
   flex-flow: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
-  padding: 0 185px 0 0;
   margin-top: 45px;
+}
+.fluid-content > div,
+.fluid-content > section {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 185px 30px 0;
+}
+.fluid-content > div > *,
+.fluid-content > section > * {
+  flex: 0 0 calc(77% - 60px);
+  max-width: calc(77% - 60px);
 }
 .fixed-social-links {
   position: fixed;
@@ -3205,14 +3225,15 @@ section.new-items > .previously-viewed-body,
 section.previously-viewed > .previously-viewed-body {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: stretch;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow: hidden;
+  max-height: 426px;
 }
 .product-item {
-  flex: 0 0 20%;
-  max-width: 20%;
+  flex: 0 0 246px;
+  max-width: 246px;
   width: 100%;
   padding: 0 3px;
   margin-bottom: 6px;
@@ -3228,8 +3249,9 @@ section.previously-viewed > .previously-viewed-body {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  width: 100%;
-  min-height: 100%;
+  min-width: 240px;
+  max-width: 240px;
+  height: auto;
   padding: 10px 0 20px 0;
   background-color: #fff;
 }
@@ -3483,17 +3505,17 @@ section.previously-viewed > .previously-viewed-body {
   background-color: #5489d7;
 }
 .advantages > .advantages-wrap {
-  flex: 0 0 calc(75% - 66px);
-  max-width: calc(75% - 66px);
   width: 100%;
 }
 .advantages > .advantages-wrap > .advantages-list {
   list-style: none;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 30px 60px;
+}
+.advantages > .advantages-wrap > .advantages-list > .advantages-item {
+  margin: 0 75px;
 }
 .advantages > .advantages-wrap > .advantages-list > .advantages-item > .advantages-link {
   display: flex;
@@ -3536,10 +3558,10 @@ section.previously-viewed > .previously-viewed-body {
 .blog-news > .subscribe-to-updates-wrap,
 .about-us > .subscribe-to-updates-wrap,
 .subscribe-to-updates > .subscribe-to-updates-wrap {
-  padding: 50px 0;
-  flex: 0 0 calc(75% - 66px);
-  max-width: calc(75% - 66px);
+  flex-flow: column;
+  align-items: flex-end;
   width: 100%;
+  padding: 30px 155px 30px 0;
 }
 .blog-news > .blog-news-wrap > .blog-news-header,
 .about-us > .blog-news-wrap > .blog-news-header,
@@ -3935,8 +3957,23 @@ section.previously-viewed > .previously-viewed-body {
 .about-us > .subscribe-to-updates-wrap.subscribe-to-updates-wrap,
 .subscribe-to-updates > .subscribe-to-updates-wrap.subscribe-to-updates-wrap {
   display: flex;
-  justify-content: flex-start;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 100px;
   position: relative;
+}
+.blog-news > .blog-news-wrap.subscribe-to-updates-wrap > .send-email-box,
+.about-us > .blog-news-wrap.subscribe-to-updates-wrap > .send-email-box,
+.subscribe-to-updates > .blog-news-wrap.subscribe-to-updates-wrap > .send-email-box,
+.blog-news > .about-us-wrap.subscribe-to-updates-wrap > .send-email-box,
+.about-us > .about-us-wrap.subscribe-to-updates-wrap > .send-email-box,
+.subscribe-to-updates > .about-us-wrap.subscribe-to-updates-wrap > .send-email-box,
+.blog-news > .subscribe-to-updates-wrap.subscribe-to-updates-wrap > .send-email-box,
+.about-us > .subscribe-to-updates-wrap.subscribe-to-updates-wrap > .send-email-box,
+.subscribe-to-updates > .subscribe-to-updates-wrap.subscribe-to-updates-wrap > .send-email-box {
+  width: 500px;
+  max-width: 500px;
 }
 .blog-news > .blog-news-wrap.subscribe-to-updates-wrap > .send-email-box > h2.title,
 .about-us > .blog-news-wrap.subscribe-to-updates-wrap > .send-email-box > h2.title,
@@ -4055,10 +4092,8 @@ section.previously-viewed > .previously-viewed-body {
 .about-us > .subscribe-to-updates-wrap.subscribe-to-updates-wrap > .girl-box,
 .subscribe-to-updates > .subscribe-to-updates-wrap.subscribe-to-updates-wrap > .girl-box {
   display: block;
-  position: absolute;
   width: 375px;
-  left: 500px;
-  bottom: 0;
+  max-width: 375px;
 }
 .blog-news > .blog-news-wrap.subscribe-to-updates-wrap > .girl-box > img,
 .about-us > .blog-news-wrap.subscribe-to-updates-wrap > .girl-box > img,
@@ -4136,19 +4171,22 @@ section.previously-viewed > .previously-viewed-body {
   text-transform: uppercase;
   margin-left: 10px;
 }
-@media screen and (max-width: 1560px) {
+@media screen and (max-width: 1920px) {
   .content {
-    padding: 0 7px;
-    flex: 0 0 77%;
-    max-width: 77%;
+    padding: 0 5% 0 0;
   }
-  .fluid-content {
-    padding: 0 7px 0 0;
+  .fluid-content > div,
+  .fluid-content > section {
+    padding: 30px 6% 30px 0;
   }
-  .product-item {
-    flex: 0 0 25%;
-    max-width: 25%;
+  .blog-news > .blog-news-wrap,
+  .about-us > .blog-news-wrap,
+  .blog-news > .about-us-wrap,
+  .about-us > .about-us-wrap {
+    padding: 30px 5% 30px 0;
   }
+}
+@media screen and (max-width: 1560px) {
   .product-item > .product-item-wrap > .product-item-header > .tooltips-box > .product-item-tooltip {
     width: 100px;
     height: 20px;
@@ -4163,53 +4201,17 @@ section.previously-viewed > .previously-viewed-body {
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .current-price {
     font-size: 20px;
   }
-  .blog-news > .blog-news-wrap,
-  .about-us > .blog-news-wrap,
-  .subscribe-to-updates > .blog-news-wrap,
-  .advantages > .blog-news-wrap,
-  .blog-news > .about-us-wrap,
-  .about-us > .about-us-wrap,
-  .subscribe-to-updates > .about-us-wrap,
-  .advantages > .about-us-wrap,
-  .blog-news > .subscribe-to-updates-wrap,
-  .about-us > .subscribe-to-updates-wrap,
-  .subscribe-to-updates > .subscribe-to-updates-wrap,
-  .advantages > .subscribe-to-updates-wrap,
-  .blog-news > .advantages-wrap,
-  .about-us > .advantages-wrap,
-  .subscribe-to-updates > .advantages-wrap,
-  .advantages > .advantages-wrap {
-    flex: 0 0 calc(77% - 7px);
-    max-width: calc(77% - 7px);
-  }
-  .blog-news > .blog-news-wrap.subscribe-to-updates-wrap,
-  .about-us > .blog-news-wrap.subscribe-to-updates-wrap,
-  .subscribe-to-updates > .blog-news-wrap.subscribe-to-updates-wrap,
-  .advantages > .blog-news-wrap.subscribe-to-updates-wrap,
-  .blog-news > .about-us-wrap.subscribe-to-updates-wrap,
-  .about-us > .about-us-wrap.subscribe-to-updates-wrap,
-  .subscribe-to-updates > .about-us-wrap.subscribe-to-updates-wrap,
-  .advantages > .about-us-wrap.subscribe-to-updates-wrap,
-  .blog-news > .subscribe-to-updates-wrap.subscribe-to-updates-wrap,
-  .about-us > .subscribe-to-updates-wrap.subscribe-to-updates-wrap,
-  .subscribe-to-updates > .subscribe-to-updates-wrap.subscribe-to-updates-wrap,
-  .advantages > .subscribe-to-updates-wrap.subscribe-to-updates-wrap,
-  .blog-news > .advantages-wrap.subscribe-to-updates-wrap,
-  .about-us > .advantages-wrap.subscribe-to-updates-wrap,
-  .subscribe-to-updates > .advantages-wrap.subscribe-to-updates-wrap,
-  .advantages > .advantages-wrap.subscribe-to-updates-wrap {
-    flex: 0 0 calc(77% - 57px);
-    max-width: calc(77% - 57px);
+  .advantages > .advantages-wrap > .advantages-list > .advantages-item {
+    margin: 0 50px;
   }
 }
 @media screen and (max-width: 1280px) {
   .content {
-    flex: 0 0 70%;
-    max-width: 70%;
+    padding: 0 2% 0 0;
   }
-  .product-item {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+  .fluid-content > div,
+  .fluid-content > section {
+    padding: 30px 3% 30px 0;
   }
   .blog-news > .blog-news-wrap,
   .about-us > .blog-news-wrap,
@@ -4227,26 +4229,25 @@ section.previously-viewed > .previously-viewed-body {
   .about-us > .advantages-wrap,
   .subscribe-to-updates > .advantages-wrap,
   .advantages > .advantages-wrap {
-    flex: 0 0 calc(70% - 7px);
-    max-width: calc(70% - 7px);
+    padding: 30px 3% 30px 0;
   }
-  .blog-news > .blog-news-wrap > .advantages-list,
-  .about-us > .blog-news-wrap > .advantages-list,
-  .subscribe-to-updates > .blog-news-wrap > .advantages-list,
-  .advantages > .blog-news-wrap > .advantages-list,
-  .blog-news > .about-us-wrap > .advantages-list,
-  .about-us > .about-us-wrap > .advantages-list,
-  .subscribe-to-updates > .about-us-wrap > .advantages-list,
-  .advantages > .about-us-wrap > .advantages-list,
-  .blog-news > .subscribe-to-updates-wrap > .advantages-list,
-  .about-us > .subscribe-to-updates-wrap > .advantages-list,
-  .subscribe-to-updates > .subscribe-to-updates-wrap > .advantages-list,
-  .advantages > .subscribe-to-updates-wrap > .advantages-list,
-  .blog-news > .advantages-wrap > .advantages-list,
-  .about-us > .advantages-wrap > .advantages-list,
-  .subscribe-to-updates > .advantages-wrap > .advantages-list,
-  .advantages > .advantages-wrap > .advantages-list {
-    padding: 30px;
+  .blog-news > .blog-news-wrap > .advantages-list > .advantages-item,
+  .about-us > .blog-news-wrap > .advantages-list > .advantages-item,
+  .subscribe-to-updates > .blog-news-wrap > .advantages-list > .advantages-item,
+  .advantages > .blog-news-wrap > .advantages-list > .advantages-item,
+  .blog-news > .about-us-wrap > .advantages-list > .advantages-item,
+  .about-us > .about-us-wrap > .advantages-list > .advantages-item,
+  .subscribe-to-updates > .about-us-wrap > .advantages-list > .advantages-item,
+  .advantages > .about-us-wrap > .advantages-list > .advantages-item,
+  .blog-news > .subscribe-to-updates-wrap > .advantages-list > .advantages-item,
+  .about-us > .subscribe-to-updates-wrap > .advantages-list > .advantages-item,
+  .subscribe-to-updates > .subscribe-to-updates-wrap > .advantages-list > .advantages-item,
+  .advantages > .subscribe-to-updates-wrap > .advantages-list > .advantages-item,
+  .blog-news > .advantages-wrap > .advantages-list > .advantages-item,
+  .about-us > .advantages-wrap > .advantages-list > .advantages-item,
+  .subscribe-to-updates > .advantages-wrap > .advantages-list > .advantages-item,
+  .advantages > .advantages-wrap > .advantages-list > .advantages-item {
+    margin: 0 30px;
   }
   .blog-news > .blog-news-wrap > .advantages-list > .advantages-item > .advantages-link > .advantages-icon,
   .about-us > .blog-news-wrap > .advantages-list > .advantages-item > .advantages-link > .advantages-icon,
@@ -4264,8 +4265,8 @@ section.previously-viewed > .previously-viewed-body {
   .about-us > .advantages-wrap > .advantages-list > .advantages-item > .advantages-link > .advantages-icon,
   .subscribe-to-updates > .advantages-wrap > .advantages-list > .advantages-item > .advantages-link > .advantages-icon,
   .advantages > .advantages-wrap > .advantages-list > .advantages-item > .advantages-link > .advantages-icon {
-    width: 125px;
-    max-width: 125px;
+    width: 100px;
+    max-width: 100px;
   }
   .blog-news > .blog-news-wrap > .blog-news-body > .blog-news-item > .blog-news-wrap,
   .about-us > .blog-news-wrap > .blog-news-body > .blog-news-item > .blog-news-wrap,
@@ -4301,7 +4302,7 @@ section.previously-viewed > .previously-viewed-body {
   .about-us > .advantages-wrap > .blog-news-body > .blog-news-item > .blog-news-wrap > .blog-news-image,
   .subscribe-to-updates > .advantages-wrap > .blog-news-body > .blog-news-item > .blog-news-wrap > .blog-news-image,
   .advantages > .advantages-wrap > .blog-news-body > .blog-news-item > .blog-news-wrap > .blog-news-image {
-    height: 130px;
+    height: 140px;
     max-height: 140px;
     flex: 0 0 100%;
     max-width: 100%;
@@ -4378,8 +4379,7 @@ section.previously-viewed > .previously-viewed-body {
   .about-us > .advantages-wrap.subscribe-to-updates-wrap,
   .subscribe-to-updates > .advantages-wrap.subscribe-to-updates-wrap,
   .advantages > .advantages-wrap.subscribe-to-updates-wrap {
-    flex: 0 0 calc(70% - 17px);
-    max-width: calc(70% - 17px);
+    padding: 30px 0 30px 100px;
   }
   .blog-news > .blog-news-wrap.subscribe-to-updates-wrap > .girl-box,
   .about-us > .blog-news-wrap.subscribe-to-updates-wrap > .girl-box,
@@ -4417,6 +4417,9 @@ section.previously-viewed > .previously-viewed-body {
   }
   .content.content-slider {
     display: flex;
+    padding: 0;
+  }
+  .content.content-slider > .carousel {
     flex: 0 0 100%;
     min-width: 100%;
   }

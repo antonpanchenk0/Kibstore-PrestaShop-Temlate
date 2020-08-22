@@ -23,9 +23,23 @@
 }
 
 /*Nav Styles*/
+.desktop-navigation-collapse-overlay {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: #000000a6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
 header.main-navigation-header {
     width: 100%;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @firstColor;
     top: 0;
     left: 0;
     z-index: 100;
@@ -37,8 +51,8 @@ header.main-navigation-header {
 }
 .navigation {
     width: 100%;
+    max-width: 1920px;
     height: @navHeightDesktop;
-    background-color: @firstColor;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -225,16 +239,6 @@ header.main-navigation-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    & > .desktop-navigation-collapse-overlay {
-        width: 100%;
-        height: 100vh;
-        z-index: -2;
-        background: #000000a6;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        display: none;
-    }
     & > .desktop-menu-btn-box {
         display: flex;
         justify-content: flex-end;

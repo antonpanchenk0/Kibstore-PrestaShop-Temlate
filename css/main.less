@@ -58,22 +58,35 @@
 
 .content {
     width: 100%;
-    flex: 0 0 calc(77% - 22px);
-    max-width: calc(77% - 22px);
+    max-width: 1920px;
     display: flex;
     flex-flow: column;
     align-items: flex-end;
     justify-content: flex-start;
     padding: 0 155px 0 0;
+    & > div, & > section {
+        flex: 0 0 calc(77% - 60px);
+        max-width: calc(77% - 60px);
+    }
 }
 .fluid-content {
     width: 100%;
     display: flex;
     flex-flow: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
-    padding: 0 185px 0 0;
     margin-top: 45px;
+    & > div, & > section {
+        max-width: 1920px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 30px 185px 30px 0;
+        & > * {
+            flex: 0 0 calc(77% - 60px);
+            max-width: calc(77% - 60px);
+        }
+    }
 }
 
 .fixed-social-links {
@@ -158,15 +171,16 @@ section.sales-leaders, section.new-items, section.previously-viewed {
     & > .sales-leaders-body, & > .new-items-body, & > .previously-viewed-body {
         width: 100%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: stretch;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         overflow: hidden;
+        max-height: 426px;
     }
 }
 .product-item {
-    flex: 0 0 20%;
-    max-width: 20%;
+    flex: 0 0 246px;
+    max-width: 246px;
     width: 100%;
     padding: 0 3px;
     margin-bottom: 6px;
@@ -180,8 +194,9 @@ section.sales-leaders, section.new-items, section.previously-viewed {
         display: flex;
         flex-flow: column;
         justify-content: space-between;
-        width: 100%;
-        min-height: 100%;
+        min-width: 240px;
+        max-width: 240px;
+        height: auto;
         padding: 10px 0 20px 0;
         background-color: #fff;
         & > .product-item-header {
@@ -428,17 +443,15 @@ section.sales-leaders, section.new-items, section.previously-viewed {
 .advantages {
     background-color: @secondColor;
     & > .advantages-wrap {
-        flex: 0 0 calc(75% - 66px);
-        max-width: calc(75% - 66px);
         width: 100%;
         & > .advantages-list {
             list-style: none;
             margin: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 30px 60px;
             & > .advantages-item {
+                margin: 0 75px;
                 & > .advantages-link {
                     display: flex;
                     flex-flow: column;
@@ -469,10 +482,10 @@ section.sales-leaders, section.new-items, section.previously-viewed {
         background-color: @secondColor;
     }
     & > .blog-news-wrap, & > .about-us-wrap, & > .subscribe-to-updates-wrap {
-        padding: 50px 0;
-        flex: 0 0 calc(75% - 66px);
-        max-width: calc(75% - 66px);
+        flex-flow: column;
+        align-items: flex-end;
         width: 100%;
+        padding: 30px 155px 30px 0;
         & > .blog-news-header, & > .about-us-header {
             width: 100%;
             display: flex;
@@ -622,9 +635,14 @@ section.sales-leaders, section.new-items, section.previously-viewed {
         }
         &.subscribe-to-updates-wrap {
             display: flex;
-            justify-content: flex-start;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 0 100px;
             position: relative;
             & > .send-email-box {
+                width: 500px;
+                max-width: 500px;
                 & > h2.title {
                     .HelveticaNeueCyrBold;
                     font-size: 18px;
@@ -683,10 +701,8 @@ section.sales-leaders, section.new-items, section.previously-viewed {
             }
             & > .girl-box {
                 display: block;
-                position: absolute;
                 width: 375px;
-                left: 500px;
-                bottom: 0;
+                max-width: 375px;
                 & > img {
                     width: 100%;
                     height: auto;
@@ -749,18 +765,24 @@ section.sales-leaders, section.new-items, section.previously-viewed {
     margin-left: 10px;
 }
 
-@media screen and (max-width: 1560px) {
+@media screen and (max-width: 1920px) {
     .content {
-        padding: 0 7px;
-        flex: 0 0 77%;
-        max-width: 77%;
+        padding: 0 5% 0 0;
     }
     .fluid-content {
-        padding: 0 7px 0 0;
+        & > div, & > section {
+            padding: 30px 6% 30px 0;
+        }
     }
+    .blog-news, .about-us {
+        & > .blog-news-wrap, & > .about-us-wrap {
+            padding: 30px 5% 30px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1560px) {
     .product-item {
-        flex: 0 0 25%;
-        max-width: 25%;
         & > .product-item-wrap {
             & >.product-item-header {
                 & > .tooltips-box {
@@ -786,13 +808,12 @@ section.sales-leaders, section.new-items, section.previously-viewed {
             }
         }
     }
-    .blog-news, .about-us, .subscribe-to-updates, .advantages {
-        & > .blog-news-wrap, & > .about-us-wrap, & > .subscribe-to-updates-wrap, & > .advantages-wrap {
-            flex: 0 0 calc(77% - 7px);
-            max-width: calc(77% - 7px);
-            &.subscribe-to-updates-wrap {
-                flex: 0 0 calc(77% - 57px);
-                max-width: calc(77% - 57px);
+    .advantages {
+        & > .advantages-wrap {
+            & > .advantages-list {
+                & > .advantages-item {
+                    margin: 0 50px;
+                }
             }
         }
     }
@@ -800,24 +821,23 @@ section.sales-leaders, section.new-items, section.previously-viewed {
 
 @media screen and (max-width: 1280px) {
     .content {
-        flex: 0 0 70%;
-        max-width: 70%;
+        padding: 0 2% 0 0;
     }
-    .product-item {
-        flex: 0 0 33.33%;
-        max-width: 33.33%;
+    .fluid-content {
+        & > div, & > section {
+            padding: 30px 3% 30px 0;
+        }
     }
     .blog-news, .about-us, .subscribe-to-updates, .advantages {
         & > .blog-news-wrap, & > .about-us-wrap, & > .subscribe-to-updates-wrap, & > .advantages-wrap {
-            flex: 0 0 calc(70% - 7px);
-            max-width: calc(70% - 7px);
+            padding: 30px 3% 30px 0;
             & > .advantages-list {
-                padding: 30px;
                 & > .advantages-item {
+                    margin: 0 30px;
                     & > .advantages-link {
                         & > .advantages-icon {
-                            width: 125px;
-                            max-width: 125px
+                            width: 100px;
+                            max-width: 100px
                         }
                     }
                 }
@@ -827,7 +847,7 @@ section.sales-leaders, section.new-items, section.previously-viewed {
                     & > .blog-news-wrap {
                         flex-flow: column;
                         & > .blog-news-image {
-                            height: 130px;
+                            height: 140px;
                             max-height: 140px;
                             flex: 0 0 100%;
                             max-width: 100%;
@@ -846,8 +866,7 @@ section.sales-leaders, section.new-items, section.previously-viewed {
                 }
             }
             &.subscribe-to-updates-wrap {
-                flex: 0 0 calc(70% - 17px);
-                max-width: calc(70% - 17px);
+                padding: 30px 0 30px 100px;
                 & > .girl-box {
                     display: none;
                 }
@@ -871,8 +890,11 @@ section.sales-leaders, section.new-items, section.previously-viewed {
     }
     .content.content-slider {
         display: flex;
-        flex: 0 0 100%;
-        min-width: 100%;
+        padding: 0;
+        & > .carousel {
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
     }
 }
 
