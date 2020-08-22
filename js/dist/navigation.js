@@ -627,8 +627,7 @@ var _initialiseProps = function _initialiseProps() {
 
             _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
             $(desktopNavigationCollapseMenu).css('overflow-y', 'hidden');
-            var pageHeight = window.innerHeight - 60;
-            $(desktopNavigationCollapseMenu).animate({ 'height': isDesktopMenuCollapsed ? '0px' : pageHeight + 'px' }, animationDuration * .75, function () {
+            $(desktopNavigationCollapseMenu).animate({ 'height': isDesktopMenuCollapsed ? '0px' : '100vh' }, animationDuration * .75, function () {
                 _this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
                 $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
