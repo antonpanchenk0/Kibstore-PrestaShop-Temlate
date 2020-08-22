@@ -546,8 +546,7 @@ class Navigation {
             const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
             this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
             $(desktopNavigationCollapseMenu).css('overflow-y','hidden');
-            const pageHeight = window.innerHeight - 60;
-            $(desktopNavigationCollapseMenu).animate( {'height': isDesktopMenuCollapsed ? `0px` : `${pageHeight}px`} , animationDuration * .75, ()=> {
+            $(desktopNavigationCollapseMenu).animate( {'height': isDesktopMenuCollapsed ? `0px` : `100vh`} , animationDuration * .75, ()=> {
                 this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
                 $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
