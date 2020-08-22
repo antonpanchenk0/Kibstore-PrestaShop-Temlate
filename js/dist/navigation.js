@@ -63,6 +63,8 @@ var Navigation = function Navigation(animationDuration) {
     this.navWishListBtn = document.getElementById('navWishList');
     this.navComparisonBtn = document.getElementById('navComparison');
     this.mobileResolution = 860;
+    this.footer = document.getElementById('s_footer');
+    this.footerHeight = this.footer.clientHeight;
     this.isMainPage = document.getElementById('content-slider') ? true : false;
     this.createNavigationsEvents();
 };
@@ -624,10 +626,25 @@ var _initialiseProps = function _initialiseProps() {
                 animationDuration = _config11.animationDuration;
 
             _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
-            $(desktopNavigationCollapseMenu).animate({ 'top': isDesktopMenuCollapsed ? '-100rem' : '50px' }, animationDuration * .75, function () {
+            $(desktopNavigationCollapseMenu).css('overflow-y', 'hidden');
+            var pageHeight = window.innerHeight - 60;
+            $(desktopNavigationCollapseMenu).animate({ 'height': isDesktopMenuCollapsed ? '0px' : pageHeight + 'px' }, animationDuration * .75, function () {
                 _this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
+                $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
             });
+        }
+    };
+
+    this.handleDesktopCloseNavigation = function () {
+        if (!_this.config.isDesktopAnimated) {
+            var isDesktopMenuCollapsed = _this.config.isDesktopMenuCollapsed;
+
+            if (isDesktopMenuCollapsed) {
+                _this.desktopNavigationEvent();
+            } else {
+                return null;
+            }
         }
     };
 
@@ -696,18 +713,22 @@ var _initialiseProps = function _initialiseProps() {
             _this.squeezeNavigationOnScroll(pageTop);
             // Разворачивание навигации если это main страница
             if (_this.isMainPage && window.innerWidth > 860) {
-                _this.desktopNavigationEvent(null);
+                _this.desktopNavigationEvent();
             }
             document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
             document.addEventListener('scroll', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
+                if (pageTop + window.innerHeight - 65 >= document.body.clientHeight - _this.footerHeight) {
+                    _this.handleDesktopCloseNavigation();
+                }
             });
             window.addEventListener('resize', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
                 document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
+                _this.footerHeight = _this.footer.innerHeight;
             });
         });
 

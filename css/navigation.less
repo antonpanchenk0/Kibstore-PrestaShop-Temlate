@@ -273,13 +273,14 @@ header.main-navigation-header {
         & > .desktop-navigation-collapse {
             width: 255px;
             background: #fff;
-            height: auto;
-            min-height: calc(100vh - 60px);
+            height: 0px;
+            overflow-y: hidden;
+            //min-height: calc(100vh - 60px);
             position: absolute;
-            padding-bottom: 180px;
+            //padding-bottom: 180px;
             z-index: -1;
             right: 50px;
-            top: -100rem;
+            top: 50px;
             & > .desktop-navigation-collapse-wrap {
                 width: 100%;
                 & > .desktop-navigation-list, & > .desktop-navigation-links {

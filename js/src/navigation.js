@@ -56,6 +56,8 @@ class Navigation {
         this.navWishListBtn = document.getElementById('navWishList');
         this.navComparisonBtn = document.getElementById('navComparison');
         this.mobileResolution = 860;
+        this.footer = document.getElementById('s_footer');
+        this.footerHeight = this.footer.clientHeight;
         this.isMainPage = document.getElementById('content-slider') ? true : false;
         this.createNavigationsEvents();
     }
@@ -543,10 +545,25 @@ class Navigation {
         if(!this.config.isDesktopAnimated) {
             const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
             this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
-            $(desktopNavigationCollapseMenu).animate( {'top': isDesktopMenuCollapsed ? '-100rem' : '50px'} , animationDuration * .75, ()=> {
+            $(desktopNavigationCollapseMenu).css('overflow-y','hidden');
+            const pageHeight = window.innerHeight - 60;
+            $(desktopNavigationCollapseMenu).animate( {'height': isDesktopMenuCollapsed ? `0px` : `${pageHeight}px`} , animationDuration * .75, ()=> {
                 this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
+                $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
             });
+        }
+    }
+
+    handleDesktopCloseNavigation = () => {
+        if(!this.config.isDesktopAnimated) {
+            const { isDesktopMenuCollapsed } = this.config;
+            if(isDesktopMenuCollapsed) {
+                this.desktopNavigationEvent();
+            }
+            else {
+                return null;
+            }
         }
     }
 
@@ -617,18 +634,22 @@ class Navigation {
             this.squeezeNavigationOnScroll(pageTop);
             // Разворачивание навигации если это main страница
             if(this.isMainPage && window.innerWidth > 860) {
-                this.desktopNavigationEvent(null)
+                this.desktopNavigationEvent();
             }
             document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
             document.addEventListener('scroll', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
+                if(pageTop + window.innerHeight - 65 >= document.body.clientHeight - this.footerHeight) {
+                    this.handleDesktopCloseNavigation();
+                }
             })
             window.addEventListener('resize', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
                 document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
+                this.footerHeight = this.footer.innerHeight;
             })
         })
 
