@@ -632,6 +632,19 @@ var _initialiseProps = function _initialiseProps() {
                 _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
                 $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
             });
+            if (!_this.isMainPage) {
+                if (!_this.config.isOverlayShow) {
+                    $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
+                        _this.config.isOverlayShow = !_this.config.isOverlayShow;
+                        document.body.classList.add('scroll-disabled');
+                    });
+                } else {
+                    $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100, function () {
+                        _this.config.isOverlayShow = !_this.config.isOverlayShow;
+                        document.body.classList.remove('scroll-disabled');
+                    });
+                }
+            }
         }
     };
 
@@ -639,11 +652,7 @@ var _initialiseProps = function _initialiseProps() {
         if (!_this.config.isDesktopAnimated) {
             var isDesktopMenuCollapsed = _this.config.isDesktopMenuCollapsed;
 
-            if (isDesktopMenuCollapsed) {
-                _this.desktopNavigationEvent();
-            } else {
-                return null;
-            }
+            return isDesktopMenuCollapsed ? _this.desktopNavigationEvent() : null;
         }
     };
 
@@ -710,10 +719,27 @@ var _initialiseProps = function _initialiseProps() {
         document.addEventListener('DOMContentLoaded', function (e) {
             var pageTop = window.pageYOffset;
             _this.squeezeNavigationOnScroll(pageTop);
-            // Разворачивание навигации если это main страница
+            // Разворачивание навигации если это main страница и добавление эвентов главной страницы
             if (_this.isMainPage && window.innerWidth > 860) {
                 _this.desktopNavigationEvent();
+                // Overlay при hover
+                _this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', function (e) {
+                    if (!_this.config.isOverlayShow) {
+                        $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
+                            _this.config.isOverlayShow = !_this.config.isOverlayShow;
+                        });
+                    }
+                });
+                _this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', function (e) {
+                    $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
+                    _this.config.isOverlayShow = !_this.config.isOverlayShow;
+                });
             }
+            // Добавление эвентов если не главная страница
+            else {
+                    _this.config.desktopCollapseDesktopOverlay.addEventListener('click', _this.handleDesktopCloseNavigation);
+                    _this.config.desktopCollapseDesktopOverlay.addEventListener('touchend', _this.handleDesktopCloseNavigation);
+                }
             document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
             document.addEventListener('scroll', function (e) {
@@ -734,19 +760,6 @@ var _initialiseProps = function _initialiseProps() {
         // Открытие и закрытие меню Desktop
         _this.config.desktopNavigationBtn.addEventListener('click', _this.desktopNavigationEvent);
         _this.config.desktopNavigationBtn.addEventListener('touchend', _this.desktopNavigationEvent);
-
-        // Overlay при hover
-        _this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', function (e) {
-            if (!_this.config.isOverlayShow) {
-                $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
-                    _this.config.isOverlayShow = !_this.config.isOverlayShow;
-                });
-            }
-        });
-        _this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', function (e) {
-            $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
-            _this.config.isOverlayShow = !_this.config.isOverlayShow;
-        });
 
         // Поиск в навигации
         _this.config.desktopSearchInput.addEventListener('input', function (e) {

@@ -551,18 +551,26 @@ class Navigation {
                 this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
                 $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
             });
+            if(!this.isMainPage) {
+                if(!this.config.isOverlayShow) {
+                    $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
+                        this.config.isOverlayShow = !this.config.isOverlayShow;
+                        document.body.classList.add('scroll-disabled');
+                    });
+                } else {
+                    $(this.config.desktopCollapseDesktopOverlay).fadeOut(100, () => {
+                        this.config.isOverlayShow = !this.config.isOverlayShow;
+                        document.body.classList.remove('scroll-disabled');
+                    });
+                }
+            }
         }
     }
 
     handleDesktopCloseNavigation = () => {
         if(!this.config.isDesktopAnimated) {
             const { isDesktopMenuCollapsed } = this.config;
-            if(isDesktopMenuCollapsed) {
-                this.desktopNavigationEvent();
-            }
-            else {
-                return null;
-            }
+            return isDesktopMenuCollapsed ? this.desktopNavigationEvent() : null;
         }
     }
 
@@ -631,9 +639,26 @@ class Navigation {
         document.addEventListener('DOMContentLoaded', (e) => {
             const pageTop = window.pageYOffset;
             this.squeezeNavigationOnScroll(pageTop);
-            // Разворачивание навигации если это main страница
+            // Разворачивание навигации если это main страница и добавление эвентов главной страницы
             if(this.isMainPage && window.innerWidth > 860) {
                 this.desktopNavigationEvent();
+                // Overlay при hover
+                this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', (e) => {
+                    if(!this.config.isOverlayShow) {
+                        $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
+                            this.config.isOverlayShow = !this.config.isOverlayShow
+                        });
+                    }
+                })
+                this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', (e) => {
+                    $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
+                    this.config.isOverlayShow = !this.config.isOverlayShow;
+                })
+            }
+            // Добавление эвентов если не главная страница
+            else {
+                this.config.desktopCollapseDesktopOverlay.addEventListener('click', this.handleDesktopCloseNavigation);
+                this.config.desktopCollapseDesktopOverlay.addEventListener('touchend', this.handleDesktopCloseNavigation);
             }
             document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
@@ -655,19 +680,6 @@ class Navigation {
         // Открытие и закрытие меню Desktop
         this.config.desktopNavigationBtn.addEventListener('click', this.desktopNavigationEvent);
         this.config.desktopNavigationBtn.addEventListener('touchend', this.desktopNavigationEvent);
-
-        // Overlay при hover
-        this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', (e) => {
-            if(!this.config.isOverlayShow) {
-                $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
-                    this.config.isOverlayShow = !this.config.isOverlayShow
-                });
-            }
-        })
-        this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', (e) => {
-            $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
-            this.config.isOverlayShow = !this.config.isOverlayShow;
-        })
 
         // Поиск в навигации
         this.config.desktopSearchInput.addEventListener('input', (e) => {
