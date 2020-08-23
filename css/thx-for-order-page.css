@@ -3516,6 +3516,9 @@ section.product-section > .product-section-body {
   .fixed-social-links {
     display: none;
   }
+  .content.page-header {
+    display: flex!important;
+  }
 }
 header.nav-header {
   position: absolute;

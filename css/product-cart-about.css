@@ -3516,6 +3516,9 @@ section.product-section > .product-section-body {
   .fixed-social-links {
     display: none;
   }
+  .content.page-header {
+    display: flex!important;
+  }
 }
 .router {
   width: 100%;
@@ -3555,6 +3558,7 @@ section.product-section > .product-section-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 0 15px;
 }
 .title-wrap > .title {
