@@ -40,6 +40,102 @@
   font-family: "Android Robot";
   font-weight: normal;
 }
+.router {
+  width: 100%;
+  padding: 5px 15px 10px 15px;
+}
+.router > .router-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+.router > .router-list > .router-item {
+  display: flex;
+  align-items: center;
+}
+.router > .router-list > .router-item::after {
+  content: '→';
+  color: #858585;
+  margin: 0 3px;
+}
+.router > .router-list > .router-item:last-child::after {
+  content: none;
+}
+.router > .router-list > .router-item > .router-link {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 14px;
+  color: #5489d7;
+  white-space: nowrap;
+}
+.router > .router-list > .router-item.active > .router-link {
+  color: #858585;
+}
+.title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+.title-wrap .title {
+  font-size: 22px;
+  color: #000000;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+}
+.title-wrap .go-back-title-btn {
+  display: none;
+  height: 25px;
+  width: 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.07);
+}
+.title-wrap .go-back-title-btn > svg {
+  vertical-align: unset;
+}
+.product-counter {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 12px;
+  color: #858585;
+  margin: 0 0 10px 0;
+}
+@media screen and (max-width: 1560px) {
+  .router > .router-list > .router-item > .router-link {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .title-wrap > .title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .router {
+    padding: 5px 0 10px 0;
+  }
+  .router > .router-list > .router-item > .router-link {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .title-wrap {
+    padding: 0;
+  }
+  .title-wrap > .title {
+    font-size: 16px;
+  }
+  .title-wrap > .go-back-title-btn {
+    display: block;
+  }
+}
 .border-bottom-1px {
   border-bottom: 1px solid #e9edf0;
 }
@@ -3018,6 +3114,9 @@ body {
 .bg-light-blue {
   background-color: #9ebbe3;
 }
+.bg-white {
+  background-color: #fff;
+}
 .bg-dark-white {
   background-color: #f4f6f8;
 }
@@ -3084,6 +3183,9 @@ body {
   flex-flow: column;
   align-items: flex-end;
   justify-content: flex-start;
+}
+.content.content-row {
+  flex-flow: row!important;
 }
 .fluid-content {
   width: 100%;
@@ -3518,102 +3620,6 @@ section.product-section > .product-section-body {
   }
   .content.page-header {
     display: flex!important;
-  }
-}
-.router {
-  width: 100%;
-  padding: 5px 15px 10px 15px;
-}
-.router > .router-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-}
-.router > .router-list > .router-item {
-  display: flex;
-  align-items: center;
-}
-.router > .router-list > .router-item::after {
-  content: '→';
-  color: #858585;
-  margin: 0 3px;
-}
-.router > .router-list > .router-item:last-child::after {
-  content: none;
-}
-.router > .router-list > .router-item > .router-link {
-  font-family: "SF Pro Display";
-  font-weight: bold;
-  font-size: 14px;
-  color: #5489d7;
-  white-space: nowrap;
-}
-.router > .router-list > .router-item.active > .router-link {
-  color: #858585;
-}
-.title-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 15px;
-}
-.title-wrap > .title {
-  font-size: 22px;
-  color: #000000;
-  font-family: HelveticaNeueCyr;
-  font-weight: bold;
-  margin: 5px 0 0 0;
-}
-.title-wrap > .go-back-title-btn {
-  display: none;
-  height: 25px;
-  width: 25px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.07);
-}
-.title-wrap > .go-back-title-btn > svg {
-  vertical-align: unset;
-}
-.product-counter {
-  font-family: "SF Pro Display";
-  font-weight: bold;
-  font-size: 12px;
-  color: #858585;
-  margin: 0 0 10px 0;
-}
-@media screen and (max-width: 1560px) {
-  .router > .router-list > .router-item > .router-link {
-    font-family: "SF Pro Display";
-    font-weight: bold;
-    font-size: 12px;
-  }
-  .title-wrap > .title {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 860px) {
-  .router {
-    padding: 5px 0 10px 0;
-  }
-  .router > .router-list > .router-item > .router-link {
-    font-family: "SF Pro Display";
-    font-weight: bold;
-    font-size: 10px;
-  }
-  .title-wrap {
-    padding: 0;
-  }
-  .title-wrap > .title {
-    font-size: 16px;
-  }
-  .title-wrap > .go-back-title-btn {
-    display: block;
   }
 }
 .fluid-content {

@@ -3018,6 +3018,9 @@ body {
 .bg-light-blue {
   background-color: #9ebbe3;
 }
+.bg-white {
+  background-color: #fff;
+}
 .bg-dark-white {
   background-color: #f4f6f8;
 }
@@ -3084,6 +3087,9 @@ body {
   flex-flow: column;
   align-items: flex-end;
   justify-content: flex-start;
+}
+.content.content-row {
+  flex-flow: row!important;
 }
 .fluid-content {
   width: 100%;
@@ -3561,14 +3567,14 @@ section.product-section > .product-section-body {
   width: 100%;
   padding: 0 15px;
 }
-.title-wrap > .title {
+.title-wrap .title {
   font-size: 22px;
   color: #000000;
   font-family: HelveticaNeueCyr;
   font-weight: bold;
   margin: 5px 0 0 0;
 }
-.title-wrap > .go-back-title-btn {
+.title-wrap .go-back-title-btn {
   display: none;
   height: 25px;
   width: 25px;
@@ -3577,7 +3583,7 @@ section.product-section > .product-section-body {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.07);
 }
-.title-wrap > .go-back-title-btn > svg {
+.title-wrap .go-back-title-btn > svg {
   vertical-align: unset;
 }
 .product-counter {

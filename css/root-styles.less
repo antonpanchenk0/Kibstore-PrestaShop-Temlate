@@ -1,5 +1,6 @@
 @import './colors';
 @import './fonts';
+@import './page-header-style';
 @import './navigation';
 @import './footer';
 
@@ -33,6 +34,9 @@
 }
 .bg-light-blue {
     background-color: #9ebbe3;
+}
+.bg-white {
+    background-color: #fff;
 }
 .bg-dark-white {
     background-color: #f4f6f8;
@@ -99,6 +103,9 @@
     flex-flow: column;
     align-items: flex-end;
     justify-content: flex-start;
+    &.content-row {
+        flex-flow: row!important;
+    }
 }
 .fluid-content {
     width: 100%;
