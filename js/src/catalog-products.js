@@ -11,6 +11,8 @@ class Filters {
         this.view = 'plate';
         this.filtersHeaderBox = document.querySelector('div.sort-controls');
         this.productWrapBox = document.querySelector('div.catalog-products-items-wrap');
+        this.backArrowFilterBtn = document.querySelector('span.back-arrow-mobile-filter');
+        this.XCloseFilterBtn = document.querySelector('span.close-mobile-filter');
         this.isFixed = false;
         this.createFilterEvents();
         setTimeout(this.multiRange('range', 'rangeBetween', 'rangeButton1n', 'rangeButton2n', 'rangeInput1n', 'rangeInput2n'), 0);
@@ -27,6 +29,10 @@ class Filters {
         this.openFilterBtn.addEventListener('touchend', this.toggleFilterCollapse);
         this.overlay.addEventListener('click', this.handleCloseFilter);
         this.overlay.addEventListener('touchend', this.handleCloseFilter);
+        this.backArrowFilterBtn.addEventListener('click', this.handleCloseFilter);
+        this.backArrowFilterBtn.addEventListener('touchend', this.handleCloseFilter);
+        this.XCloseFilterBtn.addEventListener('click', this.handleCloseFilter);
+        this.XCloseFilterBtn.addEventListener('touchend', this.handleCloseFilter);
 
         // Смена отображения товара
         this.changeViewBtn.addEventListener('click', this.handleChangeView);
@@ -108,7 +114,7 @@ class Filters {
 
     filterFixed = () => {
         const { isFixed, filtersHeaderBox, productWrapBox } = this;
-        if(window.scrollY >= 88) {
+        if(window.scrollY >= 88 && window.innerWidth <= 860) {
             if(!isFixed) {
                 filtersHeaderBox.classList.add('f-fixed-top');
                 productWrapBox.style.paddingTop = '43px';

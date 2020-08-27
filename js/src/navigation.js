@@ -660,7 +660,6 @@ class Navigation {
                 this.config.desktopCollapseDesktopOverlay.addEventListener('click', this.handleDesktopCloseNavigation);
                 this.config.desktopCollapseDesktopOverlay.addEventListener('touchend', this.handleDesktopCloseNavigation);
             }
-            document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
             document.addEventListener('scroll', (e) => {
                 const pageTop = window.pageYOffset;
@@ -672,7 +671,6 @@ class Navigation {
             window.addEventListener('resize', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
-                document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
                 this.footerHeight = this.footer.innerHeight;
             })
         })

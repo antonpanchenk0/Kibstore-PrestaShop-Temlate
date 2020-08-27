@@ -18,6 +18,8 @@ var Filters = function Filters(animationDuration) {
     this.view = 'plate';
     this.filtersHeaderBox = document.querySelector('div.sort-controls');
     this.productWrapBox = document.querySelector('div.catalog-products-items-wrap');
+    this.backArrowFilterBtn = document.querySelector('span.back-arrow-mobile-filter');
+    this.XCloseFilterBtn = document.querySelector('span.close-mobile-filter');
     this.isFixed = false;
     this.createFilterEvents();
     setTimeout(this.multiRange('range', 'rangeBetween', 'rangeButton1n', 'rangeButton2n', 'rangeInput1n', 'rangeInput2n'), 0);
@@ -41,6 +43,10 @@ var _initialiseProps = function _initialiseProps() {
         _this.openFilterBtn.addEventListener('touchend', _this.toggleFilterCollapse);
         _this.overlay.addEventListener('click', _this.handleCloseFilter);
         _this.overlay.addEventListener('touchend', _this.handleCloseFilter);
+        _this.backArrowFilterBtn.addEventListener('click', _this.handleCloseFilter);
+        _this.backArrowFilterBtn.addEventListener('touchend', _this.handleCloseFilter);
+        _this.XCloseFilterBtn.addEventListener('click', _this.handleCloseFilter);
+        _this.XCloseFilterBtn.addEventListener('touchend', _this.handleCloseFilter);
 
         // Смена отображения товара
         _this.changeViewBtn.addEventListener('click', _this.handleChangeView);
@@ -142,7 +148,7 @@ var _initialiseProps = function _initialiseProps() {
             filtersHeaderBox = _this.filtersHeaderBox,
             productWrapBox = _this.productWrapBox;
 
-        if (window.scrollY >= 88) {
+        if (window.scrollY >= 88 && window.innerWidth <= 860) {
             if (!isFixed) {
                 filtersHeaderBox.classList.add('f-fixed-top');
                 productWrapBox.style.paddingTop = '43px';

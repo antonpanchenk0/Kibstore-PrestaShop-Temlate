@@ -740,7 +740,6 @@ var _initialiseProps = function _initialiseProps() {
                     _this.config.desktopCollapseDesktopOverlay.addEventListener('click', _this.handleDesktopCloseNavigation);
                     _this.config.desktopCollapseDesktopOverlay.addEventListener('touchend', _this.handleDesktopCloseNavigation);
                 }
-            document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
             // Десктоп переключение меню при скроле
             document.addEventListener('scroll', function (e) {
                 var pageTop = window.pageYOffset;
@@ -752,7 +751,6 @@ var _initialiseProps = function _initialiseProps() {
             window.addEventListener('resize', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
-                document.querySelector('footer.main-footer').style.zIndex = window.innerWidth > 860 ? '200' : '50';
                 _this.footerHeight = _this.footer.innerHeight;
             });
         });
