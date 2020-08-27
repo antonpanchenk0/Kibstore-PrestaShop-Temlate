@@ -7,6 +7,11 @@ class Filters {
         this.isFilterCollapse = false;
         this.isFilterAnimated = false;
         this.overlay = document.querySelector('div.desktop-navigation-collapse-overlay');
+        this.changeViewBtn = document.getElementById('vhange_view');
+        this.view = 'plate';
+        this.filtersHeaderBox = document.querySelector('div.sort-controls');
+        this.productWrapBox = document.querySelector('div.catalog-products-items-wrap');
+        this.isFixed = false;
         this.createFilterEvents();
         setTimeout(this.multiRange('range', 'rangeBetween', 'rangeButton1n', 'rangeButton2n', 'rangeInput1n', 'rangeInput2n'), 0);
     }
@@ -22,6 +27,14 @@ class Filters {
         this.openFilterBtn.addEventListener('touchend', this.toggleFilterCollapse);
         this.overlay.addEventListener('click', this.handleCloseFilter);
         this.overlay.addEventListener('touchend', this.handleCloseFilter);
+
+        // Смена отображения товара
+        this.changeViewBtn.addEventListener('click', this.handleChangeView);
+        this.changeViewBtn.addEventListener('touchend', this.handleChangeView);
+
+        // Изменяем позицию меню фильтров
+        document.addEventListener('scroll', this.filterFixed);
+        this.filterFixed();
     }
 
     switchFilter = (e, f) => {
@@ -48,7 +61,7 @@ class Filters {
             this.isFilterAnimated = true;
             $(overlay).fadeIn(animationDuration * 0.75);
             overlay.style.zIndex = '400';
-            $(filterCollapseBox).animate({'right': '0px'}, animationDuration * 0.75, () => {
+            $(filterCollapseBox).animate({'right': '0px'}, animationDuration * 0.5, () => {
                 this.isFilterCollapse = true;
                 this.isFilterAnimated = false;
             })
@@ -61,11 +74,52 @@ class Filters {
         if(isFilterCollapse && !isFilterAnimated && window.innerWidth < 860) {
             this.isFilterAnimated = true;
             $(overlay).fadeOut(animationDuration * 0.75);
-            overlay.style.zIndex = '10';
-            $(filterCollapseBox).animate({'right': '-400px'}, animationDuration * 0.75, () => {
+            $(filterCollapseBox).animate({'right': '-400px'}, animationDuration * 0.5, () => {
                 this.isFilterCollapse = false;
                 this.isFilterAnimated = false;
+                overlay.style.zIndex = '10';
             })
+        }
+    }
+
+    handleChangeView = (e) => {
+        e.preventDefault();
+        const { view, filtersHeaderBox, productWrapBox } = this;
+        switch (view) {
+            case 'plate': {
+                this.view = 'list';
+                filtersHeaderBox.classList.add('view-list');
+                productWrapBox.classList.add('view-list');
+                break;
+            }
+            case 'list': {
+                this.view = 'plate';
+                filtersHeaderBox.classList.remove('view-list');
+                productWrapBox.classList.remove('view-list');
+                break;
+            }
+            default: {
+                this.view = 'plate';
+                filtersHeaderBox.classList.remove('view-list');
+                productWrapBox.classList.remove('view-list');
+            }
+        }
+    }
+
+    filterFixed = () => {
+        const { isFixed, filtersHeaderBox, productWrapBox } = this;
+        if(window.scrollY >= 88) {
+            if(!isFixed) {
+                filtersHeaderBox.classList.add('f-fixed-top');
+                productWrapBox.style.paddingTop = '43px';
+                this.isFixed = true;
+            }
+        } else {
+            if(isFixed) {
+                filtersHeaderBox.classList.remove('f-fixed-top');
+                productWrapBox.style.paddingTop = '0px';
+                this.isFixed = false;
+            }
         }
     }
 
@@ -83,8 +137,8 @@ class Filters {
         /*init*/
         let sliderCoords = getCoords(slider);
         button1.style.marginLeft = '0px';
-        button2.style.marginLeft = 200 + 'px';
-        between.style.width = 200 + 'px';
+        button2.style.marginLeft = 190 + 'px';
+        between.style.width = 190 + 'px';
         inpt1.value = min;
         inpt2.value = max;
 
