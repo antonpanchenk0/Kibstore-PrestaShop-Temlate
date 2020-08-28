@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/catalog-products-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-products-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.less" afterDir="false" />
@@ -106,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/catalog-products-list.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="976" column="35" selection-start-line="976" selection-start-column="35" selection-end-line="976" selection-end-column="35" />
+            <state relative-caret-position="150">
+              <caret line="1050" column="33" selection-start-line="1050" selection-start-column="33" selection-end-line="1050" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -179,6 +178,7 @@
       <find>max-width</find>
       <find>label</find>
       <find>product-item</find>
+      <find>descri</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -403,12 +403,12 @@
       <workItem from="1598265464607" duration="11905000" />
       <workItem from="1598360945232" duration="13372000" />
       <workItem from="1598476815546" duration="5850000" />
-      <workItem from="1598534064087" duration="30006000" />
+      <workItem from="1598534064087" duration="30613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110283000" />
+    <option name="totallyTimeSpent" value="110890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -789,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/catalog-products-list.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="976" column="35" selection-start-line="976" selection-start-column="35" selection-end-line="976" selection-end-column="35" />
+        <state relative-caret-position="150">
+          <caret line="1050" column="33" selection-start-line="1050" selection-start-column="33" selection-end-line="1050" selection-end-column="33" />
         </state>
       </provider>
     </entry>
