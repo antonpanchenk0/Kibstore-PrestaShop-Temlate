@@ -2920,7 +2920,7 @@ footer.main-footer {
   .footer-content {
     max-width: unset!important;
     width: 100%;
-    padding: 30px 120px 0 120px!important;
+    padding: 30px 120px 0 120px;
   }
   .footer-footer {
     max-width: unset!important;
