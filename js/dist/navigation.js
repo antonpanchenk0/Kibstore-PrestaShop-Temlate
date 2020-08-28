@@ -802,3 +802,14 @@ var _initialiseProps = function _initialiseProps() {
 };
 
 var navigation = new Navigation(400);
+
+var productCartWidthCounter = function productCartWidthCounter(e) {
+    var porducts = document.querySelectorAll('div.product-item:first-child');
+    console.log(porducts);
+    var windowWidth = window.innerWidth;
+    if (windowWidth >= 1920) {}
+};
+
+// Расчет ширены карточек при resize
+window.addEventListener('resize', productCartWidthCounter);
+productCartWidthCounter();
