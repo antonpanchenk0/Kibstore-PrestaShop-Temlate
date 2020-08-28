@@ -14,6 +14,8 @@ class Filters {
         this.backArrowFilterBtn = document.querySelector('span.back-arrow-mobile-filter');
         this.XCloseFilterBtn = document.querySelector('span.close-mobile-filter');
         this.isFixed = false;
+        this.avaliableFilters = document.querySelectorAll('input[type=checkbox].form-check-input');
+        this.prevCheck = null;
         this.createFilterEvents();
         setTimeout(this.multiRange('range', 'rangeBetween', 'rangeButton1n', 'rangeButton2n', 'rangeInput1n', 'rangeInput2n'), 0);
     }
@@ -41,6 +43,9 @@ class Filters {
         // Изменяем позицию меню фильтров
         document.addEventListener('scroll', this.filterFixed);
         this.filterFixed();
+
+        // События на filter check
+        this.avaliableFilters.forEach((c) => c.addEventListener('change', this.onCheck));
     }
 
     switchFilter = (e, f) => {
@@ -126,6 +131,19 @@ class Filters {
                 productWrapBox.style.paddingTop = '0px';
                 this.isFixed = false;
             }
+        }
+    }
+
+    onCheck = (e) => {
+        const input = e.target;
+        const parent = input.parentNode;
+        const tooltip = parent.querySelector('div');
+        if(this.prevCheck) {
+            this.prevCheck.style.display = 'none';
+        }
+        if(tooltip) {
+            tooltip.style.display = 'flex';
+            this.prevCheck = tooltip;
         }
     }
 

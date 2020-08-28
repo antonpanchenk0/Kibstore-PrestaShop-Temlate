@@ -21,6 +21,8 @@ var Filters = function Filters(animationDuration) {
     this.backArrowFilterBtn = document.querySelector('span.back-arrow-mobile-filter');
     this.XCloseFilterBtn = document.querySelector('span.close-mobile-filter');
     this.isFixed = false;
+    this.avaliableFilters = document.querySelectorAll('input[type=checkbox].form-check-input');
+    this.prevCheck = null;
     this.createFilterEvents();
     setTimeout(this.multiRange('range', 'rangeBetween', 'rangeButton1n', 'rangeButton2n', 'rangeInput1n', 'rangeInput2n'), 0);
 };
@@ -55,6 +57,11 @@ var _initialiseProps = function _initialiseProps() {
         // Изменяем позицию меню фильтров
         document.addEventListener('scroll', _this.filterFixed);
         _this.filterFixed();
+
+        // События на filter check
+        _this.avaliableFilters.forEach(function (c) {
+            return c.addEventListener('change', _this.onCheck);
+        });
     };
 
     this.switchFilter = function (e, f) {
@@ -160,6 +167,19 @@ var _initialiseProps = function _initialiseProps() {
                 productWrapBox.style.paddingTop = '0px';
                 _this.isFixed = false;
             }
+        }
+    };
+
+    this.onCheck = function (e) {
+        var input = e.target;
+        var parent = input.parentNode;
+        var tooltip = parent.querySelector('div');
+        if (_this.prevCheck) {
+            _this.prevCheck.style.display = 'none';
+        }
+        if (tooltip) {
+            tooltip.style.display = 'flex';
+            _this.prevCheck = tooltip;
         }
     };
 
