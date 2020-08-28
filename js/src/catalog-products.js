@@ -114,7 +114,7 @@ class Filters {
 
     filterFixed = () => {
         const { isFixed, filtersHeaderBox, productWrapBox } = this;
-        if(window.scrollY >= 88 && window.innerWidth <= 860) {
+        if(window.scrollY >= productWrapBox.getBoundingClientRect().top + 10 && window.innerWidth <= 860) {
             if(!isFixed) {
                 filtersHeaderBox.classList.add('f-fixed-top');
                 productWrapBox.style.paddingTop = '43px';

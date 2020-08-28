@@ -148,7 +148,7 @@ var _initialiseProps = function _initialiseProps() {
             filtersHeaderBox = _this.filtersHeaderBox,
             productWrapBox = _this.productWrapBox;
 
-        if (window.scrollY >= 88 && window.innerWidth <= 860) {
+        if (window.scrollY >= productWrapBox.getBoundingClientRect().top + 10 && window.innerWidth <= 860) {
             if (!isFixed) {
                 filtersHeaderBox.classList.add('f-fixed-top');
                 productWrapBox.style.paddingTop = '43px';

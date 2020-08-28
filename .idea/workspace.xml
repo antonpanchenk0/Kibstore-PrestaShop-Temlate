@@ -20,35 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/404.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog-page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-products-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-products-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/catalog-products-list.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/full-pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/full-pages.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-characteristics.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-characteristics.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-characteristics.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-photo-and-video.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/root-styles.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/root-styles.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/dist/catalog-products.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/catalog-products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/dist/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/catalog-products.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/catalog-products.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -79,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog-products-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="1323" column="56" selection-start-line="1323" selection-start-column="52" selection-end-line="1323" selection-end-column="56" />
+            <state relative-caret-position="357">
+              <caret line="1230" column="91" selection-start-line="1230" selection-start-column="70" selection-end-line="1230" selection-end-column="91" />
               <folding>
                 <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -116,16 +94,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/catalog-products-list.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="149" column="30" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
+            <state relative-caret-position="504">
+              <caret line="810" column="42" lean-forward="true" selection-start-line="810" selection-start-column="42" selection-end-line="810" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/footer.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="403">
@@ -137,10 +115,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/catalog-products.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="130" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="391">
+              <caret line="116" column="76" selection-start-line="116" selection-start-column="76" selection-end-line="116" selection-end-column="76" />
               <folding>
-                <element signature="e#4463#4479#0" />
                 <element signature="e#3156#10840#0" />
               </folding>
             </state>
@@ -210,6 +187,11 @@
       <find>zIndex</find>
       <find>productCartWidthCounter</find>
       <find>pagin</find>
+      <find>padding: 30px 0</find>
+      <find>sort-controls-</find>
+      <find>sort-controls-list</find>
+      <find>overflow</find>
+      <find>max-width</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,14 +210,14 @@
         <option value="$PROJECT_DIR$/img/icons/rotate-cww.svg" />
         <option value="$PROJECT_DIR$/img/icons/grid.svg" />
         <option value="$PROJECT_DIR$/img/icons/menu-burger-second-color.svg" />
-        <option value="$PROJECT_DIR$/catalog-products-list.html" />
-        <option value="$PROJECT_DIR$/js/src/catalog-products.js" />
         <option value="$PROJECT_DIR$/js/src/navigation.js" />
         <option value="$PROJECT_DIR$/css/main.less" />
         <option value="$PROJECT_DIR$/css/catalog.less" />
         <option value="$PROJECT_DIR$/css/root-styles.less" />
-        <option value="$PROJECT_DIR$/css/catalog-products-list.less" />
         <option value="$PROJECT_DIR$/css/footer.less" />
+        <option value="$PROJECT_DIR$/js/src/catalog-products.js" />
+        <option value="$PROJECT_DIR$/catalog-products-list.html" />
+        <option value="$PROJECT_DIR$/css/catalog-products-list.less" />
       </list>
     </option>
   </component>
@@ -440,18 +422,18 @@
       <workItem from="1598265464607" duration="11905000" />
       <workItem from="1598360945232" duration="13372000" />
       <workItem from="1598476815546" duration="5850000" />
-      <workItem from="1598534064087" duration="15450000" />
+      <workItem from="1598534064087" duration="23050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95727000" />
+    <option name="totallyTimeSpent" value="103327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3219616" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3219616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -464,7 +446,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.1744312" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.1744312" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.16901408" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -713,12 +695,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="715" column="39" selection-start-line="715" selection-start-column="39" selection-end-line="715" selection-end-column="39" />
+          <folding>
+            <element signature="n#Navigation#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="337" column="5" selection-start-line="337" selection-start-column="5" selection-end-line="337" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/catalog.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/root-styles.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="162" column="22" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/footer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="263" column="20" selection-start-line="263" selection-start-column="20" selection-end-line="263" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/src/catalog-products.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="391">
+          <caret line="116" column="76" selection-start-line="116" selection-start-column="76" selection-end-line="116" selection-end-column="76" />
           <folding>
-            <element signature="e#4463#4479#0" />
             <element signature="e#3156#10840#0" />
           </folding>
         </state>
@@ -726,8 +745,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog-products-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="1323" column="56" selection-start-line="1323" selection-start-column="52" selection-end-line="1323" selection-end-column="56" />
+        <state relative-caret-position="357">
+          <caret line="1230" column="91" selection-start-line="1230" selection-start-column="70" selection-end-line="1230" selection-end-column="91" />
           <folding>
             <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -762,48 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="715" column="39" selection-start-line="715" selection-start-column="39" selection-end-line="715" selection-end-column="39" />
-          <folding>
-            <element signature="n#Navigation#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="337" column="5" selection-start-line="337" selection-start-column="5" selection-end-line="337" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/catalog.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/root-styles.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="162" column="22" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/catalog-products-list.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="149" column="30" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/footer.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="263" column="20" selection-start-line="263" selection-start-column="20" selection-end-line="263" selection-end-column="20" />
+        <state relative-caret-position="504">
+          <caret line="810" column="42" lean-forward="true" selection-start-line="810" selection-start-column="42" selection-end-line="810" selection-end-column="42" />
         </state>
       </provider>
     </entry>
