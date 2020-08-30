@@ -4219,6 +4219,262 @@ footer.main-footer {
   font-family: "SF Pro Display";
   font-weight: bold;
 }
+.content > .page-header > .product-about-section-body,
+.content > .product-about-section > .product-about-section-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+  padding: 30px 40px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info {
+  flex: 0 0 65%;
+  max-width: 65%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info {
+  flex: 0 0 35%;
+  max-width: 35%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section {
+  border: 1px solid #51c878;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 25px 0px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 25px;
+  padding: 0 10px 0 20px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section {
+  flex: 0 0 48%;
+  max-width: 48%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #5489d7;
+  position: relative;
+  padding-left: 10px;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability.is-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability.is-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability.is-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability.is-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability.not-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability.not-available::before {
+  content: '✔';
+  color: #51c878;
+  position: absolute;
+  left: -10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-availability.not-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-availability.not-available::before {
+  content: '✖';
+  color: #ff5342;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-price > .price,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-price > .price,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-price > .price,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-price > .price,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-price > .product-nds-status,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-price > .product-nds-status,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-price > .product-nds-status,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-price > .product-nds-status {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 40px;
+  color: #000;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-price > .product-nds-status,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-price > .product-nds-status,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-price > .product-nds-status,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-price > .product-nds-status {
+  font-size: 14px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-title,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-title {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 13px;
+  color: #000;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #858585;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  border-right: 0px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  border-left: 0px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-shortcut,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-shortcut,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-shortcut,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-shortcut {
+  flex: 0 0 50%;
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-shortcut > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-shortcut > img,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-shortcut > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-shortcut > img {
+  max-width: 50px;
+  height: auto;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn {
+  flex: 0 0 48%;
+  max-width: 48%;
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.buy-product-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.buy-product-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn.buy-product-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn.buy-product-btn {
+  background: #51c878;
+  color: #fff;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.buy-product-btn::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.buy-product-btn::before,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn.buy-product-btn::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn.buy-product-btn::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/icons/cart.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  margin-right: 5px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.add-to-cart-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.add-to-cart-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn.add-to-cart-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn.add-to-cart-btn {
+  border: 1px solid #51c878;
+  background: #fff;
+  color: #51c878;
+}
 .previously-viewed {
   margin-top: 0!important;
   padding: 30px 155px 55px 155px;
