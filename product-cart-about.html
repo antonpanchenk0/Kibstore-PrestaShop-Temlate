@@ -11,15 +11,353 @@
 </head>
 <body>
 <div class="wrap">
-    <header>
 
+    <div class="desktop-navigation-collapse-overlay"></div>
+    <header class="main-navigation-header">
         <nav class="navigation">
 
             <button class="nav-toggle-btn" id="navToggleBtn"></button>
 
-            <div class="navigation-links">
+            <div class="desktop-navigation-header">
+                <div class="logotype-box">
+                    <img src="./img/logo.png" alt="Logotype" class="img-fluid logotype" id="mainLogo">
+                    <div class="logotype-text">
+                        <h1 class="web-title">Kibstore</h1>
+                        <h2 class="web-sub-title">Гипермаркет систем безопасности</h2>
+                    </div>
+                </div>
+                <div class="navigation-list-box">
+                    <div class="lang-switch-box">
+                        <ul class="lang-switch-list">
+                            <li class="lang-switch-item active" data-lang="ru">ru</li>
+                            <li class="lang-switch-item" data-lang="ua">ua</li>
+                        </ul>
+                    </div>
+                    <div class="navigation-header-list-box">
+                        <ul class="navigation-header-list">
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Акции</a>
+                            </li>
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Новости</a>
+                            </li>
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Скидки</a>
+                            </li>
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Гарантия</a>
+                            </li>
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Блог</a>
+                            </li>
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Оплата</a>
+                            </li>
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Доставка</a>
+                            </li>
+                            <li class="navigation-header-item">
+                                <a href="#" class="nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-box">
+                    <a href="#" class="social-link">
+                        <img src="./img/icons/telegram.png" alt="Telegram social" class="social-icon img-fluid">
+                        Telegram
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="./img/icons/viber.png" alt="Viber social" class="social-icon img-fluid">
+                        Viber
+                    </a>
+                </div>
+            </div>
+
+            <div class="navigation-desktop-and-mobile">
+                <div class="desktop-menu-btn-box">
+                    <a href="#" class="desktop-menu-btn" id="dmenu">Меню</a>
+                    <div class="desktop-navigation-collapse">
+                        <div class="desktop-navigation-collapse-wrap">
+                            <ul class="desktop-navigation-list">
+                                <li class="desktop-navigation-item active">
+                                    <a href="#" class="desktop-navigation-link">
+                                        <svg stroke="#5489d7" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="7" x="3" y="3"/><rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="7" x="14" y="3"/><rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="7" x="14" y="14"/><rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="7" x="3" y="14"/></svg>
+                                        Каталог товаров
+                                    </a>
+                                    <ul class="desktop-catalog-navigation-list">
+                                        <li class="desktop-catalog-navigation-item has-dropdown-nav">
+                                            <a href="#" class="desktop-catalog-navigation-link">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                                IP - видеонаблюдение
+                                            </a>
+                                            <div class="desktop-sub-catalog-navigation">
+                                                <div class="desktop-sub-catalog-col">
+                                                    <ul class="sub-catalog-list">
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Камеры видеонаблюдения</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Камеры наружного наблюдения</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Камеры внутренние</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Камеры купольные</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Камеры цилиндрические</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Камеры миниатюрные</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Speed dome (роботизированые) камеры</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Камеры корпусные</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="sub-catalog-list">
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Видеонаблюдение AHD</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">AHD Видеокамеры</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">AHD Видеорегистраторы</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Комплекты видеонаблюдения AHD</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="sub-catalog-list">
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Видеонаблюдение HD-CVI</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">HD-CVI Видеокамеры</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">HD-CVI Видеорегистраторы</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Комплекты видеонаблюдения HD-CVI</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="sub-catalog-list">
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Аксессуары для видеонаблюдения</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Разъёмы видеонаблюдения</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Усилители и передатчики</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Жесткие диски (Винчестеры)</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Инструмент для работы с СКС</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Карты памяти</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="sub-catalog-list">
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Видеонаблюдение HD-TVI</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">HD-TVI Видеокамеры</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">HD-TVI Видеорегистраторы</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Комплекты видеонаблюдения HD-TVI</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="sub-catalog-list">
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Гиборидное видеонаблюдение</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Видеокамеры MHD</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Гибридный видеорегистратор</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Гибридный комплект видеонаблюдения</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="sub-catalog-list">
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Комплекты видеонаблюдения</a>
+                                                        </li>
+                                                        <li class="sub-catalog-item">
+                                                            <a href="#" class="sub-catalog-link">Комплекты проводного видеонаблюдения</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="desktop-sub-catalog-col adv-col">
+                                                    <a href="#" data-name="adv1"></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="desktop-catalog-navigation-item">
+                                            <a href="#" class="desktop-catalog-navigation-link">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                                Видеонаблюдение
+                                            </a>
+                                        </li>
+                                        <li class="desktop-catalog-navigation-item">
+                                            <a href="#" class="desktop-catalog-navigation-link">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                                Охранная сигнализация
+                                            </a>
+                                        </li>
+                                        <li class="desktop-catalog-navigation-item">
+                                            <a href="#" class="desktop-catalog-navigation-link">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                                Пожарная сигнализация
+                                            </a>
+                                        </li>
+                                        <li class="desktop-catalog-navigation-item">
+                                            <a href="#" class="desktop-catalog-navigation-link">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                                Домофоны
+                                            </a>
+                                        </li>
+                                        <li class="desktop-catalog-navigation-item">
+                                            <a href="#" class="desktop-catalog-navigation-link">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                                Контроль доступа
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="desktop-navigation-item">
+                                    <a href="#" class="desktop-navigation-link">
+                                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                        Скидки
+                                    </a>
+                                </li>
+                                <li class="desktop-navigation-item underline">
+                                    <a href="#" class="desktop-navigation-link">
+                                        <svg fill="none" height="24" stroke="#b058fc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" x2="7" y1="7" y2="7"/></svg>
+                                        Новинки
+                                    </a>
+                                </li>
+                                <li class="desktop-navigation-item">
+                                    <a href="#" class="desktop-navigation-link">
+                                        <svg fill="none" height="24" stroke="#858585" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                        Гавная
+                                    </a>
+                                </li>
+                                <li class="desktop-navigation-item">
+                                    <a href="#" class="desktop-navigation-link">
+                                        <svg height="24" stroke="#66cf88" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" fill="none" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="20" cy="21" fill="none" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                                        Корзина
+                                    </a>
+                                </li>
+                                <li class="desktop-navigation-item underline">
+                                    <a href="#" class="desktop-navigation-link">
+                                        <svg fill="none" height="24" stroke="#858585" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="desktop-navigation-links">
+                                <li class="desktop-navigation-link">
+                                    <a href="#">0800 331-276</a>
+                                </li>
+                                <li class="desktop-navigation-link">
+                                    <a href="#">044 333-74-31</a>
+                                </li>
+                                <li class="desktop-navigation-link telegram">
+                                    <a href="#">
+                                        <img src="./img/icons/telegram.png" alt="Telegram">
+                                        Telegram
+                                    </a>
+                                </li>
+                                <li class="desktop-navigation-link viber">
+                                    <a href="#">
+                                        <img src="./img/icons/viber.png" alt="Telegram">
+                                        Viber
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-search" id="navSearch">
+                    <form action="#" id="navSearchForm">
+                        <div class="form-row">
+                            <input type="text" id="navSearchInp">
+                            <button type="reset">✕</button>
+                            <button type="submit"></button>
+                        </div>
+                    </form>
+                    <div class="navigation-search-result" id="navSearchResult">
+                        <a href="#" class="navigation-search-result-item" data-id="0">
+                            <div class="navigation-search-result-item-shortcut-img">
+                                <img src="./img/camera.png" alt="Camera-Short">
+                            </div>
+                            <div class="navigation-search-result-item-info">
+                                <h2 class="navigation-search-result-item-title">Видеокамера Tecsar AHDD-20F3M-out</h2>
+                                <div class="navigation-search-result-item-price-tooltip">
+                                    <h3 class="price">963,00 ₴<span class="old-price">963,00 ₴</span></h3>
+                                    <div class="i-tooltips-box">
+                                        <div class="i-tooltip green">Хит продаж</div>
+                                        <div class="i-tooltip yellow">Акция -10%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="navigation-search-result-item" data-id="1">
+                            <div class="navigation-search-result-item-shortcut-img">
+                                <img src="./img/camera.png" alt="Camera-Short">
+                            </div>
+                            <div class="navigation-search-result-item-info">
+                                <h2 class="navigation-search-result-item-title">Видеокамера Tecsar AHDD-20F3M-out</h2>
+                                <div class="navigation-search-result-item-price-tooltip">
+                                    <h3 class="price">963,00 ₴<span class="old-price"></span></h3>
+                                    <div class="i-tooltips-box">
+                                        <div class="i-tooltip green">Хит продаж</div>
+                                        <div class="i-tooltip yellow">Акция -10%</div>
+                                        <div class="i-tooltip green">Хит продаж</div>
+                                        <div class="i-tooltip yellow">Акция -10%</div>
+                                        <div class="i-tooltip green">Хит продаж</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="navigation-search-result-item" data-id="1">
+                            <div class="navigation-search-result-item-shortcut-img">
+                                <img src="./img/camera.png" alt="Camera-Short">
+                            </div>
+                            <div class="navigation-search-result-item-info">
+                                <h2 class="navigation-search-result-item-title">Видеокамера Tecsar AHDD-20F3M-out</h2>
+                                <div class="navigation-search-result-item-price-tooltip">
+                                    <h3 class="price">963,00 ₴<span class="old-price"></span></h3>
+                                    <div class="i-tooltips-box">
+                                        <div class="i-tooltip green">Хит продаж</div>
+                                        <div class="i-tooltip yellow">Акция -10%</div>
+                                        <div class="i-tooltip green">Хит продаж</div>
+                                        <div class="i-tooltip yellow">Акция -10%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <ul class="navigation-list">
-                    <li class="navigation-item">
+                    <li class="navigation-item d-none">
                         <a href="#" class="nav-link" id="phone">
                             <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
                                  stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -39,13 +377,14 @@
                     </li>
                     <li class="navigation-item">
                         <a href="#" class="nav-link" id="heart">
+                            <span class="heart-counter">2</span>
                             <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
                                  stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                             </svg>
                         </a>
                     </li>
-                    <li class="navigation-item">
+                    <li class="navigation-item d-none ">
                         <a href="#" class="nav-link" id="search">
                             <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
                                  stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +404,19 @@
                                 <path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1"
                                       fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                             </svg>
+                            <span class="nav-cart-total-price">3 528,00 ₴</span>
                         </a>
+                    </li>
+                    <li class="navigation-item nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <?xml version="1.0" ?><svg fill="none" height="24" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>0800 123 45 25</span>
+                        </a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-link">0800 123 45 25</a>
+                            <a href="#" class="dropdown-link">0800 123 45 25</a>
+                            <a href="#" class="dropdown-link">0800 123 45 25</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -530,390 +881,415 @@
                         </div>
                     </header>
 
-                    <ul class="navigation-collapse-list">
-                        <li class="navigation-collapse-list-item">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#858585"
-                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                     width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                    <polyline points="9 22 9 12 15 12 15 22"/>
-                                </svg>
-                                <span>Главная</span>
-                            </a>
-                        </li>
-                        <li class="navigation-collapse-list-item navigation-collapse-list-item-with-sub-navigation">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg data-name="catalog" class="navigation-collapse-list-icon" height="24"
-                                     viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
-                                          stroke-width="2" width="7" x="3" y="3"/>
-                                    <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
-                                          stroke-width="2" width="7" x="14" y="3"/>
-                                    <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
-                                          stroke-width="2" width="7" x="14" y="14"/>
-                                    <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
-                                          stroke-width="2" width="7" x="3" y="14"/>
-                                </svg>
-                                <span>Каталог товаров</span>
-                            </a>
-
-                            <div class="sub-navigation-collapse" data-level="2">
-                                <a href="#" class="go-back-btn">
+                    <div class="navigation-collapse-body-with-footer d-flex justify-content-between flex-column">
+                        <ul class="navigation-collapse-list">
+                            <li class="navigation-collapse-list-item">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#858585"
+                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                         width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                        <polyline points="9 22 9 12 15 12 15 22"/>
+                                    </svg>
+                                    <span>Главная</span>
+                                </a>
+                            </li>
+                            <li class="navigation-collapse-list-item navigation-collapse-list-item-with-sub-navigation">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg data-name="catalog" class="navigation-collapse-list-icon" height="24"
+                                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
+                                              stroke-width="2" width="7" x="3" y="3"/>
+                                        <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
+                                              stroke-width="2" width="7" x="14" y="3"/>
+                                        <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
+                                              stroke-width="2" width="7" x="14" y="14"/>
+                                        <rect fill="none" height="7" stroke-linecap="round" stroke-linejoin="round"
+                                              stroke-width="2" width="7" x="3" y="14"/>
+                                    </svg>
                                     <span>Каталог товаров</span>
                                 </a>
-                                <ul class="sub-navigation-collapse-list">
-                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
-                                                 stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
-                                                 stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                                <polyline points="9 22 9 12 15 12 15 22"/>
-                                            </svg>
-                                            <span>IP-видеонаблюдение</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon navigation-collapse-list-item-with-sub-navigation">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
-                                                 stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
-                                                 stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                                <polyline points="9 22 9 12 15 12 15 22"/>
-                                            </svg>
-                                            <span>Видеонаблюдение</span>
-                                        </a>
 
-                                        <div class="sub-navigation-collapse" data-level="3">
-                                            <a href="#" class="go-back-btn">
+                                <div class="sub-navigation-collapse" data-level="2">
+                                    <div class="go-back-btn">
+                                        <a href="#">Каталог товаров</a>
+                                    </div>
+                                    <ul class="sub-navigation-collapse-list">
+                                        <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
+                                                     stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
+                                                     stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                                </svg>
+                                                <span>IP-видеонаблюдение</span>
+                                            </a>
+                                        </li>
+                                        <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon navigation-collapse-list-item-with-sub-navigation">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
+                                                     stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
+                                                     stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                                </svg>
                                                 <span>Видеонаблюдение</span>
                                             </a>
-                                            <ul class="sub-navigation-collapse-list">
-                                                <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                                    <a href="#" class="sub-navigation-collapse-list-link">Камеры
-                                                        видеонаблюдения</a>
-                                                </li>
-                                                <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                                    <a href="#" class="sub-navigation-collapse-list-link">Видеонаблюдение
-                                                        AHD</a>
-                                                </li>
-                                                <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                                    <a href="#" class="sub-navigation-collapse-list-link">Видеонаблюдение
-                                                        HD-CVI</a>
-                                                </li>
-                                                <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                                    <a href="#" class="sub-navigation-collapse-list-link">Видеонаблюдение
-                                                        HD-TVI</a>
-                                                </li>
-                                                <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon navigation-collapse-list-item-with-sub-navigation">
-                                                    <a href="#" class="sub-navigation-collapse-list-link">Гибрридное
-                                                        видеонаблюдение</a>
 
-                                                    <div class="sub-navigation-collapse" data-level="4">
-                                                        <a href="#" class="go-back-btn">
-                                                            <span>Гибрридное видеонаблюдение</span>
-                                                        </a>
-                                                        <ul class="sub-navigation-collapse-list">
-                                                            <li class="sub-navigation-collapse-item">
-                                                                <a href="#" class="sub-navigation-collapse-list-link">Видеокамеры
-                                                                    MHD</a>
-                                                            </li>
-                                                            <li class="sub-navigation-collapse-item">
-                                                                <a href="#" class="sub-navigation-collapse-list-link">Гибридный
-                                                                    видеорегистратор</a>
-                                                            </li>
-                                                            <li class="sub-navigation-collapse-item">
-                                                                <a href="#" class="sub-navigation-collapse-list-link">Гибридные
-                                                                    комплекты</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                            <div class="sub-navigation-collapse" data-level="3">
+                                                <div class="go-back-btn">
+                                                    <a href="#">Видеонаблюдение</a>
+                                                </div>
+                                                <ul class="sub-navigation-collapse-list">
+                                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                                        <a href="#" class="sub-navigation-collapse-list-link">Камеры
+                                                            видеонаблюдения</a>
+                                                    </li>
+                                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                                        <a href="#" class="sub-navigation-collapse-list-link">Видеонаблюдение
+                                                            AHD</a>
+                                                    </li>
+                                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                                        <a href="#" class="sub-navigation-collapse-list-link">Видеонаблюдение
+                                                            HD-CVI</a>
+                                                    </li>
+                                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                                        <a href="#" class="sub-navigation-collapse-list-link">Видеонаблюдение
+                                                            HD-TVI</a>
+                                                    </li>
+                                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon navigation-collapse-list-item-with-sub-navigation">
+                                                        <a href="#" class="sub-navigation-collapse-list-link">Гибрридное
+                                                            видеонаблюдение</a>
 
-                                                </li>
-                                                <li class="sub-navigation-collapse-item">
-                                                    <a href="#" class="sub-navigation-collapse-list-link">Комплекты
-                                                        идеонаблюдения</a>
-                                                    <svg class="sub-navigation-more-icon" fill="none" height="24"
-                                                         stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                                                         stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <polyline points="9 18 15 12 9 6"/>
-                                                    </svg>
-                                                </li>
-                                                <li class="sub-navigation-collapse-item">
-                                                    <a href="#" class="sub-navigation-collapse-list-link">Аксессуары
-                                                        видеонаблюдения</a>
-                                                    <svg class="sub-navigation-more-icon" fill="none" height="24"
-                                                         stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                                                         stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <polyline points="9 18 15 12 9 6"/>
-                                                    </svg>
-                                                </li>
-                                            </ul>
+                                                        <div class="sub-navigation-collapse" data-level="4">
+                                                            <div class="go-back-btn">
+                                                                <a href="#">Гибрридное видеонаблюдение</a>
+                                                            </div>
+                                                            <ul class="sub-navigation-collapse-list">
+                                                                <li class="sub-navigation-collapse-item">
+                                                                    <a href="#" class="sub-navigation-collapse-list-link">Видеокамеры
+                                                                        MHD</a>
+                                                                </li>
+                                                                <li class="sub-navigation-collapse-item">
+                                                                    <a href="#" class="sub-navigation-collapse-list-link">Гибридный
+                                                                        видеорегистратор</a>
+                                                                </li>
+                                                                <li class="sub-navigation-collapse-item">
+                                                                    <a href="#" class="sub-navigation-collapse-list-link">Гибридные
+                                                                        комплекты</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </li>
+                                                    <li class="sub-navigation-collapse-item">
+                                                        <a href="#" class="sub-navigation-collapse-list-link">Комплекты
+                                                            идеонаблюдения</a>
+                                                        <svg class="sub-navigation-more-icon" fill="none" height="24"
+                                                             stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                                             stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <polyline points="9 18 15 12 9 6"/>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="sub-navigation-collapse-item">
+                                                        <a href="#" class="sub-navigation-collapse-list-link">Аксессуары
+                                                            видеонаблюдения</a>
+                                                        <svg class="sub-navigation-more-icon" fill="none" height="24"
+                                                             stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                                             stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <polyline points="9 18 15 12 9 6"/>
+                                                        </svg>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </li>
+                                        <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
+                                                     stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
+                                                     stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                                </svg>
+                                                <span>Охранная сигнализация</span>
+                                            </a>
+                                        </li>
+                                        <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
+                                                     stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
+                                                     stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                                </svg>
+                                                <span>Пожарная сигнализация</span>
+                                            </a>
+                                        </li>
+                                        <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
+                                                     stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
+                                                     stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                                </svg>
+                                                <span>Домофоны</span>
+                                            </a>
+                                        </li>
+                                        <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon border-bottom-1px">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
+                                                     stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
+                                                     stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                                </svg>
+                                                <span>Контроль доступа</span>
+                                            </a>
+                                        </li>
+                                        <li class="sub-navigation-collapse-item">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg height="24" class="sub-navigation-collapse-list-icon"
+                                                     viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                    <line fill="none" stroke="#ffc600" stroke-linecap="round"
+                                                          stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5"
+                                                          y2="19"/>
+                                                    <circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"/>
+                                                    <circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"/>
+                                                </svg>
+                                                <span>Скидки</span>
+                                            </a>
+                                        </li>
+                                        <li class="sub-navigation-collapse-item">
+                                            <a href="#" class="sub-navigation-collapse-list-link">
+                                                <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
+                                                     stroke="#b058fc" stroke-linecap="round" stroke-linejoin="round"
+                                                     stroke-width="2" viewBox="0 0 24 24" width="24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                                                    <line x1="7" x2="7" y1="7" y2="7"/>
+                                                </svg>
+                                                <span>Новинки</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li class="navigation-collapse-list-item">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg height="24" class="navigation-collapse-list-icon" viewBox="0 0 24 24" width="24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <line stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5"
+                                              y1="5" y2="19"/>
+                                        <circle fill="none" cx="6.5" cy="6.5" r="2.5" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2"/>
+                                        <circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2"/>
+                                    </svg>
+                                    <span>Скидки</span>
+                                </a>
+                            </li>
+                            <li class="navigation-collapse-list-item">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#b058fc"
+                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                         width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                                        <line x1="7" x2="7" y1="7" y2="7"/>
+                                    </svg>
+                                    <span>Новинки</span>
+                                </a>
+                            </li>
+                            <li class="navigation-collapse-list-item" id="navCart">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg data-name="cart" height="24" class="navigation-collapse-list-icon"
+                                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="8" cy="21" fill="none" r="2" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2"/>
+                                        <circle cx="20" cy="21" fill="none" r="2" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2"/>
+                                        <path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1"
+                                              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                    </svg>
+                                    <span>Корзина</span>
+                                </a>
+                            </li>
+                            <li class="navigation-collapse-list-item" id="navWishList">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#fff"
+                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                         width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                    <span>Список желаний</span>
+                                </a>
+                            </li>
+                            <li class="navigation-collapse-list-item" id="navComparison">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg stroke="#fff" class="navigation-collapse-list-icon" fill="none" id="scales"
+                                         data-name="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8">
+                                        <path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z"
+                                              transform="translate(-2.45 -1.95)"/>
+                                        <path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z"
+                                              transform="translate(-2.45 -1.95)"/>
+                                        <rect x="4.72" y="0.75" width="9.66" height="1.5"/>
+                                        <rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/>
+                                        <rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/>
+                                        <rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/>
+                                        <circle cx="9.55" cy="1.5" r="1.5"/>
+                                    </svg>
+                                    <span>Сравнения</span>
+                                </a>
+                            </li>
+                            <li class="navigation-collapse-list-item">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#000"
+                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                         width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/>
+                                        <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/>
+                                    </svg>
+                                    <span>Блог</span>
+                                </a>
+                            </li>
+                            <li class="navigation-collapse-list-item">
+                                <a href="#" class="navigation-collapse-list-link">
+                                    <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#fff"
+                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                         width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                    <span>Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <footer class="navigation-collapse-footer">
+                            <div class="row mobile-app-row">
+                                <div class="col-6 mobile-app-wrap">
+                                    <div class="dummy"></div>
+                                    <a href="#" class="mobile-app-item google-pay">
+                                        <img src="./img/icons/google-play.svg" class="mobile-app-icon" alt="Google play">
+                                        <div class="mobile-app-title">
+                                            <h3>Google Play</h3>
+                                            <p>Загрузите на</p>
                                         </div>
-
-                                    </li>
-                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
-                                                 stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
-                                                 stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                                <polyline points="9 22 9 12 15 12 15 22"/>
-                                            </svg>
-                                            <span>Охранная сигнализация</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
-                                                 stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
-                                                 stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                                <polyline points="9 22 9 12 15 12 15 22"/>
-                                            </svg>
-                                            <span>Пожарная сигнализация</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
-                                                 stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
-                                                 stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                                <polyline points="9 22 9 12 15 12 15 22"/>
-                                            </svg>
-                                            <span>Домофоны</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-navigation-collapse-item sub-navigation-collapse-item-with-icon border-bottom-1px">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
-                                                 stroke="#858585" stroke-linecap="round" stroke-linejoin="round"
-                                                 stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                                <polyline points="9 22 9 12 15 12 15 22"/>
-                                            </svg>
-                                            <span>Контроль доступа</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-navigation-collapse-item">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg height="24" class="sub-navigation-collapse-list-icon"
-                                                 viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                                <line fill="none" stroke="#ffc600" stroke-linecap="round"
-                                                      stroke-linejoin="round" stroke-width="2" x1="19" x2="5" y1="5"
-                                                      y2="19"/>
-                                                <circle cx="6.5" cy="6.5" fill="none" r="2.5" stroke="#ffc600"
-                                                        stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"/>
-                                                <circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke="#ffc600"
-                                                        stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"/>
-                                            </svg>
-                                            <span>Скидки</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-navigation-collapse-item">
-                                        <a href="#" class="sub-navigation-collapse-list-link">
-                                            <svg fill="none" class="sub-navigation-collapse-list-icon" height="24"
-                                                 stroke="#b058fc" stroke-linecap="round" stroke-linejoin="round"
-                                                 stroke-width="2" viewBox="0 0 24 24" width="24"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
-                                                <line x1="7" x2="7" y1="7" y2="7"/>
-                                            </svg>
-                                            <span>Новинки</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                    </a>
+                                </div>
+                                <div class="col-6 mobile-app-wrap">
+                                    <div class="dummy"></div>
+                                    <a href="#" class="mobile-app-item app-store">
+                                        <img src="./img/icons/oc-mac.svg" class="mobile-app-icon" alt="App store">
+                                        <div class="mobile-app-title">
+                                            <h3>App Store</h3>
+                                            <p>Загрузите на</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-
-                        </li>
-                        <li class="navigation-collapse-list-item">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg height="24" class="navigation-collapse-list-icon" viewBox="0 0 24 24" width="24"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <line stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="19" x2="5"
-                                          y1="5" y2="19"/>
-                                    <circle fill="none" cx="6.5" cy="6.5" r="2.5" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2"/>
-                                    <circle cx="17.5" cy="17.5" fill="none" r="2.5" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2"/>
-                                </svg>
-                                <span>Скидки</span>
-                            </a>
-                        </li>
-                        <li class="navigation-collapse-list-item">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#b058fc"
-                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                     width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
-                                    <line x1="7" x2="7" y1="7" y2="7"/>
-                                </svg>
-                                <span>Новинки</span>
-                            </a>
-                        </li>
-                        <li class="navigation-collapse-list-item" id="navCart">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg data-name="cart" height="24" class="navigation-collapse-list-icon"
-                                     viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="8" cy="21" fill="none" r="2" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2"/>
-                                    <circle cx="20" cy="21" fill="none" r="2" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2"/>
-                                    <path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1"
-                                          fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                </svg>
-                                <span>Корзина</span>
-                            </a>
-                        </li>
-                        <li class="navigation-collapse-list-item" id="navWishList">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#fff"
-                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                     width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                                </svg>
-                                <span>Список желаний</span>
-                            </a>
-                        </li>
-                        <li class="navigation-collapse-list-item" id="navComparison">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg stroke="#fff" class="navigation-collapse-list-icon" fill="none" id="scales"
-                                     data-name="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8">
-                                    <path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z"
-                                          transform="translate(-2.45 -1.95)"/>
-                                    <path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z"
-                                          transform="translate(-2.45 -1.95)"/>
-                                    <rect x="4.72" y="0.75" width="9.66" height="1.5"/>
-                                    <rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/>
-                                    <rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/>
-                                    <rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/>
-                                    <circle cx="9.55" cy="1.5" r="1.5"/>
-                                </svg>
-                                <span>Сравнения</span>
-                            </a>
-                        </li>
-                        <li class="navigation-collapse-list-item">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#000"
-                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                     width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/>
-                                    <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/>
-                                </svg>
-                                <span>Блог</span>
-                            </a>
-                        </li>
-                        <li class="navigation-collapse-list-item">
-                            <a href="#" class="navigation-collapse-list-link">
-                                <svg fill="none" class="navigation-collapse-list-icon" height="24" stroke="#fff"
-                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                     width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                </svg>
-                                <span>Контакты</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <footer class="navigation-collapse-footer">
-                        <div class="row mobile-app-row">
-                            <div class="col-6 mobile-app-wrap">
-                                <div class="dummy"></div>
-                                <a href="#" class="mobile-app-item google-pay">
-                                    <img src="./img/icons/google-play.svg" class="mobile-app-icon" alt="Google play">
-                                    <div class="mobile-app-title">
-                                        <h3>Google Play</h3>
-                                        <p>Загрузите на</p>
-                                    </div>
-                                </a>
+                            <div class="navigation-collapse-footer-social">
+                                <a href="#"><img src="./img/icons/facebook.png" alt="Facebook"></a>
+                                <a href="#"><img src="./img/icons/twitter.png" alt="Twitter"></a>
+                                <a href="#"><img src="./img/icons/instagramm.png" alt="Instagram"></a>
+                                <a href="#"><img src="./img/icons/youtube.png" alt="YouTube"></a>
                             </div>
-                            <div class="col-6 mobile-app-wrap">
-                                <div class="dummy"></div>
-                                <a href="#" class="mobile-app-item app-store">
-                                    <img src="./img/icons/oc-mac.svg" class="mobile-app-icon" alt="App store">
-                                    <div class="mobile-app-title">
-                                        <h3>App Store</h3>
-                                        <p>Загрузите на</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="navigation-collapse-footer-social">
-                            <a href="#"><img src="./img/icons/facebook.png" alt="Facebook"></a>
-                            <a href="#"><img src="./img/icons/twitter.png" alt="Twitter"></a>
-                            <a href="#"><img src="./img/icons/instagramm.png" alt="Instagram"></a>
-                            <a href="#"><img src="./img/icons/youtube.png" alt="YouTube"></a>
-                        </div>
-                    </footer>
+                        </footer>
+                    </div>
                 </div>
 
             </div>
         </nav>
-        <div class="product-item-nav">
-            <nav>
-                <ul class="product-item-nav-list">
-                    <li class="product-item-nav-item active">
-                        <a href="#" class="product-item-nav-link">Все о товаре</a>
+    </header>
+    <div class="fixed-social-links">
+        <a href="#" class="fixed-social-link"><img src="./img/icons/viber.png" alt="Viber">Viber</a>
+        <a href="#" class="fixed-social-link"><img src="./img/icons/telegram.png" alt="Telergam">Telergam</a>
+    </div>
+
+    <div class="content">
+        <section class="page-header">
+            <div class="router">
+                <ul class="router-list">
+                    <li class="router-item">
+                        <a href="#" class="router-link">Главная</a>
                     </li>
-                    <li class="product-item-nav-item">
-                        <a href="#" class="product-item-nav-link">Характеристики</a>
+                    <li class="router-item">
+                        <a href="#" class="router-link">Каталог товаров</a>
                     </li>
-                    <li class="product-item-nav-item">
-                        <a href="#" class="product-item-nav-link">Фото</a>
+                    <li class="router-item">
+                        <a href="#" class="router-link">Видеонаблюдение</a>
                     </li>
-                    <li class="product-item-nav-item">
-                        <a href="#" class="product-item-nav-link">Отзывы</a>
+                    <li class="router-item">
+                        <a href="#" class="router-link">Гибридное видеонаблюдение</a>
+                    </li>
+                    <li class="router-item">
+                        <a href="#" class="router-link">Видеокамеры MHD</a>
+                    </li>
+                    <li class="router-item active">
+                        <a href="#" class="router-link">Видеокамера Tecsar AHDD-20F3M-out</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+            <div class="title-wrap">
+                <div>
+                    <h1 class="title">Видеокамера Tecsar AHDD-20F3M-out</h1>
+                    <p class="product-code">Код товара: <span>123456</span></p>
+                </div>
+                <a href="#" class="go-back-title-btn">
+                    <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"/></svg>
+                </a>
+            </div>
+        </section>
+    </div>
 
-    </header>
+    <div class="content">
+        <section class="product-about-section">
+            <div class="product-about-section-header">
+                <ul class="product-about-section-header-navigation-list">
+                    <li class="product-about-section-header-navigation-item active">
+                        <a href="#" class="product-about-section-header-navigation-link">Все о товаре</a>
+                    </li>
+                    <li class="product-about-section-header-navigation-item">
+                        <a href="#" class="product-about-section-header-navigation-link">Характеристики</a>
+                    </li>
+                    <li class="product-about-section-header-navigation-item">
+                        <a href="#" class="product-about-section-header-navigation-link">Фото</a>
+                    </li>
+                    <li class="product-about-section-header-navigation-item">
+                        <a href="#" class="product-about-section-header-navigation-link">Отзывы <span>(4)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="product-about-section-body">
+                <div class="product-about-section-product-info"></div>
+                <div class="product-about-section-controls-other-info">
+                    <div class="buy-section">
+                        <div class="product-info">
+
+                        </div>
+                        <div class="buy-controls">
+                            <a href="#" class="buy-product-btn"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <section class="main">
-
-        <div class="router">
-            <ul class="router-list">
-
-                <li class="router-item">
-                    <a href="#" class="router-link">Видеонаблюдение</a>
-                </li>
-
-                <li class="router-item">
-                    <a href="#" class="router-link">Гибридное видеонаблюдение</a>
-                </li>
-
-                <li class="router-item">
-                    <a href="#" class="router-link">Видеокамеры MHD</a>
-                </li>
-
-                <li class="router-item active">
-                    <a href="#" class="router-link">Видеокамера Tecsar AHDD-20F3M-out</a>
-                </li>
-
-            </ul>
-        </div>
-
-        <div class="title-wrap">
-            <div>
-                <h1 class="title">Видеокамера Tecsar AHDD-20F3M-out</h1>
-                <p class="product-code">Код товара: <span>123456</span></p>
-            </div>
-            <a href="#" class="go-back-title-btn">
-                <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"/></svg>
-            </a>
-        </div>
 
         <div id="carouselProductPhotos" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -1084,7 +1460,292 @@
         <a href="#" class="go-to-category-btn">Перейти в категорию</a>
     </section>
 
-    <footer class="main-footer">
+    <div class="fluid-content previously-viewed bg-light-blue">
+        <section class="previously-viewed-section product-section">
+            <div class="previously-viewed-header product-section-header">
+                <h2>Просмотренные ранее товары</h2>
+                <a href="#">Смотреть все товары данной категории</a>
+            </div>
+            <div class="previously-viewed-body product-section-body">
+                <div class="product-item" data-id="0">
+                    <div class="product-item-wrap">
+                        <div class="product-item-header">
+                            <h2>Код <span>265941</span></h2>
+                            <div class="tooltips-box">
+                                <div class="product-item-tooltip violet"><h2>Новинка</h2></div>
+                            </div>
+                        </div>
+                        <div class="product-item-body">
+                            <img src="./img/camera.png" alt="Camera">
+                            <h2 class="title">Видеокамера идеокамера идеокамера идеокамера идеокамера идеокамера Hikvision S-2Ce16D8 T-ITE (2.8mm)</h2>
+                            <div class="product-item-rating">
+                                <ul class="rating-list">
+                                    <li class="rating-list-star fill" data-id="0"></li>
+                                    <li class="rating-list-star fill" data-id="1"></li>
+                                    <li class="rating-list-star fill" data-id="2"></li>
+                                    <li class="rating-list-star fill" data-id="3"></li>
+                                    <li class="rating-list-star half-fill" data-id="4"></li>
+                                </ul>
+                                <p class="comment-counter">(<span>6</span>)</p>
+                            </div>
+                        </div>
+                        <div class="product-item-footer">
+                            <div class="product-item-footer-price">
+                                <div class="old-price">
+                                    <h2>3 509,00₴</h2>
+                                    <h3>Скидка <span>242₴</span></h3>
+                                </div>
+                                <div class="current-price">
+                                    <h2>3 267,00₴</h2>
+                                    <h3>Без НДС</h3>
+                                </div>
+                            </div>
+                            <div class="product-item-footer-controls">
+                                <a href="#" class="add-to-cart"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="20" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+                                <div class="second-controls">
+                                    <a href="#" class="add-to-comparison"><svg stroke="#7f7f7f" fill="none" id="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8"><path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z" transform="translate(-2.45 -1.95)"/><path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z" transform="translate(-2.45 -1.95)"/><rect x="4.72" y="0.75" width="9.66" height="1.5"/><rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/><rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><circle cx="9.55" cy="1.5" r="1.5"/></svg></a>
+                                    <a href="#" class="add-to-favorites"><svg fill="none" height="24" stroke="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" data-id="2">
+                    <div class="product-item-wrap">
+                        <div class="product-item-header">
+                            <h2>Код <span>265941</span></h2>
+                            <div class="tooltips-box">
+                                <div class="product-item-tooltip orange"><h2>Акция - 10%</h2></div>
+                            </div>
+                        </div>
+                        <div class="product-item-body">
+                            <img src="./img/camera.png" alt="Camera">
+                            <h2 class="title">Видеокамера идеокамера идеокамера идеокамера идеокамера идеокамера Hikvision S-2Ce16D8 T-ITE (2.8mm)</h2>
+                            <div class="product-item-rating">
+                                <ul class="rating-list">
+                                    <li class="rating-list-star fill" data-id="0"></li>
+                                    <li class="rating-list-star fill" data-id="1"></li>
+                                    <li class="rating-list-star fill" data-id="2"></li>
+                                    <li class="rating-list-star fill" data-id="3"></li>
+                                    <li class="rating-list-star half-fill" data-id="4"></li>
+                                </ul>
+                                <p class="comment-counter">(<span>6</span>)</p>
+                            </div>
+                        </div>
+                        <div class="product-item-footer">
+                            <div class="product-item-footer-price">
+                                <div class="old-price">
+                                    <h2>3 509,00₴</h2>
+                                    <h3>Скидка <span>242₴</span></h3>
+                                </div>
+                                <div class="current-price">
+                                    <h2>3 267,00₴</h2>
+                                    <h3>Без НДС</h3>
+                                </div>
+                            </div>
+                            <div class="product-item-footer-controls">
+                                <a href="#" class="add-to-cart"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="20" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+                                <div class="second-controls">
+                                    <a href="#" class="add-to-comparison"><svg stroke="#7f7f7f" fill="none" id="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8"><path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z" transform="translate(-2.45 -1.95)"/><path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z" transform="translate(-2.45 -1.95)"/><rect x="4.72" y="0.75" width="9.66" height="1.5"/><rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/><rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><circle cx="9.55" cy="1.5" r="1.5"/></svg></a>
+                                    <a href="#" class="add-to-favorites"><svg fill="none" height="24" stroke="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" data-id="3">
+                    <div class="product-item-wrap">
+                        <div class="product-item-header">
+                            <h2>Код <span>265941</span></h2>
+                            <div class="tooltips-box">
+                                <div class="product-item-tooltip orange"><h2>Акция - 10%</h2></div>
+                                <div class="product-item-tooltip green"><h2>Хит продаж</h2></div>
+                            </div>
+                        </div>
+                        <div class="product-item-body">
+                            <img src="./img/camera.png" alt="Camera">
+                            <h2 class="title">Видеокамера идеокамера идеокамера идеокамера идеокамера идеокамера Hikvision S-2Ce16D8 T-ITE (2.8mm)</h2>
+                            <div class="product-item-rating">
+                                <ul class="rating-list">
+                                    <li class="rating-list-star fill" data-id="0"></li>
+                                    <li class="rating-list-star fill" data-id="1"></li>
+                                    <li class="rating-list-star fill" data-id="2"></li>
+                                    <li class="rating-list-star fill" data-id="3"></li>
+                                    <li class="rating-list-star half-fill" data-id="4"></li>
+                                </ul>
+                                <p class="comment-counter">(<span>6</span>)</p>
+                            </div>
+                        </div>
+                        <div class="product-item-footer">
+                            <div class="product-item-footer-price">
+                                <div class="old-price">
+                                    <h2>3 509,00₴</h2>
+                                    <h3>Скидка <span>242₴</span></h3>
+                                </div>
+                                <div class="current-price">
+                                    <h2>3 267,00₴</h2>
+                                    <h3>Без НДС</h3>
+                                </div>
+                            </div>
+                            <div class="product-item-footer-controls">
+                                <a href="#" class="add-to-cart"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="20" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+                                <div class="second-controls">
+                                    <a href="#" class="add-to-comparison"><svg stroke="#7f7f7f" fill="none" id="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8"><path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z" transform="translate(-2.45 -1.95)"/><path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z" transform="translate(-2.45 -1.95)"/><rect x="4.72" y="0.75" width="9.66" height="1.5"/><rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/><rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><circle cx="9.55" cy="1.5" r="1.5"/></svg></a>
+                                    <a href="#" class="add-to-favorites"><svg fill="none" height="24" stroke="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" data-id="4">
+                    <div class="product-item-wrap">
+                        <div class="product-item-header">
+                            <h2>Код <span>265941</span></h2>
+                            <div class="tooltips-box">
+                            </div>
+                        </div>
+                        <div class="product-item-body">
+                            <img src="./img/camera.png" alt="Camera">
+                            <h2 class="title">Видеокамера идеокамера идеокамера идеокамера идеокамера идеокамера Hikvision S-2Ce16D8 T-ITE (2.8mm)</h2>
+                            <div class="product-item-rating">
+                                <ul class="rating-list">
+                                    <li class="rating-list-star fill" data-id="0"></li>
+                                    <li class="rating-list-star fill" data-id="1"></li>
+                                    <li class="rating-list-star fill" data-id="2"></li>
+                                    <li class="rating-list-star fill" data-id="3"></li>
+                                    <li class="rating-list-star half-fill" data-id="4"></li>
+                                </ul>
+                                <p class="comment-counter">(<span>6</span>)</p>
+                            </div>
+                        </div>
+                        <div class="product-item-footer">
+                            <div class="product-item-footer-price">
+                                <div class="old-price">
+                                    <h2>3 509,00₴</h2>
+                                    <h3>Скидка <span>242₴</span></h3>
+                                </div>
+                                <div class="current-price">
+                                    <h2>3 267,00₴</h2>
+                                    <h3>Без НДС</h3>
+                                </div>
+                            </div>
+                            <div class="product-item-footer-controls">
+                                <a href="#" class="add-to-cart"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="20" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+                                <div class="second-controls">
+                                    <a href="#" class="add-to-comparison"><svg stroke="#7f7f7f" fill="none" id="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8"><path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z" transform="translate(-2.45 -1.95)"/><path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z" transform="translate(-2.45 -1.95)"/><rect x="4.72" y="0.75" width="9.66" height="1.5"/><rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/><rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><circle cx="9.55" cy="1.5" r="1.5"/></svg></a>
+                                    <a href="#" class="add-to-favorites"><svg fill="none" height="24" stroke="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" data-id="5">
+                    <div class="product-item-wrap">
+                        <div class="product-item-header">
+                            <h2>Код <span>265941</span></h2>
+                            <div class="tooltips-box">
+                            </div>
+                        </div>
+                        <div class="product-item-body">
+                            <img src="./img/camera.png" alt="Camera">
+                            <h2 class="title">Видеокамера идеокамера идеокамера идеокамера идеокамера идеокамера Hikvision S-2Ce16D8 T-ITE (2.8mm)</h2>
+                            <div class="product-item-rating">
+                                <ul class="rating-list">
+                                    <li class="rating-list-star fill" data-id="0"></li>
+                                    <li class="rating-list-star fill" data-id="1"></li>
+                                    <li class="rating-list-star fill" data-id="2"></li>
+                                    <li class="rating-list-star fill" data-id="3"></li>
+                                    <li class="rating-list-star half-fill" data-id="4"></li>
+                                </ul>
+                                <p class="comment-counter">(<span>6</span>)</p>
+                            </div>
+                        </div>
+                        <div class="product-item-footer">
+                            <div class="product-item-footer-price">
+                                <div class="old-price">
+                                    <h2>3 509,00₴</h2>
+                                    <h3>Скидка <span>242₴</span></h3>
+                                </div>
+                                <div class="current-price">
+                                    <h2>3 267,00₴</h2>
+                                    <h3>Без НДС</h3>
+                                </div>
+                            </div>
+                            <div class="product-item-footer-controls">
+                                <a href="#" class="add-to-cart"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="20" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+                                <div class="second-controls">
+                                    <a href="#" class="add-to-comparison"><svg stroke="#7f7f7f" fill="none" id="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8"><path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z" transform="translate(-2.45 -1.95)"/><path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z" transform="translate(-2.45 -1.95)"/><rect x="4.72" y="0.75" width="9.66" height="1.5"/><rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/><rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><circle cx="9.55" cy="1.5" r="1.5"/></svg></a>
+                                    <a href="#" class="add-to-favorites"><svg fill="none" height="24" stroke="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" data-id="6">
+                    <div class="product-item-wrap">
+                        <div class="product-item-header">
+                            <h2>Код <span>265941</span></h2>
+                            <div class="tooltips-box">
+                            </div>
+                        </div>
+                        <div class="product-item-body">
+                            <img src="./img/camera.png" alt="Camera">
+                            <h2 class="title">Видеокамера идеокамера идеокамера идеокамера идеокамера идеокамера Hikvision S-2Ce16D8 T-ITE (2.8mm)</h2>
+                            <div class="product-item-rating">
+                                <ul class="rating-list">
+                                    <li class="rating-list-star fill" data-id="0"></li>
+                                    <li class="rating-list-star fill" data-id="1"></li>
+                                    <li class="rating-list-star fill" data-id="2"></li>
+                                    <li class="rating-list-star fill" data-id="3"></li>
+                                    <li class="rating-list-star half-fill" data-id="4"></li>
+                                </ul>
+                                <p class="comment-counter">(<span>6</span>)</p>
+                            </div>
+                        </div>
+                        <div class="product-item-footer">
+                            <div class="product-item-footer-price">
+                                <div class="old-price">
+                                    <h2>3 509,00₴</h2>
+                                    <h3>Скидка <span>242₴</span></h3>
+                                </div>
+                                <div class="current-price">
+                                    <h2>3 267,00₴</h2>
+                                    <h3>Без НДС</h3>
+                                </div>
+                            </div>
+                            <div class="product-item-footer-controls">
+                                <a href="#" class="add-to-cart"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="20" cy="21" fill="none" r="2" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M5.67,6H23l-1.68,8.39a2,2,0,0,1-2,1.61H8.75a2,2,0,0,1-2-1.74L5.23,2.74A2,2,0,0,0,3.25,1H1" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+                                <div class="second-controls">
+                                    <a href="#" class="add-to-comparison"><svg stroke="#7f7f7f" fill="none" id="scales" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.09 19.8"><path d="M7.1,3.64a1,1,0,0,0-1.79,0C3.73,7.67,1.08,16,6.21,16S8.68,7.67,7.1,3.64Z" transform="translate(-2.45 -1.95)"/><path d="M18.69,3.64a1,1,0,0,0-1.79,0c-1.58,4-4.23,12.36.9,12.36S20.27,7.67,18.69,3.64Z" transform="translate(-2.45 -1.95)"/><rect x="4.72" y="0.75" width="9.66" height="1.5"/><rect x="3.55" y="18.3" width="12" height="1.5" rx="0.75" ry="0.75"/><rect x="0.86" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><rect x="12.44" y="10.41" width="5.79" height="1.5" rx="0.5" ry="0.5"/><circle cx="9.55" cy="1.5" r="1.5"/></svg></a>
+                                    <a href="#" class="add-to-favorites"><svg fill="none" height="24" stroke="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="fluid-content subscribe-to-updates">
+        <div class="subscribe-to-updates-wrap">
+            <div class="send-email-box">
+                <h2 class="title">Будьте в курсе последних новостей, акций и поступлений</h2>
+                <form action="#">
+                    <input type="email" placeholder="Ваш электронный адрес">
+                    <div class="form-row">
+                        <button type="submit">Подписаться</button>
+                        <p>Нажимая кнопку "Подписаться", вы даете согласие на обработку персональных данных.</p>
+                    </div>
+                </form>
+            </div>
+            <div class="girl-box">
+                <img src="./img/girl.png" alt="Girl">
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer" id="s_footer">
         <nav class="footer-nav">
             <ul class="footer-nav-list">
                 <li class="footer-nav-item"><a href="#" class="footer-nav-link">Каталог</a></li>
@@ -1093,44 +1754,77 @@
                 <li class="footer-nav-item"><a href="#" class="footer-nav-link">Контакты</a></li>
             </ul>
         </nav>
-        <div class="container-fluid footer-content">
-            <div class="row">
-                <div class="col-6 footer-content-wrap">
-                    <div class="footer-content-item footer-contacts">
-                        <h3>08000 331-276</h3>
-                        <h3>044 333-75-31</h3>
-                        <p>Пн-Пт: 9:00-18:00</p>
-                        <p>Сб: 9:00-15:00</p>
-                        <p>Вс: Только заказы онлайн</p>
-                    </div>
+        <div class="footer-content">
+            <div class="company-info-section">
+                <h2 class="company-title">Kibstore</h2>
+                <div class="company-logo">
+                    <img src="./img/logo-vertical.png" alt="Logotype">
                 </div>
-                <div class="col-6 footer-content-wrap">
-                    <div class="footer-content-item footer-social">
-                        <div class="row">
-                            <div class="col-6 footer-social-item">
-                                <a href="#" class="footer-social-item-link">
-                                    <img src="./img/icons/instagramm.png" class="footer-social-item-icon" alt="Instagram">
-                                </a>
-                            </div>
-                            <div class="col-6 footer-social-item">
-                                <a href="#" class="footer-social-item-link">
-                                    <img src="./img/icons/youtube.png" class="footer-social-item-icon" alt="YouTube play">
-                                </a>
-                            </div>
-                            <div class="col-6 footer-social-item">
-                                <a href="#" class="footer-social-item-link">
-                                    <img src="./img/icons/facebook.png" class="footer-social-item-icon" alt="Facebook">
-                                </a>
-                            </div>
-                            <div class="col-6 footer-social-item">
-                                <a href="#" class="footer-social-item-link">
-                                    <img src="./img/icons/twitter.png" class="footer-social-item-icon" alt="Twitter">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="copyright">© ООО "Кибстор". 2014 - 2020</p>
             </div>
+            <div class="navigation-footer-list-wrap">
+                <h2 class="navigation-footer-list-title">Информация о магазине</h2>
+                <ul class="navigation-footer-list">
+                    <li class="navigation-footer-list-item mobile-item"><a href="#" class="navigation-footer-list-link">0800 331-276</a></li>
+                    <li class="navigation-footer-list-item mobile-item"><a href="#" class="navigation-footer-list-link">044 333-74-31</a></li>
+                    <li class="navigation-footer-list-item">ул. Титова 2, Днепр, 49055</li>
+                    <li class="navigation-footer-list-item d-flex justify-content-start"><a href="#" class="navigation-footer-list-link mr-2">(0800) 331-276</a><a href="#" class="navigation-footer-list-link">(044)333-75-31</a></li>
+                    <li class="navigation-footer-list-item work-time">Время работы:</li>
+                    <li class="navigation-footer-list-item work-time">Пн-Пт: 9:00-18:00</li>
+                    <li class="navigation-footer-list-item work-time">Сб: 9:00-15:00</li>
+                    <li class="navigation-footer-list-item work-time">Вс: Только заказы онлайн</li>
+                </ul>
+                <ul class="social-links-list">
+                    <li class="social-links-list-item"><a href="#" class="social-links-list-link"><img src="./img/icons/facebook.png" alt="Facebook"></a></li>
+                    <li class="social-links-list-item"><a href="#" class="social-links-list-link"><img src="./img/icons/youtube.png" alt="YouTube"></a></li>
+                    <li class="social-links-list-item"><a href="#" class="social-links-list-link"><img src="./img/icons/twitter.png" alt="Twitter"></a></li>
+                    <li class="social-links-list-item"><a href="#" class="social-links-list-link"><img src="./img/icons/instagramm.png" alt="Instagramm"></a></li>
+                </ul>
+            </div>
+            <div class="navigation-footer-list-wrap">
+                <h2 class="navigation-footer-list-title">Услуги</h2>
+                <ul class="navigation-footer-list">
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Монтаж видеонаблюдения</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Установка охранных и пожарных систем</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Установка домофонов</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Приглашаем к сотрудничеству</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Сервис и гарантия</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Возврат товара</a></li>
+                </ul>
+                <a href="#" class="phone-number">0800 123 45 25</a>
+            </div>
+            <div class="navigation-footer-list-wrap">
+                <h2 class="navigation-footer-list-title">Покупателям</h2>
+                <ul class="navigation-footer-list">
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Условия доставки</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Условияч пользования</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Как оплатить</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Акции</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Новые товары</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Карта сайта</a></li>
+                </ul>
+                <a href="#" class="phone-number">0800 331 27 64</a>
+            </div>
+            <div class="navigation-footer-list-wrap">
+                <h2 class="navigation-footer-list-title">Каталог</h2>
+                <ul class="navigation-footer-list">
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">IP - видеонаблюдение</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Видеонаблюдение</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Охранная сигнализация</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Пожарная сигнализация</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Домофоны</a></li>
+                    <li class="navigation-footer-list-item"><a href="#" class="navigation-footer-list-link">Контроль доступа</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <ul class="footer-payment-list">
+                <li class="payment-item"><img src="./img/payments/visa.png" alt="Visa"></li>
+                <li class="payment-item"><img src="./img/payments/masterCard.png" alt="MasterCard"></li>
+                <li class="payment-item"><img src="./img/payments/private24.png" alt="Private24"></li>
+                <li class="payment-item"><img src="./img/payments/gpay.png" alt="GPay"></li>
+            </ul>
+            <p class="copyright">© ООО "Кибстор". 2014 - 2020</p>
         </div>
     </footer>
 
@@ -1184,7 +1878,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script type="module" src="js/src/product-card.js"></script>
+<script type="text/javascript" src="js/dist/navigation.js"></script>
 </body>
 </html>
 
