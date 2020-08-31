@@ -4179,12 +4179,85 @@ footer.main-footer {
 }
 .content > .page-header > .product-about-section-header,
 .content > .product-about-section > .product-about-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 15px 30px;
   background: #fff;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #f1f1f1;
+  position: relative;
+  margin-top: 45px;
+}
+.content > .page-header > .product-about-section-header > .rating-block,
+.content > .product-about-section > .product-about-section-header > .rating-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: absolute;
+  top: -35px;
+  left: 0;
+}
+.content > .page-header > .product-about-section-header > .rating-block > .rating-list,
+.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.content > .page-header > .product-about-section-header > .rating-block > .rating-list > .rating-list-star,
+.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list > .rating-list-star {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url("../img/icons/star.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.content > .page-header > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.fill::before,
+.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.fill::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icons/star-fill.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.content > .page-header > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.half-fill::before,
+.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.half-fill::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  background-image: url("../img/icons/star-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 0;
+  background-size: cover;
+}
+.content > .page-header > .product-about-section-header > .rating-block > .rating-counter,
+.content > .product-about-section > .product-about-section-header > .rating-block > .rating-counter {
+  margin: 0;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 18px;
+  color: #858585;
+  line-height: 16px;
+}
+.content > .page-header > .product-about-section-header > .rating-block > .rating-counter > span,
+.content > .product-about-section > .product-about-section-header > .rating-block > .rating-counter > span {
+  margin-right: 4px;
 }
 .content > .page-header > .product-about-section-header > .product-about-section-header-navigation-list,
 .content > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list {
@@ -4219,6 +4292,20 @@ footer.main-footer {
   font-family: "SF Pro Display";
   font-weight: bold;
 }
+.content > .page-header > .product-about-section-header > .product-code,
+.content > .product-about-section > .product-about-section-header > .product-code {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  color: #858585;
+  font-size: 14px;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-header > .product-code > span,
+.content > .product-about-section > .product-about-section-header > .product-code > span {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  color: #000;
+}
 .content > .page-header > .product-about-section-body,
 .content > .product-about-section > .product-about-section-body {
   display: flex;
@@ -4226,11 +4313,519 @@ footer.main-footer {
   align-items: flex-start;
   background: #fff;
   padding: 30px 40px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .content > .page-header > .product-about-section-body > .product-about-section-product-info,
 .content > .product-about-section > .product-about-section-body > .product-about-section-product-info {
   flex: 0 0 65%;
   max-width: 65%;
+  padding-right: 30px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset {
+  display: none;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset.show,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset.show {
+  display: flex;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts {
+  flex: 0 0 10%;
+  max-width: 10%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list {
+  list-style: none;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item {
+  width: 75px;
+  height: 75px;
+  max-width: 75px;
+  max-height: 75px;
+  padding: 3px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  margin: 5px 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item:hover {
+  cursor: pointer;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item.show,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list > .product-short-cuts-item.show {
+  border: 1px solid #51c878;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list.short-list > .product-short-cuts-item:nth-child(n + 5),
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts .product-short-cuts-list.short-list > .product-short-cuts-item:nth-child(n + 5) {
+  display: none;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts > .show-more-short-cuts-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts > .show-more-short-cuts-btn {
+  text-decoration: underline;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #5489d7;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider {
+  flex: 0 0 90%;
+  max-width: 90%;
+  width: 100%;
+  padding-top: 25px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  min-height: 420px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image > img {
+  width: 425px;
+  max-width: 425px;
+  height: auto;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image.show,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image.show {
+  opacity: 1;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls > .product-image-slider-controls-item,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls > .product-image-slider-controls-item {
+  height: 4px;
+  width: 40px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #858585;
+  margin: 0 10px;
+  display: block;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls > .product-image-slider-controls-item:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls > .product-image-slider-controls-item:hover {
+  cursor: pointer;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls > .product-image-slider-controls-item.show,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls > .product-image-slider-controls-item.show {
+  background: #5489d7;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-title,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-desc,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-desc {
+  margin: 0;
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-title.product-description-full-desc,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-title.product-description-full-desc,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-desc.product-description-full-desc,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-desc.product-description-full-desc {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  text-align: justify;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list {
+  flex: 0 0 60%;
+  max-width: 60%;
+  width: 100%;
+  padding-right: 25px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-list-title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-list-title {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 0 0 10px 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer {
+  width: 100%;
+  padding: 10px;
+  background-color: #fdfdfd;
+  border: 1px solid #858585;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-author,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-author,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 12px;
+  color: #000;
+  margin: 0 10px 0 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-author > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-author > span,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author > span {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  margin-right: 5px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star {
+  margin: 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #ffc600;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg {
+  fill: #ffc600;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-post-date,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-header > .feedback-post-date,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-post-date,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-header > .feedback-post-date {
+  margin: 0;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 10px;
+  color: #858585;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-body,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-body,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-body,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-body {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-body p,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-body p,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-body p,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-body p {
+  margin: 0;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #000;
+  text-align: justify;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .answer-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .answer-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .answer-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .answer-btn {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 12px;
+  color: #5489d7;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: #858585;
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  margin: 0 5px;
+  font-size: 12px;
+  text-decoration: none!important;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn > span,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > span {
+  margin-bottom: -3px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.like-btn {
+  color: #5489d7;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn > svg,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > svg {
+  height: 18px;
+  width: 18px;
+  stroke: #5489d7;
+  margin-right: 3px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .product-feedback > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg {
+  -webkit-transform: scale(-1, 1) rotate(180deg);
+  -moz-transform: scale(-1, 1) rotate(180deg);
+  -ms-transform: scale(-1, 1) rotate(180deg);
+  -o-transform: scale(-1, 1) rotate(180deg);
+  transform: scale(-1, 1) rotate(180deg);
+  stroke: #858585;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .feedback-answers-block,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .feedback-answers-block {
+  width: 100%;
+  position: relative;
+  padding-left: 30px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .feedback-answers-block::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list > .product-feedback-box > .feedback-answers-block::before {
+  content: '';
+  width: 15px;
+  height: 40px;
+  display: block;
+  border-left: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback {
+  flex: 0 0 40%;
+  max-width: 40%;
+  width: 100%;
+  padding: 30px 15px 25px 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-title {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form {
+  width: 100%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > input,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > input,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > textarea,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > textarea {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #000;
+  border: 1px solid #858585;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  resize: none;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > input,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > input {
+  width: 80%;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > textarea,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > textarea {
+  height: 80px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating {
+  display: flex;
+  justify-content: flex-end;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  margin-bottom: 5px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > input,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > input {
+  display: none;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > input:checked ~ label::after,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > input:checked ~ label::after,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > input:hover ~ label::after,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > input:hover ~ label::after {
+  opacity: 1;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label {
+  display: block;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  margin: 0 2px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label:first-child,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label:first-child {
+  margin: 0 2px 0 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label:last-child,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label:last-child {
+  margin: 0 0 0 2px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: block;
+  background: url("../img/icons/star.svg") no-repeat center center;
+  background-size: cover;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label::after,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  display: block;
+  background: url("../img/icons/star-fill.svg") no-repeat center center;
+  background-size: cover;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label:hover::after,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .rating > label:hover::after {
+  opacity: 1;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .product-send-feedback-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback > .product-send-feedback-form > .product-send-feedback-btn {
+  background: #51c878;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  width: 180px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #51c878;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info {
@@ -4244,6 +4839,7 @@ footer.main-footer {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 25px 0px;
+  margin-bottom: 20px;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info {
@@ -4474,6 +5070,141 @@ footer.main-footer {
   border: 1px solid #51c878;
   background: #fff;
   color: #51c878;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1px solid #5489d7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 48%;
+  max-width: 48%;
+  width: 100%;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  color: #000;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn.add-to-comparison-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn.add-to-comparison-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn.add-to-comparison-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn.add-to-comparison-btn {
+  border-right: 1px solid #5489d7;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn > svg,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn > svg {
+  width: 25px;
+  height: 25px;
+  stroke: #000 !important;
+  margin-right: 5px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section {
+  padding: 20px 15px;
+  border: 1px solid #858585;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > h2.title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > h2.title,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > h2.title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > h2.title,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > h2.title,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > h2.title,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > p.description,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > p.description,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > p.description {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottom: 10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > p.description,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > p.description,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > p.description {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > .types-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > .types-list,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > .types-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > .types-list,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > .types-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > .types-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding-top: 10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > .types-list > .types-item,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > .types-list > .types-item,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > .types-list > .types-item,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > .types-list > .types-item,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > .types-list > .types-item,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > .types-list > .types-item {
+  margin: 0 15px 0 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > .types-list > .types-item > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section > .types-list > .types-item > img,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > .types-list > .types-item > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section > .types-list > .types-item > img,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > .types-list > .types-item > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section > .types-list > .types-item > img {
+  width: auto;
+  height: 30px;
+  max-height: 30px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section.guarantee-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section.guarantee-section,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section.guarantee-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section.guarantee-section,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section.guarantee-section,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section.guarantee-section {
+  margin-bottom: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section.guarantee-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .pay-types-section.guarantee-section > p.description,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section.guarantee-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .delivery-types-section.guarantee-section > p.description,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section.guarantee-section > p.description,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .guarantee-section.guarantee-section > p.description {
+  padding: 10px 0 0 0;
+  border-bottom: 0px;
 }
 .previously-viewed {
   margin-top: 0!important;
