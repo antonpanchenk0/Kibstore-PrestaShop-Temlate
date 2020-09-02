@@ -8,7 +8,6 @@ var Slider = function Slider(swipeTime) {
     _classCallCheck(this, Slider);
 
     this.slideTo = function (next_id) {
-        console.log(next_id);
         var slidesControls = _this.slidesControls,
             id_prev = _this.activeNowId,
             slides = _this.slides,
@@ -50,6 +49,17 @@ var Slider = function Slider(swipeTime) {
                 return _this.slideTo(slideId);
             });
         });
+
+        // Swipe shortcuts events
+        _this.slidesShortCuts.forEach(function (c) {
+            var slideId = Number(c.getAttribute('data-slide')) - 1;
+            c.addEventListener('click', function () {
+                return _this.slideTo(slideId);
+            });
+            c.addEventListener('touchend', function () {
+                return _this.slideTo(slideId);
+            });
+        });
     };
 
     this.swipeTime = swipeTime >= 1000 ? swipeTime : 1000;
@@ -62,4 +72,58 @@ var Slider = function Slider(swipeTime) {
     this.onLoad();
 };
 
+var ProductNavigation = function ProductNavigation(animationDuration) {
+    var _this2 = this;
+
+    _classCallCheck(this, ProductNavigation);
+
+    this.createNavigationEvents = function () {
+        // Product fieldset swipe
+        _this2.navLinks.forEach(function (l) {
+            l.addEventListener('click', _this2.changeViewProductFieldset);
+            l.addEventListener('touchend', _this2.changeViewProductFieldset);
+        });
+
+        _this2.showMoreShortCutsBtn.addEventListener('click', _this2.showAllShortCuts);
+    };
+
+    this.showAllShortCuts = function (e) {
+        e.preventDefault();
+        $(_this2.showMoreShortCutsBtn).fadeOut(_this2.animationDuration / 3, function () {
+            _this2.showMoreShortCutsBtn.previousElementSibling.classList.remove('short-list');
+        });
+    };
+
+    this.changeViewProductFieldset = function (e) {
+        e.preventDefault();
+        var pageId = Number(e.target.getAttribute('data-toggle') || e.target.parentNode.getAttribute('data-toggle'));
+        _this2.navLinks.forEach(function (l) {
+            return l.classList.remove('active');
+        });
+        _this2.navLinks[pageId - 1].classList.add('active');
+        _this2.productFieldsets[_this2.activeFielsetId - 1].classList.remove('show');
+        _this2.productFieldsets[pageId - 1].classList.add('show');
+        _this2.activeFielsetId = pageId;
+        $('body,html').animate({ scrollTop: 0 }, _this2.animationDuration);
+    };
+
+    this.animationDuration = animationDuration;
+    this.navLinks = document.querySelectorAll('li.product-about-section-header-navigation-item');
+    this.productFieldsets = document.querySelectorAll('section.about-product-fieldset');
+    this.activeFielsetId = 1;
+    this.productAboutSection = document.querySelector('section.product-about-section');
+    this.productAboutSectionTop = this.productAboutSection.offsetTop + this.productAboutSection.offsetHeight;
+    this.productInfoBlock = document.querySelector('div.product-about-section-body');
+    this.productBuyBlock = document.querySelector('div.buy-section');
+    this.productControlBlock = document.querySelector('div.control-section');
+    this.productNavigation = document.querySelector('div.product-about-section-header');
+    this.showMoreShortCutsBtn = document.querySelector('a.show-more-short-cuts-btn');
+    this.productNavigationTop = this.productNavigation.offsetTop;
+    this.isSticky = false;
+
+    this.createNavigationEvents();
+};
+
 var slider = new Slider(5000);
+
+var productNavigation = new ProductNavigation(400);

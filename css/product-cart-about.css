@@ -3131,7 +3131,7 @@ section.product-section > .product-section-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 3px 0 25px;
+  padding: 0 3px 0 0px;
   margin-bottom: 20px;
 }
 section.product-section > .product-section-header > h2 {
@@ -4173,9 +4173,78 @@ footer.main-footer {
   width: 100%;
   max-width: 1605px;
 }
+.content > .page-header.product-about-section,
+.content > .product-about-section.product-about-section {
+  margin-bottom: 60px;
+}
 .content > .page-header.page-header,
 .content > .product-about-section.page-header {
   padding-top: 15px;
+}
+.content > .page-header.page-header > .rating-block,
+.content > .product-about-section.page-header > .rating-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 10px 0;
+}
+.content > .page-header.page-header > .rating-block > .rating-list,
+.content > .product-about-section.page-header > .rating-block > .rating-list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.content > .page-header.page-header > .rating-block > .rating-list > .rating-list-star,
+.content > .product-about-section.page-header > .rating-block > .rating-list > .rating-list-star {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url("../img/icons/star.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.content > .page-header.page-header > .rating-block > .rating-list > .rating-list-star.fill::before,
+.content > .product-about-section.page-header > .rating-block > .rating-list > .rating-list-star.fill::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icons/star-fill.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.content > .page-header.page-header > .rating-block > .rating-list > .rating-list-star.half-fill::before,
+.content > .product-about-section.page-header > .rating-block > .rating-list > .rating-list-star.half-fill::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  background-image: url("../img/icons/star-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 0;
+  background-size: cover;
+}
+.content > .page-header.page-header > .rating-block > .rating-counter,
+.content > .product-about-section.page-header > .rating-block > .rating-counter {
+  margin: 0;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 18px;
+  color: #858585;
+  line-height: 16px;
+}
+.content > .page-header.page-header > .rating-block > .rating-counter > span,
+.content > .product-about-section.page-header > .rating-block > .rating-counter > span {
+  margin-right: 4px;
 }
 .content > .page-header > .product-about-section-header,
 .content > .product-about-section > .product-about-section-header {
@@ -4190,74 +4259,13 @@ footer.main-footer {
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid #f1f1f1;
   position: relative;
-  margin-top: 45px;
 }
-.content > .page-header > .product-about-section-header > .rating-block,
-.content > .product-about-section > .product-about-section-header > .rating-block {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  position: absolute;
-  top: -35px;
-  left: 0;
-}
-.content > .page-header > .product-about-section-header > .rating-block > .rating-list,
-.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list {
-  list-style: none;
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-.content > .page-header > .product-about-section-header > .rating-block > .rating-list > .rating-list-star,
-.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list > .rating-list-star {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  background-image: url("../img/icons/star.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-}
-.content > .page-header > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.fill::before,
-.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.fill::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/icons/star-fill.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-.content > .page-header > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.half-fill::before,
-.content > .product-about-section > .product-about-section-header > .rating-block > .rating-list > .rating-list-star.half-fill::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: -10px;
-  background-image: url("../img/icons/star-fill.svg");
-  background-repeat: no-repeat;
-  background-position: 10px 0;
-  background-size: cover;
-}
-.content > .page-header > .product-about-section-header > .rating-block > .rating-counter,
-.content > .product-about-section > .product-about-section-header > .rating-block > .rating-counter {
-  margin: 0;
-  font-family: "SF Pro Display";
-  font-weight: normal;
-  font-size: 18px;
-  color: #858585;
-  line-height: 16px;
-}
-.content > .page-header > .product-about-section-header > .rating-block > .rating-counter > span,
-.content > .product-about-section > .product-about-section-header > .rating-block > .rating-counter > span {
-  margin-right: 4px;
+.content > .page-header > .product-about-section-header.is-sticky,
+.content > .product-about-section > .product-about-section-header.is-sticky {
+  position: sticky;
+  top: 60px;
+  z-index: 15;
+  max-width: 1605px;
 }
 .content > .page-header > .product-about-section-header > .product-about-section-header-navigation-list,
 .content > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list {
@@ -4277,7 +4285,26 @@ footer.main-footer {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 18px;
-  color: #000;
+  color: #343434;
+  text-decoration: none!important;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.content > .page-header > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item:not(.active):hover,
+.content > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item:not(.active):hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  border-bottom: 1px solid #343434;
+}
+.content > .page-header > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item:not(.active):hover > .product-about-section-header-navigation-link,
+.content > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item:not(.active):hover > .product-about-section-header-navigation-link {
+  color: #000 !important;
 }
 .content > .page-header > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item:first-child,
 .content > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item:first-child {
@@ -4827,6 +4854,60 @@ footer.main-footer {
   -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  width: 100%;
+  padding: 0 50px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list > .product-characteristics-item,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list > .product-characteristics-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #858585;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list > .product-characteristics-item > h2,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list > .product-characteristics-item > h2,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list > .product-characteristics-item > p,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list > .product-characteristics-item > p {
+  font-family: HelveticaNeueCyr;
+  font-weight: normal;
+  font-size: 12px;
+  color: #2c3138;
+  margin: 0;
+  text-transform: capitalize;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo {
+  width: 100%;
+  max-width: 470px;
+  margin-bottom: 10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo > img,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo > img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo:last-child,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo:last-child {
+  margin-bottom: 0px;
+}
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info {
   flex: 0 0 35%;
@@ -4839,7 +4920,14 @@ footer.main-footer {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 25px 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section.is-sticky,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section.is-sticky {
+  position: sticky;
+  top: 150px;
+  z-index: 10;
+  background: #fff;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info {
@@ -4963,6 +5051,7 @@ footer.main-footer {
   font-size: 14px;
   color: #000;
   text-align: center;
+  text-decoration: none!important;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
@@ -4997,6 +5086,62 @@ footer.main-footer {
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
   border-left: 0px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.plus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.plus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.plus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .minus-one-btn.minus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .current-product-count.minus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-right-section > .product-shortcut-control > .product-control > .plus-one-btn.minus-one-btn:hover {
+  background: #e1e1e1;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-shortcut,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-info > .product-info-left-section > .product-shortcut-control > .product-shortcut,
@@ -5041,6 +5186,20 @@ footer.main-footer {
   justify-content: center;
   align-items: center;
   position: relative;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none!important;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn:hover {
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.buy-product-btn,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn.buy-product-btn,
@@ -5082,13 +5241,14 @@ footer.main-footer {
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn,
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex: 0 0 48%;
   max-width: 48%;
@@ -5097,6 +5257,19 @@ footer.main-footer {
   font-weight: normal;
   font-size: 16px;
   color: #000;
+  text-decoration: none!important;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn:hover,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn:hover,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn:hover {
+  color: #5489d7;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn:hover > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn:hover > svg,
+.content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn:hover > svg,
+.content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn:hover > svg {
+  stroke: #5489d7 !important;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn.add-to-comparison-btn,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn.add-to-comparison-btn,
@@ -5330,5 +5503,203 @@ footer.main-footer {
   font-size: 14px;
   color: #000;
   text-align: left;
+}
+@media screen and (max-width: 1920px) {
+  .content.product-about > .product-about-section {
+    padding: 0px 100px;
+    max-width: unset;
+  }
+  .content > .page-header {
+    padding: 0px 100px;
+    max-width: unset;
+  }
+  .previously-viewed {
+    padding: 30px 100px 55px 100px;
+  }
+  .previously-viewed > .previously-viewed-section {
+    max-width: unset;
+  }
+}
+@media screen and (max-width: 1560px) {
+  .content.product-about > .product-about-section {
+    padding: 0px;
+  }
+  .content > .page-header {
+    padding: 0 20px;
+  }
+  .content > .page-header > .router,
+  .content > .page-header > .title-wrap {
+    padding-left: 0px;
+  }
+  .previously-viewed {
+    padding: 30px 20px 55px 20px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .content.product-about > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item > .product-about-section-header-navigation-link {
+    font-size: 16px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body {
+    padding: 30px 15px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images {
+    margin-bottom: 10px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image > img {
+    width: 360px;
+    max-width: 360px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .product-price > .price {
+    font-size: 32px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .buy-product-btn,
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section > .buy-controls > .add-to-cart-btn {
+    font-size: 14px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-comparison-btn,
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .control-section > .add-to-wish-btn {
+    font-size: 0px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info {
+    flex: 0 0 58%;
+    max-width: 58%;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-title {
+    font-size: 16px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full > .product-description-full-desc {
+    font-size: 14px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo {
+    max-width: 370px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list {
+    padding: 0 15px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-send-feedback {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info {
+    flex: 0 0 42%;
+    max-width: 42%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .content.page-header-content {
+    display: flex!important;
+    background: #fff;
+  }
+  .content.page-header-content > .page-header {
+    padding: 5px 10px 20px 10px;
+  }
+  .content.page-header-content > .page-header > .router,
+  .content.page-header-content > .page-header > .title-wrap {
+    padding: 0 7px;
+  }
+  .content.page-header-content > .page-header > .router .title,
+  .content.page-header-content > .page-header > .title-wrap .title {
+    font-size: 18px;
+  }
+  .content.page-header-content > .page-header > .router > .router-list > .router-item:first-child,
+  .content.page-header-content > .page-header > .title-wrap > .router-list > .router-item:first-child,
+  .content.page-header-content > .page-header > .router > .router-list > .router-item:nth-child(2),
+  .content.page-header-content > .page-header > .title-wrap > .router-list > .router-item:nth-child(2) {
+    display: none;
+  }
+  .content.page-header-content > .page-header > .rating-block {
+    display: none;
+  }
+  .content.product-about {
+    display: flex;
+  }
+  .content.product-about > .product-about-section > .product-about-section-header {
+    position: sticky;
+    top: 40px;
+    z-index: 10;
+    background: #596372;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 10px;
+    max-height: 40px;
+    border-bottom: 0px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .content.product-about > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+  }
+  .content.product-about > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item.active > .product-about-section-header-navigation-link {
+    color: #fff;
+    border-bottom: 2px solid #51c878;
+  }
+  .content.product-about > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item > .product-about-section-header-navigation-link {
+    color: #c4c4c5;
+    font-size: 12px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-header > .product-code {
+    display: none;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body {
+    padding: 15px 15px 30px 15px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-short-cuts {
+    display: none;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images {
+    min-height: 300px;
+    margin-bottom: 20px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image > img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo {
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list {
+    padding: 0;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info {
+    display: none;
+  }
 }
 /*# sourceMappingURL=product-cart-about.css.map */
