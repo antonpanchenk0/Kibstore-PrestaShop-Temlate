@@ -4479,6 +4479,169 @@ footer.main-footer {
 .content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-controls > .product-image-slider-controls-item.show {
   background: #5489d7;
 }
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 25px;
+  display: none;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile {
+  flex: 0 0 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list {
+  list-style: none;
+  margin: 0 0 5px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list > .rating-list-star,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list > .rating-list-star,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list > .rating-list-star,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list > .rating-list-star {
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+  background-image: url("../img/icons/star.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list > .rating-list-star.fill::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list > .rating-list-star.fill::before,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list > .rating-list-star.fill::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list > .rating-list-star.fill::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icons/star-fill.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list > .rating-list-star.half-fill::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .rating-list > .rating-list-star.half-fill::before,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list > .rating-list-star.half-fill::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .rating-list > .rating-list-star.half-fill::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  left: -6px;
+  background-image: url("../img/icons/star-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 0;
+  background-size: cover;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .feedback-counter,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .feedback-counter,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .feedback-counter,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .feedback-counter {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #858585;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .feedback-counter > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .feedback-counter > span,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .feedback-counter > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .feedback-counter > span {
+  margin-right: 5px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #5489d7;
+  position: relative;
+  padding-left: 10px;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability.is-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability.is-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability.is-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability.is-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability.not-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability.not-available::before {
+  content: '✔';
+  color: #51c878;
+  position: absolute;
+  left: -10px;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-availability.not-available::before,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability.not-available::before,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-availability.not-available::before {
+  content: '✖';
+  color: #ff5342;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .old-price,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .old-price,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .old-price,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .old-price {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 12px;
+  color: #858585;
+  margin: 0 0 5px 0;
+  text-decoration: line-through;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .current-price,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .current-price,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .current-price,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .current-price {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+  line-height: 1;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .current-price > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .current-price > span,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .current-price > span,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .current-price > span {
+  background: #d3ffd3;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-nds,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile > .product-nds,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-nds,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile > .product-nds {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 10px;
+  color: #858585;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile.product-information-other-mobile,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-price-mobile.product-information-other-mobile,
+.content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile.product-information-other-mobile,
+.content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile > .product-information-other-mobile.product-information-other-mobile {
+  align-items: flex-end;
+}
 .content > .page-header > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full,
 .content > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-description-full {
   flex: 0 0 100%;
@@ -5379,6 +5542,119 @@ footer.main-footer {
   padding: 10px 0 0 0;
   border-bottom: 0px;
 }
+.content > .page-header > .product-about-section-mobile-footer,
+.content > .product-about-section > .product-about-section-mobile-footer {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #e9edf0;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.content > .page-header > .product-about-section-mobile-footer.in-cart,
+.content > .product-about-section > .product-about-section-mobile-footer.in-cart {
+  background: #fff;
+}
+.content > .page-header > .product-about-section-mobile-footer.in-cart > .mobile-footer-controls > .buy-product-btn,
+.content > .product-about-section > .product-about-section-mobile-footer.in-cart > .mobile-footer-controls > .buy-product-btn {
+  background: #fff;
+  color: #51c878;
+}
+.content > .page-header > .product-about-section-mobile-footer.in-cart > .mobile-footer-controls > .buy-product-btn::before,
+.content > .product-about-section > .product-about-section-mobile-footer.in-cart > .mobile-footer-controls > .buy-product-btn::before {
+  background-image: url("../img/icons/shopping-cart-sale-green.svg");
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-price > .current-price,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-price > .current-price {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
+  margin: 0 0 5px 0;
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-price > .product-nds,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-price > .product-nds {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 10px;
+  color: #858585;
+  margin: 0;
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-wish-btn,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-wish-btn,
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  position: relative;
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-wish-btn > svg,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-wish-btn > svg,
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn > svg,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  stroke: #5489d7;
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-wish-btn.active::before,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-wish-btn.active::before,
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn.active::before,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn.active::before {
+  content: '✓';
+  color: #51c878;
+  position: absolute;
+  top: -15px;
+  right: -3px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .buy-product-btn,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .buy-product-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  background: #51c878;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #51c878;
+}
+.content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .buy-product-btn::before,
+.content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .buy-product-btn::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/icons/cart.svg");
+  background-size: cover;
+  background-position: center center;
+  margin-right: 10px;
+}
 .previously-viewed {
   margin-top: 0!important;
   padding: 30px 155px 55px 155px;
@@ -5627,6 +5903,9 @@ footer.main-footer {
   .content.product-about {
     display: flex;
   }
+  .content.product-about > .product-about-section {
+    margin-bottom: 15px;
+  }
   .content.product-about > .product-about-section > .product-about-section-header {
     position: sticky;
     top: 40px;
@@ -5647,7 +5926,7 @@ footer.main-footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0;
+    margin: 0 5px;
   }
   .content.product-about > .product-about-section > .product-about-section-header > .product-about-section-header-navigation-list > .product-about-section-header-navigation-item.active > .product-about-section-header-navigation-link {
     color: #fff;
@@ -5681,13 +5960,16 @@ footer.main-footer {
     margin-bottom: 20px;
   }
   .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image {
-    max-width: 100%;
+    max-width: 320px;
     width: 100%;
     padding: 0 15px;
   }
   .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-image-slider > .product-image-slider-images > .product-image-slider-image > img {
     max-width: 100%;
     width: 100%;
+  }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-information-mobile {
+    display: flex;
   }
   .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-photos-wrap > .product-photo {
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -5698,8 +5980,14 @@ footer.main-footer {
   .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-characteristics-list {
     padding: 0;
   }
+  .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-product-info > .about-product-fieldset > .product-feedback-list {
+    padding: 0;
+  }
   .content.product-about > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info {
     display: none;
+  }
+  .content.product-about > .product-about-section > .product-about-section-mobile-footer {
+    display: flex;
   }
 }
 /*# sourceMappingURL=product-cart-about.css.map */
