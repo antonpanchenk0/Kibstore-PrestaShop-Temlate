@@ -9,6 +9,7 @@ class Filters {
         this.overlay = document.querySelector('div.desktop-navigation-collapse-overlay');
         this.changeViewBtn = document.getElementById('vhange_view');
         this.view = 'plate';
+        this.pageHeaderBox = document.querySelector('div.page-header').getBoundingClientRect().height;
         this.filtersHeaderBox = document.querySelector('div.sort-controls');
         this.productWrapBox = document.querySelector('div.catalog-products-items-wrap');
         this.backArrowFilterBtn = document.querySelector('span.back-arrow-mobile-filter');
@@ -46,6 +47,10 @@ class Filters {
 
         // События на filter check
         this.avaliableFilters.forEach((c) => c.addEventListener('change', this.onCheck));
+
+        window.addEventListener('resize', () => {
+            this.productWrapBoxTop = this.productWrapBox.getBoundingClientRect().top;
+        })
     }
 
     switchFilter = (e, f) => {
@@ -118,14 +123,17 @@ class Filters {
     }
 
     filterFixed = () => {
-        const { isFixed, filtersHeaderBox, productWrapBox } = this;
-        if(window.scrollY >= productWrapBox.getBoundingClientRect().top + 10 && window.innerWidth <= 860) {
+        const { isFixed, filtersHeaderBox, productWrapBox, pageHeaderBox } = this;
+        console.log(pageHeaderBox)
+        console.log(window.scrollY)
+        if(window.scrollY >= (pageHeaderBox - 40) && window.innerWidth <= 860) {
             if(!isFixed) {
                 filtersHeaderBox.classList.add('f-fixed-top');
-                productWrapBox.style.paddingTop = '43px';
+                productWrapBox.style.paddingTop = '40px';
                 this.isFixed = true;
             }
-        } else {
+        }
+        if(window.scrollY < (pageHeaderBox - 40) && window.innerWidth <= 860) {
             if(isFixed) {
                 filtersHeaderBox.classList.remove('f-fixed-top');
                 productWrapBox.style.paddingTop = '0px';

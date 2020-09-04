@@ -16,6 +16,7 @@ var Filters = function Filters(animationDuration) {
     this.overlay = document.querySelector('div.desktop-navigation-collapse-overlay');
     this.changeViewBtn = document.getElementById('vhange_view');
     this.view = 'plate';
+    this.pageHeaderBox = document.querySelector('div.page-header').getBoundingClientRect().height;
     this.filtersHeaderBox = document.querySelector('div.sort-controls');
     this.productWrapBox = document.querySelector('div.catalog-products-items-wrap');
     this.backArrowFilterBtn = document.querySelector('span.back-arrow-mobile-filter');
@@ -61,6 +62,10 @@ var _initialiseProps = function _initialiseProps() {
         // События на filter check
         _this.avaliableFilters.forEach(function (c) {
             return c.addEventListener('change', _this.onCheck);
+        });
+
+        window.addEventListener('resize', function () {
+            _this.productWrapBoxTop = _this.productWrapBox.getBoundingClientRect().top;
         });
     };
 
@@ -153,15 +158,19 @@ var _initialiseProps = function _initialiseProps() {
     this.filterFixed = function () {
         var isFixed = _this.isFixed,
             filtersHeaderBox = _this.filtersHeaderBox,
-            productWrapBox = _this.productWrapBox;
+            productWrapBox = _this.productWrapBox,
+            pageHeaderBox = _this.pageHeaderBox;
 
-        if (window.scrollY >= productWrapBox.getBoundingClientRect().top + 10 && window.innerWidth <= 860) {
+        console.log(pageHeaderBox);
+        console.log(window.scrollY);
+        if (window.scrollY >= pageHeaderBox - 40 && window.innerWidth <= 860) {
             if (!isFixed) {
                 filtersHeaderBox.classList.add('f-fixed-top');
-                productWrapBox.style.paddingTop = '43px';
+                productWrapBox.style.paddingTop = '40px';
                 _this.isFixed = true;
             }
-        } else {
+        }
+        if (window.scrollY < pageHeaderBox - 40 && window.innerWidth <= 860) {
             if (isFixed) {
                 filtersHeaderBox.classList.remove('f-fixed-top');
                 productWrapBox.style.paddingTop = '0px';
