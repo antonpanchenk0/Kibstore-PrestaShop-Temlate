@@ -3047,6 +3047,9 @@ body {
 .bg-dark-white {
   background-color: #f4f6f8;
 }
+.bg-dark-white-2 {
+  background-color: #e9edf0;
+}
 .fixed-social-links {
   position: fixed;
   top: 240px;

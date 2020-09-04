@@ -3047,6 +3047,9 @@ body {
 .bg-dark-white {
   background-color: #f4f6f8;
 }
+.bg-dark-white-2 {
+  background-color: #e9edf0;
+}
 .fixed-social-links {
   position: fixed;
   top: 240px;
@@ -5614,14 +5617,18 @@ footer.main-footer {
 .content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-wish-btn.active::before,
 .content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn.active::before,
 .content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .add-to-comparison-btn.active::before {
-  content: '✓';
-  color: #51c878;
+  content: '';
+  height: 16px;
+  width: 8px;
+  display: block;
+  border: solid #51c878;
+  border-width: 0px 2px 2px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   position: absolute;
-  top: -15px;
-  right: -3px;
-  font-size: 24px;
-  font-weight: bold;
-  border: none;
+  top: -6px;
+  right: 0px;
 }
 .content > .page-header > .product-about-section-mobile-footer > .mobile-footer-controls > .buy-product-btn,
 .content > .product-about-section > .product-about-section-mobile-footer > .mobile-footer-controls > .buy-product-btn {
@@ -5655,13 +5662,18 @@ footer.main-footer {
   background-position: center center;
   margin-right: 10px;
 }
-.previously-viewed {
+.previously-viewed,
+.more-product-this-category {
   margin-top: 0!important;
   padding: 30px 155px 55px 155px;
   width: 100%;
 }
-.previously-viewed > .previously-viewed-section {
+.previously-viewed > .previously-viewed-section,
+.more-product-this-category > .previously-viewed-section,
+.previously-viewed > .more-product-this-category-section,
+.more-product-this-category > .more-product-this-category-section {
   max-width: 1590px;
+  margin-top: 0px;
 }
 .subscribe-to-updates {
   margin-top: 0!important;
@@ -5789,10 +5801,14 @@ footer.main-footer {
     padding: 0px 100px;
     max-width: unset;
   }
-  .previously-viewed {
+  .previously-viewed,
+  .more-product-this-category {
     padding: 30px 100px 55px 100px;
   }
-  .previously-viewed > .previously-viewed-section {
+  .previously-viewed > .previously-viewed-section,
+  .more-product-this-category > .previously-viewed-section,
+  .previously-viewed > .more-product-this-category-section,
+  .more-product-this-category > .more-product-this-category-section {
     max-width: unset;
   }
 }
@@ -5807,7 +5823,8 @@ footer.main-footer {
   .content > .page-header > .title-wrap {
     padding-left: 0px;
   }
-  .previously-viewed {
+  .previously-viewed,
+  .more-product-this-category {
     padding: 30px 20px 55px 20px;
   }
 }
