@@ -5622,6 +5622,9 @@ section.product-section > .product-section-body {
     padding: 0px 100px;
     max-width: unset;
   }
+  .content.product-about > .product-about-section > .product-about-section-header {
+    max-width: unset;
+  }
   .content > .page-header {
     padding: 0px 100px;
     max-width: unset;
