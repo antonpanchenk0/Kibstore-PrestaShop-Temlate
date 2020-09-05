@@ -161,4 +161,107 @@
             }
         }
     }
+    & > .checkout-page-body {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10px 35px;
+        & > .checkout-steps-wrapper {
+            flex: 0 0 70%;
+            max-width: 70%;
+            & > .steps-title {
+                .HelveticaNeueCyrBold;
+                font-size: 24px;
+                color: #000;
+                margin: 0 0 15px 0;
+            }
+            & > .checkout-step {
+                width: 100%;
+                padding: 0 0 0 20px;
+                & > .checkout-step-header {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    & > .checkout-step-number {
+                        width: 25px;
+                        height: 25px;
+                        background: @grayColor;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                    & > .checkout-step-title {
+                        .SFProDisplayBold;
+                        font-size: 18px;
+                        color: @grayColor;
+                    }
+                }
+                & > .checkout-step-body {
+                    width: calc(100% - 12px);
+                    padding: 20px 10px;
+                    margin: 10px 0 10px 12px;
+                    border-left: 1px solid @grayColor;
+                    & > input {
+                        width: 555px;
+                        height: 30px;
+                        padding: 5px;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        border-radius: 3px;
+                        box-shadow: none;
+                        .SFProDisplayRegular;
+                        font-size: 16px;
+                        color: #000;
+                        border: 1px solid @grayColor;
+                        outline: none;
+                        &:focus {
+                            border: 1px solid @secondColor;
+                            -webkit-box-shadow: none;
+                            -moz-box-shadow: none;
+                            box-shadow: none;
+                        }
+                        &::placeholder {
+                            color: @grayColor;
+                        }
+                        &.has-error {
+                            border: 1px solid #ff3647;
+                        }
+                        &.complete {
+                            border: 1px solid @thirdColor;
+                        }
+                    }
+                }
+                &.complete {
+                    & > .checkout-step-header {
+                        & > .checkout-step-number {
+                            background: @thirdColor;
+                        }
+                        & > .checkout-step-title {
+                            color: #0000
+                        }
+                    }
+                    & > .checkout-step-body {
+                        display: none;
+                    }
+                }
+                &.active {
+                    & > .checkout-step-header {
+                        & > .checkout-step-number {
+                            background: @secondColor;
+                        }
+                        & > .checkout-step-title {
+                            color: @secondColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

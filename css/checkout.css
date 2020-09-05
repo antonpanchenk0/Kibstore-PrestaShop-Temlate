@@ -202,4 +202,102 @@
 .checkout-page-section > .checkout-page-controls > .control-btn:last-child {
   margin: 0;
 }
+.checkout-page-section > .checkout-page-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px 35px;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .steps-title {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
+  margin: 0 0 15px 0;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step {
+  width: 100%;
+  padding: 0 0 0 20px;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-header > .checkout-step-number {
+  width: 25px;
+  height: 25px;
+  background: #858585;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-header > .checkout-step-title {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 18px;
+  color: #858585;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body {
+  width: calc(100% - 12px);
+  padding: 20px 10px;
+  margin: 10px 0 10px 12px;
+  border-left: 1px solid #858585;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > input {
+  width: 555px;
+  height: 30px;
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: none;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #858585;
+  outline: none;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > input:focus {
+  border: 1px solid #5489d7;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > input::placeholder {
+  color: #858585;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > input.has-error {
+  border: 1px solid #ff3647;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > input.complete {
+  border: 1px solid #51c878;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.complete > .checkout-step-header > .checkout-step-number {
+  background: #51c878;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.complete > .checkout-step-header > .checkout-step-title {
+  color: #0000;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.complete > .checkout-step-body {
+  display: none;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.active > .checkout-step-header > .checkout-step-number {
+  background: #5489d7;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.active > .checkout-step-header > .checkout-step-title {
+  color: #5489d7;
+}
 /*# sourceMappingURL=checkout.css.map */
