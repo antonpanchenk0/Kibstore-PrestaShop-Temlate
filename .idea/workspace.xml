@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/checkout-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/checkout.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css.map" afterDir="false" />
@@ -57,28 +58,25 @@
         <entry file="file://$PROJECT_DIR$/css/root-styles.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="557" column="13" lean-forward="true" selection-start-line="557" selection-start-column="13" selection-end-line="557" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/checkout.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="145" column="16" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
-              <folding>
-                <element signature="e#62#70#0" />
-              </folding>
+              <caret line="557" column="13" selection-start-line="557" selection-start-column="13" selection-end-line="557" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/checkout.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="515">
+              <caret line="400" column="42" selection-start-line="400" selection-start-column="42" selection-end-line="400" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkout-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="38" />
+            <state relative-caret-position="306">
+              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -89,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/checkout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="544">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -171,8 +169,8 @@
         <option value="$PROJECT_DIR$/css/main.less" />
         <option value="$PROJECT_DIR$/css/product-cart-about.less" />
         <option value="$PROJECT_DIR$/js/src/checkout.js" />
-        <option value="$PROJECT_DIR$/checkout-page.html" />
         <option value="$PROJECT_DIR$/css/checkout.less" />
+        <option value="$PROJECT_DIR$/checkout-page.html" />
       </list>
     </option>
   </component>
@@ -188,8 +186,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-5" />
-    <option name="y" value="-23" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
     <option name="width" value="1440" />
     <option name="height" value="780" />
   </component>
@@ -391,17 +389,18 @@
       <workItem from="1598870256266" duration="1899000" />
       <workItem from="1598906168351" duration="2824000" />
       <workItem from="1598986128571" duration="47417000" />
+      <workItem from="1599508707812" duration="3637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179160000" />
+    <option name="totallyTimeSpent" value="182797000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17217484" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19926651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -414,7 +413,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.17334779" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.17917134" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.16901408" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -576,44 +575,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/src/product-card.js" />
-    <entry file="file://$PROJECT_DIR$/css/product-cart-feedback.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-cart-feedback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="1008" column="16" selection-start-line="1008" selection-start-column="16" selection-end-line="1061" selection-end-column="22" />
-          <folding>
-            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/product-cart-characteristics.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="34" selection-start-line="34" selection-end-line="48" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-cart-characteristics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="939" column="17" lean-forward="true" selection-start-line="917" selection-start-column="12" selection-end-line="939" selection-end-column="17" />
-          <folding>
-            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product-cart-feedback.less" />
+    <entry file="file://$PROJECT_DIR$/product-cart-feedback.html" />
+    <entry file="file://$PROJECT_DIR$/css/product-cart-characteristics.less" />
+    <entry file="file://$PROJECT_DIR$/product-cart-characteristics.html" />
     <entry file="file://$PROJECT_DIR$/img/icons/shopping-cart-sale.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -631,13 +596,7 @@
     <entry file="file://$PROJECT_DIR$/img/icons/heart.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/product-cart-photo-and-video.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" selection-start-line="33" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product-cart-photo-and-video.less" />
     <entry file="file://$PROJECT_DIR$/js/dist/catalog-products.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -703,16 +662,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/product-buy-block.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1117" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/product-item-nav.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-267" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product-buy-block.less" />
+    <entry file="file://$PROJECT_DIR$/css/product-item-nav.less" />
     <entry file="file://$PROJECT_DIR$/css/page-header-style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -819,13 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/root-styles.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="557" column="13" lean-forward="true" selection-start-line="557" selection-start-column="13" selection-end-line="557" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/icons/chevron-right.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -836,29 +780,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/checkout.js">
+    <entry file="file://$PROJECT_DIR$/css/root-styles.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="112">
+          <caret line="557" column="13" selection-start-line="557" selection-start-column="13" selection-end-line="557" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout-page.html">
+    <entry file="file://$PROJECT_DIR$/js/src/checkout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="38" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/checkout.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="145" column="16" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
+        <state relative-caret-position="515">
+          <caret line="400" column="42" selection-start-line="400" selection-start-column="42" selection-end-line="400" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding>
-            <element signature="e#62#70#0" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

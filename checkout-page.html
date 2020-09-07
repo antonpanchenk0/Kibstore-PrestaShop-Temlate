@@ -38,21 +38,88 @@
         <a href="#" class="control-btn">Вернуться на сайт</a>
         <a href="#" class="control-btn">Перейти к корзине</a>
     </div>
-    <div class="checkout-page-body">
-        <form action="#" class="checkout-steps-wrapper">
+    <form action="#" class="checkout-page-body">
+        <div class="checkout-steps-wrapper">
             <h2 class="steps-title">Оформление заказа</h2>
-            <div class="checkout-step" data-id="1">
+            <div class="checkout-step complete" data-id="1">
                 <div class="checkout-step-header">
                     <div class="checkout-step-number">1</div>
                     <div class="checkout-step-title">Ваши данные</div>
                 </div>
                 <div class="checkout-step-body">
-                    <input type="text" placeholder="Ваше имя">
+                    <input id="user_name" type="text" name="name" placeholder="Ваше имя" />
+                    <input id="user_phone" type="text" name="phone" placeholder="+38(099)999-9999" />
+                    <input id="user_email" type="email" name="email" placeholder="Электронная почта" />
+                    <div class="checkout-step-controls">
+                        <a href="#" class="go-next-step-btn">Далее</a>
+                    </div>
                 </div>
             </div>
-        </form>
-        <div class="checkout-info-wrapper"></div>
-    </div>
+            <div class="checkout-step complete" data-id="2">
+                <div class="checkout-step-header">
+                    <div class="checkout-step-number">2</div>
+                    <div class="checkout-step-title">Доставка</div>
+                </div>
+                <div class="checkout-step-body">
+                    <input id="delivery_city" type="text" name="city" placeholder="Введите город" />
+                    <h2 class="checkout-step-subtitle">Способ доставки</h2>
+                    <div class="checkout-step-select-section">
+                        <div class="check-item">
+                            <input type="radio" id="delivery_type_1" name="delivery">
+                            <label for="delivery_type_1">Доставка в отделение "Нова Пошта"</label>
+                            <textarea name="post_number" id="branch_number" placeholder="Укажите отделение"></textarea>
+                        </div>
+                        <div class="check-item">
+                            <input type="radio" id="delivery_type_2" name="delivery">
+                            <label for="delivery_type_2">Самовывоз из магазина</label>
+                        </div>
+                        <div class="check-item">
+                            <input type="radio" id="delivery_type_3" name="delivery">
+                            <label for="delivery_type_3">Доставка курьером "Нова Пошта"</label>
+                            <textarea name="post_number" id="delivery_address" placeholder="Укажите адрес доставки"></textarea>
+                        </div>
+                    </div>
+                    <div class="checkout-step-controls">
+                        <a href="#" class="go-next-step-btn">Далее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-step active" data-id="3">
+                <div class="checkout-step-header">
+                    <div class="checkout-step-number">3</div>
+                    <div class="checkout-step-title">Оплата</div>
+                </div>
+                <div class="checkout-step-body">
+                    <h2 class="checkout-step-subtitle">Способ оплаты</h2>
+                    <div class="checkout-step-select-section">
+                        <div class="check-item">
+                            <input type="radio" id="payment_type_1" name="payment">
+                            <label for="payment_type_1">Наложенный платеж</label>
+                        </div>
+                        <div class="check-item">
+                            <input type="radio" id="payment_type_2" name="payment">
+                            <label for="payment_type_2">Google Pay</label>
+                        </div>
+                        <div class="check-item">
+                            <input type="radio" id="payment_type_3" name="payment">
+                            <label for="payment_type_3">Оплата картой на сайте</label>
+                        </div>
+                        <div class="check-item">
+                            <input type="radio" id="payment_type_4" name="payment">
+                            <label for="payment_type_4">Безналичный расчет (для юр. лиц)</label>
+                        </div>
+                        <div class="check-item">
+                            <input type="radio" id="payment_type_5" name="payment">
+                            <label for="payment_type_5">Кредит онлайн</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-info-wrapper">
+            
+        </div>
+    </form>
 </section>
 <footer class="checkout-page-footer">
 
