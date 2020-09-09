@@ -41,21 +41,21 @@
     <form action="#" class="checkout-page-body">
         <div class="checkout-steps-wrapper">
             <h2 class="steps-title">Оформление заказа</h2>
-            <div class="checkout-step complete" data-id="1">
+            <div class="checkout-step active" data-id="1">
                 <div class="checkout-step-header">
                     <div class="checkout-step-number">1</div>
                     <div class="checkout-step-title">Ваши данные</div>
                 </div>
                 <div class="checkout-step-body">
                     <input id="user_name" type="text" name="name" placeholder="Ваше имя" />
-                    <input id="user_phone" type="text" name="phone" placeholder="+38(099)999-9999" />
+                    <input id="user_phone" type="text" name="phone" placeholder="0993456789" />
                     <input id="user_email" type="email" name="email" placeholder="Электронная почта" />
                     <div class="checkout-step-controls">
-                        <a href="#" class="go-next-step-btn">Далее</a>
+                        <a href="#" class="go-next-step-btn" data-id="1">Далее</a>
                     </div>
                 </div>
             </div>
-            <div class="checkout-step complete" data-id="2">
+            <div class="checkout-step" data-id="2">
                 <div class="checkout-step-header">
                     <div class="checkout-step-number">2</div>
                     <div class="checkout-step-title">Доставка</div>
@@ -76,15 +76,15 @@
                         <div class="check-item">
                             <input type="radio" id="delivery_type_3" name="delivery">
                             <label for="delivery_type_3">Доставка курьером "Нова Пошта"</label>
-                            <textarea name="post_number" id="delivery_address" placeholder="Укажите адрес доставки"></textarea>
+                            <textarea name="delivery_address" id="delivery_address" placeholder="Укажите адрес доставки"></textarea>
                         </div>
                     </div>
                     <div class="checkout-step-controls">
-                        <a href="#" class="go-next-step-btn">Далее</a>
+                        <a href="#" class="go-next-step-btn" data-id="2">Далее</a>
                     </div>
                 </div>
             </div>
-            <div class="checkout-step active" data-id="3">
+            <div class="checkout-step" data-id="3">
                 <div class="checkout-step-header">
                     <div class="checkout-step-number">3</div>
                     <div class="checkout-step-title">Оплата</div>
@@ -117,7 +117,59 @@
             </div>
         </div>
         <div class="checkout-info-wrapper">
-            
+            <h2 class="checkout-info-title">Состав заказа</h2>
+            <div class="order-list-wrapper">
+                <div class="order-product-item">
+                    <div class="product-item-image">
+                        <img src="./img/camera.png" alt="Camera">
+                    </div>
+                    <div class="product-item-info">
+                        <h2 class="product-name">Видеокамера Tecsar AHDD-20F3M-out</h2>
+                        <div class="product-price">
+                            <p class="price">963,00 ₴</p>
+                            <p class="nds">Без НДС</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-product-item">
+                    <div class="product-item-image">
+                        <img src="./img/camera.png" alt="Camera">
+                    </div>
+                    <div class="product-item-info">
+                        <h2 class="product-name">Видеокамера Tecsar AHDD-20F3M-out</h2>
+                        <div class="product-price">
+                            <p class="price">963,00 ₴</p>
+                            <p class="nds">Без НДС</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-product-item">
+                    <div class="product-item-image">
+                        <img src="./img/camera.png" alt="Camera">
+                    </div>
+                    <div class="product-item-info">
+                        <h2 class="product-name">Видеокамера Tecsar AHDD-20F3M-out</h2>
+                        <div class="product-price">
+                            <p class="price">963,00 ₴</p>
+                            <p class="nds">Без НДС</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-general-price">
+                <div class="price"><span>Итого:</span><span class="price">3 507,00 ₴</span></div>
+                <div class="info"><span>(без доставки)</span><span class="nds">Без НДС</span></div>
+            </div>
+            <button type="submit" class="confirm-order-btn">Заказ подтверждаю</button>
+            <p class="order-agreements">Подтверждая заказ, я принимаю условия <a href="#">Публичной оферты</a></p>
+            <div class="call-back-status">
+                <input type="checkbox" name="isCallBack" id="call-back">
+                <label for="call-back">Не перезванивать</label>
+            </div>
+            <div class="order-comment">
+                <h2>Комментрарии к заказу</h2>
+                <textarea name="comments" class="comments-textarea"></textarea>
+            </div>
         </div>
     </form>
 </section>
@@ -127,7 +179,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="js/plugins/jquery.maskedinput.min.js"></script>
 <script src="js/dist/checkout.js"></script>
 </body>
 </html>
