@@ -736,4 +736,27 @@
     transform: translate3d(4px, 0, 0);
   }
 }
+@media screen and (max-width: 1560px) {
+  .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  .checkout-page-section > .checkout-page-body > .checkout-info-wrapper {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper {
+    flex: 0 0 50%;
+    max-width: 60%;
+  }
+  .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > input {
+    width: 325px;
+  }
+  .checkout-page-section > .checkout-page-body > .checkout-info-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 /*# sourceMappingURL=checkout.css.map */

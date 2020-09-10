@@ -23,8 +23,6 @@
       <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/checkout.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/checkout.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/dist/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/checkout.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -61,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/checkout.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="397" column="44" selection-start-line="397" selection-start-column="44" selection-end-line="397" selection-end-column="44" />
+            <state relative-caret-position="617">
+              <caret line="727" selection-start-line="727" selection-end-line="727" />
             </state>
           </provider>
         </entry>
@@ -82,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/checkout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="176" column="105" lean-forward="true" selection-start-line="176" selection-start-column="105" selection-end-line="176" selection-end-column="105" />
+            <state relative-caret-position="1742">
+              <caret line="221" column="1" lean-forward="true" selection-start-line="221" selection-start-column="1" selection-end-line="221" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -104,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pagin</find>
       <find>sort-controls-</find>
       <find>sort-controls-list</find>
       <find>overflow</find>
@@ -134,6 +131,7 @@
       <find>navigation-list</find>
       <find>box-s</find>
       <find>track</find>
+      <find>deb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,8 +165,8 @@
         <option value="$PROJECT_DIR$/css/product-cart-about.less" />
         <option value="$PROJECT_DIR$/css/root-styles.less" />
         <option value="$PROJECT_DIR$/checkout-page.html" />
-        <option value="$PROJECT_DIR$/css/checkout.less" />
         <option value="$PROJECT_DIR$/js/src/checkout.js" />
+        <option value="$PROJECT_DIR$/css/checkout.less" />
       </list>
     </option>
   </component>
@@ -387,12 +385,12 @@
       <workItem from="1598870256266" duration="1899000" />
       <workItem from="1598906168351" duration="2824000" />
       <workItem from="1598986128571" duration="47417000" />
-      <workItem from="1599508707812" duration="22568000" />
+      <workItem from="1599508707812" duration="23388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201728000" />
+    <option name="totallyTimeSpent" value="202548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
@@ -805,17 +803,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/checkout.less">
+    <entry file="file://$PROJECT_DIR$/js/src/checkout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="397" column="44" selection-start-line="397" selection-start-column="44" selection-end-line="397" selection-end-column="44" />
+        <state relative-caret-position="1742">
+          <caret line="221" column="1" lean-forward="true" selection-start-line="221" selection-start-column="1" selection-end-line="221" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/checkout.js">
+    <entry file="file://$PROJECT_DIR$/css/checkout.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="176" column="105" lean-forward="true" selection-start-line="176" selection-start-column="105" selection-end-line="176" selection-end-column="105" />
+        <state relative-caret-position="617">
+          <caret line="727" selection-start-line="727" selection-end-line="727" />
         </state>
       </provider>
     </entry>
