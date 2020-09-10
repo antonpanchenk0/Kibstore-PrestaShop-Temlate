@@ -39,7 +39,7 @@ class OrderSumbiter {
                 regExp: /^[A-Za-zА-Яа-яЁё]{1,}$/,
             },
             deliveryTypes: {
-                delivery_mail_number_regExp: /^[0-9]{1,}$/g,
+                delivery_mail_number_regExp: /^[a-zа-яґїієй0-9]{1,}$/iu,
                 delivery_address_regExp: /[a-zа-яґїієй\s.\/0-9]/gmi,
                 isSelected: false,
             },
@@ -68,11 +68,11 @@ class OrderSumbiter {
         this.inputsNodes.forEach((node) => {
             node.addEventListener('input', (event) => this.validateInput(node, event.target.value));
         })
-        this.nextButtons.forEach((btn) => {
-            btn.addEventListener('click', (event) => this.checkIsPageValid(event, btn.dataset.id));
+        this.nextButtons.forEach((btn, index) => {
+            btn.addEventListener('click', (event) => this.checkIsPageValid(event, index));
         })
         this.confirmOrderButton.addEventListener('mouseenter', () => {
-            if(this.currentPage !== 3) {
+            if(this.currentPage !== 2 || !this.inputs.paymentsTypes.isSelected) {
                 this.confirmOrderButton.setAttribute('disabled', 'true');
             }
         })
@@ -114,36 +114,41 @@ class OrderSumbiter {
         }
     }
 
-    checkIsPageValid = (event, id) => {
+    checkIsPageValid = (event, pageID) => {
         event.preventDefault();
-        switch (+id) {
-            case 1: {
+        switch (pageID) {
+            case 0: {
                 if(user_name.value.match(this.inputs.user_name.regExp) &&
                     user_phone.value.match(this.inputs.user_phone.regExp) &&
                     user_email.value.match(this.inputs.user_email.regExp)) {
-                    this.goToNextPage(id - 1);
+                    this.goToNextPage(pageID);
+                    this.createCompeleteInformationBlock([user_name.value, user_phone.value, user_email.value], this.orderStepsBlocks[pageID], pageID);
                 } else {
                     !user_name.value.match(this.inputs.user_name.regExp) && user_name.classList.add('has-error');
                     !user_phone.value.match(this.inputs.user_phone.regExp) && user_phone.classList.add('has-error');
                     !user_email.value.match(this.inputs.user_email.regExp) && user_email.classList.add('has-error');
                     this.shakeButton(event.target);
                 }
+                break;
             }
-            case 2: {
+            case 1: {
                 if(delivery_city.value.match(this.inputs.delivery_city.regExp) &&
                     this.inputs.deliveryTypes.isSelected) {
                     if(this.deliveryInputNodes[0].checked &&
                         this.postNumberTextArea.value.match(this.inputs.deliveryTypes.delivery_mail_number_regExp) &&
                         this.postNumberTextArea.value !== '') {
-                        this.goToNextPage(id - 1);
+                        this.goToNextPage(pageID);
+                        this.createCompeleteInformationBlock([delivery_city.value, this.deliveryInputNodes[0].nextElementSibling.innerHTML, this.postNumberTextArea.value], this.orderStepsBlocks[pageID], pageID);
                     }
                     if(this.deliveryInputNodes[2].checked &&
                         this.deliveryAddressTextArea.value.match(this.inputs.deliveryTypes.delivery_address_regExp) &&
                         this.deliveryAddressTextArea.value !== ''){
-                        this.goToNextPage(id - 1);
+                        this.goToNextPage(pageID);
+                        this.createCompeleteInformationBlock([delivery_city.value, this.deliveryInputNodes[2].nextElementSibling.innerHTML, this.deliveryAddressTextArea.value], this.orderStepsBlocks[pageID], pageID);
                     }
                     if(this.deliveryInputNodes[1].checked) {
-                        this.goToNextPage(id - 1);
+                        this.goToNextPage(pageID);
+                        this.createCompeleteInformationBlock([delivery_city.value, this.deliveryInputNodes[1].nextElementSibling.innerHTML], this.orderStepsBlocks[pageID], pageID);
                     } else {
                         this.postNumberTextArea.classList.remove('has-error');
                         this.deliveryAddressTextArea.classList.remove('has-error');
@@ -155,6 +160,7 @@ class OrderSumbiter {
                     !delivery_city.value.match(this.inputs.delivery_city.regExp) && delivery_city.classList.add('has-error');
                     this.shakeButton(event.target);
                 }
+                break;
             }
             default: {
                 return null;
@@ -162,11 +168,15 @@ class OrderSumbiter {
         }
     }
 
-    goToNextPage = (prevId) => {
-        this.orderStepsBlocks[prevId].classList.remove('active');
-        this.orderStepsBlocks[prevId].classList.add('complete');
-        this.orderStepsBlocks[prevId + 1].classList.add('active');
-        this.currentPage = prevId + 1;
+    goToNextPage = (currentPageId) => {
+        this.orderStepsBlocks[currentPageId].classList.remove('active');
+        this.nextButtons[currentPageId].classList.remove('shake');
+        this.orderStepsBlocks[currentPageId].classList.add('complete');
+        const confirmDataNextPage = this.orderStepsBlocks[currentPageId + 1].querySelector('div.checkout-step-complete-info');
+        confirmDataNextPage && this.orderStepsBlocks[currentPageId + 1].removeChild(confirmDataNextPage);
+        this.orderStepsBlocks[currentPageId + 1].classList.remove('complete');
+        this.orderStepsBlocks[currentPageId + 1].classList.add('active');
+        this.currentPage = currentPageId + 1;
     }
 
     isDeliveryCheck = () => {
@@ -182,8 +192,33 @@ class OrderSumbiter {
         $(btn).removeClass('shake');
         setTimeout(()=> $(btn).addClass('shake'), 100);
     }
+
+    createCompeleteInformationBlock = (dataArr, stepNode, stepId) => {
+        const editBtn = document.createElement('a');
+        editBtn.innerHTML = 'Изменить';
+        editBtn.classList.add('complete-info-edit-btn');
+        const completeWrap = document.createElement('div');
+        completeWrap.classList.add('checkout-step-complete-info');
+        const completeInfo = document.createElement('p');
+        completeInfo.classList.add('complete-info');
+        completeInfo.innerHTML = dataArr.join(', ');
+        editBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.goBackToChange(stepId)
+        });
+        completeWrap.appendChild(completeInfo);
+        completeWrap.appendChild(editBtn);
+        stepNode.appendChild(completeWrap);
+    }
+
+    goBackToChange = (backPageId) => {
+        this.orderStepsBlocks[this.currentPage].classList.remove('active');
+        this.orderStepsBlocks[backPageId].classList.remove('complete');
+        const confirmData = this.orderStepsBlocks[backPageId].querySelector('div.checkout-step-complete-info');
+        this.orderStepsBlocks[backPageId].removeChild(confirmData);
+        this.orderStepsBlocks[backPageId].classList.add('active');
+        this.currentPage = backPageId;
+    }
 }
 
 const submiter = new OrderSumbiter();
-
-console.log(submiter.inputsNodes)

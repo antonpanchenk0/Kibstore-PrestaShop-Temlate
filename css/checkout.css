@@ -411,6 +411,7 @@
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  outline: none;
 }
 .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > .checkout-step-select-section > .check-item textarea::placeholder {
   color: #858585;
@@ -420,6 +421,34 @@
 }
 .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-body > .checkout-step-select-section > .check-item textarea.complete {
   border: 1px solid #51c878;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-complete-info {
+  width: calc(100% - 12px);
+  padding: 20px 100px 20px 10px;
+  margin: 10px 0 10px 12px;
+  border-left: 1px solid #858585;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-complete-info > .complete-info {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #858585;
+  margin: 0;
+  width: 80%;
+  max-width: 80%;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-complete-info > .complete-info-edit-btn {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #5489d7;
+  text-decoration: underline;
+}
+.checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step > .checkout-step-complete-info > .complete-info-edit-btn:hover {
+  cursor: pointer;
 }
 .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.complete > .checkout-step-header > .checkout-step-number {
   background: #51c878;

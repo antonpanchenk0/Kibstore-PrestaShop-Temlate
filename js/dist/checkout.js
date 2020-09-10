@@ -39,13 +39,13 @@ var OrderSumbiter = function OrderSumbiter() {
                 return _this.validateInput(node, event.target.value);
             });
         });
-        _this.nextButtons.forEach(function (btn) {
+        _this.nextButtons.forEach(function (btn, index) {
             btn.addEventListener('click', function (event) {
-                return _this.checkIsPageValid(event, btn.dataset.id);
+                return _this.checkIsPageValid(event, index);
             });
         });
         _this.confirmOrderButton.addEventListener('mouseenter', function () {
-            if (_this.currentPage !== 3) {
+            if (_this.currentPage !== 2 || !_this.inputs.paymentsTypes.isSelected) {
                 _this.confirmOrderButton.setAttribute('disabled', 'true');
             }
         });
@@ -86,31 +86,36 @@ var OrderSumbiter = function OrderSumbiter() {
         }
     };
 
-    this.checkIsPageValid = function (event, id) {
+    this.checkIsPageValid = function (event, pageID) {
         event.preventDefault();
-        switch (+id) {
-            case 1:
+        switch (pageID) {
+            case 0:
                 {
                     if (user_name.value.match(_this.inputs.user_name.regExp) && user_phone.value.match(_this.inputs.user_phone.regExp) && user_email.value.match(_this.inputs.user_email.regExp)) {
-                        _this.goToNextPage(id - 1);
+                        _this.goToNextPage(pageID);
+                        _this.createCompeleteInformationBlock([user_name.value, user_phone.value, user_email.value], _this.orderStepsBlocks[pageID], pageID);
                     } else {
                         !user_name.value.match(_this.inputs.user_name.regExp) && user_name.classList.add('has-error');
                         !user_phone.value.match(_this.inputs.user_phone.regExp) && user_phone.classList.add('has-error');
                         !user_email.value.match(_this.inputs.user_email.regExp) && user_email.classList.add('has-error');
                         _this.shakeButton(event.target);
                     }
+                    break;
                 }
-            case 2:
+            case 1:
                 {
                     if (delivery_city.value.match(_this.inputs.delivery_city.regExp) && _this.inputs.deliveryTypes.isSelected) {
                         if (_this.deliveryInputNodes[0].checked && _this.postNumberTextArea.value.match(_this.inputs.deliveryTypes.delivery_mail_number_regExp) && _this.postNumberTextArea.value !== '') {
-                            _this.goToNextPage(id - 1);
+                            _this.goToNextPage(pageID);
+                            _this.createCompeleteInformationBlock([delivery_city.value, _this.deliveryInputNodes[0].nextElementSibling.innerHTML, _this.postNumberTextArea.value], _this.orderStepsBlocks[pageID], pageID);
                         }
                         if (_this.deliveryInputNodes[2].checked && _this.deliveryAddressTextArea.value.match(_this.inputs.deliveryTypes.delivery_address_regExp) && _this.deliveryAddressTextArea.value !== '') {
-                            _this.goToNextPage(id - 1);
+                            _this.goToNextPage(pageID);
+                            _this.createCompeleteInformationBlock([delivery_city.value, _this.deliveryInputNodes[2].nextElementSibling.innerHTML, _this.deliveryAddressTextArea.value], _this.orderStepsBlocks[pageID], pageID);
                         }
                         if (_this.deliveryInputNodes[1].checked) {
-                            _this.goToNextPage(id - 1);
+                            _this.goToNextPage(pageID);
+                            _this.createCompeleteInformationBlock([delivery_city.value, _this.deliveryInputNodes[1].nextElementSibling.innerHTML], _this.orderStepsBlocks[pageID], pageID);
                         } else {
                             _this.postNumberTextArea.classList.remove('has-error');
                             _this.deliveryAddressTextArea.classList.remove('has-error');
@@ -122,6 +127,7 @@ var OrderSumbiter = function OrderSumbiter() {
                         !delivery_city.value.match(_this.inputs.delivery_city.regExp) && delivery_city.classList.add('has-error');
                         _this.shakeButton(event.target);
                     }
+                    break;
                 }
             default:
                 {
@@ -130,11 +136,15 @@ var OrderSumbiter = function OrderSumbiter() {
         }
     };
 
-    this.goToNextPage = function (prevId) {
-        _this.orderStepsBlocks[prevId].classList.remove('active');
-        _this.orderStepsBlocks[prevId].classList.add('complete');
-        _this.orderStepsBlocks[prevId + 1].classList.add('active');
-        _this.currentPage = prevId + 1;
+    this.goToNextPage = function (currentPageId) {
+        _this.orderStepsBlocks[currentPageId].classList.remove('active');
+        _this.nextButtons[currentPageId].classList.remove('shake');
+        _this.orderStepsBlocks[currentPageId].classList.add('complete');
+        var confirmDataNextPage = _this.orderStepsBlocks[currentPageId + 1].querySelector('div.checkout-step-complete-info');
+        confirmDataNextPage && _this.orderStepsBlocks[currentPageId + 1].removeChild(confirmDataNextPage);
+        _this.orderStepsBlocks[currentPageId + 1].classList.remove('complete');
+        _this.orderStepsBlocks[currentPageId + 1].classList.add('active');
+        _this.currentPage = currentPageId + 1;
     };
 
     this.isDeliveryCheck = function () {
@@ -153,6 +163,33 @@ var OrderSumbiter = function OrderSumbiter() {
         }, 100);
     };
 
+    this.createCompeleteInformationBlock = function (dataArr, stepNode, stepId) {
+        var editBtn = document.createElement('a');
+        editBtn.innerHTML = 'Изменить';
+        editBtn.classList.add('complete-info-edit-btn');
+        var completeWrap = document.createElement('div');
+        completeWrap.classList.add('checkout-step-complete-info');
+        var completeInfo = document.createElement('p');
+        completeInfo.classList.add('complete-info');
+        completeInfo.innerHTML = dataArr.join(', ');
+        editBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            _this.goBackToChange(stepId);
+        });
+        completeWrap.appendChild(completeInfo);
+        completeWrap.appendChild(editBtn);
+        stepNode.appendChild(completeWrap);
+    };
+
+    this.goBackToChange = function (backPageId) {
+        _this.orderStepsBlocks[_this.currentPage].classList.remove('active');
+        _this.orderStepsBlocks[backPageId].classList.remove('complete');
+        var confirmData = _this.orderStepsBlocks[backPageId].querySelector('div.checkout-step-complete-info');
+        _this.orderStepsBlocks[backPageId].removeChild(confirmData);
+        _this.orderStepsBlocks[backPageId].classList.add('active');
+        _this.currentPage = backPageId;
+    };
+
     this.inputs = {
         user_name: {
             regExp: /^[a-z\u017F\u0430-\u044F\u0454\u0456\u0457\u0491\u212A]+$/gmi
@@ -167,7 +204,7 @@ var OrderSumbiter = function OrderSumbiter() {
             regExp: /^[A-Za-zА-Яа-яЁё]{1,}$/
         },
         deliveryTypes: {
-            delivery_mail_number_regExp: /^[0-9]{1,}$/g,
+            delivery_mail_number_regExp: /^[0-9a-z\u017F\u0430-\u044F\u0454\u0456\u0457\u0491\u212A]+$/i,
             delivery_address_regExp: /[a-zа-яґїієй\s.\/0-9]/gmi,
             isSelected: false
         },
@@ -192,5 +229,3 @@ var OrderSumbiter = function OrderSumbiter() {
 };
 
 var submiter = new OrderSumbiter();
-
-console.log(submiter.inputsNodes);

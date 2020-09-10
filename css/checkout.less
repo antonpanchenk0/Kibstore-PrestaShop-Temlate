@@ -358,6 +358,7 @@
                                     -webkit-box-shadow: none;
                                     -moz-box-shadow: none;
                                     box-shadow: none;
+                                    outline: none;
                                 }
                                 &::placeholder {
                                     color: @grayColor;
@@ -369,6 +370,32 @@
                                     border: 1px solid @thirdColor;
                                 }
                             }
+                        }
+                    }
+                }
+                & > .checkout-step-complete-info {
+                    width: calc(100% - 12px);
+                    padding: 20px 100px 20px 10px;
+                    margin: 10px 0 10px 12px;
+                    border-left: 1px solid @grayColor;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & > .complete-info {
+                        .SFProDisplayRegular;
+                        font-size: 14px;
+                        color: @grayColor;
+                        margin: 0;
+                        width: 80%;
+                        max-width: 80%;
+                    }
+                    & > .complete-info-edit-btn {
+                        .SFProDisplayRegular;
+                        font-size: 14px;
+                        color: @secondColor;
+                        text-decoration: underline;
+                        &:hover {
+                            cursor: pointer;
                         }
                     }
                 }
