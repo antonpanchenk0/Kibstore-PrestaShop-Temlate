@@ -485,10 +485,10 @@ body {
   display: none;
 }
 .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.active > .checkout-step-header > .checkout-step-number {
-  background: #5489d7;
+  background: #51c878;
 }
 .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.active > .checkout-step-header > .checkout-step-title {
-  color: #5489d7;
+  color: #000;
 }
 .checkout-page-section > .checkout-page-body > .checkout-steps-wrapper > .checkout-step.active > .checkout-step-body {
   display: block;
