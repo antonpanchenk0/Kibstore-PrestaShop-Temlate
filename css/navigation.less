@@ -2558,43 +2558,45 @@ header.main-navigation-header {
 }
 
 @media screen and (max-width: 860px) {
-    .navigation {
-        height: 40px;
-        padding: 0 10px;
-        flex-flow: row;
-        & > .nav-toggle-btn {
-            display: block;
-        }
-    }
-    .desktop-navigation-header {
-        display: none;
-    }
-    .navigation-desktop-and-mobile {
-        & > .desktop-menu-btn-box {
-            flex: 0 0 0%;
-            max-width: 0%;
-            display: none;
-        }
-        & > .navigation-search {
-            flex: 0 0 0%;
-            max-width: 0;
-            display: none;
-        }
-        & > .navigation-list {
-            justify-content: flex-end;
-            flex: 0 0 100%;
-            max-width: 100%;
-            & > .navigation-item {
-                margin: 0 15px;
-                display: flex!important;
-                & > .nav-link#cart {
-                    & > .nav-cart-total-price {
-                        display: none;
+    .main-navigation-header {
+        & > nav.navigation {
+            height: 40px;
+            padding: 0 10px;
+            flex-flow: row;
+            & > .nav-toggle-btn {
+                display: block;
+            }
+            & > .desktop-navigation-header {
+                display: none;
+            }
+            & > .navigation-desktop-and-mobile {
+                & > .desktop-menu-btn-box {
+                    flex: 0 0 0%;
+                    max-width: 0%;
+                    display: none;
+                }
+                & > .navigation-search {
+                    flex: 0 0 0%;
+                    max-width: 0;
+                    display: none;
+                }
+                & > .navigation-list {
+                    justify-content: flex-end;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    & > .navigation-item {
+                        margin: 0 15px;
+                        display: flex!important;
+                        & > .nav-link#cart {
+                            & > .nav-cart-total-price {
+                                display: none;
+                            }
+                        }
+                    }
+                    & > .nav-dropdown {
+                        display: none!important;
                     }
                 }
-            }
-            & > .nav-dropdown {
-                display: none!important;
             }
         }
     }

@@ -45,6 +45,85 @@
 .bg-dark-white-2 {
     background-color: @bodyBackgroundColor;
 }
+
+section.pagination {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    & > .pagination-status {
+        .SFProDisplayRegular;
+        color: @grayColor;
+        font-size: 16px;
+        margin: 0 0 15px 0;
+    }
+    & > .pagination-load-more-btn {
+        .SFProDisplayRegular;
+        font-size: 22px;
+        color: #000;
+        text-decoration: none!important;
+        position: relative;
+        line-height: 1;
+        margin: 0 0 45px 35px;
+        &::before {
+            content: '';
+            width: 30px;
+            min-width: 30px;
+            height: 30px;
+            position: absolute;
+            left: -35px;
+            top: -1px;
+            background-image: url("../img/icons/rotate-cww.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    & > .pagination-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        & > .pagination-list-item {
+            min-width: 30px;
+            max-width: 30px;
+            min-height: 30px;
+            max-height: 30px;
+            margin: 0 3px;
+            border: 1px solid @grayColor;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.previous, &.next {
+                border: 1px solid #2f2f30;
+            }
+            & > .pagination-list-link {
+                .SFProDisplayBold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+                line-height: 1;
+                color: @grayColor;
+            }
+            &.active {
+                background-color: @secondColor;
+                & > .pagination-list-link {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
 .fixed-social-links {
     position: fixed;
     top: 240px;
