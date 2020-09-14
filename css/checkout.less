@@ -790,13 +790,38 @@ body {
 
 @media screen and (max-width: 680px) {
     .checkout-page-header {
+        padding: 10px 0 10px 20px;
         & > .checkout-page-header-wrapper {
-            flex-flow: column;
-            justify-content: center;
+            & > h1.logotype {
+                font-size: 18px;
+            }
             & > .phone-menu {
-                width: 100%;
                 justify-content: center;
-                margin-top: 10px;
+                margin-right: 5px;
+                & > .phone-item:first-child {
+                    & > svg:first-child {
+                        display: none;
+                    }
+                    & > svg.chevron {
+                        margin-left: 3px;
+                        margin-right: 0;
+                    }
+                }
+                & > .phone-item {
+                    & > .phone-link {
+                        & > span {
+                            font-size: 14px;
+                        }
+                    }
+                    & > .dropdown-menu-phone {
+                        & > .dropdown-menu-phone-item {
+                            padding: 5px 27px 5px 5px;
+                            & > .dropdown-menu-phone-link {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

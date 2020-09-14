@@ -812,14 +812,31 @@ body {
   }
 }
 @media screen and (max-width: 680px) {
-  .checkout-page-header > .checkout-page-header-wrapper {
-    flex-flow: column;
-    justify-content: center;
+  .checkout-page-header {
+    padding: 10px 0 10px 20px;
+  }
+  .checkout-page-header > .checkout-page-header-wrapper > h1.logotype {
+    font-size: 18px;
   }
   .checkout-page-header > .checkout-page-header-wrapper > .phone-menu {
-    width: 100%;
     justify-content: center;
-    margin-top: 10px;
+    margin-right: 5px;
+  }
+  .checkout-page-header > .checkout-page-header-wrapper > .phone-menu > .phone-item:first-child > svg:first-child {
+    display: none;
+  }
+  .checkout-page-header > .checkout-page-header-wrapper > .phone-menu > .phone-item:first-child > svg.chevron {
+    margin-left: 3px;
+    margin-right: 0;
+  }
+  .checkout-page-header > .checkout-page-header-wrapper > .phone-menu > .phone-item > .phone-link > span {
+    font-size: 14px;
+  }
+  .checkout-page-header > .checkout-page-header-wrapper > .phone-menu > .phone-item > .dropdown-menu-phone > .dropdown-menu-phone-item {
+    padding: 5px 27px 5px 5px;
+  }
+  .checkout-page-header > .checkout-page-header-wrapper > .phone-menu > .phone-item > .dropdown-menu-phone > .dropdown-menu-phone-item > .dropdown-menu-phone-link {
+    font-size: 14px;
   }
   .checkout-page-section > .checkout-page-body {
     flex-wrap: wrap;

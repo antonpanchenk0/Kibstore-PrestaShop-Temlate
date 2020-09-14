@@ -20,25 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/404.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/full-pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/full-pages.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/navigation.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkout.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -113,25 +99,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/navigation.less">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="2485" column="35" lean-forward="true" selection-start-line="2485" selection-start-column="35" selection-end-line="2485" selection-end-column="35" />
+            <state relative-caret-position="272">
+              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkout-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="674">
+              <caret line="175" column="35" selection-start-line="175" selection-start-column="15" selection-end-line="175" selection-end-column="35" />
               <folding>
-                <element signature="e#67886#67950#0" />
-                <element signature="e#68000#70690#0" />
-                <element signature="e#70892#71717#0" />
-                <element signature="e#73686#73884#0" />
-                <element signature="e#74059#74239#0" />
-                <element signature="e#74284#74546#0" />
-                <element signature="e#74667#74805#0" />
-                <element signature="e#75063#76589#0" />
-                <element signature="e#76767#78706#0" />
-                <element signature="e#78908#79671#0" />
-                <element signature="e#82231#82940#0" />
-                <element signature="e#83381#83903#0" />
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/checkout.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="799" column="34" selection-start-line="799" selection-start-column="34" selection-end-line="799" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -212,8 +205,9 @@
         <option value="$PROJECT_DIR$/css/root-styles.less" />
         <option value="$PROJECT_DIR$/js/src/checkout.js" />
         <option value="$PROJECT_DIR$/checkout-page.html" />
-        <option value="$PROJECT_DIR$/css/checkout.less" />
         <option value="$PROJECT_DIR$/css/navigation.less" />
+        <option value="$PROJECT_DIR$/blog.html" />
+        <option value="$PROJECT_DIR$/css/checkout.less" />
       </list>
     </option>
   </component>
@@ -435,17 +429,18 @@
       <workItem from="1599508707812" duration="23388000" />
       <workItem from="1599855403895" duration="2641000" />
       <workItem from="1599897435701" duration="6880000" />
+      <workItem from="1600102119859" duration="1453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212069000" />
+    <option name="totallyTimeSpent" value="213522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19926651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20171149" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -541,9 +536,6 @@
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1595421442094" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/icons/yt-play.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/icons/youtube.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -791,16 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2601">
-          <caret line="175" column="35" selection-start-line="175" selection-start-column="15" selection-end-line="175" selection-end-column="35" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/src/checkout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3757">
@@ -808,10 +790,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/checkout.less">
+    <entry file="file://$PROJECT_DIR$/css/navigation.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="446" column="40" selection-start-line="446" selection-start-column="40" selection-end-line="446" selection-end-column="40" />
+        <state relative-caret-position="348">
+          <caret line="2485" column="35" selection-start-line="2485" selection-start-column="35" selection-end-line="2485" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -858,24 +840,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/navigation.less">
+    <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="2485" column="35" lean-forward="true" selection-start-line="2485" selection-start-column="35" selection-end-line="2485" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="175" column="35" selection-start-line="175" selection-start-column="15" selection-end-line="175" selection-end-column="35" />
           <folding>
-            <element signature="e#67886#67950#0" />
-            <element signature="e#68000#70690#0" />
-            <element signature="e#70892#71717#0" />
-            <element signature="e#73686#73884#0" />
-            <element signature="e#74059#74239#0" />
-            <element signature="e#74284#74546#0" />
-            <element signature="e#74667#74805#0" />
-            <element signature="e#75063#76589#0" />
-            <element signature="e#76767#78706#0" />
-            <element signature="e#78908#79671#0" />
-            <element signature="e#82231#82940#0" />
-            <element signature="e#83381#83903#0" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/checkout.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="799" column="34" selection-start-line="799" selection-start-column="34" selection-end-line="799" selection-end-column="34" />
         </state>
       </provider>
     </entry>
