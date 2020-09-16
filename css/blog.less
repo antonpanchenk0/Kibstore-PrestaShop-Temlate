@@ -70,7 +70,8 @@ section.blog {
 
                 & > img {
                     max-width: 100%;
-                    height: auto;
+                    height: 100%;
+                    object-fit: cover;
                     padding-right: 20px;
                 }
 
@@ -141,6 +142,76 @@ section.blog {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1560px){
+    .blog-main-wrapper {
+        & > section.blog {
+            flex: 0 0 calc(100% - 265px);
+            max-width: calc(100% - 265px);
+            padding: 15px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .blog-main-wrapper {
+        & > section.blog {
+            flex: 0 0 calc(100% - 275px);
+            max-width: calc(100% - 275px);
+
+            & > .page-header {
+                padding-left: 30px;
+            }
+
+            & > .blog-list-wrapper {
+                & > .blog-item {
+                    flex-flow: column;
+                    align-items: center;
+
+                    & > .blog-short-cut, & > .blog-info {
+                        max-width: 100%;
+
+                        &.blog-short-cut {
+                            max-height: 125px;
+                            margin-bottom: 10px;
+
+                            & > img {
+                                min-width: 100%;
+                                padding: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .blog-main-wrapper {
+        & > section.blog {
+            flex: 0 0 calc(100% - 265px);
+            max-width: calc(100% - 265px);
+            padding: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .blog-main-wrapper {
+        display: flex;
+        flex-flow: column;
+        & > section.blog {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 15px;
+
+            & > .page-header {
+                padding-left: 0;
             }
         }
     }
