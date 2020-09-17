@@ -118,6 +118,10 @@ section.sub-navigation-for-page-content {
 
             }
         }
+
+        & > .sub-navigation-overlay {
+            display: none;
+        }
     }
 }
 
@@ -142,5 +146,110 @@ section.sub-navigation-for-page-content {
         flex: 0 0 265px;
         max-width: 265px;
         padding: 10px 0 0 10px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    section.sub-navigation-for-page-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: 100%;
+        padding: 0;
+        position: absolute;
+        top: 125px;
+
+        &.fixed {
+            position: fixed;
+            top: 40px;
+            z-index: 100;
+        }
+
+        & > .sub-navigation-wrapper {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            background-color: unset;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-flow: column;
+
+            & > .sub-navigation-header {
+                padding: 15px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 0;
+                background-color: #fff;
+
+                & > span {
+                    .SFProDisplayRegular;
+                    font-size: 14px;
+                    color: @secondColor;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 3px;
+                        right: -25px;
+                        width: 15px;
+                        height: 15px;
+                        display: block;
+                        background-image: url("../img/icons/chevron-right.svg");
+                        background-size: cover;
+                        -webkit-transform: rotate(-90deg);
+                        -moz-transform: rotate(-90deg);
+                        -ms-transform: rotate(-90deg);
+                        -o-transform: rotate(-90deg);
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+
+            & > .sub-navigation-body {
+                border-bottom: 0;
+                width: 240px;
+                max-width: 240px;
+                position: absolute;
+                top: 51px;
+                z-index: 10;
+
+                & > .sub-navigation-list {
+                    width: 100%;
+                    max-width: 100%;
+                    background-color: #fff;
+                    -webkit-border-radius: 0 0 5px 5px;
+                    -moz-border-radius: 0 0 5px 5px;
+                    border-radius: 0 0 5px 5px;
+                    display: none;
+
+                    & > .list-item {
+
+                        & > .list-link {
+                            padding: 10px 0 10px 15px;
+                            .SFProDisplayRegular;
+                            font-size: 14px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            & > .sub-navigation-footer {
+                display: none;
+            }
+
+            & > .sub-navigation-overlay {
+                display: none ;
+                width: 100%;
+                min-width: 100%;
+                height: 100vh;
+                min-height: 100vh;
+                background: rgba(64, 64, 64, 0.4);
+                position: absolute;
+                top: 51px;
+            }
+        }
     }
 }

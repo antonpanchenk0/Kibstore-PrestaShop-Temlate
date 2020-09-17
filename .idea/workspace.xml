@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/blog.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/dist/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/blog.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -89,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="1276" column="50" selection-start-line="1276" selection-start-column="39" selection-end-line="1276" selection-end-column="50" />
+            <state relative-caret-position="535">
+              <caret line="1558" column="30" selection-start-line="1558" selection-start-column="30" selection-end-line="1558" selection-end-column="30" />
               <folding>
                 <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -124,16 +126,25 @@
         <entry file="file://$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
-              <caret line="142" column="25" lean-forward="true" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
+              <caret line="163" column="24" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/src/blog.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/blog.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="213" column="32" lean-forward="true" selection-start-line="213" selection-start-column="32" selection-end-line="213" selection-end-column="32" />
+            <state relative-caret-position="488">
+              <caret line="218" column="40" selection-start-line="218" selection-start-column="40" selection-end-line="218" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -141,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/navigation.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44183">
-              <caret line="2599" column="13" selection-start-line="2599" selection-start-column="13" selection-end-line="2599" selection-end-column="13" />
+            <state>
+              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -225,9 +236,10 @@
         <option value="$PROJECT_DIR$/css/navigation.less" />
         <option value="$PROJECT_DIR$/css/catalog-products-list.less" />
         <option value="$PROJECT_DIR$/css/page-header-style.less" />
+        <option value="$PROJECT_DIR$/css/blog.less" />
         <option value="$PROJECT_DIR$/blog.html" />
         <option value="$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less" />
-        <option value="$PROJECT_DIR$/css/blog.less" />
+        <option value="$PROJECT_DIR$/js/src/blog.js" />
       </list>
     </option>
   </component>
@@ -449,18 +461,18 @@
       <workItem from="1599508707812" duration="23388000" />
       <workItem from="1599855403895" duration="2641000" />
       <workItem from="1599897435701" duration="6880000" />
-      <workItem from="1600102119859" duration="13590000" />
+      <workItem from="1600102119859" duration="19107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225659000" />
+    <option name="totallyTimeSpent" value="231176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20171149" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20171149" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -473,7 +485,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.17917134" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.17917134" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.16901408" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -556,9 +568,6 @@
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1595421442094" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/icons/thumbs-up.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/icons/square.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -636,13 +645,6 @@
     <entry file="file://$PROJECT_DIR$/css/product-cart-photo-and-video.less" />
     <entry file="file://$PROJECT_DIR$/js/dist/catalog-products.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/catalog-products.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="138" column="51" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/product-buy-block.less" />
     <entry file="file://$PROJECT_DIR$/css/product-item-nav.less" />
@@ -854,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/navigation.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44183">
-          <caret line="2599" column="13" selection-start-line="2599" selection-start-column="13" selection-end-line="2599" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/root-styles.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
@@ -882,10 +877,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/navigation.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/blog.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="218" column="40" selection-start-line="218" selection-start-column="40" selection-end-line="218" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="1276" column="50" selection-start-line="1276" selection-start-column="39" selection-end-line="1276" selection-end-column="50" />
+        <state relative-caret-position="535">
+          <caret line="1558" column="30" selection-start-line="1558" selection-start-column="30" selection-end-line="1558" selection-end-column="30" />
           <folding>
             <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -914,17 +923,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less">
+    <entry file="file://$PROJECT_DIR$/js/src/catalog-products.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="142" column="25" lean-forward="true" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
+        <state relative-caret-position="444">
+          <caret line="138" column="51" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/blog.less">
+    <entry file="file://$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="213" column="32" lean-forward="true" selection-start-line="213" selection-start-column="32" selection-end-line="213" selection-end-column="32" />
+        <state relative-caret-position="600">
+          <caret line="163" column="24" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
         </state>
       </provider>
     </entry>

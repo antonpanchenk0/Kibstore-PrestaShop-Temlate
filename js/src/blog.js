@@ -1,41 +1,61 @@
-import Navigation from './modules/navigation-module.js';
-const navElements = document.querySelectorAll('.menu-link');
-const overlay = document.getElementById('overlay');
-const loadMore = document.getElementById('loadMore');
+const wrapper = document.querySelector('section.sub-navigation-for-page-content');
+const overlay = document.querySelector('div.sub-navigation-overlay');
+let isCollapse = false;
+let isAnimated = false;
+const header = document.querySelector('div.sub-navigation-header');
+const body = document.querySelector('ul.sub-navigation-list');
+let topHeight = wrapper.getBoundingClientRect().top - 40;
 
-const navigation = new Navigation(600);
-
-const changeSub = (e) => {
-    e.preventDefault();
-    const {target} = e;
-    const status = target.parentElement.getAttribute('data-collapse');
-    if(status == 'true') {
-        target.parentElement.setAttribute('data-collapse', 'false');
-        loadMore.style.display = 'flex';
-        $($(target).siblings('ul')[0]).fadeOut(500, () =>{
-            target.parentElement.classList.remove('collapse');
+const switchMenu = () => {
+    if(!isCollapse && !isAnimated) {
+        isAnimated = true;
+        overlay.style.height = document.body.getBoundingClientRect().height - 176 + 'px';
+        $(body).fadeIn(400, () => {
+            isAnimated = false;
+            isCollapse = true;
         });
-        $(overlay).fadeOut(500);
-    } else {
-        target.parentElement.setAttribute('data-collapse', 'true');
-        loadMore.style.display = 'none';
-        target.parentElement.classList.add('collapse');
-        $(overlay).fadeIn(500);
-        $($(target).siblings('ul')[0]).fadeIn(500);
+        $(overlay).fadeIn(200);
+    }
+    if(isCollapse && !isAnimated) {
+        isAnimated = true;
+        overlay.style.height = document.body.getBoundingClientRect().height - 176 + 'px';
+        $(body).fadeOut(200, () => {
+            isAnimated = false;
+            isCollapse = false;
+        });
+        $(overlay).fadeOut(400);
     }
 };
 
-navElements.forEach(e => {
-    e.addEventListener('click', changeSub);
+const onScroll = (e) => {
+    if(window.innerWidth <= 860) {
+        if(window.scrollY >= topHeight) {
+            wrapper.classList.add('fixed');
+        }
+        if(window.scrollY < topHeight) {
+            wrapper.classList.remove('fixed');
+        }
+    }
+};
+
+window.addEventListener('resize', (e) => {
+    topHeight = wrapper.getBoundingClientRect().top - 40;
+    onScroll(e);
+});
+
+header.addEventListener('click', (e) => {
+    switchMenu();
 });
 
 overlay.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector('.menu-item[data-collapse=true] .menu-link');
-    target.parentElement.setAttribute('data-collapse', 'false');
-    loadMore.style.display = 'flex';
-    $($(target).siblings('ul')[0]).fadeOut(500, () =>{
-        target.parentElement.classList.remove('collapse');
-    });
-    $(overlay).fadeOut(500);
+    switchMenu();
+});
+
+window.addEventListener('scroll', (e) => {
+    onScroll(e);
+});
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    topHeight = wrapper.getBoundingClientRect().top - 40;
+    onScroll(e);
 });

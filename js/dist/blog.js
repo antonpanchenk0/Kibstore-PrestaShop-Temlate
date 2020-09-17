@@ -1,49 +1,63 @@
 'use strict';
 
-var _navigationModule = require('./modules/navigation-module.js');
+var wrapper = document.querySelector('section.sub-navigation-for-page-content');
+var overlay = document.querySelector('div.sub-navigation-overlay');
+var isCollapse = false;
+var isAnimated = false;
+var header = document.querySelector('div.sub-navigation-header');
+var body = document.querySelector('ul.sub-navigation-list');
+var topHeight = wrapper.getBoundingClientRect().top - 40;
 
-var _navigationModule2 = _interopRequireDefault(_navigationModule);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var navElements = document.querySelectorAll('.menu-link');
-var overlay = document.getElementById('overlay');
-var loadMore = document.getElementById('loadMore');
-
-var navigation = new _navigationModule2.default(600);
-
-var changeSub = function changeSub(e) {
-    e.preventDefault();
-    var target = e.target;
-
-    var status = target.parentElement.getAttribute('data-collapse');
-    if (status == 'true') {
-        target.parentElement.setAttribute('data-collapse', 'false');
-        loadMore.style.display = 'flex';
-        $($(target).siblings('ul')[0]).fadeOut(500, function () {
-            target.parentElement.classList.remove('collapse');
+var switchMenu = function switchMenu() {
+    if (!isCollapse && !isAnimated) {
+        isAnimated = true;
+        overlay.style.height = document.body.getBoundingClientRect().height - 176 + 'px';
+        $(body).fadeIn(400, function () {
+            isAnimated = false;
+            isCollapse = true;
         });
-        $(overlay).fadeOut(500);
-    } else {
-        target.parentElement.setAttribute('data-collapse', 'true');
-        loadMore.style.display = 'none';
-        target.parentElement.classList.add('collapse');
-        $(overlay).fadeIn(500);
-        $($(target).siblings('ul')[0]).fadeIn(500);
+        $(overlay).fadeIn(200);
+    }
+    if (isCollapse && !isAnimated) {
+        isAnimated = true;
+        overlay.style.height = document.body.getBoundingClientRect().height - 176 + 'px';
+        $(body).fadeOut(200, function () {
+            isAnimated = false;
+            isCollapse = false;
+        });
+        $(overlay).fadeOut(400);
     }
 };
 
-navElements.forEach(function (e) {
-    e.addEventListener('click', changeSub);
+var onScroll = function onScroll(e) {
+    if (window.innerWidth <= 860) {
+        if (window.scrollY >= topHeight) {
+            wrapper.classList.add('fixed');
+        }
+        if (window.scrollY < topHeight) {
+            wrapper.classList.remove('fixed');
+        }
+    }
+};
+
+window.addEventListener('resize', function (e) {
+    topHeight = wrapper.getBoundingClientRect().top - 40;
+    onScroll(e);
+});
+
+header.addEventListener('click', function (e) {
+    switchMenu();
 });
 
 overlay.addEventListener('click', function (e) {
-    e.preventDefault();
-    var target = document.querySelector('.menu-item[data-collapse=true] .menu-link');
-    target.parentElement.setAttribute('data-collapse', 'false');
-    loadMore.style.display = 'flex';
-    $($(target).siblings('ul')[0]).fadeOut(500, function () {
-        target.parentElement.classList.remove('collapse');
-    });
-    $(overlay).fadeOut(500);
+    switchMenu();
+});
+
+window.addEventListener('scroll', function (e) {
+    onScroll(e);
+});
+
+document.addEventListener('DOMContentLoaded', function (e) {
+    topHeight = wrapper.getBoundingClientRect().top - 40;
+    onScroll(e);
 });

@@ -4122,6 +4122,9 @@ section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigat
   margin: 0;
   color: #8f5db7;
 }
+section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-overlay {
+  display: none;
+}
 @media screen and (max-width: 1560px) {
   section.sub-navigation-for-page-content {
     flex: 0 0 265px;
@@ -4141,6 +4144,99 @@ section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigat
     flex: 0 0 265px;
     max-width: 265px;
     padding: 10px 0 0 10px;
+  }
+}
+@media screen and (max-width: 860px) {
+  section.sub-navigation-for-page-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0;
+    position: absolute;
+    top: 125px;
+  }
+  section.sub-navigation-for-page-content.fixed {
+    position: fixed;
+    top: 40px;
+    z-index: 100;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    background-color: unset;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-header {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0;
+    background-color: #fff;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-header > span {
+    font-family: "SF Pro Display";
+    font-weight: normal;
+    font-size: 14px;
+    color: #5489d7;
+    position: relative;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-header > span::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: -25px;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-image: url("../img/icons/chevron-right.svg");
+    background-size: cover;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-body {
+    border-bottom: 0;
+    width: 240px;
+    max-width: 240px;
+    position: absolute;
+    top: 51px;
+    z-index: 10;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-body > .sub-navigation-list {
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    display: none;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-body > .sub-navigation-list > .list-item > .list-link {
+    padding: 10px 0 10px 15px;
+    font-family: "SF Pro Display";
+    font-weight: normal;
+    font-size: 14px;
+    color: #000;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-footer {
+    display: none;
+  }
+  section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-overlay {
+    display: none ;
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: rgba(64, 64, 64, 0.4);
+    position: absolute;
+    top: 51px;
   }
 }
 .wrap {
@@ -4340,6 +4436,12 @@ section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p:f
   }
   .blog-main-wrapper > section.blog > .page-header {
     padding-left: 0;
+    margin-bottom: 60px;
+  }
+  .blog-main-wrapper > section.blog > .page-header > .title-wrap .title {
+    font-size: 18px;
+  }
+  .blog-main-wrapper > section.blog > .page-header > .title-wrap .sub-title {
+    font-size: 12px;
   }
 }
-/*# sourceMappingURL=blog.css.map */
