@@ -4,7 +4,7 @@ let isCollapse = false;
 let isAnimated = false;
 const header = document.querySelector('div.sub-navigation-header');
 const body = document.querySelector('ul.sub-navigation-list');
-let topHeight = wrapper.getBoundingClientRect().top - 40;
+let topHeight = 124;
 
 const switchMenu = () => {
     if(!isCollapse && !isAnimated) {
@@ -39,7 +39,6 @@ const onScroll = (e) => {
 };
 
 window.addEventListener('resize', (e) => {
-    topHeight = wrapper.getBoundingClientRect().top - 40;
     onScroll(e);
 });
 
@@ -56,6 +55,5 @@ window.addEventListener('scroll', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    topHeight = wrapper.getBoundingClientRect().top - 40;
     onScroll(e);
 });

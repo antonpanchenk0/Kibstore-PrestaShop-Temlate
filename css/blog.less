@@ -80,6 +80,7 @@ section.blog {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    margin-bottom: 5px;
 
                     & > span {
                         .SFProDisplayRegular;
@@ -130,6 +131,7 @@ section.blog {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
+                    margin-top: 5px;
 
                     & > p {
                         margin: 0;
@@ -224,6 +226,36 @@ section.blog {
                     }
                 }
             }
+
+            & > .blog-list-wrapper {
+                & > .blog-item {
+                    min-width: 300px;
+                    padding: 20px 20px 0;
+
+                    & > .blog-info {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
         }
     }
 }
+
+@media screen and (max-width: 640px) {
+    .blog-main-wrapper {
+        & > section.blog {
+            padding: 5px;
+
+            & > .blog-list-wrapper {
+                & > .blog-item {
+                    flex: 0 0 100%;
+                    min-width: unset;
+                    max-width: 100%;
+                    width: 100%;
+                    margin: 0 0 6px;
+                }
+            }
+        }
+    }
+}
+

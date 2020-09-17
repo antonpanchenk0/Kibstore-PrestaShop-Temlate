@@ -6,7 +6,7 @@ var isCollapse = false;
 var isAnimated = false;
 var header = document.querySelector('div.sub-navigation-header');
 var body = document.querySelector('ul.sub-navigation-list');
-var topHeight = wrapper.getBoundingClientRect().top - 40;
+var topHeight = 124;
 
 var switchMenu = function switchMenu() {
     if (!isCollapse && !isAnimated) {
@@ -41,7 +41,6 @@ var onScroll = function onScroll(e) {
 };
 
 window.addEventListener('resize', function (e) {
-    topHeight = wrapper.getBoundingClientRect().top - 40;
     onScroll(e);
 });
 
@@ -58,6 +57,5 @@ window.addEventListener('scroll', function (e) {
 });
 
 document.addEventListener('DOMContentLoaded', function (e) {
-    topHeight = wrapper.getBoundingClientRect().top - 40;
     onScroll(e);
 });
