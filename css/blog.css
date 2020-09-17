@@ -4075,6 +4075,9 @@ section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigat
   margin: 0;
   text-decoration: none;
 }
+section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-body > .sub-navigation-list > .list-item.active > .list-link {
+  color: #5489d7;
+}
 section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-footer {
   width: 100%;
   padding: 20px;
