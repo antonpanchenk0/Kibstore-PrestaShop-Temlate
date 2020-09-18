@@ -4030,6 +4030,8 @@ section.sub-navigation-for-page-content > .sub-navigation-wrapper {
   max-width: 255px;
   background-color: #fff;
   position: fixed;
+  height: calc(100vh - 120px);
+  z-index: 50;
 }
 section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-header {
   width: 100%;
@@ -4249,6 +4251,7 @@ section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigat
 }
 .wrap {
   justify-content: flex-start;
+  min-height: unset;
 }
 .blog-main-wrapper {
   flex-flow: row;
@@ -4392,6 +4395,58 @@ section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p {
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer > p:first-child,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p:first-child {
   margin-right: 30px;
+}
+section.blog > .blog-article-wrapper {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 20px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+section.blog > .blog-article-wrapper > .blog-article-footer {
+  width: 100%;
+  border-top: 1px solid #858585;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+section.blog > .blog-article-wrapper > .blog-article-footer > span {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #858585;
+  margin: 0;
+  position: relative;
+  display: block;
+  padding-left: 15px;
+}
+section.blog > .blog-article-wrapper > .blog-article-footer > span:not(:first-child) {
+  margin-left: 50px;
+}
+section.blog > .blog-article-wrapper > .blog-article-footer > span::before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -ms-filter: contrast(0);
+  filter: contrast(0);
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+section.blog > .blog-article-wrapper > .blog-article-footer > span.author::before {
+  background-image: url("../img/icons/user.svg");
+}
+section.blog > .blog-article-wrapper > .blog-article-footer > span.views::before {
+  background-image: url("../img/icons/eye.svg");
+}
+section.blog > .blog-article-wrapper > .blog-article-footer > span.comments::before {
+  background-image: url("../img/icons/message.svg");
 }
 @media screen and (max-width: 1560px) {
   .blog-main-wrapper > section.blog {
