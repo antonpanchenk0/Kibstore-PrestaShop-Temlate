@@ -1,3 +1,4 @@
+
 const wrapper = document.querySelector('section.sub-navigation-for-page-content');
 const overlay = document.querySelector('div.sub-navigation-overlay');
 let isCollapse = false;
