@@ -4031,7 +4031,20 @@ section.sub-navigation-for-page-content > .sub-navigation-wrapper {
   background-color: #fff;
   position: fixed;
   height: calc(100vh - 60px);
+  overflow-y: auto;
   z-index: 50;
+}
+section.sub-navigation-for-page-content > .sub-navigation-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+section.sub-navigation-for-page-content > .sub-navigation-wrapper::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+section.sub-navigation-for-page-content > .sub-navigation-wrapper::-webkit-scrollbar-thumb {
+  background: #858585;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigation-header {
   width: 100%;

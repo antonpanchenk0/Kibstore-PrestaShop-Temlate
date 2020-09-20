@@ -1,4 +1,5 @@
-
+const subscribeToUpdates = document.querySelector('div.subscribe-to-updates');
+const subNavigationWrapper = document.querySelector('div.sub-navigation-wrapper');
 const wrapper = document.querySelector('section.sub-navigation-for-page-content');
 const overlay = document.querySelector('div.sub-navigation-overlay');
 let isCollapse = false;
@@ -30,12 +31,21 @@ const switchMenu = () => {
 
 const onScroll = (e) => {
     if(window.innerWidth <= 860) {
+        subNavigationWrapper.style.maxHeight = 'unset';
         if(window.scrollY >= topHeight) {
             wrapper.classList.add('fixed');
         }
         if(window.scrollY < topHeight) {
             wrapper.classList.remove('fixed');
         }
+    } else {
+        if(subscribeToUpdates.offsetTop < window.scrollY + window.innerHeight) {
+            console.log('done')
+            subNavigationWrapper.style.maxHeight = `calc(100vh - 10px - ${window.scrollY + window.innerHeight - subscribeToUpdates.offsetTop}px)`;
+        }
+        console.log(window.scrollY )
+        console.log(window.innerHeight )
+        console.log(subscribeToUpdates.offsetTop)
     }
 };
 
