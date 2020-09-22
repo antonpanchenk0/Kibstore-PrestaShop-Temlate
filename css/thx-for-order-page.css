@@ -2654,15 +2654,15 @@ header.main-navigation-header {
     width: 225%!important;
   }
   .main-navigation-header > nav.navigation > .navigation-desktop-and-mobile > .navigation-search {
-    flex: 0 0 40%;
-    max-width: 40%;
+    flex: 0 0 38%;
+    max-width: 38%;
     padding-right: 5px;
   }
   .main-navigation-header > nav.navigation > .navigation-desktop-and-mobile > .navigation-list {
     justify-content: flex-end;
     padding: 0;
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 32%;
+    max-width: 32%;
   }
   .main-navigation-header > nav.navigation > .navigation-desktop-and-mobile > .navigation-list > .navigation-item {
     margin: 0 10px;
