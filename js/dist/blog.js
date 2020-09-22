@@ -14,6 +14,7 @@ var switchMenu = function switchMenu() {
     if (!isCollapse && !isAnimated) {
         isAnimated = true;
         overlay.style.height = $(document).height() - 176 + 'px';
+        header.classList.add('showed');
         subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
         $(body).fadeIn(400, function () {
             isAnimated = false;
@@ -25,6 +26,7 @@ var switchMenu = function switchMenu() {
         isAnimated = true;
         overlay.style.height = $(document).height() - 176 + 'px';
         subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
+        header.classList.remove('showed');
         $(body).fadeOut(200, function () {
             isAnimated = false;
             isCollapse = false;
