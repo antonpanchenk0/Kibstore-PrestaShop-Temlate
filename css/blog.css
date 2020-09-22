@@ -4274,6 +4274,9 @@ section.sub-navigation-for-page-content > .sub-navigation-wrapper > .sub-navigat
 .fluid-content {
   align-items: flex-end;
 }
+div.subscribe-to-updates {
+  z-index: 50;
+}
 section.blog,
 section.more-article {
   flex: 0 0 75%;

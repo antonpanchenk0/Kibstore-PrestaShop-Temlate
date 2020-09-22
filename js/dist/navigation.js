@@ -744,9 +744,11 @@ var _initialiseProps = function _initialiseProps() {
             window.addEventListener('scroll', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
-                if (pageTop + window.screen.height - 65 >= document.body.clientHeight - _this.footerHeight) {
+                // if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
+                //     this.handleDesktopCloseNavigation();
+                // }
+                if (_this.footer.getBoundingClientRect().top < window.screen.height - 110) {
                     _this.handleDesktopCloseNavigation();
-                    alert('test');
                 }
             });
             window.addEventListener('resize', function (e) {

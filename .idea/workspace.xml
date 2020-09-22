@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/dist/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/navigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/src/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/navigation.js" afterDir="false" />
     </list>
@@ -109,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/blog.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12478">
-              <caret line="734" selection-start-line="734" selection-end-line="734" />
+            <state relative-caret-position="340">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -132,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/blog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="464">
               <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
@@ -189,8 +192,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="666" column="49" selection-start-line="666" selection-start-column="49" selection-end-line="666" selection-end-column="49" />
+            <state relative-caret-position="320">
+              <caret line="669" column="87" selection-start-line="669" selection-start-column="87" selection-end-line="669" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -208,7 +211,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>view</find>
       <find>box-sha</find>
       <find>rat</find>
       <find>send-feedback-rate-stars-list</find>
@@ -238,6 +240,7 @@
       <find>product</find>
       <find>scroll</find>
       <find>addEventListener('scroll</find>
+      <find>'scroll'</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -274,10 +277,10 @@
         <option value="$PROJECT_DIR$/blog-title-page.html" />
         <option value="$PROJECT_DIR$/product-cart-about.html" />
         <option value="$PROJECT_DIR$/blog-article-page.html" />
-        <option value="$PROJECT_DIR$/css/blog.less" />
         <option value="$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less" />
         <option value="$PROJECT_DIR$/js/src/blog.js" />
         <option value="$PROJECT_DIR$/css/navigation.less" />
+        <option value="$PROJECT_DIR$/css/blog.less" />
         <option value="$PROJECT_DIR$/js/src/navigation.js" />
       </list>
     </option>
@@ -389,14 +392,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.catalog-products-list.html">
+  <component name="RunManager" selected="JavaScript Debug.blog.html">
+    <configuration name="blog.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CyberStor-Template/blog.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="catalog-products-list.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CyberStor-Template/catalog-products-list.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="catalog.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CyberStor-Template/catalog.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="contacts-full.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CyberStor-Template/contacts-full.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CyberStor-Template/main.html" useBuiltInWebServerPort="true">
@@ -407,11 +410,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.blog.html" />
         <item itemvalue="JavaScript Debug.catalog-products-list.html" />
         <item itemvalue="JavaScript Debug.catalog.html" />
         <item itemvalue="JavaScript Debug.main.html" />
         <item itemvalue="JavaScript Debug.product-cart-about.html" />
-        <item itemvalue="JavaScript Debug.contacts-full.html" />
       </list>
     </recent_temporary>
   </component>
@@ -501,16 +504,15 @@
       <workItem from="1599855403895" duration="2641000" />
       <workItem from="1599897435701" duration="6880000" />
       <workItem from="1600102119859" duration="34407000" />
-      <workItem from="1600800938823" duration="1605000" />
+      <workItem from="1600800938823" duration="2406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248081000" />
+    <option name="totallyTimeSpent" value="248882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20415647" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -904,13 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/blog.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12478">
-          <caret line="734" selection-start-line="734" selection-end-line="734" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -920,13 +915,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/img/icons/user.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -972,10 +960,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/blog.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="666" column="49" selection-start-line="666" selection-start-column="49" selection-end-line="666" selection-end-column="49" />
+        <state relative-caret-position="320">
+          <caret line="669" column="87" selection-start-line="669" selection-start-column="87" selection-end-line="669" selection-end-column="87" />
         </state>
       </provider>
     </entry>

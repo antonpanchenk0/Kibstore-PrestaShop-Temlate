@@ -664,9 +664,11 @@ class Navigation {
             window.addEventListener('scroll', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
-                if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
+                // if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
+                //     this.handleDesktopCloseNavigation();
+                // }
+                if(this.footer.getBoundingClientRect().top < window.screen.height - 110) {
                     this.handleDesktopCloseNavigation();
-                    alert('test')
                 }
             })
             window.addEventListener('resize', (e) => {
