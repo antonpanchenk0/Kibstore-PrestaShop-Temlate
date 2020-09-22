@@ -20,8 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/dist/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/blog.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -129,11 +128,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/src/blog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="153">
+              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -186,7 +185,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="439">
@@ -277,8 +276,8 @@
         <option value="$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less" />
         <option value="$PROJECT_DIR$/css/navigation.less" />
         <option value="$PROJECT_DIR$/css/blog.less" />
-        <option value="$PROJECT_DIR$/js/src/blog.js" />
         <option value="$PROJECT_DIR$/js/src/navigation.js" />
+        <option value="$PROJECT_DIR$/js/src/blog.js" />
       </list>
     </option>
   </component>
@@ -501,12 +500,12 @@
       <workItem from="1599855403895" duration="2641000" />
       <workItem from="1599897435701" duration="6880000" />
       <workItem from="1600102119859" duration="34407000" />
-      <workItem from="1600800938823" duration="3687000" />
+      <workItem from="1600800938823" duration="4115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250163000" />
+    <option name="totallyTimeSpent" value="250591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
@@ -964,17 +963,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
           <caret line="430" column="52" selection-start-line="430" selection-start-column="52" selection-end-line="430" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
         </state>
       </provider>
     </entry>

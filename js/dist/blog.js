@@ -14,6 +14,7 @@ var switchMenu = function switchMenu() {
     if (!isCollapse && !isAnimated) {
         isAnimated = true;
         overlay.style.height = $(document).height() - 176 + 'px';
+        subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
         $(body).fadeIn(400, function () {
             isAnimated = false;
             isCollapse = true;
@@ -23,17 +24,19 @@ var switchMenu = function switchMenu() {
     if (isCollapse && !isAnimated) {
         isAnimated = true;
         overlay.style.height = $(document).height() - 176 + 'px';
+        subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
         $(body).fadeOut(200, function () {
             isAnimated = false;
             isCollapse = false;
         });
-        $(overlay).fadeOut(400);
+        $(overlay).fadeOut(400, function () {
+            subNavigationWrapper.removeAttribute('style');
+        });
     }
 };
 
 var onScroll = function onScroll(e) {
     if (window.innerWidth <= 860) {
-        subNavigationWrapper.style.maxHeight = 'unset';
         if (window.scrollY >= topHeight) {
             wrapper.classList.add('fixed');
         }
