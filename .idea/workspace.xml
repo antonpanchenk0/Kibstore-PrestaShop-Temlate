@@ -20,9 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/dist/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/navigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/src/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/navigation.js" afterDir="false" />
     </list>
@@ -193,7 +190,7 @@
         <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="669" column="87" selection-start-line="669" selection-start-column="87" selection-end-line="669" selection-end-column="87" />
+              <caret line="669" column="79" selection-start-line="669" selection-start-column="79" selection-end-line="669" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -504,15 +501,16 @@
       <workItem from="1599855403895" duration="2641000" />
       <workItem from="1599897435701" duration="6880000" />
       <workItem from="1600102119859" duration="34407000" />
-      <workItem from="1600800938823" duration="2406000" />
+      <workItem from="1600800938823" duration="2762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248882000" />
+    <option name="totallyTimeSpent" value="249238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20415647" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -977,7 +975,7 @@
     <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
-          <caret line="669" column="87" selection-start-line="669" selection-start-column="87" selection-end-line="669" selection-end-column="87" />
+          <caret line="669" column="79" selection-start-line="669" selection-start-column="79" selection-end-line="669" selection-end-column="79" />
         </state>
       </provider>
     </entry>

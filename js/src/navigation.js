@@ -667,7 +667,7 @@ class Navigation {
                 // if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
                 //     this.handleDesktopCloseNavigation();
                 // }
-                if(this.footer.getBoundingClientRect().top < window.screen.height - 110) {
+                if(this.footer.getBoundingClientRect().top < window.innerHeight) {
                     this.handleDesktopCloseNavigation();
                 }
             })

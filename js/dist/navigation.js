@@ -747,7 +747,7 @@ var _initialiseProps = function _initialiseProps() {
                 // if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
                 //     this.handleDesktopCloseNavigation();
                 // }
-                if (_this.footer.getBoundingClientRect().top < window.screen.height - 110) {
+                if (_this.footer.getBoundingClientRect().top < window.innerHeight) {
                     _this.handleDesktopCloseNavigation();
                 }
             });
