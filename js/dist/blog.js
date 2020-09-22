@@ -43,11 +43,10 @@ var onScroll = function onScroll(e) {
     } else {
         if (subscribeToUpdates.offsetTop < window.scrollY + window.innerHeight) {
             console.log('done');
-            subNavigationWrapper.style.maxHeight = 'calc(100vh - 10px - ' + (window.scrollY + window.innerHeight - subscribeToUpdates.offsetTop) + 'px)';
+            subNavigationWrapper.style.maxHeight = 'calc(100vh - ' + (window.scrollY + window.innerHeight - subscribeToUpdates.offsetTop) + 'px)';
+        } else {
+            subNavigationWrapper.style.maxHeight = 'unset';
         }
-        console.log(window.scrollY);
-        console.log(window.innerHeight);
-        console.log(subscribeToUpdates.offsetTop);
     }
 };
 
