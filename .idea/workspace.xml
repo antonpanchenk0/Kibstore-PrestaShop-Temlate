@@ -20,7 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/404.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-products-list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-products-list.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog-subcategories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog-subcategories.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/catalog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/full-pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/full-pages.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/full-pages.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/navigation.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product-cart-about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/product-cart-about.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/thx-for-order-page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/thx-for-order-page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/navigation.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -176,11 +195,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/navigation.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="551" column="34" selection-start-line="551" selection-start-column="34" selection-end-line="551" selection-end-column="34" />
+            <state relative-caret-position="246">
+              <caret line="2152" column="81" selection-start-line="2152" selection-start-column="81" selection-end-line="2152" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="668" column="31" selection-start-line="668" selection-start-column="31" selection-end-line="668" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -198,8 +226,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>label</find>
-      <find>descri</find>
       <find>view</find>
       <find>box-sha</find>
       <find>rat</find>
@@ -228,6 +254,8 @@
       <find>catalog-products-items-footer</find>
       <find>product-feedback-list</find>
       <find>product</find>
+      <find>scroll</find>
+      <find>addEventListener('scroll</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -244,7 +272,6 @@
         <option value="$PROJECT_DIR$/img/icons/rotate-cww.svg" />
         <option value="$PROJECT_DIR$/img/icons/grid.svg" />
         <option value="$PROJECT_DIR$/img/icons/menu-burger-second-color.svg" />
-        <option value="$PROJECT_DIR$/js/src/navigation.js" />
         <option value="$PROJECT_DIR$/css/catalog.less" />
         <option value="$PROJECT_DIR$/css/catalog-products-plate.less" />
         <option value="$PROJECT_DIR$/css/footer.less" />
@@ -269,6 +296,7 @@
         <option value="$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less" />
         <option value="$PROJECT_DIR$/js/src/blog.js" />
         <option value="$PROJECT_DIR$/css/navigation.less" />
+        <option value="$PROJECT_DIR$/js/src/navigation.js" />
       </list>
     </option>
   </component>
@@ -491,18 +519,17 @@
       <workItem from="1599855403895" duration="2641000" />
       <workItem from="1599897435701" duration="6880000" />
       <workItem from="1600102119859" duration="34407000" />
-      <workItem from="1600800938823" duration="589000" />
+      <workItem from="1600800938823" duration="1322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247065000" />
+    <option name="totallyTimeSpent" value="247798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20415647" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20415647" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -515,7 +542,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.17917134" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.17917134" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.16901408" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -606,16 +633,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/img/icons/x.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="715" column="39" selection-start-line="715" selection-start-column="39" selection-end-line="715" selection-end-column="39" />
-          <folding>
-            <element signature="n#Navigation#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/catalog.less">
       <provider selected="true" editor-type-id="text-editor">
@@ -967,8 +984,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/navigation.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="551" column="34" selection-start-line="551" selection-start-column="34" selection-end-line="551" selection-end-column="34" />
+        <state relative-caret-position="246">
+          <caret line="2152" column="81" selection-start-line="2152" selection-start-column="81" selection-end-line="2152" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="668" column="31" selection-start-line="668" selection-start-column="31" selection-end-line="668" selection-end-column="31" />
         </state>
       </provider>
     </entry>

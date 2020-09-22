@@ -666,6 +666,7 @@ class Navigation {
                 this.squeezeNavigationOnScroll(pageTop);
                 if(pageTop + window.innerHeight - 65 >= document.body.clientHeight - this.footerHeight) {
                     this.handleDesktopCloseNavigation();
+                    alert('test')
                 }
             })
             window.addEventListener('resize', (e) => {
