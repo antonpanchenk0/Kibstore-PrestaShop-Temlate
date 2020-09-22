@@ -746,6 +746,7 @@ var _initialiseProps = function _initialiseProps() {
                 _this.squeezeNavigationOnScroll(pageTop);
                 if (pageTop + window.innerHeight - 65 >= document.body.clientHeight - _this.footerHeight) {
                     _this.handleDesktopCloseNavigation();
+                    alert('test');
                 }
             });
             window.addEventListener('resize', function (e) {
