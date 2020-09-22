@@ -741,7 +741,7 @@ var _initialiseProps = function _initialiseProps() {
                     _this.config.desktopCollapseDesktopOverlay.addEventListener('touchend', _this.handleDesktopCloseNavigation);
                 }
             // Десктоп переключение меню при скроле
-            document.addEventListener('scroll', function (e) {
+            window.addEventListener('scroll', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
                 if (pageTop + window.innerHeight - 65 >= document.body.clientHeight - _this.footerHeight) {

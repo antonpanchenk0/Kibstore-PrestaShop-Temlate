@@ -661,7 +661,7 @@ class Navigation {
                 this.config.desktopCollapseDesktopOverlay.addEventListener('touchend', this.handleDesktopCloseNavigation);
             }
             // Десктоп переключение меню при скроле
-            document.addEventListener('scroll', (e) => {
+            window.addEventListener('scroll', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
                 if(pageTop + window.innerHeight - 65 >= document.body.clientHeight - this.footerHeight) {
