@@ -664,7 +664,7 @@ class Navigation {
             window.addEventListener('scroll', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
-                if(pageTop + window.innerHeight - 65 >= document.body.clientHeight - this.footerHeight) {
+                if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
                     this.handleDesktopCloseNavigation();
                     alert('test')
                 }
