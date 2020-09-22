@@ -57,7 +57,6 @@ class Navigation {
         this.navComparisonBtn = document.getElementById('navComparison');
         this.mobileResolution = 860;
         this.footer = document.getElementById('s_footer');
-        this.footerHeight = this.footer.clientHeight;
         this.isMainPage = document.getElementById('content-slider') ? true : false;
         this.createNavigationsEvents();
     }
@@ -429,6 +428,7 @@ class Navigation {
             this.config.logotype.style.top = '0px';
             return 0;
         }
+        this.config.navigationBlock.style.top = '0';
         this.wrapBlock.style.marginTop = '40px';
         return 1;
     }
@@ -674,7 +674,6 @@ class Navigation {
             window.addEventListener('resize', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
-                this.footerHeight = this.footer.innerHeight;
             })
         })
 

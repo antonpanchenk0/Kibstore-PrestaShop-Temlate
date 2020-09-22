@@ -64,7 +64,6 @@ var Navigation = function Navigation(animationDuration) {
     this.navComparisonBtn = document.getElementById('navComparison');
     this.mobileResolution = 860;
     this.footer = document.getElementById('s_footer');
-    this.footerHeight = this.footer.clientHeight;
     this.isMainPage = document.getElementById('content-slider') ? true : false;
     this.createNavigationsEvents();
 };
@@ -489,6 +488,7 @@ var _initialiseProps = function _initialiseProps() {
             _this.config.logotype.style.top = '0px';
             return 0;
         }
+        _this.config.navigationBlock.style.top = '0';
         _this.wrapBlock.style.marginTop = '40px';
         return 1;
     };
@@ -754,7 +754,6 @@ var _initialiseProps = function _initialiseProps() {
             window.addEventListener('resize', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
-                _this.footerHeight = _this.footer.innerHeight;
             });
         });
 

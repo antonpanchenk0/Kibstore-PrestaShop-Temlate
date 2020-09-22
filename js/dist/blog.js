@@ -13,7 +13,7 @@ var topHeight = 124;
 var switchMenu = function switchMenu() {
     if (!isCollapse && !isAnimated) {
         isAnimated = true;
-        overlay.style.height = document.body.clientHeight - 176 + 'px';
+        overlay.style.height = $(document).height() - 176 + 'px';
         $(body).fadeIn(400, function () {
             isAnimated = false;
             isCollapse = true;
@@ -22,7 +22,7 @@ var switchMenu = function switchMenu() {
     }
     if (isCollapse && !isAnimated) {
         isAnimated = true;
-        overlay.style.height = document.body.clientHeight - 176 + 'px';
+        overlay.style.height = $(document).height() - 176 + 'px';
         $(body).fadeOut(200, function () {
             isAnimated = false;
             isCollapse = false;
