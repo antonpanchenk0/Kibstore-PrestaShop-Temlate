@@ -21,11 +21,11 @@ div.subscribe-to-updates {
     z-index: 50;
 }
 
-section.blog, section.more-article {
+section.blog, section.more-article, section.service {
     flex: 0 0 75%;
     width: 100%;
     max-width: 75%;
-    padding: 15px 50px 15px 30px;
+    padding: 15px 120px 15px 30px;
 
     & > .blog-list-wrapper, & > .more-article-body {
         width: 100%;
@@ -533,11 +533,49 @@ section.blog, section.more-article {
             }
         }
     }
+
+    & > .service-description-wrapper {
+        padding: 20px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #fff;
+        width: 100%;
+        margin-top: 15px;
+
+        & > .service-description {
+            & > .service-paragraph {
+                .SFProDisplayRegular;
+                color: #000;
+                font-size: 16px;
+                margin: 0 0 10px;
+                text-align: justify;
+            }
+            & > .service-image {
+                width: 35%;
+                height: auto;
+
+                &.float-right {
+                    padding: 15px 0 15px 15px;
+                }
+
+                &.float-left {
+                    padding: 15px 15px 15px 0;
+                }
+
+                & > img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1560px){
     .blog-main-wrapper, .fluid-content {
-        & > section.blog, & > section.more-article {
+        & > section.blog, & > section.more-article, & > section.service {
             flex: 0 0 calc(100% - 265px);
             max-width: calc(100% - 265px);
             padding: 15px 40px;
@@ -547,7 +585,7 @@ section.blog, section.more-article {
 
 @media screen and (max-width: 1280px){
     .blog-main-wrapper, .fluid-content {
-        & > section.blog, & > section.more-article {
+        & > section.blog, & > section.more-article, & > section.service {
             flex: 0 0 calc(100% - 275px);
             max-width: calc(100% - 275px);
 
@@ -588,13 +626,26 @@ section.blog, section.more-article {
                     padding-right: 25px;
                 }
             }
+
+            & > .service-description-wrapper {
+
+                & > .service-description {
+                    & > .service-paragraph {
+                        font-size: 14px;
+                    }
+
+                    & > .service-image {
+                        width: 320px;
+                    }
+                }
+            }
         }
     }
 }
 
 @media screen and (max-width: 1120px) {
     .blog-main-wrapper, .fluid-content {
-        & > section.blog, & > section.more-article {
+        & > section.blog, & > section.more-article, & > section.service {
             flex: 0 0 calc(100% - 265px);
             max-width: calc(100% - 265px);
             padding: 15px;
@@ -633,7 +684,7 @@ section.blog, section.more-article {
             }
         }
 
-        & > section.blog {
+        & > section.blog, & > section.service {
             flex: 0 0 100%;
             max-width: 100%;
             padding: 15px;
@@ -695,7 +746,7 @@ section.blog, section.more-article {
 
 @media screen and (max-width: 640px) {
     .blog-main-wrapper {
-        & > section.blog {
+        & > section.blog, & > section.service {
             padding: 5px;
 
             & > .blog-list-wrapper {
@@ -754,6 +805,25 @@ section.blog, section.more-article {
                     flex: 0 0 100%;
                     max-width: 100%;
                     padding-right: 0px;
+                }
+            }
+
+            & > .service-description-wrapper {
+
+                & > .service-description {
+
+                    & > .service-image {
+                        width: 100%;
+
+                        &.float-left, &.float-right {
+                            float: none!important;
+                            padding: 10px 0;
+                        }
+
+                        & > img {
+                            max-height: 320px;
+                        }
+                    }
                 }
             }
         }

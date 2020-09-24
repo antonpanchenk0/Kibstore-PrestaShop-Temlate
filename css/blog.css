@@ -4290,16 +4290,19 @@ div.subscribe-to-updates {
   z-index: 50;
 }
 section.blog,
-section.more-article {
+section.more-article,
+section.service {
   flex: 0 0 75%;
   width: 100%;
   max-width: 75%;
-  padding: 15px 50px 15px 30px;
+  padding: 15px 120px 15px 30px;
 }
 section.blog > .blog-list-wrapper,
 section.more-article > .blog-list-wrapper,
+section.service > .blog-list-wrapper,
 section.blog > .more-article-body,
-section.more-article > .more-article-body {
+section.more-article > .more-article-body,
+section.service > .more-article-body {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -4309,14 +4312,18 @@ section.more-article > .more-article-body {
 }
 section.blog > .blog-list-wrapper.more-article-body,
 section.more-article > .blog-list-wrapper.more-article-body,
+section.service > .blog-list-wrapper.more-article-body,
 section.blog > .more-article-body.more-article-body,
-section.more-article > .more-article-body.more-article-body {
+section.more-article > .more-article-body.more-article-body,
+section.service > .more-article-body.more-article-body {
   padding: 20px 0;
 }
 section.blog > .blog-list-wrapper > .blog-item,
 section.more-article > .blog-list-wrapper > .blog-item,
+section.service > .blog-list-wrapper > .blog-item,
 section.blog > .more-article-body > .blog-item,
-section.more-article > .more-article-body > .blog-item {
+section.more-article > .more-article-body > .blog-item,
+section.service > .more-article-body > .blog-item {
   padding: 20px;
   flex: 1 0 49%;
   display: flex;
@@ -4333,20 +4340,26 @@ section.more-article > .more-article-body > .blog-item {
 }
 section.blog > .blog-list-wrapper > .blog-item:nth-child(even),
 section.more-article > .blog-list-wrapper > .blog-item:nth-child(even),
+section.service > .blog-list-wrapper > .blog-item:nth-child(even),
 section.blog > .more-article-body > .blog-item:nth-child(even),
-section.more-article > .more-article-body > .blog-item:nth-child(even) {
+section.more-article > .more-article-body > .blog-item:nth-child(even),
+section.service > .more-article-body > .blog-item:nth-child(even) {
   margin-left: 3px;
 }
 section.blog > .blog-list-wrapper > .blog-item:nth-child(odd),
 section.more-article > .blog-list-wrapper > .blog-item:nth-child(odd),
+section.service > .blog-list-wrapper > .blog-item:nth-child(odd),
 section.blog > .more-article-body > .blog-item:nth-child(odd),
-section.more-article > .more-article-body > .blog-item:nth-child(odd) {
+section.more-article > .more-article-body > .blog-item:nth-child(odd),
+section.service > .more-article-body > .blog-item:nth-child(odd) {
   margin-right: 3px;
 }
 section.blog > .blog-list-wrapper > .blog-item:hover,
 section.more-article > .blog-list-wrapper > .blog-item:hover,
+section.service > .blog-list-wrapper > .blog-item:hover,
 section.blog > .more-article-body > .blog-item:hover,
-section.more-article > .more-article-body > .blog-item:hover {
+section.more-article > .more-article-body > .blog-item:hover,
+section.service > .more-article-body > .blog-item:hover {
   z-index: 10;
   -webkit-transform: scale(1.02);
   -moz-transform: scale(1.02);
@@ -4359,12 +4372,16 @@ section.more-article > .more-article-body > .blog-item:hover {
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut,
 section.blog > .more-article-body > .blog-item > .blog-short-cut,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut,
+section.service > .more-article-body > .blog-item > .blog-short-cut,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info,
+section.service > .blog-list-wrapper > .blog-item > .blog-info,
 section.blog > .more-article-body > .blog-item > .blog-info,
-section.more-article > .more-article-body > .blog-item > .blog-info {
+section.more-article > .more-article-body > .blog-item > .blog-info,
+section.service > .more-article-body > .blog-item > .blog-info {
   flex: 0 0 50%;
   width: 100%;
   max-width: 50%;
@@ -4375,12 +4392,16 @@ section.more-article > .more-article-body > .blog-item > .blog-info {
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > img,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > img,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > img,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > img,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > img,
+section.service > .more-article-body > .blog-item > .blog-short-cut > img,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > img,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > img,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > img,
 section.blog > .more-article-body > .blog-item > .blog-info > img,
-section.more-article > .more-article-body > .blog-item > .blog-info > img {
+section.more-article > .more-article-body > .blog-item > .blog-info > img,
+section.service > .more-article-body > .blog-item > .blog-info > img {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4388,12 +4409,16 @@ section.more-article > .more-article-body > .blog-item > .blog-info > img {
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-header,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-header,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-header,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-header,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-header,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-header,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-header,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-header,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-header,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-header,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-header {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-header,
+section.service > .more-article-body > .blog-item > .blog-info > .info-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -4402,12 +4427,16 @@ section.more-article > .more-article-body > .blog-item > .blog-info > .info-head
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-header > span,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-header > span,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-header > span,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-header > span,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-header > span,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-header > span,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-header > span,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-header > span,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-header > span,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-header > span,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-header > span {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-header > span,
+section.service > .more-article-body > .blog-item > .blog-info > .info-header > span {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 14px;
@@ -4415,22 +4444,30 @@ section.more-article > .more-article-body > .blog-item > .blog-info > .info-head
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-body,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-body,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-body,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-body,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-body,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-body,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-body,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-body {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-body,
+section.service > .more-article-body > .blog-item > .blog-info > .info-body {
   width: 100%;
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body > .title,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body > .title,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body > .title,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-body > .title,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-body > .title,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-body > .title,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-body > .title,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-body > .title,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-body > .title,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-body > .title,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-body > .title {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-body > .title,
+section.service > .more-article-body > .blog-item > .blog-info > .info-body > .title {
   font-family: "SF Pro Display";
   font-weight: bold;
   font-size: 16px;
@@ -4449,12 +4486,16 @@ section.more-article > .more-article-body > .blog-item > .blog-info > .info-body
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body > .short-description,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body > .short-description,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-body > .short-description,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-body > .short-description,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-body > .short-description,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-body > .short-description,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-body > .short-description,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-body > .short-description,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-body > .short-description,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-body > .short-description,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-body > .short-description {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-body > .short-description,
+section.service > .more-article-body > .blog-item > .blog-info > .info-body > .short-description {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 14px;
@@ -4472,12 +4513,16 @@ section.more-article > .more-article-body > .blog-item > .blog-info > .info-body
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-footer,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-footer,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-footer,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-footer,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-footer,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-footer,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-footer,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-footer {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-footer,
+section.service > .more-article-body > .blog-item > .blog-info > .info-footer {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -4486,12 +4531,16 @@ section.more-article > .more-article-body > .blog-item > .blog-info > .info-foot
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer > p,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer > p,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer > p,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-footer > p,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-footer > p,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-footer > p,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-footer > p,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-footer > p {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-footer > p,
+section.service > .more-article-body > .blog-item > .blog-info > .info-footer > p {
   margin: 0;
   font-family: "SF Pro Display";
   font-weight: normal;
@@ -4500,20 +4549,26 @@ section.more-article > .more-article-body > .blog-item > .blog-info > .info-foot
 }
 section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer > p:first-child,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer > p:first-child,
+section.service > .blog-list-wrapper > .blog-item > .blog-short-cut > .info-footer > p:first-child,
 section.blog > .more-article-body > .blog-item > .blog-short-cut > .info-footer > p:first-child,
 section.more-article > .more-article-body > .blog-item > .blog-short-cut > .info-footer > p:first-child,
+section.service > .more-article-body > .blog-item > .blog-short-cut > .info-footer > p:first-child,
 section.blog > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p:first-child,
 section.more-article > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p:first-child,
+section.service > .blog-list-wrapper > .blog-item > .blog-info > .info-footer > p:first-child,
 section.blog > .more-article-body > .blog-item > .blog-info > .info-footer > p:first-child,
-section.more-article > .more-article-body > .blog-item > .blog-info > .info-footer > p:first-child {
+section.more-article > .more-article-body > .blog-item > .blog-info > .info-footer > p:first-child,
+section.service > .more-article-body > .blog-item > .blog-info > .info-footer > p:first-child {
   margin-right: 30px;
 }
 section.blog > .more-article-header,
-section.more-article > .more-article-header {
+section.more-article > .more-article-header,
+section.service > .more-article-header {
   margin: 15px 0 0;
 }
 section.blog > .blog-article-wrapper,
-section.more-article > .blog-article-wrapper {
+section.more-article > .blog-article-wrapper,
+section.service > .blog-article-wrapper {
   width: 100%;
   background-color: #fff;
   padding: 20px 20px 0;
@@ -4523,49 +4578,57 @@ section.more-article > .blog-article-wrapper {
   margin-top: 5px;
 }
 section.blog > .blog-article-wrapper > .blog-article-body,
-section.more-article > .blog-article-wrapper > .blog-article-body {
+section.more-article > .blog-article-wrapper > .blog-article-body,
+section.service > .blog-article-wrapper > .blog-article-body {
   width: 100%;
 }
 section.blog > .blog-article-wrapper > .blog-article-body > p.article-text,
-section.more-article > .blog-article-wrapper > .blog-article-body > p.article-text {
+section.more-article > .blog-article-wrapper > .blog-article-body > p.article-text,
+section.service > .blog-article-wrapper > .blog-article-body > p.article-text {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 16px;
   color: #000;
 }
 section.blog > .blog-article-wrapper > .blog-article-body > p.article-text.justify-between,
-section.more-article > .blog-article-wrapper > .blog-article-body > p.article-text.justify-between {
+section.more-article > .blog-article-wrapper > .blog-article-body > p.article-text.justify-between,
+section.service > .blog-article-wrapper > .blog-article-body > p.article-text.justify-between {
   text-align: justify;
 }
 section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-big,
-section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-big {
+section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-big,
+section.service > .blog-article-wrapper > .blog-article-body > img.article-img-big {
   width: 40%;
   height: auto;
   object-fit: cover;
   padding: 10px;
 }
 section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-small,
-section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-small {
+section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-small,
+section.service > .blog-article-wrapper > .blog-article-body > img.article-img-small {
   width: 20%;
   height: auto;
   object-fit: cover;
   padding: 10px;
 }
 section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block,
-section.more-article > .blog-article-wrapper > .blog-article-body > .img-row-block {
+section.more-article > .blog-article-wrapper > .blog-article-body > .img-row-block,
+section.service > .blog-article-wrapper > .blog-article-body > .img-row-block {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   padding: 10px;
 }
 section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
-section.more-article > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
+section.more-article > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
+section.service > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
   width: 300px;
   height: auto;
   object-fit: cover;
 }
 section.blog > .blog-article-wrapper > .blog-article-footer,
-section.more-article > .blog-article-wrapper > .blog-article-footer {
+section.more-article > .blog-article-wrapper > .blog-article-footer,
+section.service > .blog-article-wrapper > .blog-article-footer {
   width: 100%;
   border-top: 1px solid #858585;
   padding: 15px 25px;
@@ -4574,7 +4637,8 @@ section.more-article > .blog-article-wrapper > .blog-article-footer {
   align-items: center;
 }
 section.blog > .blog-article-wrapper > .blog-article-footer > span,
-section.more-article > .blog-article-wrapper > .blog-article-footer > span {
+section.more-article > .blog-article-wrapper > .blog-article-footer > span,
+section.service > .blog-article-wrapper > .blog-article-footer > span {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 14px;
@@ -4585,11 +4649,13 @@ section.more-article > .blog-article-wrapper > .blog-article-footer > span {
   padding-left: 15px;
 }
 section.blog > .blog-article-wrapper > .blog-article-footer > span:not(:first-child),
-section.more-article > .blog-article-wrapper > .blog-article-footer > span:not(:first-child) {
+section.more-article > .blog-article-wrapper > .blog-article-footer > span:not(:first-child),
+section.service > .blog-article-wrapper > .blog-article-footer > span:not(:first-child) {
   margin-left: 50px;
 }
 section.blog > .blog-article-wrapper > .blog-article-footer > span::before,
-section.more-article > .blog-article-wrapper > .blog-article-footer > span::before {
+section.more-article > .blog-article-wrapper > .blog-article-footer > span::before,
+section.service > .blog-article-wrapper > .blog-article-footer > span::before {
   content: '';
   display: block;
   width: 13px;
@@ -4604,19 +4670,23 @@ section.more-article > .blog-article-wrapper > .blog-article-footer > span::befo
   top: 3px;
 }
 section.blog > .blog-article-wrapper > .blog-article-footer > span.author::before,
-section.more-article > .blog-article-wrapper > .blog-article-footer > span.author::before {
+section.more-article > .blog-article-wrapper > .blog-article-footer > span.author::before,
+section.service > .blog-article-wrapper > .blog-article-footer > span.author::before {
   background-image: url("../img/icons/user.svg");
 }
 section.blog > .blog-article-wrapper > .blog-article-footer > span.views::before,
-section.more-article > .blog-article-wrapper > .blog-article-footer > span.views::before {
+section.more-article > .blog-article-wrapper > .blog-article-footer > span.views::before,
+section.service > .blog-article-wrapper > .blog-article-footer > span.views::before {
   background-image: url("../img/icons/eye.svg");
 }
 section.blog > .blog-article-wrapper > .blog-article-footer > span.comments::before,
-section.more-article > .blog-article-wrapper > .blog-article-footer > span.comments::before {
+section.more-article > .blog-article-wrapper > .blog-article-footer > span.comments::before,
+section.service > .blog-article-wrapper > .blog-article-footer > span.comments::before {
   background-image: url("../img/icons/message.svg");
 }
 section.blog > .blog-article-feedback-wrapper,
-section.more-article > .blog-article-feedback-wrapper {
+section.more-article > .blog-article-feedback-wrapper,
+section.service > .blog-article-feedback-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -4625,13 +4695,15 @@ section.more-article > .blog-article-feedback-wrapper {
   padding: 40px 0 20px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list {
   flex: 0 0 60%;
   max-width: 60%;
   width: 100%;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-list-title,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-list-title {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-list-title,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-list-title {
   padding-left: 15px;
   font-family: "SF Pro Display";
   font-weight: bold;
@@ -4641,8 +4713,10 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer {
   width: 100%;
   padding: 10px;
   background-color: #fdfdfd;
@@ -4658,8 +4732,10 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -4668,16 +4744,20 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-author,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-author,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-author,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author {
   font-family: "SF Pro Display";
   font-weight: bold;
   font-size: 12px;
@@ -4686,16 +4766,20 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-author > span,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-author > span,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-author > span,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author > span,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author > span {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author > span,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-author > span {
   font-family: "SF Pro Display";
   font-weight: normal;
   margin-right: 5px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list {
   list-style-type: none;
   display: flex;
   justify-content: flex-start;
@@ -4703,8 +4787,10 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star {
   margin: 0 2px;
   display: flex;
   justify-content: center;
@@ -4714,8 +4800,10 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star > svg {
   width: 100%;
   height: 100%;
   fill: none;
@@ -4723,14 +4811,18 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-header-info .feedback-rate-stars-list .rate-star.fill > svg {
   fill: #ffc600;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-post-date,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-post-date,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-header > .feedback-post-date,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-post-date,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-post-date {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-post-date,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-header > .feedback-post-date {
   margin: 0;
   font-family: "SF Pro Display";
   font-weight: normal;
@@ -4739,15 +4831,19 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-body,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-body,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-body,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body {
   width: 100%;
   margin-bottom: 15px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-body p,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-body p,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-body p,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body p,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body p {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body p,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-body p {
   margin: 0;
   font-family: "SF Pro Display";
   font-weight: normal;
@@ -4757,8 +4853,10 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -4766,8 +4864,10 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .answer-btn,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .answer-btn,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .answer-btn,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .answer-btn,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .answer-btn {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .answer-btn,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .answer-btn {
   font-family: "SF Pro Display";
   font-weight: bold;
   font-size: 12px;
@@ -4775,16 +4875,20 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -4797,20 +4901,26 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn > span,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn > span,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn > span,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > span,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > span {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > span,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > span {
   margin-bottom: -3px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.like-btn {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.like-btn,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.like-btn {
   color: #5489d7;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn > svg,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn > svg,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > svg,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > svg {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn > svg {
   height: 18px;
   width: 18px;
   stroke: #5489d7;
@@ -4818,8 +4928,10 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
 section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .article-feedback > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box .feedback-answer > .feedback-footer > .feedback-rating > .rating-btn.dislike-btn > svg {
   -webkit-transform: scale(-1, 1) rotate(180deg);
   -moz-transform: scale(-1, 1) rotate(180deg);
   -ms-transform: scale(-1, 1) rotate(180deg);
@@ -4828,13 +4940,15 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
   stroke: #858585;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block {
   width: 100%;
   position: relative;
   padding-left: 30px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block::before,
-section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block::before {
+section.more-article > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block::before,
+section.service > .blog-article-feedback-wrapper > .article-feedback-list > .article-feedback-box > .feedback-answers-block::before {
   content: '';
   width: 15px;
   height: 40px;
@@ -4846,14 +4960,16 @@ section.more-article > .blog-article-feedback-wrapper > .article-feedback-list >
   left: 10px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback {
   flex: 0 0 40%;
   max-width: 40%;
   width: 100%;
   padding-right: 60px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-title,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-title {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-title,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-title {
   padding-left: 15px;
   font-family: "SF Pro Display";
   font-weight: bold;
@@ -4861,13 +4977,16 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   color: #000;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form {
   width: 100%;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > input,
 section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > input,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > input,
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 12px;
@@ -4880,15 +4999,18 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   resize: none;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > input,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > input {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > input,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > input {
   width: 80%;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > textarea {
   height: 80px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating {
   display: flex;
   justify-content: flex-end;
   -webkit-transform: rotateY(180deg);
@@ -4899,17 +5021,21 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   margin-bottom: 5px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input {
   display: none;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input:checked ~ label::after,
 section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input:checked ~ label::after,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input:checked ~ label::after,
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input:hover ~ label::after,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input:hover ~ label::after {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input:hover ~ label::after,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > input:hover ~ label::after {
   opacity: 1;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label {
   display: block;
   cursor: pointer;
   width: 25px;
@@ -4918,15 +5044,18 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   margin: 0 2px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:first-child,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:first-child {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:first-child,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:first-child {
   margin: 0 2px 0 0;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:last-child,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:last-child {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:last-child,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:last-child {
   margin: 0 0 0 2px;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::before,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::before {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::before,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::before {
   content: '';
   width: 25px;
   height: 25px;
@@ -4936,7 +5065,8 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   background-size: cover;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::after,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::after {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::after,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label::after {
   content: '';
   width: 25px;
   height: 25px;
@@ -4953,11 +5083,13 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   transition: 0.5s;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:hover::after,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:hover::after {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:hover::after,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .rating > label:hover::after {
   opacity: 1;
 }
 section.blog > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .article-send-feedback-btn,
-section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .article-send-feedback-btn {
+section.more-article > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .article-send-feedback-btn,
+section.service > .blog-article-feedback-wrapper > .article-send-feedback > .article-send-feedback-form > .article-send-feedback-btn {
   background: #51c878;
   font-family: HelveticaNeueCyr;
   font-weight: bold;
@@ -4976,11 +5108,57 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
+section.blog > .service-description-wrapper,
+section.more-article > .service-description-wrapper,
+section.service > .service-description-wrapper {
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 15px;
+}
+section.blog > .service-description-wrapper > .service-description > .service-paragraph,
+section.more-article > .service-description-wrapper > .service-description > .service-paragraph,
+section.service > .service-description-wrapper > .service-description > .service-paragraph {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  color: #000;
+  font-size: 16px;
+  margin: 0 0 10px;
+  text-align: justify;
+}
+section.blog > .service-description-wrapper > .service-description > .service-image,
+section.more-article > .service-description-wrapper > .service-description > .service-image,
+section.service > .service-description-wrapper > .service-description > .service-image {
+  width: 35%;
+  height: auto;
+}
+section.blog > .service-description-wrapper > .service-description > .service-image.float-right,
+section.more-article > .service-description-wrapper > .service-description > .service-image.float-right,
+section.service > .service-description-wrapper > .service-description > .service-image.float-right {
+  padding: 15px 0 15px 15px;
+}
+section.blog > .service-description-wrapper > .service-description > .service-image.float-left,
+section.more-article > .service-description-wrapper > .service-description > .service-image.float-left,
+section.service > .service-description-wrapper > .service-description > .service-image.float-left {
+  padding: 15px 15px 15px 0;
+}
+section.blog > .service-description-wrapper > .service-description > .service-image > img,
+section.more-article > .service-description-wrapper > .service-description > .service-image > img,
+section.service > .service-description-wrapper > .service-description > .service-image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 @media screen and (max-width: 1560px) {
   .blog-main-wrapper > section.blog,
   .fluid-content > section.blog,
   .blog-main-wrapper > section.more-article,
-  .fluid-content > section.more-article {
+  .fluid-content > section.more-article,
+  .blog-main-wrapper > section.service,
+  .fluid-content > section.service {
     flex: 0 0 calc(100% - 265px);
     max-width: calc(100% - 265px);
     padding: 15px 40px;
@@ -4990,24 +5168,32 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   .blog-main-wrapper > section.blog,
   .fluid-content > section.blog,
   .blog-main-wrapper > section.more-article,
-  .fluid-content > section.more-article {
+  .fluid-content > section.more-article,
+  .blog-main-wrapper > section.service,
+  .fluid-content > section.service {
     flex: 0 0 calc(100% - 275px);
     max-width: calc(100% - 275px);
   }
   .blog-main-wrapper > section.blog > .page-header,
   .fluid-content > section.blog > .page-header,
   .blog-main-wrapper > section.more-article > .page-header,
-  .fluid-content > section.more-article > .page-header {
+  .fluid-content > section.more-article > .page-header,
+  .blog-main-wrapper > section.service > .page-header,
+  .fluid-content > section.service > .page-header {
     padding-left: 30px;
   }
   .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item,
   .fluid-content > section.blog > .blog-list-wrapper > .blog-item,
   .blog-main-wrapper > section.more-article > .blog-list-wrapper > .blog-item,
   .fluid-content > section.more-article > .blog-list-wrapper > .blog-item,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item,
+  .fluid-content > section.service > .blog-list-wrapper > .blog-item,
   .blog-main-wrapper > section.blog > .more-article-body > .blog-item,
   .fluid-content > section.blog > .more-article-body > .blog-item,
   .blog-main-wrapper > section.more-article > .more-article-body > .blog-item,
-  .fluid-content > section.more-article > .more-article-body > .blog-item {
+  .fluid-content > section.more-article > .more-article-body > .blog-item,
+  .blog-main-wrapper > section.service > .more-article-body > .blog-item,
+  .fluid-content > section.service > .more-article-body > .blog-item {
     flex-flow: column;
     align-items: center;
   }
@@ -5015,36 +5201,52 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   .fluid-content > section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut,
   .blog-main-wrapper > section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut,
   .fluid-content > section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item > .blog-short-cut,
+  .fluid-content > section.service > .blog-list-wrapper > .blog-item > .blog-short-cut,
   .blog-main-wrapper > section.blog > .more-article-body > .blog-item > .blog-short-cut,
   .fluid-content > section.blog > .more-article-body > .blog-item > .blog-short-cut,
   .blog-main-wrapper > section.more-article > .more-article-body > .blog-item > .blog-short-cut,
   .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-short-cut,
+  .blog-main-wrapper > section.service > .more-article-body > .blog-item > .blog-short-cut,
+  .fluid-content > section.service > .more-article-body > .blog-item > .blog-short-cut,
   .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item > .blog-info,
   .fluid-content > section.blog > .blog-list-wrapper > .blog-item > .blog-info,
   .blog-main-wrapper > section.more-article > .blog-list-wrapper > .blog-item > .blog-info,
   .fluid-content > section.more-article > .blog-list-wrapper > .blog-item > .blog-info,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item > .blog-info,
+  .fluid-content > section.service > .blog-list-wrapper > .blog-item > .blog-info,
   .blog-main-wrapper > section.blog > .more-article-body > .blog-item > .blog-info,
   .fluid-content > section.blog > .more-article-body > .blog-item > .blog-info,
   .blog-main-wrapper > section.more-article > .more-article-body > .blog-item > .blog-info,
-  .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-info {
+  .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-info,
+  .blog-main-wrapper > section.service > .more-article-body > .blog-item > .blog-info,
+  .fluid-content > section.service > .more-article-body > .blog-item > .blog-info {
     max-width: 100%;
   }
   .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut,
   .fluid-content > section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut,
   .blog-main-wrapper > section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut,
   .fluid-content > section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut,
+  .fluid-content > section.service > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut,
   .blog-main-wrapper > section.blog > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut,
   .fluid-content > section.blog > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut,
   .blog-main-wrapper > section.more-article > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut,
   .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut,
+  .blog-main-wrapper > section.service > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut,
+  .fluid-content > section.service > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut,
   .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut,
   .fluid-content > section.blog > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut,
   .blog-main-wrapper > section.more-article > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut,
   .fluid-content > section.more-article > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut,
+  .fluid-content > section.service > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut,
   .blog-main-wrapper > section.blog > .more-article-body > .blog-item > .blog-info.blog-short-cut,
   .fluid-content > section.blog > .more-article-body > .blog-item > .blog-info.blog-short-cut,
   .blog-main-wrapper > section.more-article > .more-article-body > .blog-item > .blog-info.blog-short-cut,
-  .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-info.blog-short-cut {
+  .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-info.blog-short-cut,
+  .blog-main-wrapper > section.service > .more-article-body > .blog-item > .blog-info.blog-short-cut,
+  .fluid-content > section.service > .more-article-body > .blog-item > .blog-info.blog-short-cut {
     max-height: 125px;
     margin-bottom: 10px;
   }
@@ -5052,42 +5254,72 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   .fluid-content > section.blog > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut > img,
   .blog-main-wrapper > section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut > img,
   .fluid-content > section.more-article > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut > img,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut > img,
+  .fluid-content > section.service > .blog-list-wrapper > .blog-item > .blog-short-cut.blog-short-cut > img,
   .blog-main-wrapper > section.blog > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut > img,
   .fluid-content > section.blog > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut > img,
   .blog-main-wrapper > section.more-article > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut > img,
   .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut > img,
+  .blog-main-wrapper > section.service > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut > img,
+  .fluid-content > section.service > .more-article-body > .blog-item > .blog-short-cut.blog-short-cut > img,
   .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut > img,
   .fluid-content > section.blog > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut > img,
   .blog-main-wrapper > section.more-article > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut > img,
   .fluid-content > section.more-article > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut > img,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut > img,
+  .fluid-content > section.service > .blog-list-wrapper > .blog-item > .blog-info.blog-short-cut > img,
   .blog-main-wrapper > section.blog > .more-article-body > .blog-item > .blog-info.blog-short-cut > img,
   .fluid-content > section.blog > .more-article-body > .blog-item > .blog-info.blog-short-cut > img,
   .blog-main-wrapper > section.more-article > .more-article-body > .blog-item > .blog-info.blog-short-cut > img,
-  .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-info.blog-short-cut > img {
+  .fluid-content > section.more-article > .more-article-body > .blog-item > .blog-info.blog-short-cut > img,
+  .blog-main-wrapper > section.service > .more-article-body > .blog-item > .blog-info.blog-short-cut > img,
+  .fluid-content > section.service > .more-article-body > .blog-item > .blog-info.blog-short-cut > img {
     min-width: 100%;
     padding: 0px;
   }
   .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper > .article-feedback-list,
   .fluid-content > section.blog > .blog-article-feedback-wrapper > .article-feedback-list,
   .blog-main-wrapper > section.more-article > .blog-article-feedback-wrapper > .article-feedback-list,
-  .fluid-content > section.more-article > .blog-article-feedback-wrapper > .article-feedback-list {
+  .fluid-content > section.more-article > .blog-article-feedback-wrapper > .article-feedback-list,
+  .blog-main-wrapper > section.service > .blog-article-feedback-wrapper > .article-feedback-list,
+  .fluid-content > section.service > .blog-article-feedback-wrapper > .article-feedback-list {
     flex: 0 0 50%;
     max-width: 50%;
   }
   .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper > .article-send-feedback,
   .fluid-content > section.blog > .blog-article-feedback-wrapper > .article-send-feedback,
   .blog-main-wrapper > section.more-article > .blog-article-feedback-wrapper > .article-send-feedback,
-  .fluid-content > section.more-article > .blog-article-feedback-wrapper > .article-send-feedback {
+  .fluid-content > section.more-article > .blog-article-feedback-wrapper > .article-send-feedback,
+  .blog-main-wrapper > section.service > .blog-article-feedback-wrapper > .article-send-feedback,
+  .fluid-content > section.service > .blog-article-feedback-wrapper > .article-send-feedback {
     flex: 0 0 50%;
     max-width: 50%;
     padding-right: 25px;
+  }
+  .blog-main-wrapper > section.blog > .service-description-wrapper > .service-description > .service-paragraph,
+  .fluid-content > section.blog > .service-description-wrapper > .service-description > .service-paragraph,
+  .blog-main-wrapper > section.more-article > .service-description-wrapper > .service-description > .service-paragraph,
+  .fluid-content > section.more-article > .service-description-wrapper > .service-description > .service-paragraph,
+  .blog-main-wrapper > section.service > .service-description-wrapper > .service-description > .service-paragraph,
+  .fluid-content > section.service > .service-description-wrapper > .service-description > .service-paragraph {
+    font-size: 14px;
+  }
+  .blog-main-wrapper > section.blog > .service-description-wrapper > .service-description > .service-image,
+  .fluid-content > section.blog > .service-description-wrapper > .service-description > .service-image,
+  .blog-main-wrapper > section.more-article > .service-description-wrapper > .service-description > .service-image,
+  .fluid-content > section.more-article > .service-description-wrapper > .service-description > .service-image,
+  .blog-main-wrapper > section.service > .service-description-wrapper > .service-description > .service-image,
+  .fluid-content > section.service > .service-description-wrapper > .service-description > .service-image {
+    width: 320px;
   }
 }
 @media screen and (max-width: 1120px) {
   .blog-main-wrapper > section.blog,
   .fluid-content > section.blog,
   .blog-main-wrapper > section.more-article,
-  .fluid-content > section.more-article {
+  .fluid-content > section.more-article,
+  .blog-main-wrapper > section.service,
+  .fluid-content > section.service {
     flex: 0 0 calc(100% - 265px);
     max-width: calc(100% - 265px);
     padding: 15px;
@@ -5095,19 +5327,25 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-big,
   .fluid-content > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-big,
   .blog-main-wrapper > section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-big,
-  .fluid-content > section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-big {
+  .fluid-content > section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-big,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-big,
+  .fluid-content > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-big {
     width: 60%;
   }
   .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-small,
   .fluid-content > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-small,
   .blog-main-wrapper > section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-small,
-  .fluid-content > section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-small {
+  .fluid-content > section.more-article > .blog-article-wrapper > .blog-article-body > img.article-img-small,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-small,
+  .fluid-content > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-small {
     width: 40%;
   }
   .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
   .fluid-content > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
   .blog-main-wrapper > section.more-article > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
-  .fluid-content > section.more-article > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
+  .fluid-content > section.more-article > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
+  .fluid-content > section.service > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
     width: 200px;
     height: auto;
     object-fit: cover;
@@ -5121,94 +5359,132 @@ section.more-article > .blog-article-feedback-wrapper > .article-send-feedback >
   .blog-main-wrapper > .sub-navigation-for-page-content > .sub-navigation-wrapper {
     height: unset;
   }
-  .blog-main-wrapper > section.blog {
+  .blog-main-wrapper > section.blog,
+  .blog-main-wrapper > section.service {
     flex: 0 0 100%;
     max-width: 100%;
     padding: 15px;
   }
-  .blog-main-wrapper > section.blog > .page-header {
+  .blog-main-wrapper > section.blog > .page-header,
+  .blog-main-wrapper > section.service > .page-header {
     padding-left: 0;
     margin-bottom: 60px;
   }
-  .blog-main-wrapper > section.blog > .page-header > .title-wrap .title {
+  .blog-main-wrapper > section.blog > .page-header > .title-wrap .title,
+  .blog-main-wrapper > section.service > .page-header > .title-wrap .title {
     font-size: 18px;
   }
-  .blog-main-wrapper > section.blog > .page-header > .title-wrap .sub-title {
+  .blog-main-wrapper > section.blog > .page-header > .title-wrap .sub-title,
+  .blog-main-wrapper > section.service > .page-header > .title-wrap .sub-title {
     font-size: 12px;
   }
-  .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item {
+  .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item {
     min-width: 300px;
     padding: 20px 20px 0;
   }
-  .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item > .blog-info {
+  .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item > .blog-info,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item > .blog-info {
     padding-bottom: 20px;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-big {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-big,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-big {
     width: 75%;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-small {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-small,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-small {
     width: 30%;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > .img-row-block {
     width: 100%;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
     width: 50%;
     height: auto;
     object-fit: cover;
   }
-  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper {
+  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper,
+  .blog-main-wrapper > section.service > .blog-article-feedback-wrapper {
     flex-flow: column;
     padding: 25px 5px;
   }
 }
 @media screen and (max-width: 640px) {
-  .blog-main-wrapper > section.blog {
+  .blog-main-wrapper > section.blog,
+  .blog-main-wrapper > section.service {
     padding: 5px;
   }
-  .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item {
+  .blog-main-wrapper > section.blog > .blog-list-wrapper > .blog-item,
+  .blog-main-wrapper > section.service > .blog-list-wrapper > .blog-item {
     flex: 0 0 100%;
     min-width: unset;
     max-width: 100%;
     width: 100%;
     margin: 0 0 6px;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-big {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-big,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-big {
     width: 75%;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-small {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > img.article-img-small,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > img.article-img-small {
     width: 50%;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > .img-row-block {
     width: 100%;
     padding: 5px 0;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-body > .img-row-block > img,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-body > .img-row-block > img {
     width: 50%;
     height: auto;
     object-fit: cover;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-footer {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-footer,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-footer {
     flex-wrap: wrap;
     padding: 10px;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-footer > .author {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-footer > .author,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-footer > .author {
     flex: 0 0 100%;
   }
-  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-footer > .views {
+  .blog-main-wrapper > section.blog > .blog-article-wrapper > .blog-article-footer > .views,
+  .blog-main-wrapper > section.service > .blog-article-wrapper > .blog-article-footer > .views {
     margin-left: 0px;
   }
-  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper {
+  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper,
+  .blog-main-wrapper > section.service > .blog-article-feedback-wrapper {
     flex-flow: column;
   }
-  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper > .article-feedback-list {
+  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper > .article-feedback-list,
+  .blog-main-wrapper > section.service > .blog-article-feedback-wrapper > .article-feedback-list {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper > .article-send-feedback {
+  .blog-main-wrapper > section.blog > .blog-article-feedback-wrapper > .article-send-feedback,
+  .blog-main-wrapper > section.service > .blog-article-feedback-wrapper > .article-send-feedback {
     flex: 0 0 100%;
     max-width: 100%;
     padding-right: 0px;
+  }
+  .blog-main-wrapper > section.blog > .service-description-wrapper > .service-description > .service-image,
+  .blog-main-wrapper > section.service > .service-description-wrapper > .service-description > .service-image {
+    width: 100%;
+  }
+  .blog-main-wrapper > section.blog > .service-description-wrapper > .service-description > .service-image.float-left,
+  .blog-main-wrapper > section.service > .service-description-wrapper > .service-description > .service-image.float-left,
+  .blog-main-wrapper > section.blog > .service-description-wrapper > .service-description > .service-image.float-right,
+  .blog-main-wrapper > section.service > .service-description-wrapper > .service-description > .service-image.float-right {
+    float: none!important;
+    padding: 10px 0;
+  }
+  .blog-main-wrapper > section.blog > .service-description-wrapper > .service-description > .service-image > img,
+  .blog-main-wrapper > section.service > .service-description-wrapper > .service-description > .service-image > img {
+    max-height: 320px;
   }
 }
 /*# sourceMappingURL=blog.css.map */
