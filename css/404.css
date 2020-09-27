@@ -3229,7 +3229,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 1);
   width: 100%;
   background-color: #e9edf0;
   position: relative;

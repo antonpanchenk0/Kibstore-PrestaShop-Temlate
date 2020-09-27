@@ -40,108 +40,6 @@
   font-family: "Android Robot";
   font-weight: normal;
 }
-.router {
-  width: 100%;
-  padding: 5px 0px 10px;
-}
-.router > .router-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-}
-.router > .router-list > .router-item {
-  display: flex;
-  align-items: center;
-}
-.router > .router-list > .router-item::after {
-  content: '→';
-  color: #858585;
-  margin: 0 3px;
-}
-.router > .router-list > .router-item:last-child::after {
-  content: none;
-}
-.router > .router-list > .router-item > .router-link {
-  font-family: "SF Pro Display";
-  font-weight: bold;
-  font-size: 14px;
-  color: #5489d7;
-  white-space: nowrap;
-}
-.router > .router-list > .router-item.active > .router-link {
-  color: #858585;
-}
-.title-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.title-wrap .title {
-  font-size: 22px;
-  color: #000000;
-  font-family: HelveticaNeueCyr;
-  font-weight: bold;
-  margin: 5px 0 0 0;
-}
-.title-wrap .sub-title {
-  font-family: "SF Pro Display";
-  font-weight: bold;
-  font-size: 16px;
-  color: #858585;
-  margin: 15px 0 0;
-}
-.title-wrap .go-back-title-btn {
-  display: none;
-  height: 25px;
-  width: 25px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.07);
-}
-.title-wrap .go-back-title-btn > svg {
-  vertical-align: unset;
-}
-.product-counter {
-  font-family: "SF Pro Display";
-  font-weight: bold;
-  font-size: 12px;
-  color: #858585;
-  margin: 0 0 10px 0;
-}
-@media screen and (max-width: 1560px) {
-  .router > .router-list > .router-item > .router-link {
-    font-family: "SF Pro Display";
-    font-weight: bold;
-    font-size: 12px;
-  }
-  .title-wrap > .title {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 860px) {
-  .router {
-    padding: 5px 0 10px 0;
-  }
-  .router > .router-list > .router-item > .router-link {
-    font-family: "SF Pro Display";
-    font-weight: bold;
-    font-size: 10px;
-  }
-  .title-wrap {
-    padding: 0;
-  }
-  .title-wrap > .title {
-    font-size: 16px;
-  }
-  .title-wrap > .go-back-title-btn {
-    display: block;
-  }
-}
 .border-bottom-1px {
   border-bottom: 1px solid #e9edf0;
 }
@@ -4016,4 +3914,238 @@ section.product-section > .product-section-body {
     margin-right: 0px;
   }
 }
-/*# sourceMappingURL=root-styles.css.map */
+.router {
+  width: 100%;
+  padding: 5px 0px 10px;
+}
+.router > .router-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+.router > .router-list > .router-item {
+  display: flex;
+  align-items: center;
+}
+.router > .router-list > .router-item::after {
+  content: '→';
+  color: #858585;
+  margin: 0 3px;
+}
+.router > .router-list > .router-item:last-child::after {
+  content: none;
+}
+.router > .router-list > .router-item > .router-link {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 14px;
+  color: #5489d7;
+  white-space: nowrap;
+}
+.router > .router-list > .router-item.active > .router-link {
+  color: #858585;
+}
+.title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.title-wrap .title {
+  font-size: 22px;
+  color: #000000;
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+}
+.title-wrap .sub-title {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 16px;
+  color: #858585;
+  margin: 15px 0 0;
+}
+.title-wrap .go-back-title-btn {
+  display: none;
+  height: 25px;
+  width: 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.07);
+}
+.title-wrap .go-back-title-btn > svg {
+  vertical-align: unset;
+}
+.product-counter {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 12px;
+  color: #858585;
+  margin: 0 0 10px 0;
+}
+@media screen and (max-width: 1560px) {
+  .router > .router-list > .router-item > .router-link {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .title-wrap > .title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .router {
+    padding: 5px 0 10px 0;
+  }
+  .router > .router-list > .router-item > .router-link {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .title-wrap {
+    padding: 0;
+  }
+  .title-wrap > .title {
+    font-size: 16px;
+  }
+  .title-wrap > .go-back-title-btn {
+    display: block;
+  }
+}
+.wrap {
+  padding: 25px 0;
+  justify-content: space-between;
+}
+.about-us > section.about-us-wrapper {
+  max-width: 1540px;
+}
+.about-us > section.about-us-wrapper > .about-us-block {
+  padding: 25px 0 45px;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-description > .description {
+  flex: 0 0 85%;
+  max-width: 85%;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-description > .description > p.description-text {
+  width: 100%;
+  font-size: 16px;
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  color: #000;
+  text-align: justify;
+  word-break: break-word;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-description > .description > p.description-text > span {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-description > .description > p.description-text:not(:last-child) {
+  margin-bottom: 30px;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-description > .description-image {
+  flex: 0 0 15%;
+  max-width: 15%;
+  float: right;
+  padding-left: 15px;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-description > .description-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities {
+  margin-top: 25px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-title,
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  width: 75%;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table {
+  width: 100%;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 25px 10px;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child {
+  border-right: 1px solid #5489d7;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-header > .header-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #5489d7;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-header > .header-title {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin-left: 20px;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-body {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  color: #000;
+  text-align: justify;
+  width: calc(100% - 70px);
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child > .activities-description {
+  align-items: flex-start;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child > .activities-description > .description-header {
+  flex-flow: row-reverse;
+}
+.about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child > .activities-description > .description-header > .header-title {
+  margin: 0 20px 0 0;
+}
+/*# sourceMappingURL=about-us.css.map */
