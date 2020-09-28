@@ -4017,7 +4017,7 @@ section.product-section > .product-section-body {
   }
 }
 .wrap {
-  padding: 25px 0;
+  padding: 25px 0 0;
   justify-content: space-between;
 }
 .about-us > section.about-us-wrapper {
@@ -4147,5 +4147,174 @@ section.product-section > .product-section-body {
 }
 .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child > .activities-description > .description-header > .header-title {
   margin: 0 20px 0 0;
+}
+@media screen and (max-width: 1920px) {
+  .about-us > section.about-us-wrapper {
+    max-width: 100%;
+    padding: 0 120px;
+  }
+}
+@media screen and (max-width: 1560px) {
+  .about-us > section.about-us-wrapper {
+    max-width: 100%;
+    padding: 0 120px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description-image {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about-us > section.about-us-wrapper {
+    max-width: 100%;
+    padding: 0 50px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description > p.description-text {
+    font-size: 14px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description-image {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-title,
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    font-size: 21px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    font-size: 14px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-header > .header-title {
+    font-size: 16px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .about-us > section.about-us-wrapper {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description {
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description-image {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-title,
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    font-size: 19px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    font-size: 14px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-header > .header-title {
+    font-size: 14px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .about-us {
+    display: flex;
+  }
+  .about-us > section.about-us-wrapper {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description {
+    flex-flow: column-reverse;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description > p.description-text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    max-height: 350px;
+    margin-bottom: 15px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-description > .description-image > img {
+    max-height: 350px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-title,
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    font-size: 19px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    font-size: 14px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row:nth-child(odd) > .activities-table-col:first-child {
+    display: none;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row:nth-child(even) > .activities-table-col:last-child {
+    display: none;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col {
+    border-right: none!important;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child > .activities-description {
+    align-items: flex-end;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child > .activities-description > .description-header {
+    flex-flow: row;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col:first-child > .activities-description > .description-header > .header-title {
+    margin: 0 0 0 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-title,
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    font-size: 19px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-subtitle {
+    width: 90%;
+    font-size: 14px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col {
+    padding: 10px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-header > .header-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .about-us > section.about-us-wrapper > .about-us-block > .company-activities > .activities-table > .activities-table-row > .activities-table-col > .activities-description > .description-body {
+    width: calc(100% - 50px);
+  }
 }
 /*# sourceMappingURL=about-us.css.map */

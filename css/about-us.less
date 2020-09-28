@@ -3,7 +3,7 @@
 @import './page-header-style';
 
 .wrap {
-  padding: 25px 0;
+  padding: 25px 0 0;
   justify-content: space-between;
 }
 
@@ -153,4 +153,282 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1920px) {
+    .about-us {
+        & > section.about-us-wrapper {
+            max-width: 100%;
+            padding: 0 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    .about-us {
+        & > section.about-us-wrapper {
+            max-width: 100%;
+            padding: 0 120px;
+
+            & > .about-us-block {
+                & > .company-description {
+                    & > .description {
+                        flex: 0 0 75%;
+                        max-width: 75%;
+                    }
+
+                    & > .description-image {
+                        flex: 0 0 25%;
+                        max-width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .about-us {
+        & > section.about-us-wrapper {
+            max-width: 100%;
+            padding: 0 50px;
+
+            & > .about-us-block {
+                & > .company-description {
+                    & > .description {
+                        flex: 0 0 75%;
+                        max-width: 75%;
+
+                        & > p.description-text {
+                            font-size: 14px;
+                        }
+                    }
+
+                    & > .description-image {
+                        flex: 0 0 25%;
+                        max-width: 25%;
+                    }
+                }
+
+                & > .company-activities {
+                    & > .activities-title, & > .activities-subtitle {
+                        font-size: 21px;
+                    }
+
+                    & > .activities-subtitle {
+                        font-size: 14px;
+                    }
+
+                    & > .activities-table {
+                        & > .activities-table-row {
+                            & > .activities-table-col {
+                                & > .activities-description {
+                                    & > .description-header {
+                                        & > .header-title {
+                                            font-size: 16px;
+                                        }
+                                    }
+
+                                    & > .description-body {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .about-us {
+        & > section.about-us-wrapper {
+            max-width: 100%;
+            padding: 0 25px;
+
+            & > .about-us-block {
+                & > .company-description {
+                    & > .description {
+                        flex: 0 0 65%;
+                        max-width: 65%;
+                    }
+
+                    & > .description-image {
+                        flex: 0 0 35%;
+                        max-width: 35%;
+                    }
+                }
+
+                & > .company-activities {
+                    & > .activities-title, & > .activities-subtitle {
+                        font-size: 19px;
+                    }
+
+                    & > .activities-subtitle {
+                        font-size: 14px;
+                    }
+
+                    & > .activities-table {
+                        & > .activities-table-row {
+                            & > .activities-table-col {
+                                & > .activities-description {
+                                    & > .description-header {
+                                        & > .header-title {
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    & > .description-body {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .about-us {
+        display: flex;
+
+        & > section.about-us-wrapper {
+            max-width: 100%;
+            padding: 0 10px;
+
+            & > .about-us-block {
+                & > .company-description {
+                    flex-flow: column-reverse;
+
+                    & > .description {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+
+                        & > p.description-text {
+                            &:not(:last-child) {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+
+                    & > .description-image {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        padding-left: 0;
+                        max-height: 350px;
+                        margin-bottom: 15px;
+
+                        & > img {
+                            max-height: 350px;
+                        }
+                    }
+                }
+
+                & > .company-activities {
+                    & > .activities-title, & > .activities-subtitle {
+                        font-size: 19px;
+                    }
+
+                    & > .activities-subtitle {
+                        font-size: 14px;
+                    }
+
+                    & > .activities-table {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        & > .activities-table-row {
+                            flex: 0 0 50%;
+                            max-width: 50%;
+                            &:nth-child(odd) {
+                                & > .activities-table-col {
+                                    &:first-child {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            &:nth-child(even) {
+                                & > .activities-table-col {
+                                    &:last-child {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            & > .activities-table-col {
+                                border-right: none!important;
+                                flex: 0 0 100%;
+                                max-width: 100%;
+
+                                &:first-child {
+                                    & > .activities-description {
+                                        align-items: flex-end;
+
+                                        & > .description-header {
+                                            flex-flow: row;
+
+                                            & > .header-title {
+                                                margin: 0 0 0 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .about-us {
+        & > section.about-us-wrapper {
+            & > .about-us-block {
+                & > .company-activities {
+                    & > .activities-title, & > .activities-subtitle {
+                        font-size: 19px;
+                    }
+
+                    & > .activities-subtitle {
+                        width: 90%;
+                        font-size: 14px;
+                    }
+
+                    & > .activities-table {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        & > .activities-table-row {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+
+                            & > .activities-table-col {
+                                padding: 10px;
+                                & > .activities-description {
+                                    & > .description-header {
+                                        & > .header-icon {
+                                            width: 40px;
+                                            height: 40px;
+                                        }
+                                    }
+
+                                    & > .description-body {
+                                        width: calc(100% - 50px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
