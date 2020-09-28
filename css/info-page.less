@@ -1,0 +1,97 @@
+@import "./navigation";
+@import './root-styles';
+@import './page-header-style';
+
+.wrap {
+    padding: 25px 0 0;
+    justify-content: space-between;
+}
+
+.info-page {
+    & > section.info-page-wrapper {
+        max-width: 1540px;
+
+        & > .info-page-block {
+            width: 100%;
+            padding: 50px 0;
+
+            & > .info-page-items-wrapper {
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+
+                & > .info-page-item {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    padding: 0 30px;
+                    flex: 0 0 20%;
+                    max-width: 20%;
+
+                    & > .info-page-icon-wrap {
+                        width: 150px;
+                        height: 150px;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        -webkit-transition: 0.2s;
+                        -moz-transition: 0.2s;
+                        -ms-transition: 0.2s;
+                        -o-transition: 0.2s;
+                        transition: 0.2s;
+
+                        &:hover {
+                            cursor: pointer;
+                            -webkit-box-shadow: 0px 0px 10px 5px #0000005c;
+                            -moz-box-shadow:  0px 0px 10px 5px #0000005c;
+                            box-shadow:  0px 0px 10px 5px #0000005c;
+                        }
+
+                        & > .info-page-icon {
+                            max-width: 60%;
+
+                            & > img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    & > .info-page-item-body {
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+
+                        & > .body-title {
+                            .SFProDisplayBold;
+                            color: #000;
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                        }
+
+                        & > .body-description {
+                            .SFProDisplayRegular;
+                            font-size: 16px;
+                            color: #000;
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+
+            & > .info-page-block-footer {
+                .SFProDisplayBold;
+                font-size: 18px;
+                color: #000;
+                width: 100%;
+                margin-top: 35px;
+            }
+        }
+    }
+}
