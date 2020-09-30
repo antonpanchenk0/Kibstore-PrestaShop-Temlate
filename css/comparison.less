@@ -1,0 +1,281 @@
+@import './navigation';
+@import './root-styles';
+@import './page-header-style';
+
+.wrap {
+    justify-content: flex-end;
+}
+
+.comparison-page {
+    & > section.comparison-page-wrapper {
+        width: 100%;
+        max-width: 1540px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .comparison-page {
+        & > section.comparison-page-wrapper {
+            width: 100%;
+            max-width: 100%;
+            padding: 0 120px;
+
+            & > .comparison-table-wrapper {
+                width: 100%;
+                padding: 40px 0 75px;
+
+                & .comparison-table-row {
+                    width: 100%;
+                    max-width: 100%;
+                    display: flex;
+                    justify-content: stretch;
+                    align-items: stretch;
+                    overflow-x: auto;
+                    position: relative;
+
+                    & > .table-row-scroll-body {
+                        padding-top: 5px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: stretch;
+                        max-width: calc(100% - 280px);
+                        overflow-x: scroll;
+                        background-color: #fff;
+
+                        &::-webkit-scrollbar-track {
+                            background-color: #fff;
+                            height: 4px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            -webkit-border-radius: 10px;
+                            border-radius: 10px;
+                            background-color: #858585;
+                            height: 4px;
+                            border: 4px solid #fff;
+                        }
+                        &::-webkit-scrollbar {
+                            width: 12px;
+                            height: 12px;
+                        }
+
+                        & > .comparison-table-col {
+                            &:not(:last-child) {
+                                border-right: 1px solid #cccccc;
+                            }
+                        }
+                    }
+
+                    & .comparison-table-col {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 20px;
+                        min-width: 280px;
+                        max-width: 280px;
+
+                        & > .add-more-products-btn {
+                            .SFProDisplayRegular;
+                            font-size: 14px;
+                            color: @secondColor;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 215px;
+                            height: 65px;
+                            border: 1px solid @secondColor;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            border-radius: 5px;
+                            text-decoration: none;
+                        }
+
+                        & > .product-comparison-item {
+                            width: 100%;
+                            & > .item-header {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                & > .code {
+                                    .SFProDisplayRegular;
+                                    font-size: 10px;
+                                    color: @grayColor;
+                                }
+
+                                & > .delete-item-btn {
+                                    display: block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-image: url("../img/icons/trash.svg");
+                                    background-size: cover;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+
+                            & > .item-body {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+
+                                & > .item-image {
+                                    flex: 0 0 75px;
+                                    max-width: 75px;
+
+                                    & > .product-item-rating {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-end;
+                                        & > .rating-list {
+                                            list-style: none;
+                                            margin: 0;
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            align-items: flex-end;
+                                            & > .rating-list-star {
+                                                width: 8px;
+                                                height: 8px;
+                                                margin-right: 5px;
+                                                background-image: url("../img/icons/star.svg");
+                                                background-repeat: no-repeat;
+                                                background-position: center center;
+                                                background-size: cover;
+                                                position: relative;
+                                                &.fill::before {
+                                                    content: '';
+                                                    width: 8px;
+                                                    height: 8px;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    background-image: url("../img/icons/star-fill.svg");
+                                                    background-repeat: no-repeat;
+                                                    background-position: center center;
+                                                    background-size: cover;
+                                                }
+                                                &.half-fill::before {
+                                                    content: '';
+                                                    width: 8px;
+                                                    height: 8px;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: -4px;
+                                                    background-image: url("../img/icons/star-fill.svg");
+                                                    background-repeat: no-repeat;
+                                                    background-position: 4px 0;
+                                                    background-size: cover;
+                                                }
+                                            }
+                                        }
+                                        & > .comment-counter {
+                                            margin: 0;
+                                            color: @grayColor;
+                                            .SFProDisplayRegular;
+                                            font-size: 10px;
+                                            line-height: 1;
+                                        }
+                                    }
+
+                                    & > img {
+                                        width: 100%;
+                                        height: auto;
+                                        object-fit: cover;
+                                        padding: 10px;
+                                    }
+                                }
+
+                                & > .item-name {
+                                    .SFProDisplayRegular;
+                                    font-size: 13px;
+                                    color: #000;
+                                    margin-left: 5px;
+                                    line-height: 1.2;
+                                    margin-top: 15px;
+                                }
+                            }
+
+                            & > .item-footer {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 5px;
+
+                                & > .price {
+                                    & > .total {
+                                        .SFProDisplayBold;
+                                        font-size: 18px;
+                                        color: #000;
+                                        margin-bottom: 5px;
+                                    }
+
+                                    & > .nds {
+                                        .SFProDisplayRegular;
+                                        font-size: 10px;
+                                        color: @grayColor;
+                                        margin: 0;
+                                        line-height: 1;
+                                    }
+                                }
+
+                                & > .controls {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+
+                                    & > .add-to-cart-btn, & > .add-to-wish-btn {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 35px;
+                                        height: 25px;
+                                        padding: 0 0 0 10px;
+
+                                        & > svg {
+                                            width: 25px;
+                                        }
+                                    }
+
+                                    & > .add-to-cart-btn {
+                                        border-right: 1px solid @grayColor;
+                                        padding: 0 10px 0 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+
+                        }
+
+                    }
+
+                    & > .comparison-table-col {
+                        &:last-child {
+                            min-width: 20px;
+                            max-width: 20px;
+                            padding: 0;
+                            background-color: #fff!important;
+                            -webkit-box-shadow: -5px 0px 10px 2px rgba(0, 0, 0, 0.39);
+                            -moz-box-shadow: -5px 0px 10px 2px rgba(0, 0, 0, 0.39);
+                            box-shadow: -5px 0px 10px 2px rgba(0, 0, 0, 0.39);
+                            z-index: 10;
+                        }
+
+                        &:first-child {
+                            -webkit-box-shadow: 5px 0px 10px 2px rgba(0, 0, 0, 0.39);
+                            -moz-box-shadow: 5px 0px 10px 2px rgba(0, 0, 0, 0.39);
+                            box-shadow: 5px 0px 10px 2px rgba(0, 0, 0, 0.39);
+                            z-index: 10;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        & .comparison-table-col {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
