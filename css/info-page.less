@@ -24,7 +24,46 @@
 
         & > .info-page-block {
             width: 100%;
-            padding: 50px 0;
+            padding: 35px 0;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            & > .info-page-additional-info {
+                width: 100%;
+                margin-bottom: 40px;
+
+                & > .title {
+                    .SFProDisplayBold;
+                    font-size: 18px;
+                    color: #000;
+                    margin-bottom: 30px;
+                }
+
+                & > .info {
+                    width: 100%;
+
+                    & > p {
+                        .SFProDisplayRegular;
+                        font-size: 16px;
+                        color: #000;
+                        margin: 0 0 20px;
+                        text-align: justify;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        & > a {
+                            .SFProDisplayBold;
+                            color: #000;
+                            text-decoration: none!important;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
 
             & > .info-page-items-wrapper {
                 display: flex;
@@ -51,6 +90,10 @@
                         & > .info-page-item-body {
                             & > .body-title {
                                 color: @secondColor;
+                            }
+
+                            & > .body-description {
+                                .SFProDisplayBold;
                             }
                         }
                     }
@@ -98,9 +141,20 @@
                             color: #000;
                             font-size: 18px;
                             margin-bottom: 10px;
+                            text-align: center;
+
+                            & > span {
+                                display: block;
+                                white-space: nowrap;
+                            }
                         }
 
                         & > .body-description {
+                            -webkit-transition: 0.2s;
+                            -moz-transition: 0.2s;
+                            -ms-transition: 0.2s;
+                            -o-transition: 0.2s;
+                            transition: 0.2s;
                             .SFProDisplayRegular;
                             font-size: 16px;
                             color: #000;
@@ -185,6 +239,18 @@
             padding: 0 20px;
 
             & > .info-page-block {
+                & > .info-page-additional-info {
+                    & > .title {
+                        font-size: 16px;
+                    }
+
+                    & > .info {
+                        & > p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
                 & > .info-page-items-wrapper {
                     & > .info-page-item {
                         flex: 0 0 33.33%;
@@ -270,7 +336,23 @@
             & > .info-page-block {
                 padding: 40px 10px;
 
+                & > .info-page-additional-info {
+                    order: 3;
+                    margin: 0;
+                    & > .title {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+
+                    & > .info {
+                        & > p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
                 & > .info-page-items-wrapper {
+                    order: 1;
                     & > .info-page-item {
                         flex: 0 0 33.33%;
                         max-width: 33.33%;
@@ -294,8 +376,10 @@
                 }
 
                 & > .info-page-block-footer {
+                    order: 2;
                     font-size: 14px;
                     text-align: justify;
+                    margin-bottom: 15px;
                 }
             }
         }
@@ -306,6 +390,18 @@
     .info-page {
         & > section.info-page-wrapper {
             & > .info-page-block {
+                & > .info-page-additional-info {
+                    & > .title {
+                        font-size: 12px;
+                    }
+
+                    & > .info {
+                        & > p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
                 & > .info-page-items-wrapper {
                     & > .info-page-item {
                         flex: 0 0 50%;

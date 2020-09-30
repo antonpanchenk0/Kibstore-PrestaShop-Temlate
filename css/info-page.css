@@ -4031,7 +4031,43 @@ section.product-section > .product-section-body {
 }
 .info-page > section.info-page-wrapper > .info-page-block {
   width: 100%;
-  padding: 50px 0;
+  padding: 35px 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .title {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 30px;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .info {
+  width: 100%;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .info > p {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 16px;
+  color: #000;
+  margin: 0 0 20px;
+  text-align: justify;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .info > p:last-child {
+  margin-bottom: 0;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .info > p > a {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  color: #000;
+  text-decoration: none!important;
+  white-space: nowrap;
 }
 .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper {
   display: flex;
@@ -4056,6 +4092,10 @@ section.product-section > .product-section-body {
 }
 .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item:hover > .info-page-item-body > .body-title {
   color: #5489d7;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item:hover > .info-page-item-body > .body-description {
+  font-family: "SF Pro Display";
+  font-weight: bold;
 }
 .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item > .info-page-icon-wrap {
   width: 150px;
@@ -4098,8 +4138,18 @@ section.product-section > .product-section-body {
   color: #000;
   font-size: 18px;
   margin-bottom: 10px;
+  text-align: center;
+}
+.info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item > .info-page-item-body > .body-title > span {
+  display: block;
+  white-space: nowrap;
 }
 .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item > .info-page-item-body > .body-description {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 16px;
@@ -4156,6 +4206,12 @@ section.product-section > .product-section-body {
 @media screen and (max-width: 1120px) {
   .info-page > section.info-page-wrapper {
     padding: 0 20px;
+  }
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .title {
+    font-size: 16px;
+  }
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .info > p {
+    font-size: 14px;
   }
   .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item {
     flex: 0 0 33.33%;
@@ -4228,6 +4284,20 @@ section.product-section > .product-section-body {
   .info-page > section.info-page-wrapper > .info-page-block {
     padding: 40px 10px;
   }
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info {
+    order: 3;
+    margin: 0;
+  }
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .info > p {
+    font-size: 12px;
+  }
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper {
+    order: 1;
+  }
   .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
@@ -4244,11 +4314,19 @@ section.product-section > .product-section-body {
     font-size: 12px;
   }
   .info-page > section.info-page-wrapper > .info-page-block > .info-page-block-footer {
+    order: 2;
     font-size: 14px;
     text-align: justify;
+    margin-bottom: 15px;
   }
 }
 @media screen and (max-width: 640px) {
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .title {
+    font-size: 12px;
+  }
+  .info-page > section.info-page-wrapper > .info-page-block > .info-page-additional-info > .info > p {
+    font-size: 12px;
+  }
   .info-page > section.info-page-wrapper > .info-page-block > .info-page-items-wrapper > .info-page-item {
     flex: 0 0 50%;
     max-width: 50%;
