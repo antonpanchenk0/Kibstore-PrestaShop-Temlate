@@ -4286,6 +4286,9 @@ section.product-section > .product-section-body {
   .wish-list-page > section.wish-list-wrapper {
     padding: 0;
   }
+  .wish-list-page > section.wish-list-wrapper > .page-header {
+    padding: 0 10px;
+  }
   .wish-list-page > section.wish-list-wrapper > .wish-list-form > .wish-list-header {
     top: 40px;
   }
@@ -4300,9 +4303,6 @@ section.product-section > .product-section-body {
   }
 }
 @media screen and (max-width: 680px) {
-  .wish-list-page > section.wish-list-wrapper {
-    padding: 0;
-  }
   .wish-list-page > section.wish-list-wrapper > .wish-list-form > .wish-list-body > .product-item {
     flex: 0 0 50%;
     max-width: 50%;
