@@ -3423,6 +3423,104 @@ section.product-section > .product-section-body {
   color: #858585;
   margin: 0;
 }
+.product-item > .product-item-wrap > .product-item-header > .form-check {
+  position: relative;
+  display: flex;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > input[type="checkbox"].form-check-input {
+  opacity: 0;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > input[type="checkbox"].form-check-input + label::after {
+  content: none;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > input[type="checkbox"].form-check-input + label:hover {
+  cursor: pointer;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > input[type="checkbox"].form-check-input:checked + label::after {
+  content: '';
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > input[type="checkbox"].form-check-input:checked + label::before {
+  border: 1px solid #51c878;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > input[type="checkbox"].form-check-input:focus + label::before {
+  outline: none;
+  border: 1px solid #51c878;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > label.form-check-label {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  color: #51c878;
+  position: relative;
+  display: inline-block;
+  padding-left: 32px;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > label.form-check-label::before,
+.product-item > .product-item-wrap > .product-item-header > .form-check > label.form-check-label::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > label.form-check-label::before {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #858585;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  left: 0px;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > label.form-check-label::after {
+  height: 7px;
+  width: 14px;
+  border-left: 2px solid #51c878;
+  border-bottom: 2px solid #51c878;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 3px;
+  top: 5px;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > .check-tooltip {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  max-width: 85px;
+  height: 25px;
+  max-height: 25px;
+  background: #51c878;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  position: absolute;
+  top: 0px;
+  left: 155px;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > .check-tooltip > a {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 10px;
+  color: #fff;
+  text-decoration: underline;
+  line-height: 1px;
+}
+.product-item > .product-item-wrap > .product-item-header > .form-check > .check-tooltip::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right: 10px solid #51c878;
+}
 .product-item > .product-item-wrap > .product-item-header > .tooltips-box {
   flex: 0 0 70%;
   max-width: 70%;
@@ -3879,8 +3977,8 @@ section.product-section > .product-section-body {
     margin-bottom: 1px;
   }
   .product-item > .product-item-wrap > .product-item-header > h2 {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
   .product-item > .product-item-wrap > .product-item-body {
     margin-top: 0px;
