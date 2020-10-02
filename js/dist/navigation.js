@@ -40,6 +40,7 @@ var Navigation = function Navigation(animationDuration) {
         closeXComparisonNodeBtn: document.querySelector('a.comparison-collapse-close-btn'),
         desktopNavigationBtn: document.getElementById('dmenu'),
         desktopNavigationCollapseMenu: document.querySelector('div.desktop-navigation-collapse'),
+        desktopNavigationCollapseMenuWrap: document.querySelector('div.desktop-navigation-collapse-wrap'),
         desktopCollapseDesktopOverlay: document.querySelector('div.desktop-navigation-collapse-overlay'),
         desktopSearchInput: document.getElementById('navSearchInp'),
         desktopSearchBlock: document.getElementById('navSearch'),
@@ -65,6 +66,7 @@ var Navigation = function Navigation(animationDuration) {
     this.mobileResolution = 860;
     this.footer = document.getElementById('s_footer');
     this.isMainPage = document.getElementById('content-slider') ? true : false;
+    this.desktopLinksWithDropDown = document.querySelectorAll('li.desktop-catalog-navigation-item.has-dropdown-nav');
     this.createNavigationsEvents();
 };
 
@@ -476,16 +478,21 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.squeezeNavigationOnScroll = function (windowTop) {
+        var _config7 = _this.config,
+            navigationBlock = _config7.navigationBlock,
+            logotype = _config7.logotype;
+
+
         if (windowTop > 0 && window.innerWidth > 860) {
-            _this.config.navigationBlock.style.top = '-60px';
+            navigationBlock.style.top = '-60px';
             _this.wrapBlock.style.marginTop = '65px';
-            _this.config.logotype.style.top = window.innerWidth >= 1650 ? '55px' : '0px';
+            logotype.style.top = window.innerWidth >= 1650 ? '55px' : '0px';
             return 0;
         }
         if (windowTop == 0 && window.innerWidth > 860) {
-            _this.config.navigationBlock.style.top = '0';
+            navigationBlock.style.top = '0';
             _this.wrapBlock.style.marginTop = '120px';
-            _this.config.logotype.style.top = '0px';
+            logotype.style.top = '0px';
             return 0;
         }
         _this.config.navigationBlock.style.top = '0';
@@ -495,11 +502,11 @@ var _initialiseProps = function _initialiseProps() {
 
     this.searchEvent = function (e) {
         e.preventDefault();
-        var _config7 = _this.config,
-            isSearchCollapsed = _config7.isSearchCollapsed,
-            collapseWrap = _config7.collapseWrap,
-            animationDuration = _config7.animationDuration,
-            collapseSearchNode = _config7.collapseSearchNode;
+        var _config8 = _this.config,
+            isSearchCollapsed = _config8.isSearchCollapsed,
+            collapseWrap = _config8.collapseWrap,
+            animationDuration = _config8.animationDuration,
+            collapseSearchNode = _config8.collapseSearchNode;
 
         if (isSearchCollapsed) return false;
         _this.closeAllRightModules(false);
@@ -513,11 +520,11 @@ var _initialiseProps = function _initialiseProps() {
 
     this.contactsEvent = function (e) {
         e.preventDefault();
-        var _config8 = _this.config,
-            isContactsCollapsed = _config8.isContactsCollapsed,
-            collapseWrap = _config8.collapseWrap,
-            animationDuration = _config8.animationDuration,
-            collapseContactsNode = _config8.collapseContactsNode;
+        var _config9 = _this.config,
+            isContactsCollapsed = _config9.isContactsCollapsed,
+            collapseWrap = _config9.collapseWrap,
+            animationDuration = _config9.animationDuration,
+            collapseContactsNode = _config9.collapseContactsNode;
 
         if (isContactsCollapsed) return false;
         _this.closeAllRightModules(false);
@@ -531,15 +538,15 @@ var _initialiseProps = function _initialiseProps() {
 
     this.navigationEvent = function (e) {
         e.preventDefault();
-        var _config9 = _this.config,
-            isCollapsed = _config9.isCollapsed,
-            collapseNode = _config9.collapseNode,
-            collapseWrap = _config9.collapseWrap,
-            animationDuration = _config9.animationDuration,
-            isSearchCollapsed = _config9.isSearchCollapsed,
-            isCartCollapsed = _config9.isCartCollapsed,
-            isContactsCollapsed = _config9.isContactsCollapsed,
-            isWishListCollapsed = _config9.isWishListCollapsed;
+        var _config10 = _this.config,
+            isCollapsed = _config10.isCollapsed,
+            collapseNode = _config10.collapseNode,
+            collapseWrap = _config10.collapseWrap,
+            animationDuration = _config10.animationDuration,
+            isSearchCollapsed = _config10.isSearchCollapsed,
+            isCartCollapsed = _config10.isCartCollapsed,
+            isContactsCollapsed = _config10.isContactsCollapsed,
+            isWishListCollapsed = _config10.isWishListCollapsed;
 
         if (isCollapsed) return false;
         _this.closeAllRightModules(false);
@@ -556,15 +563,15 @@ var _initialiseProps = function _initialiseProps() {
     this.navigationCloseEvent = function (e) {
         if (e.target !== _this.config.collapseWrap && e.target !== _this.config.closeNavigationBtn && e.target !== _this.config.closeSearchNodeBtn && e.target !== _this.config.closeCartNodeBtn && e.target !== _this.config.closeXCartNodeBtn && e.target !== _this.config.closeContactsNodeBtn && e.target !== _this.config.closeXContactsNodeBtn && e.target !== _this.config.closeWishListNodeBtn && e.target !== _this.config.closeXWishListNodeBtn && e.target !== _this.config.closeComparisonNodeBtn && e.target !== _this.config.closeXComparisonNodeBtn) return false;
         e.preventDefault();
-        var _config10 = _this.config,
-            isCollapsed = _config10.isCollapsed,
-            isSearchCollapsed = _config10.isSearchCollapsed,
-            isCartCollapsed = _config10.isCartCollapsed,
-            isContactsCollapsed = _config10.isContactsCollapsed,
-            isComparisonCollapsed = _config10.isComparisonCollapsed,
-            isWishListCollapsed = _config10.isWishListCollapsed,
-            collapseNode = _config10.collapseNode,
-            animationDuration = _config10.animationDuration;
+        var _config11 = _this.config,
+            isCollapsed = _config11.isCollapsed,
+            isSearchCollapsed = _config11.isSearchCollapsed,
+            isCartCollapsed = _config11.isCartCollapsed,
+            isContactsCollapsed = _config11.isContactsCollapsed,
+            isComparisonCollapsed = _config11.isComparisonCollapsed,
+            isWishListCollapsed = _config11.isWishListCollapsed,
+            collapseNode = _config11.collapseNode,
+            animationDuration = _config11.animationDuration;
 
         if (isCollapsed) {
             $(collapseNode).animate({ 'left': isCollapsed ? '-320px' : '0px' }, animationDuration * 0.75, _this.wrapFadeOut);
@@ -620,17 +627,17 @@ var _initialiseProps = function _initialiseProps() {
     this.desktopNavigationEvent = function (e) {
         e && e.preventDefault();
         if (!_this.config.isDesktopAnimated) {
-            var _config11 = _this.config,
-                isDesktopMenuCollapsed = _config11.isDesktopMenuCollapsed,
-                desktopNavigationCollapseMenu = _config11.desktopNavigationCollapseMenu,
-                animationDuration = _config11.animationDuration;
+            var _config12 = _this.config,
+                isDesktopMenuCollapsed = _config12.isDesktopMenuCollapsed,
+                desktopNavigationCollapseMenu = _config12.desktopNavigationCollapseMenu,
+                animationDuration = _config12.animationDuration;
 
             _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
-            $(desktopNavigationCollapseMenu).css('overflow-y', 'hidden');
+            _this.footer.style.zIndex = !isDesktopMenuCollapsed && !_this.isMainPage && '50';
             $(desktopNavigationCollapseMenu).animate({ 'height': isDesktopMenuCollapsed ? '0px' : '100vh' }, animationDuration * .75, function () {
                 _this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 _this.config.isDesktopAnimated = !_this.config.isDesktopAnimated;
-                $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
+                _this.footer.style.zIndex = isDesktopMenuCollapsed && '200';
             });
             if (!_this.isMainPage) {
                 if (!_this.config.isOverlayShow) {
@@ -653,6 +660,7 @@ var _initialiseProps = function _initialiseProps() {
             var isDesktopMenuCollapsed = _this.config.isDesktopMenuCollapsed;
 
             return isDesktopMenuCollapsed ? _this.desktopNavigationEvent() : null;
+            _this.footer.style.zIndex = '200';
         }
     };
 
@@ -723,16 +731,20 @@ var _initialiseProps = function _initialiseProps() {
             if (_this.isMainPage && window.innerWidth > 860) {
                 _this.desktopNavigationEvent();
                 // Overlay при hover
-                _this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', function (e) {
+                _this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseenter', function (e) {
+                    _this.config.desktopNavigationCollapseMenu.style.width = '100vw';
                     if (!_this.config.isOverlayShow) {
                         $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
                             _this.config.isOverlayShow = !_this.config.isOverlayShow;
+                            _this.footer.style.zIndex = '50';
                         });
                     }
                 });
-                _this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', function (e) {
+                _this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', function (e) {
+                    _this.config.desktopNavigationCollapseMenu.style.width = '255px';
                     $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
                     _this.config.isOverlayShow = !_this.config.isOverlayShow;
+                    _this.footer.style.zIndex = '200';
                 });
             }
             // Добавление эвентов если не главная страница
@@ -744,16 +756,26 @@ var _initialiseProps = function _initialiseProps() {
             window.addEventListener('scroll', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
-                // if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
-                //     this.handleDesktopCloseNavigation();
-                // }
-                if (_this.footer.getBoundingClientRect().top < window.innerHeight) {
-                    _this.handleDesktopCloseNavigation();
+
+                if (_this.footer.offsetTop < window.scrollY + window.innerHeight && _this.config.isDesktopMenuCollapsed) {
+                    $(_this.config.desktopNavigationCollapseMenu).css('max-height', 'calc(100vh + 5px - ' + (window.scrollY + window.innerHeight - _this.footer.offsetTop) + 'px)');
+                } else {
+                    if (_this.config.isDesktopMenuCollapsed) {
+                        _this.config.desktopNavigationCollapseMenu.removeAttribute('style');
+                        _this.config.desktopNavigationCollapseMenu.style.height = '100vh';
+                    }
                 }
             });
             window.addEventListener('resize', function (e) {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
+
+                if (_this.footer.offsetTop < window.scrollY + window.innerHeight) {
+                    $(_this.config.desktopNavigationCollapseMenu).css('max-height', 'calc(100vh - ' + (window.scrollY + window.innerHeight - _this.footer.offsetTop) + 'px)');
+                } else {
+                    _this.config.desktopNavigationCollapseMenu.removeAttribute('style');
+                    _this.config.desktopNavigationCollapseMenu.style.height = '100vh';
+                }
             });
         });
 
@@ -764,10 +786,10 @@ var _initialiseProps = function _initialiseProps() {
         // Поиск в навигации
         _this.config.desktopSearchInput.addEventListener('input', function (e) {
             var value = e.target.value;
-            var _config12 = _this.config,
-                isSearchResultAnimated = _config12.isSearchResultAnimated,
-                desktopSearchResult = _config12.desktopSearchResult,
-                desktopSearchBlock = _config12.desktopSearchBlock;
+            var _config13 = _this.config,
+                isSearchResultAnimated = _config13.isSearchResultAnimated,
+                desktopSearchResult = _config13.desktopSearchResult,
+                desktopSearchBlock = _config13.desktopSearchBlock;
 
             if (value.length > 0) {
                 desktopSearchBlock.classList.add('is-searching');
@@ -788,10 +810,10 @@ var _initialiseProps = function _initialiseProps() {
             }
         });
         _this.config.desktopSearchForm.addEventListener('reset', function () {
-            var _config13 = _this.config,
-                isSearchResultAnimated = _config13.isSearchResultAnimated,
-                desktopSearchResult = _config13.desktopSearchResult,
-                desktopSearchBlock = _config13.desktopSearchBlock;
+            var _config14 = _this.config,
+                isSearchResultAnimated = _config14.isSearchResultAnimated,
+                desktopSearchResult = _config14.desktopSearchResult,
+                desktopSearchBlock = _config14.desktopSearchBlock;
 
             desktopSearchBlock.classList.remove('is-searching');
             _this.config.isSearchResultAnimated = !isSearchResultAnimated;

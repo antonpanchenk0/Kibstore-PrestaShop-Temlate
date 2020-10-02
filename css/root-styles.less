@@ -232,8 +232,7 @@ section.product-section {
     }
 }
 .product-item {
-    flex: 0 0 257px;
-    max-width: 257px;
+    flex: 0 1 16.66%;
     width: 100%;
     padding: 0 3px;
     margin-bottom: 6px;
@@ -243,7 +242,6 @@ section.product-section {
         flex-flow: column;
         justify-content: space-between;
         min-width: 250px;
-        max-width: 250px;
         height: auto;
         padding: 10px 0 20px 0;
         background-color: #fff;
@@ -720,7 +718,7 @@ section.product-section {
 
 @media screen and (max-width: 1920px) {
     section.product-section {
-        padding: 30px 100px;
+        padding: 30px 120px;
         max-width: unset;
         & > .product-section-body {
             justify-content: flex-start;
@@ -737,46 +735,39 @@ section.product-section {
     }
 }
 
-@media screen and (max-width: 1780px) {
+@media screen and (max-width: 1560px) {
     section.product-section {
+        padding: 30px 60px;
+
         .product-item {
             flex: 0 0 20%;
             max-width: 20%;
             width: 20%;
-        }
-    }
-}
-
-@media screen and (max-width: 1560px) {
-    .product-item {
-        & > .product-item-wrap {
-            & >.product-item-header {
-                & > .tooltips-box {
-                    & > .product-item-tooltip {
-                        width: 100px;
-                        height: 20px;
-                        min-height: 20px;
-                        &::before {
-                            left: -12px;
+            & > .product-item-wrap {
+                & >.product-item-header {
+                    & > .tooltips-box {
+                        & > .product-item-tooltip {
+                            width: 100px;
+                            height: 20px;
+                            min-height: 20px;
+                            &::before {
+                                left: -12px;
+                            }
+                            & > h2 {
+                                font-size: 12px;
+                            }
                         }
-                        & > h2 {
-                            font-size: 12px;
+                    }
+                }
+                & > .product-item-footer {
+                    & > .product-item-footer-price {
+                        & > .current-price {
+                            font-size: 20px;
                         }
                     }
                 }
             }
-            & > .product-item-footer {
-                & > .product-item-footer-price {
-                    & > .current-price {
-                        font-size: 20px;
-                    }
-                }
-            }
         }
-    }
-
-    section.product-section {
-        padding: 30px 20px;
     }
 }
 
@@ -793,6 +784,14 @@ section.product-section {
         }
     }
     section.product-section {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    section.product-section {
+        padding: 30px 15px;
+
         .product-item {
             flex: 0 0 25%;
             max-width: 25%;

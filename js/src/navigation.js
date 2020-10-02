@@ -33,6 +33,7 @@ class Navigation {
             closeXComparisonNodeBtn: document.querySelector('a.comparison-collapse-close-btn'),
             desktopNavigationBtn: document.getElementById('dmenu'),
             desktopNavigationCollapseMenu: document.querySelector('div.desktop-navigation-collapse'),
+            desktopNavigationCollapseMenuWrap: document.querySelector('div.desktop-navigation-collapse-wrap'),
             desktopCollapseDesktopOverlay: document.querySelector('div.desktop-navigation-collapse-overlay'),
             desktopSearchInput: document.getElementById('navSearchInp'),
             desktopSearchBlock: document.getElementById('navSearch'),
@@ -58,6 +59,7 @@ class Navigation {
         this.mobileResolution = 860;
         this.footer = document.getElementById('s_footer');
         this.isMainPage = document.getElementById('content-slider') ? true : false;
+        this.desktopLinksWithDropDown = document.querySelectorAll('li.desktop-catalog-navigation-item.has-dropdown-nav');
         this.createNavigationsEvents();
     }
 
@@ -416,16 +418,19 @@ class Navigation {
     }
 
     squeezeNavigationOnScroll = (windowTop) => {
+
+        const { navigationBlock, logotype } = this.config;
+
         if(windowTop > 0 && window.innerWidth > 860) {
-            this.config.navigationBlock.style.top = '-60px';
+            navigationBlock.style.top = '-60px';
             this.wrapBlock.style.marginTop = '65px';
-            this.config.logotype.style.top = window.innerWidth >= 1650 ? '55px' : '0px';
+            logotype.style.top = window.innerWidth >= 1650 ? '55px' : '0px';
             return 0;
         }
         if(windowTop == 0 && window.innerWidth > 860) {
-            this.config.navigationBlock.style.top = '0';
+            navigationBlock.style.top = '0';
             this.wrapBlock.style.marginTop = '120px';
-            this.config.logotype.style.top = '0px';
+            logotype.style.top = '0px';
             return 0;
         }
         this.config.navigationBlock.style.top = '0';
@@ -545,11 +550,11 @@ class Navigation {
         if(!this.config.isDesktopAnimated) {
             const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
             this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
-            $(desktopNavigationCollapseMenu).css('overflow-y','hidden');
+            this.footer.style.zIndex = !isDesktopMenuCollapsed && !this.isMainPage && '50';
             $(desktopNavigationCollapseMenu).animate( {'height': isDesktopMenuCollapsed ? `0px` : `100vh`} , animationDuration * .75, ()=> {
                 this.config.isDesktopMenuCollapsed = !isDesktopMenuCollapsed;
                 this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
-                $(desktopNavigationCollapseMenu).css('overflow-y', isDesktopMenuCollapsed ? 'hidden' : 'unset');
+                this.footer.style.zIndex = isDesktopMenuCollapsed && '200';
             });
             if(!this.isMainPage) {
                 if(!this.config.isOverlayShow) {
@@ -571,6 +576,7 @@ class Navigation {
         if(!this.config.isDesktopAnimated) {
             const { isDesktopMenuCollapsed } = this.config;
             return isDesktopMenuCollapsed ? this.desktopNavigationEvent() : null;
+            this.footer.style.zIndex = '200';
         }
     }
 
@@ -634,7 +640,6 @@ class Navigation {
             btn.addEventListener('touchend', this.backSwitchMenuLevelEvent)
         });
 
-
         // События по загрузке страницы
         document.addEventListener('DOMContentLoaded', (e) => {
             const pageTop = window.pageYOffset;
@@ -643,16 +648,20 @@ class Navigation {
             if(this.isMainPage && window.innerWidth > 860) {
                 this.desktopNavigationEvent();
                 // Overlay при hover
-                this.config.desktopNavigationCollapseMenu.addEventListener('mouseenter', (e) => {
+                this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseenter', (e) => {
+                    this.config.desktopNavigationCollapseMenu.style.width = '100vw';
                     if(!this.config.isOverlayShow) {
                         $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
-                            this.config.isOverlayShow = !this.config.isOverlayShow
+                            this.config.isOverlayShow = !this.config.isOverlayShow;
+                            this.footer.style.zIndex = '50';
                         });
                     }
                 })
-                this.config.desktopNavigationCollapseMenu.addEventListener('mouseleave', (e) => {
+                this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', (e) => {
+                    this.config.desktopNavigationCollapseMenu.style.width = '255px';
                     $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
                     this.config.isOverlayShow = !this.config.isOverlayShow;
+                    this.footer.style.zIndex = '200';
                 })
             }
             // Добавление эвентов если не главная страница
@@ -664,16 +673,26 @@ class Navigation {
             window.addEventListener('scroll', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
-                // if(pageTop + window.screen.height - 65 >= document.body.clientHeight - this.footerHeight) {
-                //     this.handleDesktopCloseNavigation();
-                // }
-                if(this.footer.getBoundingClientRect().top < window.innerHeight) {
-                    this.handleDesktopCloseNavigation();
+
+                if(this.footer.offsetTop < window.scrollY + window.innerHeight && this.config.isDesktopMenuCollapsed) {
+                    $(this.config.desktopNavigationCollapseMenu).css('max-height',`calc(100vh + 5px - ${window.scrollY + window.innerHeight - this.footer.offsetTop}px)`);
+                } else {
+                    if(this.config.isDesktopMenuCollapsed) {
+                        this.config.desktopNavigationCollapseMenu.removeAttribute('style');
+                        this.config.desktopNavigationCollapseMenu.style.height = '100vh';
+                    }
                 }
             })
             window.addEventListener('resize', (e) => {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
+
+                if(this.footer.offsetTop < window.scrollY + window.innerHeight) {
+                    $(this.config.desktopNavigationCollapseMenu).css('max-height',`calc(100vh - ${window.scrollY + window.innerHeight - this.footer.offsetTop}px)`);
+                } else {
+                    this.config.desktopNavigationCollapseMenu.removeAttribute('style');
+                    this.config.desktopNavigationCollapseMenu.style.height = '100vh';
+                }
             })
         })
 
