@@ -727,25 +727,33 @@ var _initialiseProps = function _initialiseProps() {
         document.addEventListener('DOMContentLoaded', function (e) {
             var pageTop = window.pageYOffset;
             _this.squeezeNavigationOnScroll(pageTop);
-            // Разворачивание навигации если это main страница и добавление эвентов главной страницы
-            if (_this.isMainPage && window.innerWidth > 860) {
-                _this.desktopNavigationEvent();
-                // Overlay при hover
-                _this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseenter', function (e) {
-                    _this.config.desktopNavigationCollapseMenu.style.width = '100vw';
+
+            _this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseenter', function () {
+                _this.config.desktopNavigationCollapseMenu.style.width = '100vw';
+                if (_this.isMainPage) {
                     if (!_this.config.isOverlayShow) {
                         $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
                             _this.config.isOverlayShow = !_this.config.isOverlayShow;
                             _this.footer.style.zIndex = '50';
                         });
                     }
-                });
-                _this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', function (e) {
-                    _this.config.desktopNavigationCollapseMenu.style.width = '255px';
-                    $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
-                    _this.config.isOverlayShow = !_this.config.isOverlayShow;
-                    _this.footer.style.zIndex = '200';
-                });
+                }
+            }, false);
+
+            _this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', function () {
+                _this.config.desktopNavigationCollapseMenu.style.width = '255px';
+                if (_this.isMainPage) {
+                    if (_this.config.isOverlayShow) {
+                        $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
+                        _this.config.isOverlayShow = !_this.config.isOverlayShow;
+                        _this.footer.style.zIndex = '200';
+                    }
+                }
+            }, false);
+
+            // Разворачивание навигации если это main страница и добавление эвентов главной страницы
+            if (_this.isMainPage && window.innerWidth > 860) {
+                _this.desktopNavigationEvent();
             }
             // Добавление эвентов если не главная страница
             else {

@@ -644,25 +644,33 @@ class Navigation {
         document.addEventListener('DOMContentLoaded', (e) => {
             const pageTop = window.pageYOffset;
             this.squeezeNavigationOnScroll(pageTop);
-            // Разворачивание навигации если это main страница и добавление эвентов главной страницы
-            if(this.isMainPage && window.innerWidth > 860) {
-                this.desktopNavigationEvent();
-                // Overlay при hover
-                this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseenter', (e) => {
-                    this.config.desktopNavigationCollapseMenu.style.width = '100vw';
+
+            this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseenter', () => {
+                this.config.desktopNavigationCollapseMenu.style.width = '100vw';
+                if(this.isMainPage) {
                     if(!this.config.isOverlayShow) {
                         $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
                             this.config.isOverlayShow = !this.config.isOverlayShow;
                             this.footer.style.zIndex = '50';
                         });
                     }
-                })
-                this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', (e) => {
-                    this.config.desktopNavigationCollapseMenu.style.width = '255px';
-                    $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
-                    this.config.isOverlayShow = !this.config.isOverlayShow;
-                    this.footer.style.zIndex = '200';
-                })
+                }
+            }, false)
+
+            this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', () => {
+                this.config.desktopNavigationCollapseMenu.style.width = '255px';
+                if(this.isMainPage) {
+                    if(this.config.isOverlayShow) {
+                        $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
+                        this.config.isOverlayShow = !this.config.isOverlayShow;
+                        this.footer.style.zIndex = '200';
+                    }
+                }
+            }, false)
+
+            // Разворачивание навигации если это main страница и добавление эвентов главной страницы
+            if(this.isMainPage && window.innerWidth > 860) {
+                this.desktopNavigationEvent();
             }
             // Добавление эвентов если не главная страница
             else {

@@ -444,7 +444,7 @@ header.main-navigation-header {
   max-height: calc(100vh - 60px);
   position: absolute;
   z-index: -1;
-  right: 50px;
+  left: calc(100% - 305px);
   top: 50px;
 }
 .navigation-desktop-and-mobile > .desktop-menu-btn-box > .desktop-navigation-collapse::-webkit-scrollbar-track {
@@ -5106,3 +5106,4 @@ section.catalog-products-items-footer {
     width: 50%;
   }
 }
+/*# sourceMappingURL=catalog-products-list.css.map */
