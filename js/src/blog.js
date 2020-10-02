@@ -45,7 +45,6 @@ const onScroll = (e) => {
         }
     } else {
         if(subscribeToUpdates.offsetTop < window.scrollY + window.innerHeight) {
-            console.log('done')
             subNavigationWrapper.style.maxHeight = `calc(100vh - ${window.scrollY + window.innerHeight - subscribeToUpdates.offsetTop}px)`;
         } else {
             subNavigationWrapper.style.maxHeight = 'unset';
