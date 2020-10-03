@@ -59,7 +59,7 @@ class Navigation {
         this.mobileResolution = 860;
         this.footer = document.getElementById('s_footer');
         this.isMainPage = document.getElementById('content-slider') ? true : false;
-        this.desktopLinksWithDropDown = document.querySelectorAll('li.desktop-catalog-navigation-item.has-dropdown-nav');
+        this.desktopCartModal = document.getElementById('cartModalWindow');
         this.createNavigationsEvents();
     }
 
@@ -346,6 +346,10 @@ class Navigation {
 
     openCart = (e) => {
         if(window.innerWidth > this.mobileResolution) {
+            $(this.desktopCartModal).modal('show');
+            $(document.body).css({
+                padding: '0',
+            });
             return false;
         }
         e.preventDefault();
@@ -660,11 +664,9 @@ class Navigation {
             this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', () => {
                 this.config.desktopNavigationCollapseMenu.style.width = '255px';
                 if(this.isMainPage) {
-                    if(this.config.isOverlayShow) {
-                        $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
-                        this.config.isOverlayShow = !this.config.isOverlayShow;
-                        this.footer.style.zIndex = '200';
-                    }
+                    $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
+                    this.config.isOverlayShow = !this.config.isOverlayShow;
+                    this.footer.style.zIndex = '200';
                 }
             }, false)
 

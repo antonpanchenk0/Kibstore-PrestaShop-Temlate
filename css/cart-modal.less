@@ -1,0 +1,372 @@
+@import 'colors';
+@import 'fonts';
+
+div#cartModalWindow {
+    & > .modal-dialog {
+        & > .modal-content {
+            padding: 60px;
+
+            & > .modal-header {
+                border: none;
+                padding: 0;
+
+                & > .modal-title {
+                    .SFProDisplayBold;
+                    font-size: 22px;
+                    color: #2c3138;
+                }
+
+                & > button.close {
+                    padding: 0;
+                    margin: 0;
+                    outline: none!important;
+
+                    & > span {
+                        line-height: 1;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            & > .modal-body {
+                margin: 30px 0 0;
+                padding: 0 90px;
+
+                & > .cart-product-list-wrapper {
+                    border: 1px solid #cccccc;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    border-radius: 10px;
+                    padding: 20px;
+                    max-height: 500px;
+                    overflow-y: auto;
+
+                    &::-webkit-scrollbar-track {
+                        background-color: transparent;
+                        height: 4px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        -webkit-border-radius: 10px;
+                        border-radius: 10px;
+                        background-color: #858585;
+                        width: 1px;
+                        border: 8px solid #fff;
+                    }
+                    &::-webkit-scrollbar {
+                        width: 20px;
+                    }
+
+                    & > .product-cart-item {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        max-height: 104px;
+                        border-bottom: 1px solid #ccc;
+                        padding: 5px 0;
+
+                        & > .item-shortcut {
+                            height: 90px;
+                            max-height: 90px;
+
+                            & > img {
+                                width: auto;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        & > .item-info {
+                            width: 100%;
+                            margin-left: 10px;
+
+                            & > .info-header {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 5px;
+
+                                & > .title {
+                                    .SFProDisplayBold;
+                                    font-size: 16px;
+                                    color: #2c3138;
+                                    word-break: break-all;
+                                    overflow: hidden;
+                                    -ms-text-overflow: ellipsis;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 2;
+                                    line-height: 1;
+                                    max-height: 2rem;
+                                }
+
+                                & > .delete-item-btn {
+                                    width: 20px;
+                                    height: 20px;
+                                    background-image: url("../img/icons/trash.svg");
+                                    background-size: cover;
+                                    background-position: center center;
+                                }
+                            }
+
+                            & > .info-footer {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                & > .current-price, & > .total-price {
+                                    & > .price {
+                                        .SFProDisplayBold;
+                                        font-size: 16px;
+                                        color: #000;
+                                        margin-bottom: 5px;
+                                    }
+
+                                    & > .nds {
+                                        line-height: 1;
+                                        .SFProDisplayRegular;
+                                        font-size: 14px;
+                                        color: @grayColor;
+                                        margin: 0;
+                                    }
+
+                                    &.total-price {
+                                        & > .nds {
+                                            width: 100%;
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+
+                                & > .switcher {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+
+                                    & > .add-btn, & > .minus-btn, & > .counter {
+                                        width: 25px;
+                                        height: 25px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-top: 1px solid #ccc;
+                                        border-bottom: 1px solid #ccc;
+                                        .SFProDisplayBold;
+                                        font-size: 14px;
+                                        color: #000;
+                                        margin: 0;
+                                        text-decoration: none;
+
+                                        &:not(.counter) {
+                                            border: 1px solid #ccc;
+
+                                            &:hover {
+                                                background-color: #cccccc;
+                                            }
+                                        }
+
+                                        &.counter {
+                                            -webkit-user-select: none;
+                                            -moz-user-select: none;
+                                            -ms-user-select: none;
+                                            user-select: none;
+                                        }
+
+                                        &.add-btn {
+                                            -webkit-border-radius: 0 5px 5px 0;
+                                            -moz-border-radius: 0 5px 5px 0;
+                                            border-radius: 0 5px 5px 0;
+                                        }
+
+                                        &.minus-btn {
+                                            -webkit-border-radius: 5px 0 0 5px;
+                                            -moz-border-radius: 5px 0 0 5px;
+                                            border-radius: 5px 0 0 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > .modal-footer {
+                border: none;
+                padding: 0 90px;
+                margin-top: 30px;
+                align-items: flex-end;
+
+                & button.btn {
+                    width: 280px;
+                    height: 40px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .HelveticaNeueCyrBold;
+                    font-size: 18px;
+                }
+
+                & > button.close-modal {
+                    border: 1px solid @secondColor;
+                    color: @secondColor;
+                    margin: 0 20px 20px 0;
+                }
+
+                & > .create-order-section {
+                    width: auto;
+                    padding: 20px;
+                    background-color: #f3f3f3;
+                    -webkit-border-radius: 1px;
+                    -moz-border-radius: 1px;
+                    border-radius: 1px;
+                    margin: 0;
+
+                    & > .price-wrapper {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        margin-bottom: 10px;
+
+                        & > .title {
+                            .SFProDisplayBold;
+                            font-size: 22px;
+                            color: #000;
+                        }
+
+                        & > .price {
+                            & > .total {
+                                .SFProDisplayBold;
+                                font-size: 24px;
+                                color: #000;
+                            }
+
+                            & > .nds {
+                                .SFProDisplayRegular;
+                                font-size: 14px;
+                                color: #ccc;
+                                margin: 0;
+                                line-height: 1;
+                                width: 100%;
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    & > button.send-order {
+                        background-color: @thirdColor;
+                        border: 1px solid @thirdColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    div#cartModalWindow {
+        & > .modal-dialog {
+            & > .modal-content {
+                padding: 30px 15px;
+
+                & > .modal-body {
+                    padding: 0;
+                }
+
+                & > .modal-footer {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    div#cartModalWindow {
+        & > .modal-dialog {
+            & > .modal-content {
+                & > .modal-footer {
+                    & > button.close-modal {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    div#cartModalWindow {
+        & > .modal-dialog {
+            & > .modal-content {
+                padding: 15px 5px;
+                & > .modal-body {
+                    & > .cart-product-list-wrapper {
+                        padding: 5px;
+                        & > .product-cart-item {
+                            position: relative;
+                            max-height: 134px;
+                            padding: 15px 0;
+
+                            & > .item-shortcut {
+                                height: 45px;
+                                max-height: 45px;
+                            }
+
+                            & > .item-info {
+                                & > .info-header {
+                                    & > .title {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                & > .info-footer {
+                                    & > .current-price, & > .total-price {
+                                        & > .price {
+                                            font-size: 14px;
+                                            margin-bottom: 0;
+                                        }
+
+                                        & > .nds {
+                                            font-size: 10px;
+                                        }
+                                    }
+
+                                    & > .switcher {
+                                        & > .add-btn, & > .minus-btn, & > .counter {
+                                            width: 20px;
+                                            height: 20px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & > .modal-footer {
+                    flex-flow: column;
+                    & button.btn {
+                        width: 180px;
+                        height: 40px;
+                        .HelveticaNeueCyrBold;
+                        font-size: 14px;
+                    }
+
+                    & > .create-order-section {
+                        width: 270px;
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
