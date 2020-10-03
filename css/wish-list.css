@@ -3075,6 +3075,9 @@ footer.main-footer {
   }
 }
 @media screen and (max-width: 860px) {
+  footer.main-footer {
+    z-index: 50;
+  }
   .footer-nav {
     display: block;
   }

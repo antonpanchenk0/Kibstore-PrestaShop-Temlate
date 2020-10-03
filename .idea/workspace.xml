@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5211ebf6-b4a5-4544-9ddd-58f186fc390b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/cart-modal.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/dist/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dist/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/src/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -74,15 +67,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/navigation.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="284" column="37" selection-start-line="284" selection-start-column="37" selection-end-line="284" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/blog-page.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -118,11 +102,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/cart-modal.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="362" column="34" selection-start-line="362" selection-start-column="34" selection-end-line="362" selection-end-column="34" />
+            <state relative-caret-position="69">
+              <caret line="337" column="37" lean-forward="true" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/footer.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="302" column="19" selection-start-line="302" selection-start-column="19" selection-end-line="302" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -277,7 +270,6 @@
         <option value="$PROJECT_DIR$/wish-list.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/comparison.less" />
-        <option value="$PROJECT_DIR$/css/footer.less" />
         <option value="$PROJECT_DIR$/css/blog-page.less" />
         <option value="$PROJECT_DIR$/js/src/blog.js" />
         <option value="$PROJECT_DIR$/css/navigation.less" />
@@ -286,6 +278,7 @@
         <option value="$PROJECT_DIR$/main.html" />
         <option value="$PROJECT_DIR$/css/page-sub-navigation-for-page-content.less" />
         <option value="$PROJECT_DIR$/css/cart-modal.less" />
+        <option value="$PROJECT_DIR$/css/footer.less" />
       </list>
     </option>
   </component>
@@ -521,12 +514,12 @@
       <workItem from="1601451105341" duration="22309000" />
       <workItem from="1601545138715" duration="14357000" />
       <workItem from="1601639585615" duration="20155000" />
-      <workItem from="1601720864309" duration="9585000" />
+      <workItem from="1601720864309" duration="9890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333406000" />
+    <option name="totallyTimeSpent" value="333711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
@@ -929,13 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/footer.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wish-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3009">
@@ -1102,8 +1088,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/cart-modal.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="362" column="34" selection-start-line="362" selection-start-column="34" selection-end-line="362" selection-end-column="34" />
+        <state relative-caret-position="69">
+          <caret line="337" column="37" lean-forward="true" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/footer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="302" column="19" selection-start-line="302" selection-start-column="19" selection-end-line="302" selection-end-column="19" />
         </state>
       </provider>
     </entry>
