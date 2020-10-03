@@ -4143,68 +4143,50 @@ section.product-section > .product-section-body {
 .wrap {
   background: #fff;
 }
-.error {
-  padding: 25px 0;
-  min-height: calc(100vh - 40px - 186px);
+.fluid-content > section.error-page-wrapper {
+  width: 100%;
+  max-width: 1530px;
+  padding: 60px 20px;
+  min-height: calc(100vh - 120px);
   display: flex;
   flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
-.error > h1 {
+.fluid-content > section.error-page-wrapper > .title {
   font-family: "Aspire";
   font-weight: normal;
-  font-size: 16px;
+  font-size: 36px;
   color: #5489d7;
-  margin: 0;
-  padding: 0 15px;
-}
-.error > .error-msg {
-  width: 100%;
-  text-align: center;
-  padding: 10vh 0 25px 0;
-  position: relative;
-}
-.error > .error-msg > h2 {
-  font-family: "Aspire";
-  font-weight: normal;
-  font-size: 25px;
-  color: #51c878;
-  text-transform: uppercase;
-}
-.error > .error-msg > h3 {
-  font-family: "Android Robot";
-  font-weight: normal;
-  font-size: 100px;
-  color: #51c878;
-  position: relative;
   line-height: 1;
-  letter-spacing: -0.05ch;
-  margin-bottom: 40px;
-  z-index: 20;
+  width: 100%;
+  text-align: left;
 }
-.error > .error-msg > h3 > img {
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.error > .error-msg.bg-add {
-  background: url("../img/404-2.png") no-repeat center center;
+.fluid-content > section.error-page-wrapper > .bg-image {
+  width: 75%;
+  min-height: calc(100vh - 36px - 120px);
+  background-image: url("../img/404-3.png");
+  background-position: center center;
   background-size: 100%;
+  background-repeat: no-repeat;
 }
-.error > .error-msg > p {
-  font-family: "SF Pro Display";
-  font-weight: normal;
-  font-size: 14px;
-  color: #858585;
-  margin-bottom: 10px;
-  text-align: center;
-  z-index: 20;
-  padding: 0 15px;
+@media screen and (max-width: 860px) {
+  .fluid-content {
+    display: flex;
+  }
+  .fluid-content > section.error-page-wrapper {
+    padding: 20px 0;
+  }
+  .fluid-content > section.error-page-wrapper > .title {
+    padding: 0 20px;
+  }
+  .fluid-content > section.error-page-wrapper > .bg-image {
+    width: 100%;
+    min-height: calc(100vh - 300px);
+    background-image: url("../img/404-3.png");
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 /*# sourceMappingURL=404.css.map */
