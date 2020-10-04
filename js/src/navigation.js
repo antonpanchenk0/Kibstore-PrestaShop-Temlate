@@ -1,6 +1,7 @@
 class Navigation {
     constructor(animationDuration){
         this.config = {
+            navWrapper: document.querySelector('nav.navigation'),
             logotype: document.getElementById('mainLogo'),
             navigationBlock: document.querySelector('header'),
             desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
@@ -551,6 +552,7 @@ class Navigation {
 
     desktopNavigationEvent = (e) => {
         e && e.preventDefault();
+        console.log('desktopNavigationEvent')
         if(!this.config.isDesktopAnimated) {
             const { isDesktopMenuCollapsed, desktopNavigationCollapseMenu, animationDuration } = this.config;
             this.config.isDesktopAnimated = !this.config.isDesktopAnimated;
@@ -565,11 +567,15 @@ class Navigation {
                     $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
                         this.config.isOverlayShow = !this.config.isOverlayShow;
                         document.body.classList.add('scroll-disabled');
+                        $(document.body).css({paddingRight: '17px', backgroundColor: '#e9edf0'});
+                        $(this.config.navWrapper).css({paddingRight: `${parseInt($(this.config.navWrapper).css("padding-right")) + 17}px`});
                     });
                 } else {
                     $(this.config.desktopCollapseDesktopOverlay).fadeOut(100, () => {
                         this.config.isOverlayShow = !this.config.isOverlayShow;
                         document.body.classList.remove('scroll-disabled');
+                        $(document.body).css({paddingRight: '0px', backgroundColor: '#fff'});
+                        $(this.config.navWrapper).css({paddingRight: `${parseInt($(this.config.navWrapper).css("padding-right")) - 17}px`});
                     });
                 }
             }
@@ -656,6 +662,9 @@ class Navigation {
                         $(this.config.desktopCollapseDesktopOverlay).fadeIn(100, () => {
                             this.config.isOverlayShow = !this.config.isOverlayShow;
                             this.footer.style.zIndex = '50';
+                            $(document.body).css({paddingRight: '17px', backgroundColor: '#e9edf0'});
+                            $(this.config.navWrapper).css({paddingRight: `${window.innerWidth < 1560 ? '27px' : '57px'}`});
+                            document.body.classList.add('scroll-disabled');
                         });
                     }
                 }
@@ -664,6 +673,9 @@ class Navigation {
             this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', () => {
                 this.config.desktopNavigationCollapseMenu.style.width = '255px';
                 if(this.isMainPage) {
+                    document.body.classList.remove('scroll-disabled');
+                    $(document.body).css({paddingRight: '0px', backgroundColor: '#fff'});
+                    $(this.config.navWrapper).css({paddingRight: `${window.innerWidth < 1560 ? '10px' : '40px'}`});
                     $(this.config.desktopCollapseDesktopOverlay).fadeOut(100);
                     this.config.isOverlayShow = !this.config.isOverlayShow;
                     this.footer.style.zIndex = '200';

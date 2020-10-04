@@ -8,6 +8,7 @@ var Navigation = function Navigation(animationDuration) {
     _initialiseProps.call(this);
 
     this.config = {
+        navWrapper: document.querySelector('nav.navigation'),
         logotype: document.getElementById('mainLogo'),
         navigationBlock: document.querySelector('header'),
         desktopNavigationHeader: document.querySelector('div.desktop-navigation-header'),
@@ -630,6 +631,7 @@ var _initialiseProps = function _initialiseProps() {
 
     this.desktopNavigationEvent = function (e) {
         e && e.preventDefault();
+        console.log('desktopNavigationEvent');
         if (!_this.config.isDesktopAnimated) {
             var _config12 = _this.config,
                 isDesktopMenuCollapsed = _config12.isDesktopMenuCollapsed,
@@ -648,11 +650,15 @@ var _initialiseProps = function _initialiseProps() {
                     $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
                         _this.config.isOverlayShow = !_this.config.isOverlayShow;
                         document.body.classList.add('scroll-disabled');
+                        $(document.body).css({ paddingRight: '17px', backgroundColor: '#e9edf0' });
+                        $(_this.config.navWrapper).css({ paddingRight: parseInt($(_this.config.navWrapper).css("padding-right")) + 17 + 'px' });
                     });
                 } else {
                     $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100, function () {
                         _this.config.isOverlayShow = !_this.config.isOverlayShow;
                         document.body.classList.remove('scroll-disabled');
+                        $(document.body).css({ paddingRight: '0px', backgroundColor: '#fff' });
+                        $(_this.config.navWrapper).css({ paddingRight: parseInt($(_this.config.navWrapper).css("padding-right")) - 17 + 'px' });
                     });
                 }
             }
@@ -739,6 +745,9 @@ var _initialiseProps = function _initialiseProps() {
                         $(_this.config.desktopCollapseDesktopOverlay).fadeIn(100, function () {
                             _this.config.isOverlayShow = !_this.config.isOverlayShow;
                             _this.footer.style.zIndex = '50';
+                            $(document.body).css({ paddingRight: '17px', backgroundColor: '#e9edf0' });
+                            $(_this.config.navWrapper).css({ paddingRight: '' + (window.innerWidth < 1560 ? '27px' : '57px') });
+                            document.body.classList.add('scroll-disabled');
                         });
                     }
                 }
@@ -747,6 +756,9 @@ var _initialiseProps = function _initialiseProps() {
             _this.config.desktopNavigationCollapseMenuWrap.addEventListener('mouseleave', function () {
                 _this.config.desktopNavigationCollapseMenu.style.width = '255px';
                 if (_this.isMainPage) {
+                    document.body.classList.remove('scroll-disabled');
+                    $(document.body).css({ paddingRight: '0px', backgroundColor: '#fff' });
+                    $(_this.config.navWrapper).css({ paddingRight: '' + (window.innerWidth < 1560 ? '10px' : '40px') });
                     $(_this.config.desktopCollapseDesktopOverlay).fadeOut(100);
                     _this.config.isOverlayShow = !_this.config.isOverlayShow;
                     _this.footer.style.zIndex = '200';
