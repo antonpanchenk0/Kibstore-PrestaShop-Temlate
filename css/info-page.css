@@ -4358,6 +4358,7 @@ section.product-section > .product-section-body {
     top: 40px;
     left: 0;
     width: 100%;
+    z-index: 10;
   }
   .info-page > section.info-page-wrapper > .page-header > .router {
     display: none;

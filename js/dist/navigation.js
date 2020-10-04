@@ -780,12 +780,12 @@ var _initialiseProps = function _initialiseProps() {
                 var pageTop = window.pageYOffset;
                 _this.squeezeNavigationOnScroll(pageTop);
 
-                if (_this.footer.offsetTop < window.scrollY + window.innerHeight) {
-                    $(_this.config.desktopNavigationCollapseMenu).css('max-height', 'calc(100vh - ' + (window.scrollY + window.innerHeight - _this.footer.offsetTop) + 'px)');
-                } else {
-                    _this.config.desktopNavigationCollapseMenu.removeAttribute('style');
-                    _this.config.desktopNavigationCollapseMenu.style.height = '100vh';
-                }
+                // if(this.footer.offsetTop < window.scrollY + window.innerHeight) {
+                //     $(this.config.desktopNavigationCollapseMenu).css('max-height',`calc(100vh - ${window.scrollY + window.innerHeight - this.footer.offsetTop}px)`);
+                // } else {
+                //     this.config.desktopNavigationCollapseMenu.removeAttribute('style');
+                //     this.config.desktopNavigationCollapseMenu.style.height = '100vh';
+                // }
             });
         });
 

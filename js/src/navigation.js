@@ -697,12 +697,12 @@ class Navigation {
                 const pageTop = window.pageYOffset;
                 this.squeezeNavigationOnScroll(pageTop);
 
-                if(this.footer.offsetTop < window.scrollY + window.innerHeight) {
-                    $(this.config.desktopNavigationCollapseMenu).css('max-height',`calc(100vh - ${window.scrollY + window.innerHeight - this.footer.offsetTop}px)`);
-                } else {
-                    this.config.desktopNavigationCollapseMenu.removeAttribute('style');
-                    this.config.desktopNavigationCollapseMenu.style.height = '100vh';
-                }
+                // if(this.footer.offsetTop < window.scrollY + window.innerHeight) {
+                //     $(this.config.desktopNavigationCollapseMenu).css('max-height',`calc(100vh - ${window.scrollY + window.innerHeight - this.footer.offsetTop}px)`);
+                // } else {
+                //     this.config.desktopNavigationCollapseMenu.removeAttribute('style');
+                //     this.config.desktopNavigationCollapseMenu.style.height = '100vh';
+                // }
             })
         })
 
