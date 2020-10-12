@@ -165,10 +165,12 @@ var _initialiseProps = function _initialiseProps() {
 
     this.filterFixed = function () {
         if (window.scrollY > 0 && window.innerWidth > 860) {
-            _this.filtersForm.style.height = 'calc(100vh - 110px)';
+            // this.filtersForm.style.height = 'calc(100vh - 110px)';
+            _this.filtersForm.style.paddingBottom = '35px';
         }
         if (window.scrollY <= 0 && window.innerWidth > 860) {
-            _this.filtersForm.style.height = 'calc(100vh - 180px)';
+            // this.filtersForm.style.height = 'calc(100vh - 180px)';
+            _this.filtersForm.style.paddingBottom = '90px';
         }
     };
 

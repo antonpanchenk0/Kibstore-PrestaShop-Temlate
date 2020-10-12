@@ -132,10 +132,12 @@ class Filters {
 
     filterFixed = () => {
         if(window.scrollY > 0 && window.innerWidth > 860) {
-            this.filtersForm.style.height = 'calc(100vh - 110px)';
+            // this.filtersForm.style.height = 'calc(100vh - 110px)';
+            this.filtersForm.style.paddingBottom = '35px';
         }
         if(window.scrollY <=0 && window.innerWidth > 860) {
-            this.filtersForm.style.height = 'calc(100vh - 180px)';
+            // this.filtersForm.style.height = 'calc(100vh - 180px)';
+            this.filtersForm.style.paddingBottom = '90px';
         }
     }
 

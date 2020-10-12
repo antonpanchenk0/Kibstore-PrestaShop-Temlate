@@ -4487,7 +4487,7 @@ section.product-section > .product-section-body {
 .content > .product-about-section > .product-about-section-body {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   background: #fff;
   padding: 30px 40px;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
@@ -5234,9 +5234,9 @@ section.product-section > .product-section-body {
   border-radius: 5px;
   padding: 25px 0px;
   margin-bottom: 0px;
-  -webkit-box-shadow: 0px 0px 5px 2px #00000091;
-  -moz-box-shadow: 0px 0px 5px 2px #00000091;
-  box-shadow: 0px 0px 5px 2px #00000091;
+  -webkit-box-shadow: 0px 0px 5px 2px #51c87875, 0px -40px 0px 0px #ffffff;
+  -moz-box-shadow: 0px 0px 5px 2px #51c87875, 0px -40px 0px 0px #ffffff;
+  box-shadow: 0px 0px 5px 2px #51c87875, 0px -40px 0px 0px #ffffff;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section.is-sticky,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section.is-sticky {
