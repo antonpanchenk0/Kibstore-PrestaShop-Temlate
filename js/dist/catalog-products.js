@@ -9,6 +9,7 @@ var Filters = function Filters(animationDuration) {
 
     this.animationDuration = animationDuration;
     this.filters = document.querySelectorAll('.catalog-products-filter-item-header');
+    this.filtersForm = document.querySelector('form.catalog-products-filters-form');
     this.openFilterBtn = document.getElementById('filter_open');
     this.filterCollapseBox = document.getElementById('filterSection');
     this.isFilterCollapse = false;
@@ -66,6 +67,11 @@ var _initialiseProps = function _initialiseProps() {
 
         window.addEventListener('resize', function () {
             _this.productWrapBoxTop = _this.productWrapBox.getBoundingClientRect().top;
+            if (window.innerWidth <= 860) {
+                _this.filtersForm.removeAttribute('style');
+            } else {
+                _this.filterFixed();
+            }
         });
     };
 
@@ -102,6 +108,7 @@ var _initialiseProps = function _initialiseProps() {
             $(filterCollapseBox).animate({ 'right': '0px' }, animationDuration * 0.5, function () {
                 _this.isFilterCollapse = true;
                 _this.isFilterAnimated = false;
+                document.body.classList.add('scroll-disabled');
             });
         }
     };
@@ -117,6 +124,7 @@ var _initialiseProps = function _initialiseProps() {
         if (isFilterCollapse && !isFilterAnimated && window.innerWidth < 860) {
             _this.isFilterAnimated = true;
             $(overlay).fadeOut(animationDuration * 0.75);
+            document.body.classList.remove('scroll-disabled');
             $(filterCollapseBox).animate({ 'right': '-400px' }, animationDuration * 0.5, function () {
                 _this.isFilterCollapse = false;
                 _this.isFilterAnimated = false;
@@ -156,26 +164,11 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.filterFixed = function () {
-        var isFixed = _this.isFixed,
-            filtersHeaderBox = _this.filtersHeaderBox,
-            productWrapBox = _this.productWrapBox,
-            pageHeaderBox = _this.pageHeaderBox;
-
-        console.log(pageHeaderBox);
-        console.log(window.scrollY);
-        if (window.scrollY >= pageHeaderBox - 40 && window.innerWidth <= 860) {
-            if (!isFixed) {
-                filtersHeaderBox.classList.add('f-fixed-top');
-                productWrapBox.style.paddingTop = '40px';
-                _this.isFixed = true;
-            }
+        if (window.scrollY > 0 && window.innerWidth > 860) {
+            _this.filtersForm.style.height = 'calc(100vh - 110px)';
         }
-        if (window.scrollY < pageHeaderBox - 40 && window.innerWidth <= 860) {
-            if (isFixed) {
-                filtersHeaderBox.classList.remove('f-fixed-top');
-                productWrapBox.style.paddingTop = '0px';
-                _this.isFixed = false;
-            }
+        if (window.scrollY <= 0 && window.innerWidth > 860) {
+            _this.filtersForm.style.height = 'calc(100vh - 180px)';
         }
     };
 

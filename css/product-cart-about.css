@@ -3615,7 +3615,7 @@ section.product-section > .product-section-body {
   object-fit: contain;
   margin-bottom: 15px;
 }
-.product-item > .product-item-wrap > .product-item-body > h2.title {
+.product-item > .product-item-wrap > .product-item-body > .title {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 16px;
@@ -3631,6 +3631,7 @@ section.product-section > .product-section-body {
   -webkit-line-clamp: 2;
   line-height: 1;
   max-height: 2rem;
+  text-decoration: none!important;
 }
 .product-item > .product-item-wrap > .product-item-body > .product-item-rating {
   display: flex;
@@ -5233,6 +5234,9 @@ section.product-section > .product-section-body {
   border-radius: 5px;
   padding: 25px 0px;
   margin-bottom: 0px;
+  -webkit-box-shadow: 0px 0px 5px 2px #00000091;
+  -moz-box-shadow: 0px 0px 5px 2px #00000091;
+  box-shadow: 0px 0px 5px 2px #00000091;
 }
 .content > .page-header > .product-about-section-body > .product-about-section-controls-other-info > .buy-section.is-sticky,
 .content > .product-about-section > .product-about-section-body > .product-about-section-controls-other-info > .buy-section.is-sticky {

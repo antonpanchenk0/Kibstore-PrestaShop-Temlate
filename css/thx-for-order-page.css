@@ -3717,7 +3717,7 @@ section.product-section > .product-section-body {
   object-fit: contain;
   margin-bottom: 15px;
 }
-.product-item > .product-item-wrap > .product-item-body > h2.title {
+.product-item > .product-item-wrap > .product-item-body > .title {
   font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 16px;
@@ -3733,6 +3733,7 @@ section.product-section > .product-section-body {
   -webkit-line-clamp: 2;
   line-height: 1;
   max-height: 2rem;
+  text-decoration: none!important;
 }
 .product-item > .product-item-wrap > .product-item-body > .product-item-rating {
   display: flex;

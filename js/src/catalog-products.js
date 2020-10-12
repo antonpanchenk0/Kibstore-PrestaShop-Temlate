@@ -2,6 +2,7 @@ class Filters {
     constructor(animationDuration) {
         this.animationDuration = animationDuration;
         this.filters = document.querySelectorAll('.catalog-products-filter-item-header');
+        this.filtersForm = document.querySelector('form.catalog-products-filters-form');
         this.openFilterBtn = document.getElementById('filter_open');
         this.filterCollapseBox = document.getElementById('filterSection');
         this.isFilterCollapse = false;
@@ -50,6 +51,11 @@ class Filters {
 
         window.addEventListener('resize', () => {
             this.productWrapBoxTop = this.productWrapBox.getBoundingClientRect().top;
+            if(window.innerWidth <= 860) {
+                this.filtersForm.removeAttribute('style');
+            } else {
+                this.filterFixed();
+            }
         })
     }
 
@@ -80,6 +86,7 @@ class Filters {
             $(filterCollapseBox).animate({'right': '0px'}, animationDuration * 0.5, () => {
                 this.isFilterCollapse = true;
                 this.isFilterAnimated = false;
+                document.body.classList.add('scroll-disabled');
             })
         }
     }
@@ -90,6 +97,7 @@ class Filters {
         if(isFilterCollapse && !isFilterAnimated && window.innerWidth < 860) {
             this.isFilterAnimated = true;
             $(overlay).fadeOut(animationDuration * 0.75);
+            document.body.classList.remove('scroll-disabled');
             $(filterCollapseBox).animate({'right': '-400px'}, animationDuration * 0.5, () => {
                 this.isFilterCollapse = false;
                 this.isFilterAnimated = false;
@@ -123,22 +131,11 @@ class Filters {
     }
 
     filterFixed = () => {
-        const { isFixed, filtersHeaderBox, productWrapBox, pageHeaderBox } = this;
-        console.log(pageHeaderBox)
-        console.log(window.scrollY)
-        if(window.scrollY >= (pageHeaderBox - 40) && window.innerWidth <= 860) {
-            if(!isFixed) {
-                filtersHeaderBox.classList.add('f-fixed-top');
-                productWrapBox.style.paddingTop = '40px';
-                this.isFixed = true;
-            }
+        if(window.scrollY > 0 && window.innerWidth > 860) {
+            this.filtersForm.style.height = 'calc(100vh - 110px)';
         }
-        if(window.scrollY < (pageHeaderBox - 40) && window.innerWidth <= 860) {
-            if(isFixed) {
-                filtersHeaderBox.classList.remove('f-fixed-top');
-                productWrapBox.style.paddingTop = '0px';
-                this.isFixed = false;
-            }
+        if(window.scrollY <=0 && window.innerWidth > 860) {
+            this.filtersForm.style.height = 'calc(100vh - 180px)';
         }
     }
 

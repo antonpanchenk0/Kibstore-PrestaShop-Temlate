@@ -58,10 +58,10 @@
 /*Categories Section | Discount and new items section | Mobile app section*/
 
 .content {
-    padding: 0 155px 0 0;
+    padding: 0 calc(25% - 285px) 0 0;
     & > div, & > section {
-        flex: 0 0 calc(77% - 60px);
-        max-width: calc(77% - 60px);
+        flex: 0 0 calc(75% - 60px);
+        max-width: calc(75% - 60px);
     }
 }
 .fluid-content {
@@ -72,8 +72,8 @@
         justify-content: flex-end;
         padding: 30px 185px 30px 0;
         & > * {
-            flex: 0 0 calc(77% - 60px);
-            max-width: calc(77% - 60px);
+            flex: 0 0 calc(75% - 60px);
+            max-width: calc(75% - 60px);
         }
     }
 }
@@ -325,16 +325,11 @@
 
 @media screen and (max-width: 1920px) {
     .content {
-        padding: 0 5% 0 0;
-    }
-    .fluid-content {
-        & > div, & > section {
-            padding: 30px 6% 30px 0;
-        }
+        padding: 0 calc(25% - 285px) 0 0;
     }
     .blog-news, .about-us {
         & > .blog-news-wrap, & > .about-us-wrap {
-            padding: 30px 5% 30px 0;
+            padding: 30px calc(25% - 285px) 30px 0;
         }
     }
     section.product-section {
@@ -355,6 +350,14 @@
 }
 
 @media screen and (max-width: 1560px) {
+    .content {
+        padding: 0 calc(25% - 235px) 0 0;
+    }
+    .blog-news, .about-us {
+        & > .blog-news-wrap, & > .about-us-wrap {
+            padding: 30px calc(25% - 235px) 30px 0;
+        }
+    }
     .advantages {
         & > .advantages-wrap {
             & > .advantages-list {
@@ -374,17 +377,8 @@
 }
 
 @media screen and (max-width: 1280px) {
-    .content {
-        padding: 0 2% 0 0;
-    }
-    .fluid-content {
-        & > div, & > section {
-            padding: 30px 3% 30px 0;
-        }
-    }
     .blog-news, .about-us, .advantages {
         & > .blog-news-wrap, & > .about-us-wrap, & > .advantages-wrap {
-            padding: 30px 3% 30px 0;
             & > .advantages-list {
                 & > .advantages-item {
                     margin: 0 30px;
@@ -430,7 +424,26 @@
     }
 }
 
+@media screen and (max-width: 1120px) {
+    .content {
+        padding: 0 calc(30% - 270px) 0 0;
+    }
+    .blog-news, .about-us {
+        & > .blog-news-wrap, & > .about-us-wrap {
+            padding: 30px calc(30% - 270px) 30px 0;
+        }
+    }
+}
+
 @media screen and (max-width: 960px) {
+    .content {
+        padding: 0 calc(30% - 240px) 0 0;
+    }
+    .blog-news, .about-us {
+        & > .blog-news-wrap, & > .about-us-wrap {
+            padding: 30px calc(30% - 240px) 30px 0;
+        }
+    }
     .carousel {
         padding-left: 30px;
     }
