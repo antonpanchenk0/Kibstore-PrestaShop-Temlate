@@ -56,6 +56,7 @@
 .desktop-navigation-collapse-overlay {
   width: 100%;
   height: 100vh;
+  min-height: 100vh;
   z-index: 150;
   background: #000000a6;
   position: fixed;
@@ -3973,6 +3974,7 @@ section.product-section > .product-section-body {
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .old-price > h3,
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .current-price > h3 {
     display: none;
+    white-space: nowrap;
   }
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .old-price.current-price > h2,
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .current-price.current-price > h2 {

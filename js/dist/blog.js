@@ -11,29 +11,31 @@ var body = document.querySelector('ul.sub-navigation-list');
 var topHeight = 124;
 
 var switchMenu = function switchMenu() {
-    if (!isCollapse && !isAnimated) {
-        isAnimated = true;
-        overlay.style.height = $(document).height() - 176 + 'px';
-        header.classList.add('showed');
-        subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
-        $(body).fadeIn(400, function () {
-            isAnimated = false;
-            isCollapse = true;
-        });
-        $(overlay).fadeIn(200);
-    }
-    if (isCollapse && !isAnimated) {
-        isAnimated = true;
-        overlay.style.height = $(document).height() - 176 + 'px';
-        subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
-        header.classList.remove('showed');
-        $(body).fadeOut(200, function () {
-            isAnimated = false;
-            isCollapse = false;
-        });
-        $(overlay).fadeOut(400, function () {
-            subNavigationWrapper.removeAttribute('style');
-        });
+    if (window.innerWidth <= 860) {
+        if (!isCollapse && !isAnimated) {
+            isAnimated = true;
+            overlay.style.height = $(document).height() - 176 + 'px';
+            header.classList.add('showed');
+            subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
+            $(body).fadeIn(400, function () {
+                isAnimated = false;
+                isCollapse = true;
+            });
+            $(overlay).fadeIn(200);
+        }
+        if (isCollapse && !isAnimated) {
+            isAnimated = true;
+            overlay.style.height = $(document).height() - 176 + 'px';
+            subNavigationWrapper.style.height = $(document).height() - 176 + 'px';
+            header.classList.remove('showed');
+            $(body).fadeOut(200, function () {
+                isAnimated = false;
+                isCollapse = false;
+            });
+            $(overlay).fadeOut(400, function () {
+                subNavigationWrapper.removeAttribute('style');
+            });
+        }
     }
 };
 

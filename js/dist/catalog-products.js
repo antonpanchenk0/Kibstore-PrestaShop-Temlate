@@ -201,8 +201,8 @@ var _initialiseProps = function _initialiseProps() {
         /*init*/
         var sliderCoords = getCoords(slider);
         button1.style.marginLeft = '0px';
-        button2.style.marginLeft = 190 + 'px';
-        between.style.width = 190 + 'px';
+        button2.style.marginLeft = 180 + 'px';
+        between.style.width = 180 + 'px';
         inpt1.value = min;
         inpt2.value = max;
 

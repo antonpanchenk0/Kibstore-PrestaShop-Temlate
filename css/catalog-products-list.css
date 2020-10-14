@@ -158,6 +158,7 @@
 .desktop-navigation-collapse-overlay {
   width: 100%;
   height: 100vh;
+  min-height: 100vh;
   z-index: 150;
   background: #000000a6;
   position: fixed;
@@ -4075,6 +4076,7 @@ section.product-section > .product-section-body {
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .old-price > h3,
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .current-price > h3 {
     display: none;
+    white-space: nowrap;
   }
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .old-price.current-price > h2,
   .product-item > .product-item-wrap > .product-item-footer > .product-item-footer-price > .current-price.current-price > h2 {
@@ -4488,8 +4490,7 @@ section.catalog-products-filter-box > form.catalog-products-filters-form {
   width: 100%;
   height: calc(100vh - 110px);
   background-color: #fff;
-  padding: 0 5px;
-  padding-bottom: 90px;
+  padding: 0 5px 90px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -4579,7 +4580,7 @@ section.catalog-products-filter-box > form.catalog-products-filters-form > .cata
 section.catalog-products-filter-box > form.catalog-products-filters-form > .catalog-products-filters-wrap > .catalog-products-filter-item > .catalog-products-filter-item-body .multi-range > .range {
   width: 200px;
   height: 2px;
-  margin: 20px 10px 20px 0;
+  margin: 20px 0px 20px 0;
   border-radius: 4px;
   background-color: #bdbdbd;
 }
@@ -4864,6 +4865,7 @@ section.catalog-products-items-footer {
     min-width: 260px;
     max-width: 260px;
     left: unset!important;
+    min-height: 100vh;
   }
   .content section.catalog-products-filter-box > .filter-switch-btn {
     font-size: 16px!important;
