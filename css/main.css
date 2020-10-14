@@ -3942,6 +3942,11 @@ section.product-section > .product-section-body {
   height: 40px;
   min-height: 40px;
   margin-right: 15px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .subscribe-to-updates > .subscribe-to-updates-wrap > .send-email-box > form > .form-row > button:hover {
   -webkit-box-shadow: 0px 0px 5px 0px #313131a8;
@@ -4239,6 +4244,7 @@ div#cartModalWindow > .modal-dialog > .modal-content > .modal-body > .cart-produ
   -webkit-line-clamp: 2;
   line-height: 1;
   max-height: 2rem;
+  text-decoration: none;
 }
 div#cartModalWindow > .modal-dialog > .modal-content > .modal-body > .cart-product-list-wrapper > .product-cart-item > .item-info > .info-header > .delete-item-btn {
   width: 20px;
@@ -4351,6 +4357,16 @@ div#cartModalWindow > .modal-dialog > .modal-content > .modal-footer > button.cl
   border: 1px solid #5489d7;
   color: #5489d7;
   margin: 0 20px 20px 0;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+div#cartModalWindow > .modal-dialog > .modal-content > .modal-footer > button.close-modal:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #313131a8;
+  -moz-box-shadow: 0px 0px 5px 0px #313131a8;
+  box-shadow: 0px 0px 5px 0px #313131a8;
 }
 div#cartModalWindow > .modal-dialog > .modal-content > .modal-footer > .create-order-section {
   width: auto;
@@ -4394,6 +4410,16 @@ div#cartModalWindow > .modal-dialog > .modal-content > .modal-footer > .create-o
   background-color: #51c878;
   border: 1px solid #51c878;
   color: #fff;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+div#cartModalWindow > .modal-dialog > .modal-content > .modal-footer > .create-order-section > button.send-order:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #313131a8;
+  -moz-box-shadow: 0px 0px 5px 0px #313131a8;
+  box-shadow: 0px 0px 5px 0px #313131a8;
 }
 div#thxOrderModalWindow > .modal-dialog > .modal-content {
   padding: 30px;
